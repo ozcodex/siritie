@@ -4,7 +4,6 @@
 -- See README.txt for licensing and other information.
 
 dofile(minetest.get_modpath("zero_loader").."/init.lua")
-
 zero_load('religion',{"common", "nodes", "crafts"})
 
 -- time in seconds before getting a responce from god, random

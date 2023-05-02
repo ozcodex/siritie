@@ -9,6 +9,13 @@ tech.FS = function(...)
     return minetest.formspec_escape(tech.S(...))
 end
 
+-- Internationalization
+S = tech.S
+
+c_alpha = minimal.compat_alpha
+
+
+
 local modpath = minetest.get_modpath('tech')
 
 dofile(modpath .. "/lightsource_api.lua")
@@ -18,7 +25,11 @@ dofile(modpath..'/lever.lua')
 dofile(modpath..'/backpacks.lua')
 dofile(modpath..'/plant_crafts.lua')
 dofile(modpath..'/fires.lua')
-dofile(modpath..'/pottery.lua')
+--dofile(modpath..'/pottery.lua')
+-------------------------------
+dofile(minetest.get_modpath("zero_loader").."/init.lua")
+zero_load('tech',{"common", "nodes", "crafts"})
+-------------------------------
 dofile(modpath..'/drugs.lua')
 dofile(modpath..'/storage.lua')
 dofile(modpath..'/earthen_building.lua')
@@ -35,6 +46,9 @@ dofile(modpath .. "/bricks_and_mortar.lua")
 dofile(modpath .. "/cooking_pot.lua")
 dofile(modpath .. "/lantern.lua")
 -------------------------------
+
+dofile(minetest.get_modpath("zero_loader").."/init.lua")
+zero_load('tech',{"common", "nodes", "crafts"})
 
 -----------------------------------------------
 -- Dying recipes
