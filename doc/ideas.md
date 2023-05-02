@@ -32,3 +32,4 @@ Changes to minetest:
 - pottery wheel from Limestone block and sticks 
 - add mixing bucket to carpentry bench
 - make carpentry bench cheaper (one iron ingot and any log)
+- add sundial and disable the message of is the X day of the Season Y
