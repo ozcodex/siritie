@@ -363,7 +363,7 @@ minetest.register_node("tech:cooking_pot_unfired", {
 })
 
 crafting.register_recipe({
-	type = "crafting_spot",
+	type = "clay_shaping_spot",
 	output = "tech:cooking_pot_unfired 1",
 	items = {"nodes_nature:clay_wet 4"},
 	level = 1,

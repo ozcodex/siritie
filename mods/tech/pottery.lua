@@ -391,12 +391,12 @@ minetest.register_node("tech:clay_oil_lamp", {
 --Recipes
 
 --
---Hand crafts (crafting spot)
+--Hand crafts (clay shaping spot)
 --
 
 --Pot from clay
 crafting.register_recipe({
-	type = "crafting_spot",
+	type = "clay_shaping_spot",
 	output = "tech:clay_water_pot_unfired 1",
 	items = {"nodes_nature:clay_wet 4"},
 	level = 1,
@@ -414,7 +414,7 @@ crafting.register_recipe({
 
 --storage Pot from clay
 crafting.register_recipe({
-	type = "crafting_spot",
+	type = "clay_shaping_spot",
 	output = "tech:clay_storage_pot_unfired 1",
 	items = {"nodes_nature:clay_wet 6"},
 	level = 1,
@@ -431,7 +431,7 @@ crafting.register_recipe({
 
 --oil lamp
 crafting.register_recipe({
-	type = "crafting_spot",
+	type = "clay_shaping_spot",
 	output = "tech:clay_oil_lamp_unfired 1",
 	items = {"nodes_nature:clay_wet"},
 	level = 1,

@@ -1,38 +1,37 @@
-# Exile
-Created by Dokimi
+# Siritie
+Created by Ozcodex, from Exile v0.3.9e by Dokimi, with contributions from Mantar.
 for `Minetest 5.3+`
 
-CAUTION: _Some people may find parts of this game difficult or disturbing._
+Siritie is a challenging survival game where you must fight to survive in a 
+harsh world.
+Make tough decisions, adapt to your environment and learn to survive in a world
+that is both accurate and mystical.
 
 ## Installation
-Installation from the Minetest `ContentDB` is preferred; just add _Exile_ from the in-game menu &gg; `Content` &gg; `Browse online content` &gg; search in the textbox &gg; click on the `Install` plus sign.
 
-If extracting manually, _Exile_ should be placed in the `games` folder of your user’s Minetest settings, like so:
+Clone into your minetest/games folder.
 
-	Minetest > games > exile > mods/menu/.../etc.
-
-Where `Minetest` is `~/.minetest` in most Linux, and macOS configurations, `~/.var/app/net.minetest.Minetest/.minetest` in Linux Flatpak, and `%USERHOME%\Roaming\Minetest` in most Windows versions.
-
-Since `0.2.3`, _Exile_ requires `naturalslopeslib` (`nsl`). If you’re installing the source from `git`, you’ll need to install `nsl` as well. Extract it into the `./Exile/mods/` folder or use `git pull --recurse submodules` if you have cloned the repository.
 
 ## Gameplay
+
 Challenging, at times brutal, wilderness survival with simple technology.
-Use your wits to find food, water, and shelter before succumbing to the elements, while exploring the mysterious world, and developing your capacities to endure your exile.
+Use your wits to find food, water, and shelter before succumbing to the
+elements, while exploring the mysterious world, and developing your capacities 
+to endure your exile.
 
 ### Features
 *Player health effects* — Hypothermia, exhaustion, disease, …  
-*Dynamic natural world* — Seasonal weather, erosion, water flows through soil, …  
-*Plausible building materials* — Make shelters from the rain, kilns, smelters, …  
+*Dynamic natural world* — Seasonal weather, erosion, water flows through soil, 
+*Plausible building materials* — Make shelters from the rain, kilns, smelters, 
+*Realistic crafting* — Make tools, clothing, and food from natural materials.
 
 ## World Settings
-Valleys is the standard `mapgen` for _Exile_. `Carpathian` is also supported, for a somewhat more difficult and slower-paced game.
-
-`Flat` mostly works, but `Merki`, and therefore the `Glow Paint` and `Herbal Medicine` made from it, will be unavailable. Enable it in `game.conf` if you’d like to try it anyway.
+Valleys is the standard `mapgen` for _Exile_. `Carpathian` is also supported,
+for a somewhat more difficult and slower-paced game.
 
 ## Gameplay Guide
-Check out `doc > walkthrough` for a more detailed guide.
-
-Many different strategies might work, and part of the fun is figuring out what does, and catastrophically does not, work. &smile; &frown;
+Many different strategies might work, and part of the fun is figuring out 
+what does, and catastrophically does not, work.
 
 Here are some early steps you might pass though:
 1. **Craft**   basic tools. **Find** a suitable camp site quickly before you get tired.
@@ -93,18 +92,23 @@ Starvation and freezing are hard to avoid without preparation.
                      and a space below the iron mixture for slag to drain out.
 
 ## Settings for Multiplayer
-The variable `time_speed` defaults to `72`, and at this rate a player who logs on at 8:00 AM every day will get a change in season every 2.5 days.
+The variable `time_speed` defaults to `72`, and at this rate a player who logs
+on at 8:00 AM every day will get a change in season every 2.5 days.
 
-Changing speed to `60` will make days last 24 minutes and a new season every real-world day, but he will see the seasons in reverse. At `time_speed` of `96`, days last only 15 minutes, but the player might see spring (year 1) on day 1, summer (year 2) on day 2, etc.
+Changing speed to `60` will make days last 24 minutes and a new season every 
+real-world day, but he will see the seasons in reverse. At `time_speed` of `96`,
+days last only 15 minutes, but the player might see spring (year 1) on day 1,
+summer (year 2) on day 2, etc.
 
-Set `exile_hud_update` to `1.0` second for multiplayer servers on the Internet; a LAN server can probably handle `0.2` seconds.
+Set `exile_hud_update` to `1.0` second for multiplayer servers on the Internet;
+a LAN server can probably handle `0.2` seconds.
 
 ## Mods for Multiplayer
 - [Wield3d](https://github.com/stujones11/wield3d) is recommended.
-- [`Alternode`](https://github.com/AntumMT/mod-alternode) was used to add the “infotext” popups in the spawn shelter on the [Land of Catastrophe](https://exile.planetofnix.com/wiki/pmwiki.php?n=Loc.LandOfCatastrophe) server.
 
 ## Development
-_Exile_ is open-source software — that means the game is as good as you choose to make it. It also means development can be erratic and haphazard at times, so be patient!
+_Exile_ is open-source software — that means the game is as good as you choose
+to make it. It also means development can be erratic and haphazard at times, so be patient!
 
 _Exile_ is currently in “Alpha,” therefore you can expect that there may be bugs, missing features, performance issues, and perhaps compatibility-breaking updates.
 Despite this, _Exile_ does have enough features to be a playable game and should be stable and mostly bug-free.
