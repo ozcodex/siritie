@@ -105,7 +105,6 @@ minetest.register_node("religion:efigy", {
 					if picked <= accumulator then
 						response = pray_responses[prayer].message
             minetest.chat_send_player(current_player, S(response))
-            minetest.chat_send_player(current_player, "Your blessing is " .. pray_responses[prayer].blessing)
             -- give a blessing
             -- fullfill hunger, thrist and energy
             -- but only the percentage of the blessing
