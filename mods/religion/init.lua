@@ -13,9 +13,9 @@ local pray_time = math.random(2, 5)
 -- blessing idicates the percentage restored
 local pray_responses = {
 	{message="and nothing happens", weight=100, blessing=0},
-	{message="you feel how your faith is strengthened", weight=20, blessing=0},
 	{message="a voice inside you tells you that god is dead, but you decide to ignore it", weight=20, blessing=0},
 	{message="something inside you tells you that this is not working", weight=10, blessing=0},
+  {message="you feel how your faith is strengthened", weight=20, blessing=10},
   {message="and you feel refreshed", weight=10, blessing=20},
 	{message="and you feel a soft breeze that comforts you", weight=10, blessing=50},
 	{message="your hearth is full of joy and you fill in you the blessings from your god" , weight=10, blessing=80},
@@ -105,12 +105,41 @@ minetest.register_node("religion:efigy", {
 					if picked <= accumulator then
 						response = pray_responses[prayer].message
             minetest.chat_send_player(current_player, S(response))
+            minetest.chat_send_player(current_player, "Your blessing is " .. pray_responses[prayer].blessing)
             -- give a blessing
-            -- fullfill hunger, thrist, health, and energy
+            -- fullfill hunger, thrist and energy
             -- but only the percentage of the blessing
-            -- fullfill hunger
+            -- max thirst is 100
+            -- max hunger is 1000
+            -- max energy is 1000
             local player_hunger = player:get_attribute("hunger")
-            minetest.chat_send_player(current_player, S("Your hunger is "..player_hunger))
+            local player_thirst = player:get_attribute("thirst")
+            local player_energy = player:get_attribute("energy")
+            -- update player attributes
+            if player_hunger then
+              player_hunger = tonumber(player_hunger)
+              player_hunger = player_hunger + (pray_responses[prayer].blessing * 10)
+              if player_hunger > 1000 then
+                player_hunger = 1000
+              end
+              player:set_attribute("hunger", player_hunger)
+            end
+            if player_thirst then
+              player_thirst = tonumber(player_thirst)
+              player_thirst = player_thirst + (pray_responses[prayer].blessing)
+              if player_thirst > 100 then
+                player_thirst = 100
+              end
+              player:set_attribute("thirst", player_thirst)
+            end
+            if player_energy then
+              player_energy = tonumber(player_energy)
+              player_energy = player_energy + (pray_responses[prayer].blessing * 10)
+              if player_energy > 1000 then
+                player_energy = 1000
+              end
+              player:set_attribute("energy", player_energy)
+            end
 						break
 					end
 				end

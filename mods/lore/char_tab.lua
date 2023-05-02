@@ -103,8 +103,20 @@ local function sfinv_get(self, player, context)
     --generate biography
     bio = lore.generate_bio(player)
   end
+  local prayers = meta:get_int("total_prayers")
+--generate traits
+  local traits = "\n "
+  if prayers == 0 then
+    traits = traits..'Atheist'
+  elseif prayers <= days*(1/2) then
+    traits = traits..'Doubter'
+  elseif prayers <= days*(3/4) then
+    traits = traits..'Adherent'
+  else
+    traits = traits..'Devotee'
+  end
 
-  local y = 3.1
+  local y = 4.1
   local eff_form = ""
 
 
@@ -131,8 +143,10 @@ local function sfinv_get(self, player, context)
 	local formspec = "label[0.1,0.1; Name: " .. name .. "]"..
 	"label[4,0.1; Days Survived: " .. days .. "]"..
 	"label[4,0.6; Lives: " .. lives .. "]"..
+	"label[4,1.1; Prayers: " .. prayers .. "]"..
   "label[0.1,1.1; Biography: " .. bio .. "]"..
-  "label[0.1,3.1; Health Effects:]"..
+  "label[0.1,3.1; Traits: " .. traits .. "]"..
+  "label[0.1,4.1; Health Effects:]"..
   eff_form
 
 
