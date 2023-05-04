@@ -7,7 +7,7 @@ dofile(minetest.get_modpath("zero_loader").."/init.lua")
 zero_load('composter',{"common", "nodes", "crafts"})
 
 -- seconds before the next composting validation
-seconds_to_compost = 5
+seconds_to_compost = 60
 
 -- chance of converting a compostable item into compost
 composting_chance = 50
