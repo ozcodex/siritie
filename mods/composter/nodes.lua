@@ -29,8 +29,6 @@ minetest.register_node("composter:composter_bin", {
             {0.2, 0.3, -0.4, 0.4, 0.4, 0.4},
             {-0.2, 0.3, -0.4, 0.2, 0.4, -0.2},
             {-0.2, 0.3, 0.2, 0.2, 0.4, 0.4},
-
-
         },
     },
     on_construct = function(pos)
@@ -54,11 +52,35 @@ minetest.register_node("composter:composter_bin", {
         minetest.show_formspec(player_name, "composter:composter_bin", get_composter_formspec(compost))
     end,
 
-    on_receive_fields = function(pos, formname, fields, sender)
-        minetest.chat_send_player("singleplayer", "REcibido!!")
-        local meta = minetest.get_meta(pos)
-        local inv = meta:get_inventory():get_list("main")
-        local output_inv = meta:get_inventory():get_list("output")
+    allow_metadata_inventory_move = function(pos, from_list, from_index, to_list, to_index, count, player)
+        if to_list == "output" then
+            return 0
+        end
+        local inv = minetest.get_meta(pos):get_inventory()
+        -- Check if the item being moved has the 'compostable' group
+        local stack = inv:get_stack(from_list, from_index)
+        local item_name = stack:get_name()
+        local item_def = minetest.registered_items[item_name]
+        if item_def and item_def.groups.compostable then
+            -- Allow the item to be moved to the specified inventory list
+            return count
+        else
+            -- Deny the item from being moved to the specified inventory list
+            return 0
+        end
+    end,
+
+    allow_metadata_inventory_put = function(pos, listname, index, stack, player)
+        if listname == "main" then
+            local def = stack:get_definition()
+            if def.groups and def.groups.compostable then
+                return stack:get_count()
+            else
+                return 0
+            end
+        elseif listname == "output" then
+            return 0
+        end
     end,
 
     on_timer = function(pos, elapsed)
@@ -68,42 +90,10 @@ minetest.register_node("composter:composter_bin", {
         local meta = minetest.get_meta(pos)
         local inv = meta:get_inventory()
         local compost = meta:get_int("compost")
-        local main_inv = inv:get_list("main")
-        local output_inv = inv:get_list("output")
 
-        -- Check the chances of generating items
-        for _, item in ipairs(generate_items) do
-          if compost >= item.cost and math.random(1, 100) <= item.chance then
-            if inv:room_for_item("output", item.name) then
-              -- add the item to the output inventory
-              inv:add_item("output", item.name)
-              -- decrease compost level
-              compost = compost - item.cost
-            end
-          end
-        end
+        compost = generate_compost(inv, compost)
+        compost = process_compostable_items(inv, compost)
 
-        -- check if items are compostable
-        -- if so, add them to the compost and remove them from the inventory
-        for _, item in ipairs(main_inv) do
-            if item and item:get_count() > 0 then
-                local name = item:get_name()
-                minetest.chat_send_player("singleplayer", "checando item:"..name)
-                local def = minetest.registered_items[name]
-                local compostable = false
-                if def.groups['compostable'] then
-                    minetest.chat_send_player("singleplayer", "item is compostable")
-                    -- get stack size
-                    local stack_size = item:get_count()
-                    if compost < 100 then
-                        -- remove item from main inventory
-                        inv:remove_item("main", ItemStack(name .. " 1"))
-                        -- update compost
-                        compost = compost + 1
-                    end
-                end
-            end
-        end
         meta:set_int("compost", compost)
         meta:set_string("infotext", "Composter ("..compost.."% full)")
         meta:set_string("formspec", get_composter_formspec(compost))
