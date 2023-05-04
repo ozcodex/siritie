@@ -1,8 +1,8 @@
 Changes to minetest:
 
+- improve cooking, bring some benefits to making soup (depending on amount of ingredients?)
 - implement a composter block to turn organics into fertilizer
 - glass desalinitator (alembic),
-- improve cooking, bring some benefits to making soup (depending on amount of ingredients?)
 - add charcoal powder to mortar and pestle
 - remove choping block from choping block
 - create black painting with charcoal powder
@@ -33,3 +33,4 @@ Changes to minetest:
 - add mixing bucket to carpentry bench
 - make carpentry bench cheaper (one iron ingot and any log)
 - add sundial and disable the message of is the X day of the Season Y
+- make the composter able to produce worms and worms eggs but with a low chance
