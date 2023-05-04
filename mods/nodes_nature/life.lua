@@ -666,7 +666,7 @@ minetest.register_node("nodes_nature:tiken", {
 		fixed = {-0.1875, -0.5, -0.1875, 0.1875, 0.5, 0.1875},
 	},
 	groups = {choppy = 3, woody_plant = 1, flammable = 1, flora = 1,
-		  cane_plant = 1, temp_pass = 1, ncrafting_dye_candidate = 1, , compostable = 1},
+		  cane_plant = 1, temp_pass = 1, ncrafting_dye_candidate = 1, compostable = 1},
 	sounds = nodes_nature.node_sound_wood_defaults(),
 
 	after_dig_node = function(pos, node, metadata, digger)
@@ -912,7 +912,7 @@ minetest.register_node("nodes_nature:glow_worm", {
 --glowing mushroom
 minetest.override_item("nodes_nature:merki",{
 	light_source = 2,
-	groups = {snappy = 3, attached_node = 1, flammable = 3, mushroom = 1, temp_pass = 1, bioluminescent= 1, , compostable = 1}
+	groups = {snappy = 3, attached_node = 1, flammable = 3, mushroom = 1, temp_pass = 1, bioluminescent= 1, compostable = 1}
 })
 
 
