@@ -6,21 +6,6 @@
 dofile(minetest.get_modpath("zero_loader").."/init.lua")
 zero_load('composter',{"common", "nodes", "crafts"})
 
--- items that can be composted
-compostable_groups = {
-    'herbaceous_plant',
-    'woody_plant',
-    'fibrous_plant',
-    'mushroom',
-    'tree',
-    'log',
-    'cane_plant',
-    'seed',
-    'seedling',
-    'flora',
-    'bioluminescent',
-}
-
 -- seconds before the next composting validation
 seconds_to_compost = 5
 composting_chance = 50
@@ -139,15 +124,8 @@ minetest.register_node("composter:composter_bin", {
                 local name = item:get_name()
                 minetest.chat_send_player("singleplayer", "checando item:"..name)
                 local def = minetest.registered_items[name]
-                minetest.chat_send_player("singleplayer",dump(def.groups))
                 local compostable = false
-                for _, group in ipairs(compostable_groups) do
-                    if def.groups[group] then
-                        compostable = true
-                        break
-                    end
-                end
-                if compostable then
+                if def.groups['compostable'] then
                     minetest.chat_send_player("singleplayer", "item is compostable")
                     -- get stack size
                     local stack_size = item:get_count()
@@ -163,7 +141,6 @@ minetest.register_node("composter:composter_bin", {
         meta:set_int("compost", compost)
         meta:set_string("infotext", "Composter ("..compost.."% full)")
         meta:set_string("formspec", get_composter_formspec(compost))
-
     end
 
 })

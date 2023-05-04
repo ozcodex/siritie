@@ -285,33 +285,33 @@ for i in ipairs(plantlist) do
 
 	local g
 	local gs = {snappy = 3, herbaceous_plant = 1, attached_node = 1,
-		    flammable = 2, seedling = 1, temp_pass = 1} --seedlings
+		    flammable = 2, seedling = 1, temp_pass = 1, compostable = 1} --seedlings
 	local g_seed = {snappy = 3, dig_immediate = 2, flammable = 2,
-			attached_node = 1, seed = 1, temp_pass = 1}
+			attached_node = 1, seed = 1, temp_pass = 1, compostable = 1}
 
 	if type == "crumbly" then		--moss, dirt mat-like things
 	   g = {crumbly = 3, herbaceous_plant = 1, falling_node = 1,
-		attached_node = 1, flammable = 5, flora = 1, temp_pass = 1}
+		attached_node = 1, flammable = 5, flora = 1, temp_pass = 1, compostable = 1}
 	elseif type == "woody_plant" then
 	   g = {choppy = 3, woody_plant = 1, attached_node = 1,
-		flammable = 2, flora = 1, temp_pass = 1}
+		flammable = 2, flora = 1, temp_pass = 1, compostable = 1}
 		s = nodes_nature.node_sound_wood_defaults()
 	elseif type == "herbaceous_plant" then
 	   g = {snappy = 3, herbaceous_plant = 1, attached_node = 1,
-		flammable = 3, flora = 1, temp_pass = 1}
+		flammable = 3, flora = 1, temp_pass = 1, compostable = 1}
 	elseif type == "fibrous_plant" then
 	   g = {snappy = 3, fibrous_plant = 1, attached_node = 1,
-		flammable = 1, flora = 1, temp_pass = 1}
+		flammable = 1, flora = 1, temp_pass = 1, compostable = 1}
 	elseif type == "mushroom" then
 	   g = {snappy = 3, attached_node = 1, flammable = 3,
-		mushroom = 1, temp_pass = 1}
+		mushroom = 1, temp_pass = 1, compostable = 1}
 	   gs = {snappy = 3, attached_node = 1, flammable = 3,
-		 mushroom = 1, seedling = 1, temp_pass = 1}
+		 mushroom = 1, seedling = 1, temp_pass = 1, compostable = 1}
 	   g_seed = {snappy = 3, attached_node = 1, flammable = 3,
-		     mushroom = 1, seed = 1, temp_pass = 1}
+		     mushroom = 1, seed = 1, temp_pass = 1, compostable = 1}
 	else
 	   g = {snappy = 3, attached_node = 1, flammable = 2,
-		flora = 1, temp_pass = 1}
+		flora = 1, temp_pass = 1, compostable = 1}
 	end
 
 	if dyecandidate then
@@ -742,7 +742,7 @@ for i in ipairs(searooted_list) do
 	local dyecandidate = searooted_list[i][11]
 	local dominantcolor = searooted_list[i][12] or "green"
 
-	local g = {snappy = 3, flora = 1, flora_sea = 1}
+	local g = {snappy = 3, flora = 1, flora_sea = 1, compostable = 1}
 	--use seaweed as fertilizer
 	if type == "seaweed" then
 		g.fertilizer = 1

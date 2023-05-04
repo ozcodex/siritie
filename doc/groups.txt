@@ -3,93 +3,126 @@ Node and Item Groups used in Exile
 
 Misc:
 -----
-not_in_creative_inventory
-slippery
-falling_node
-attached_node
-craftedby - Add creator meta data to node; used for crafted by labels and keys
-edible - Nodes that are edible - auto adds on_use callbacks to eat
-`nobones`: Don't put this item into bones piles. e.g. crafting spots
-		Note: This destroys the item upon player death
+* not_in_creative_inventory
+* slippery
+* falling_node
+* attached_node
+* craftedby - Add creator meta data to node; used for crafted by labels and keys
+* edible - Nodes that are edible - auto adds on_use callbacks to eat
+* nobones: Don't put this item into bones piles. e.g. crafting spots. This destroys the item upon player death
+* compostable = 1: can be composted in a compost bin, the value indicates how much it contributes to the compost per unit. Max 10.
 
 Digging:
 ---------
 Values from 1 - 3, with 1 being hardest
-`cracky`: brittle, hard things. e.g. stone
-`choppy`: hard, flexible things e.g. wood
-`crumbly`: loose things e.g. sand
-`snappy`: soft, tearable things e.g. plants.
+* cracky: brittle, hard things. e.g. stone
+* choppy: hard, flexible things e.g. wood
+* crumbly: loose things e.g. sand
+* snappy: soft, tearable things e.g. plants.
 
 
 Fire:
 -----
-`flammable`: can catch fire. Has a 1 in [value] chance of catching fire.
-             Use, on_burn = function(pos) for custom post fire results.
-`igniter`: can ignite flammable.
-`cools_lava`: will cool neighboring lava to basalt
-`puts_out_fire`: will extinguish neighboring flames and fires
+* flammable: can catch fire. Has a 1 in [value] chance of catching fire. Use, on_burn = function(pos) for custom post fire results.
+* igniter: can ignite flammable.
+* cools_lava: will cool neighboring lava to basalt
+* puts_out_fire: will extinguish neighboring flames and fires
 
 
 Liquids:
 --------
-`water`: 1 = fresh, 2 = salt
-
-
+* water: 1 = fresh, 2 = salt
 
 stone
 ------
-`stone`: naturally occurring hard rock
-`soft_stone`: naturally occurring soft sedimentary semi-rock, drops the sediment
-`boulder`: stone boulder
+* stone: naturally occurring hard rock
+* soft_stone: naturally occurring soft sedimentary semi-rock, drops the sediment
+* boulder: stone boulder
 
 Sediment
 ---------
-`sediment`: 1 = loam, 2 = clay, 3 = silt, 4 = sand, 5 = gravel. Things plants might grow on, absorbs water.
-`wet_sediment`: same as above, but soaked with water. 1=fresh, 2= salt.
-`spreading`: Living surface e.g. clay with grass, spreads to exposed clay.
-`fertilizer`: restores depleted agricultural soil on punch
-`agricultural_soil`: Gives a boost to plant growth.
-`depleted_agricultural_soil`: gives a small boost to plant growth.
-`bare_sediment`: defines a sediment that grass could spread to.
+* sediment: 1 = loam, 2 = clay, 3 = silt, 4 = sand, 5 = gravel. Things plants might grow on, absorbs water.
+* wet_sediment: same as above, but soaked with water. 1=fresh, 2= salt.
+* spreading: Living surface e.g. clay with grass, spreads to exposed clay.
+* fertilizer: restores depleted agricultural soil on punch
+* agricultural_soil: Gives a boost to plant growth.
+* depleted_agricultural_soil: gives a small boost to plant growth.
+* bare_sediment: defines a sediment that grass could spread to.
 
 
 Temperature:
 -----------
-`temp_effect`: 1 = is a source of cooling or heating (node must define `temp_effect` and `temp_effect_max`.
+* temp_effect: 1 = is a source of cooling or heating (node must define `temp_effect` and `temp_effect_max`.
     See climate. Might want to use `climate.air_temp_source`. temp_effect_max is it's own internal temperature. e.g. if a fire wasn't 600C it wouldn't be a fire)
-`temp_pass`: 1 = temperature effects can be transmitted through this node (e.g. a toothpick can't shield you against fire.)
-`heatable`: Can accumulate heat/cooling from temp_effect sources that use `climate.air_temp_source`.
+* temp_pass: 1 = temperature effects can be transmitted through this node (e.g. a toothpick can't shield you against fire.)
+* heatable: Can accumulate heat/cooling from temp_effect sources that use `climate.air_temp_source`.
   Must call `climate.heat_transfer` as part of node timer. Intended for pottery, smelting etc for direct heat transfers from fires etc.
   Value = % of dissipation speed. i.e. 100 means it dissipates at 100% of base speed (like air, which holds heat poorly),
   10 means 10% of base speed (e.g. like metal which holds heat well). Allows different materials to lose heat and different rates.
-`temp_flow`: 100 = air_temp nodes can jump through this; like an open door
+* temp_flow: 100 = air_temp nodes can jump through this; like an open door
   Value = % chance of passing through. 100% will always succeed
 
 Plant groups
 -------------
-`herbaceous_plant`: Soft plant matter.
-`woody_plant`: twiggy plant matter. Can make into sticks
-`fibrous_plant`: tough stringy plant matter. Anything you might try using for string.
-`mushroom`: can grow in dark, likely a mushroom.
-`tree`: a tree trunk.
-`log`: dropped on felling tree. Used for timber crafts
-`cane_plant`: cane like plant, grows on top of itself in a pillar
-`seed`: a plant seed or spore. Will grow into a seedling.
-`seedling`: unused?
-`flora`: wild plants, will spread
-`bioluminescent`: a living thing that glows.
-`woodslab`: a log that's been cut in half, e.g. stairs/slabs
+* herbaceous_plant: Soft plant matter.
+* woody_plant: twiggy plant matter. Can make into sticks
+* fibrous_plant: tough stringy plant matter. Anything you might try using for string.
+* mushroom: can grow in dark, likely a mushroom.
+* tree: a tree trunk.
+* log: dropped on felling tree. Used for timber crafts
+* cane_plant: cane like plant, grows on top of itself in a pillar
+* seed: a plant seed or spore. Will grow into a seedling.
+* seedling: unused?
+* flora: wild plants, will spread
+* bioluminescent: a living thing that glows.
+* woodslab: a log that's been cut in half, e.g. stairs/slabs
 
 pottery groups
 --------------
-`pottery`: can be broken into broken pottery
+* pottery: can be broken into broken pottery
 
 
 construction material groups
 --------------
-`masonry`: solid bricks, blocks etc (e.g. can collect puddles)
-`ladder`: A solid ladder that needs support underneath
+* masonry: solid bricks, blocks etc (e.g. can collect puddles)
+* ladder: A solid ladder that needs support underneath
 
 Tool groups:
 --------------
-`club`: 1= blunt weapon. can stun catch mobs on right click
+* club: 1= blunt weapon. can stun catch mobs on right click
+
+Other Groups:
+--------------
+_ncrafting_bundle 
+ncrafting_dye_candidate 
+axe 
+bed
+blanket
+bouncy
+brush
+cape 
+cloth
+clothing 
+clothing_blanket
+clothing_cape
+clothing_hat 
+clothing_pants
+clothing_shirt 
+clothing_shoes
+dig_immediate
+fall_damage_add_percent
+flames
+fleshy
+float
+grafitti
+hardness
+knife
+leafdecay
+leafdecay_drop
+oddly_breakable_by_hand
+pickaxe 
+rope_block 
+shovel 
+slabs_replace
+tool 
+torch
