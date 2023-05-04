@@ -36,6 +36,7 @@ Changes to minetest:
 - make meats and cooked food compostable
 - remove search bar in gui
 - cooking pot with oil converts unkooked food in its own cooked version
+- change composter to use wet loam and loam
 
 done:
 
