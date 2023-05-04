@@ -34,3 +34,19 @@ Changes to minetest:
 - make carpentry bench cheaper (one iron ingot and any log)
 - add sundial and disable the message of is the X day of the Season Y
 - make the composter able to produce worms and worms eggs but with a low chance
+- make the input of the container smaller and the output bigger
+- create the hummus item, and make it being produced my the composter
+- add more blessings and curses with effects to the health
+- add more behaivor driven traits
+- make meats and cooked food compostable
+
+done:
+
+bring back the weaving frame and the chopping block
+apply and improve the idol worshipping, now with blessings and curses
+add religion traits 
+new working spot for all the pottery
+remove the spear
+fix an error in the code of glow worm
+remove rings
+add a file loader to better organization and standarization of the code
