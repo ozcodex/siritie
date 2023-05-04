@@ -880,39 +880,30 @@ minetest.register_node("nodes_nature:chalin", {
 
 --a bit experimental, doesn't reproduce
 minetest.register_node("nodes_nature:glow_worm", {
-			  description = S("Glow Worm"),
-			  drawtype = "plantlike",
-			  waving = 1,
-			  visual_scale = 1,
-			  light_source = 2,
-			  tiles = {"nodes_nature_glow_worm.png"},
-			  stack_max = minimal.stack_max_medium,
-			  inventory_image = "nodes_nature_glow_worm.png",
-			  wield_image = "nodes_nature_glow_worm.png",
-			  paramtype = "light",
-			  paramtype2 = "meshoptions",
-			  place_param2 = 3,
-			  floodable = true,
-			  sunlight_propagates = true,
-			  walkable = false,
-			  buildable_to = true,
-			  groups = {snappy = 3, flammable = 5, temp_pass = 1, bioluminescent = 1, compostable = 1},
-			  sounds = nodes_nature.node_sound_leaves_defaults(),
-			  selection_box = {
-			     type = "fixed",
-			     fixed = {-0.3, 0.5, -0.3, 0.3, 0.35, 0.3},
-			     floodable = true,
-			     sunlight_propagates = true,
-			     walkable = false,
-			     buildable_to = true,
-			     groups = {snappy = 3, flammable = 5, temp_pass = 1, bioluminescent = 1, compostable = 1},
-			     sounds = nodes_nature.node_sound_leaves_defaults(),
-			     selection_box = {
-				type = "fixed",
-				fixed = {-0.3, 0.5, -0.3, 0.3, 0.35, 0.3},
-			     },
-			  },
+				description = S("Glow Worm"),
+				drawtype = "plantlike",
+				waving = 1,
+				visual_scale = 1,
+				light_source = 2,
+				tiles = {"nodes_nature_glow_worm.png"},
+				stack_max = minimal.stack_max_medium,
+				inventory_image = "nodes_nature_glow_worm.png",
+				wield_image = "nodes_nature_glow_worm.png",
+				paramtype = "light",
+				paramtype2 = "meshoptions",
+				place_param2 = 3,
+				floodable = true,
+				sunlight_propagates = true,
+				walkable = false,
+				buildable_to = true,
+				groups = {snappy = 3, flammable = 5, temp_pass = 1, bioluminescent = 1, compostable = 1},
+				sounds = nodes_nature.node_sound_leaves_defaults(),
+				selection_box = {
+					type = "fixed",
+					fixed = {-0.3, 0.5, -0.3, 0.3, 0.35, 0.3},
+				},
 })
+
 
 
 ----------------------------------------------
