@@ -1,19 +1,15 @@
 Changes to minetest:
 
 - improve cooking, bring some benefits to making soup (depending on amount of ingredients?)
-- implement a composter block to turn organics into fertilizer
+- Ceramic Watering Can
+- Ceramic tea Pot?
 - glass desalinitator (alembic),
 - add charcoal powder to mortar and pestle
 - remove choping block from choping block
 - create black painting with charcoal powder
-- elaborate a guide for myself
-- Ceramic Watering Can
-- Ceramic tea Pot?
 - roasted iron powder to red painting
-- remove search bar in gui
 - change hammerig block recipe, make it require firing sticks
-- Turn bones into bonemeal
-- cooking pot with oil converts unkooked food in its own cooked version
+- Turn bones into bonemeal on the grinding stone
 - give more damage to the stone knife
 - add workbench as improved version of the crafting spot
 - add Pottery Bench as improved version of the clay shaping spot
@@ -27,7 +23,6 @@ Changes to minetest:
 - remove woodfire from sticks from choping block
 - change hammering block name to hammering log and retexture
 - add basalt and limestone grinding stones, make the grinding stones from cobbles and not boulders
-- remove hammers
 - move the basic bricks to the clay working spot (rammed earth and mudbrick)
 - pottery wheel from Limestone block and sticks 
 - add mixing bucket to carpentry bench
@@ -39,14 +34,18 @@ Changes to minetest:
 - add more blessings and curses with effects to the health
 - add more behaivor driven traits
 - make meats and cooked food compostable
+- remove search bar in gui
+- cooking pot with oil converts unkooked food in its own cooked version
 
 done:
 
-bring back the weaving frame and the chopping block
-apply and improve the idol worshipping, now with blessings and curses
-add religion traits 
-new working spot for all the pottery
-remove the spear
-fix an error in the code of glow worm
-remove rings
-add a file loader to better organization and standarization of the code
+- bring back the weaving frame and the chopping block
+- apply and improve the idol worshipping, now with blessings and curses
+- add religion traits 
+- new working spot for all the pottery
+- remove the spear
+- fix an error in the code of glow worm
+- remove rings
+- add a file loader to better organization and standarization of the code
+- implement a composter block to turn organics into fertilizer
+- remove hammers
