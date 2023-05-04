@@ -612,7 +612,7 @@ minetest.register_node("nodes_nature:gemedi", {
 		fixed = {-0.1875, -0.5, -0.1875, 0.1875, 0.5, 0.1875},
 	},
 	groups = {snappy = 3, fibrous_plant = 1, flammable = 1, flora = 1,
-		  cane_plant = 1, temp_pass = 1, ncrafting_dye_candidate = 1},
+		  cane_plant = 1, temp_pass = 1, ncrafting_dye_candidate = 1, compostable = 1},
 	sounds = nodes_nature.node_sound_leaves_defaults(),
 	_ncrafting_dye_dcolor = "yellow",
 
@@ -638,7 +638,7 @@ minetest.register_node("nodes_nature:cana", {
 		type = "fixed",
 		fixed = {-0.1875, -0.5, -0.1875, 0.1875, 0.5, 0.1875},
 	},
-	groups = {snappy = 3, fibrous_plant = 1, flammable = 1, flora = 1, cane_plant = 1, temp_pass = 1},
+	groups = {snappy = 3, fibrous_plant = 1, flammable = 1, flora = 1, cane_plant = 1, temp_pass = 1, compostable = 1},
 	sounds = nodes_nature.node_sound_leaves_defaults(),
 
 	after_dig_node = function(pos, node, metadata, digger)
@@ -666,7 +666,7 @@ minetest.register_node("nodes_nature:tiken", {
 		fixed = {-0.1875, -0.5, -0.1875, 0.1875, 0.5, 0.1875},
 	},
 	groups = {choppy = 3, woody_plant = 1, flammable = 1, flora = 1,
-		  cane_plant = 1, temp_pass = 1, ncrafting_dye_candidate = 1},
+		  cane_plant = 1, temp_pass = 1, ncrafting_dye_candidate = 1, , compostable = 1},
 	sounds = nodes_nature.node_sound_wood_defaults(),
 
 	after_dig_node = function(pos, node, metadata, digger)
@@ -844,7 +844,7 @@ minetest.register_node("nodes_nature:chalin", {
 			  },
 			  groups = {choppy = 3, woody_plant = 1, flammable = 1,
 				    flora = 1, cane_plant = 1, temp_pass = 1,
-				    ncrafting_dye_candidate = 1},
+				    ncrafting_dye_candidate = 1, compostable = 1},
 			  sounds = nodes_nature.node_sound_wood_defaults(),
 
 			  on_place = function(itemstack, placer, pointed_thing)
@@ -896,7 +896,7 @@ minetest.register_node("nodes_nature:glow_worm", {
 			  sunlight_propagates = true,
 			  walkable = false,
 			  buildable_to = true,
-			  groups = {snappy = 3, flammable = 5, temp_pass = 1, bioluminescent = 1},
+			  groups = {snappy = 3, flammable = 5, temp_pass = 1, bioluminescent = 1, compostable = 1},
 			  sounds = nodes_nature.node_sound_leaves_defaults(),
 			  selection_box = {
 			     type = "fixed",
@@ -905,7 +905,7 @@ minetest.register_node("nodes_nature:glow_worm", {
 			     sunlight_propagates = true,
 			     walkable = false,
 			     buildable_to = true,
-			     groups = {snappy = 3, flammable = 5, temp_pass = 1, bioluminescent = 1},
+			     groups = {snappy = 3, flammable = 5, temp_pass = 1, bioluminescent = 1, compostable = 1},
 			     sounds = nodes_nature.node_sound_leaves_defaults(),
 			     selection_box = {
 				type = "fixed",
@@ -921,7 +921,7 @@ minetest.register_node("nodes_nature:glow_worm", {
 --glowing mushroom
 minetest.override_item("nodes_nature:merki",{
 	light_source = 2,
-	groups = {snappy = 3, attached_node = 1, flammable = 3, mushroom = 1, temp_pass = 1, bioluminescent= 1}
+	groups = {snappy = 3, attached_node = 1, flammable = 3, mushroom = 1, temp_pass = 1, bioluminescent= 1, , compostable = 1}
 })
 
 
@@ -1035,7 +1035,7 @@ minetest.override_item("nodes_nature:lambakap",{
 	},
 	groups = {snappy = 3, mushroom = 1, falling_node = 1,
 		  attached_node = 1, flammable = 6, flora = 1,
-		  temp_pass = 1, bioluminescent = 1}
+		  temp_pass = 1, bioluminescent = 1, compostable = 1}
 })
 
 --reshedaar.  is also a mushroom.
@@ -1059,7 +1059,7 @@ minetest.override_item("nodes_nature:reshedaar",{
 	},
 	groups = {snappy = 3, mushroom = 1, fibrous_plant = 1,
 		  falling_node = 1, attached_node = 1,
-		  flammable = 2, flora = 1, temp_pass = 1}
+		  flammable = 2, flora = 1, temp_pass = 1, compostable = 1}
 })
 
 --Mahal. is also a mushroom.
@@ -1077,7 +1077,7 @@ minetest.override_item("nodes_nature:mahal",{
 	},
 	groups = {snappy = 3, mushroom = 1, woody_plant = 1,
 		  falling_node = 1, attached_node = 1, flammable = 2,
-		  flora = 1, temp_pass = 1, bioluminescent = 1}
+		  flora = 1, temp_pass = 1, bioluminescent = 1, compostable = 1}
 })
 
 --------------------------------
