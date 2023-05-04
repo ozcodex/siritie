@@ -49,3 +49,4 @@ done:
 - add a file loader to better organization and standarization of the code
 - implement a composter block to turn organics into fertilizer
 - remove hammers
+- enable back drinking cooking oil
