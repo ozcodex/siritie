@@ -18,12 +18,6 @@ local modpath = minetest.get_modpath('tech')
 
 dofile(modpath .. "/lightsource_api.lua")
 dofile(modpath..'/craft_stations.lua')
-dofile(modpath..'/tools.lua')
-dofile(modpath..'/lever.lua')
---dofile(modpath..'/backpacks.lua')
---dofile(modpath..'/plant_crafts.lua')
---dofile(modpath..'/fires.lua')
---dofile(modpath..'/pottery.lua')
 -------------------------------
 dofile(minetest.get_modpath("zero_loader").."/init.lua")
 zero_load('tech',{"common", "nodes", "crafts", "items"})

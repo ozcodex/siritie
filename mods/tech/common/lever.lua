@@ -1,10 +1,3 @@
---------------------------------------------------------------------------
--- lever
---rotate tool
-
--- Internationalization
-local S = tech.S
-
 -- Declare global
 creative = creative
 
@@ -151,30 +144,3 @@ lever.handler = function(itemstack, user, pointed_thing, mode)
 	end
 	return itemstack
 end
-
--- lever
-minetest.register_tool("tech:lever", {
-	description = S("lever") .. "\n" .. S("(left-click rotates face, right-click rotates axis)"),
-	inventory_image = "tech_tool_lever.png",
-	groups = {tool = 1},
-	_uses = 400,
-	on_use = function(itemstack, user, pointed_thing)
-		lever.handler(itemstack, user, pointed_thing, lever.ROTATE_FACE)
-		return itemstack
-	end,
-	on_place = function(itemstack, user, pointed_thing)
-		lever.handler(itemstack, user, pointed_thing, lever.ROTATE_AXIS)
-		return itemstack
-	end,
-})
-
-
-----stick from sticks
-crafting.register_recipe({
-	type = "crafting_spot",
-	output = "tech:lever 1",
-	items = {"tech:stick 2"},
-	level = 1,
-	always_known = true,
-})
-
