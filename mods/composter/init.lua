@@ -94,7 +94,6 @@ minetest.register_node("composter:composter_bin", {
         timer:start(seconds_to_compost)
     end,
 
-
     on_rightclick = function(pos, node, player, itemstack, pointed_thing)
         local meta = minetest.get_meta(pos)
         local player_name = player:get_player_name()
@@ -140,6 +139,7 @@ minetest.register_node("composter:composter_bin", {
                 local name = item:get_name()
                 minetest.chat_send_player("singleplayer", "checando item:"..name)
                 local def = minetest.registered_items[name]
+                minetest.chat_send_player("singleplayer",dump(def.groups))
                 local compostable = false
                 for _, group in ipairs(compostable_groups) do
                     if def.groups[group] then

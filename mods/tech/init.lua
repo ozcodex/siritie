@@ -24,7 +24,7 @@ dofile(modpath..'/tools.lua')
 dofile(modpath..'/lever.lua')
 dofile(modpath..'/backpacks.lua')
 dofile(modpath..'/plant_crafts.lua')
-dofile(modpath..'/fires.lua')
+--dofile(modpath..'/fires.lua')
 --dofile(modpath..'/pottery.lua')
 -------------------------------
 dofile(minetest.get_modpath("zero_loader").."/init.lua")
@@ -46,9 +46,6 @@ dofile(modpath .. "/bricks_and_mortar.lua")
 dofile(modpath .. "/cooking_pot.lua")
 dofile(modpath .. "/lantern.lua")
 -------------------------------
-
-dofile(minetest.get_modpath("zero_loader").."/init.lua")
-zero_load('tech',{"common", "nodes", "crafts"})
 
 -----------------------------------------------
 -- Dying recipes
