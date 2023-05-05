@@ -25,12 +25,20 @@ minetest.register_node("composter:composter_bin", {
             -- Placa intermedia 3
             {-0.4, 0.1, -0.4, 0.4, 0.2, 0.4},
             -- Placa superior (hueca)
-            {-0.4, 0.3, -0.4, -0.2, 0.4, 0.4},
-            {0.2, 0.3, -0.4, 0.4, 0.4, 0.4},
-            {-0.2, 0.3, -0.4, 0.2, 0.4, -0.2},
-            {-0.2, 0.3, 0.2, 0.2, 0.4, 0.4},
+            {-0.4, 0.3, -0.4, -0.312, 0.4, 0.4},
+            {0.312, 0.3, -0.4, 0.4, 0.4, 0.4},
+            {-0.312, 0.3, -0.4, 0.312, 0.4, -0.312},
+            {-0.312, 0.3, 0.312, 0.312, 0.4, 0.4},
+        },
+
+    },
+    selection_box = {
+        type = "fixed",
+        fixed = {
+            {-0.35, -0.5, -0.35, 0.35, 0.4, 0.35},
         },
     },
+
     on_construct = function(pos)
         local meta = minetest.get_meta(pos)
         meta:set_int("compost", 0)

@@ -1,8 +1,6 @@
 Changes to minetest:
 
-- Ceramic Watering Can
-- Ceramic tea Pot?
-- glass desalinitator (alembic),
+- ceramimc alembic (alembic)
 - add charcoal powder to mortar and pestle
 - remove choping block from choping block
 - create black painting with charcoal powder
@@ -49,6 +47,7 @@ Changes to minetest:
 - make the food decay, and conservation methods
 - take out craft stations from nodes_natures
 - restore the agricultural soil recipes
+- Ceramic tea Pot?
 
 done:
 
@@ -63,3 +62,4 @@ done:
 - implement a composter block to turn organics into fertilizer
 - remove hammers
 - enable back drinking cooking oil
+- Ceramic Watering Can
