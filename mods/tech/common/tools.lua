@@ -1,6 +1,4 @@
 
-c_alpha = minimal.compat_alpha
-
 base_use = 500
 base_punch_int = minimal.hand_punch_int
 

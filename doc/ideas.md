@@ -1,6 +1,5 @@
 Changes to minetest:
 
-- improve cooking, bring some benefits to making soup (depending on amount of ingredients?)
 - Ceramic Watering Can
 - Ceramic tea Pot?
 - glass desalinitator (alembic),
@@ -28,6 +27,7 @@ Changes to minetest:
 - add mixing bucket to carpentry bench
 - make carpentry bench cheaper (one iron ingot and any log)
 - add sundial and disable the message of is the X day of the Season Y
+- improve cooking, bring some benefits to making soup (depending on amount of ingredients?)
 - make the composter able to produce worms and worms eggs but with a low chance
 - make the input of the container smaller and the output bigger
 - create the hummus item, and make it being produced my the composter
@@ -35,8 +35,18 @@ Changes to minetest:
 - add more behaivor driven traits
 - make meats and cooked food compostable
 - remove search bar in gui
+- add new diseases and possitive effects
 - cooking pot with oil converts unkooked food in its own cooked version
 - change composter to use wet loam and loam
+- Alchemy glass equipment (alembic, retort, mortar and pestle, crucible, flask, beaker, test tube, funnel, pipette, etc)
+- Alchemy bench
+- sulfur, salt, extract minerals from soil, extract oils from plants
+- alcohol destilation from fermented tang
+- add more plants
+- add vinegar and sugar
+- add alchemical medicines for each disease
+- add more metals?
+- make the food decay, and conservation methods
 
 done:
 
