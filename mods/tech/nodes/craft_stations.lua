@@ -1,117 +1,3 @@
-------------------------------------
---CRAFTING STATIONS
---work tables etc
------------------------------------
--------------------------------------------------
-
--- Internationalization
-local S = tech.S
-
-local c_alpha = minimal.compat_alpha
-
---Register
---some crafts are more convienently registered at the same time as the resource,
---hence why not all are here.
-crafting.register_type("crafting_spot")
-crafting.register_type("clay_shaping_spot")
---crafting.register_type("mixing_spot")...has to be done in nodes_nature
---crafting.register_type("threshing_spot")...has to be done in nodes_nature
-crafting.register_type("weaving_frame")
-crafting.register_type("grinding_stone")
-crafting.register_type("mortar_and_pestle")
---crafting.register_type("chopping_block")...has to be done in nodes_nature
---crafting.register_type("hammering_block")...has to be done in nodes_nature
-crafting.register_type("anvil")
-crafting.register_type("carpentry_bench")
---crafting.register_type("masonry_bench")...has to be done in nodes_nature
-crafting.register_type("brick_makers_bench")
-crafting.register_type("spinning_wheel")
-crafting.register_type("loom")
-crafting.register_type("glass_furnace")
-
-
--- location limit craft spots --------------------
--- grouplist/banlistg {{group1, group_number}, {'stone', 1}}
--- nodelist/banlistn {node_name, 'nodes_nature:sandstone'}
--- msg string "stone or sandstone"
-local function on_place_loclim_spot(itemstack, placer, pointed_thing, grouplist, nodelist, msg, banlistg, banlistn)
-   local ground = minetest.get_node(pointed_thing.under)
-
-   --check lists to see if it's a valid substrate
-   local valid = false
-   local vcheck = false
-
-   if grouplist and #grouplist >= 1 then
-     vcheck = true
-     for i in ipairs(grouplist) do
-       local group = grouplist[i][1]
-       local num = grouplist[i][2]
-       if minetest.get_item_group(ground.name,group) == num then
-         valid = true
-         break
-       end
-     end
-   end
-
-   if nodelist and #nodelist >= 1 then
-     vcheck = true
-     local gname = ground.name
-     for i in ipairs(nodelist) do
-        local name = nodelist[i]
-      if gname == name then
-        valid = true
-        break
-      end
-    end
-  end
-
-  local banned
-  if banlistg and #banlistg >= 1 then
-    for i in ipairs(banlistg) do
-     local group = banlistg[i][1]
-     local num = banlistg[i][2]
-     if minetest.get_item_group(ground.name,group) == num then
-       banned = true
-       break
-     end
-   end
-  end
-
-  if banlistn and #banlistn >= 1 then
-    local gname = ground.name
-    for i in ipairs(banlistn) do
-     local name = banlistn[i]
-     if gname == name then
-       banned = true
-       break
-     end
-   end
- end
-
-
-  --block invalid
-  if banned == true
-  --or above.name ~= "air"
-  or (vcheck == true and valid == false) then
-
-    minetest.chat_send_player(placer:get_player_name(),
-    "Cannot place here! Needs: "..msg..".")
-
-    local udef = minetest.registered_nodes[ground.name]
-    if udef and udef.on_rightclick and
-    not (placer and placer:is_player() and placer:get_player_control().sneak) then
-      return udef.on_rightclick(pointed_thing.under, ground,
-      placer, itemstack, pointed_thing) or itemstack
-    else
-      return itemstack
-    end
-  end
-
-  return minetest.item_place_node(itemstack,placer,pointed_thing)
-end
-
-
-
 ---- Stations -------------------
 --Entry level --equivalent to sitting down to make stuff
 --crafting spot--basic crafts
@@ -306,7 +192,34 @@ minetest.register_node("tech:hammering_spot",{
   end
   })
 
-
+-- Clay shaping spot, for making clay items
+minetest.register_node("tech:clay_shaping_spot", {
+  description   = S("Clay Shaping Spot"),
+  tiles         = {"tech_station_clay_shaping_spot.png"},
+  drawtype      = "nodebox",
+  node_box      = {
+    type  = "fixed",
+    fixed = {-0.5, -0.5, -0.5, 0.5, -0.45, 0.5},
+    },
+  selection_box = {
+    type  = "fixed",
+    fixed = {-0.5, -0.5, -0.5, 0.5, -0.25, 0.5},
+    },
+  stack_max     = 1,
+  paramtype     = "light",
+  use_texture_alpha = c_alpha.clip,
+  walkable      = false,
+  buildable_to  = true,
+  floodable     = true,
+  groups        = {dig_immediate=3, falling_node = 1, temp_pass = 1,
+       nobones = 1},
+  sounds        = nodes_nature.node_sound_wood_defaults(),
+  sunlight_propagates = true,
+  on_rightclick = crafting.make_on_rightclick("clay_shaping_spot", 2, { x = 8, y = 3 }),
+  on_punch      = function(pos, node, player)
+    minetest.remove_node(pos)
+    end
+})
 ------------------------------
 --Tool based
 --chopping_block --crude wood crafts,
@@ -599,156 +512,6 @@ minetest.register_node("tech:glass_furnace", {
   sounds        = nodes_nature.node_sound_wood_defaults(),
   on_rightclick = crafting.make_on_rightclick("glass_furnace", 2, { x = 8, y = 3 }),
   })
-
----------------------------------------
---Recipes
----- Hand crafts (inv) ----
-crafting.register_recipe({ ----craft crafting spot for free
-  type   = "inv",
-  output = "tech:crafting_spot",
-  items  = {},
-  level  = 1,
-  always_known = true,
-  })
-crafting.register_recipe({ ----craft mixing spot for free
-  type   = "inv",
-  output = "tech:mixing_spot",
-  items  = {},
-  level  = 1,
-  always_known = true,
-  })
-crafting.register_recipe({ ----craft threshing spot for free
-  type   = "inv",
-  output = "tech:threshing_spot",
-  items  = {},
-  level  = 1,
-  always_known = true,
-  })
-crafting.register_recipe({ --weaving_frame for free (location limited)
-  type   = "inv",
-  output = "tech:weaving_spot",
-  items  = {},
-  level  = 1,
-  always_known = true,
-  })
-crafting.register_recipe({ ----grinding_stone for free (location limited)
-  type   = "inv",
-  output = "tech:grinding_spot",
-  items  = {},
-  level  = 1,
-  always_known = true,
-  })
-crafting.register_recipe({ --hammering block for free (location limited)
-  type   = "inv",
-  output = "tech:hammering_spot",
-  items  = {},
-  level  = 1,
-  always_known = true,
-  })
----- Boulders ----
---grind a mortar_and_pestle
-crafting.register_recipe({
-  type   = "grinding_stone",
-  output = "tech:mortar_pestle_basalt",
-  items  = {'nodes_nature:basalt_boulder', "group:basalt_cobble", 'nodes_nature:sand'},
-  level  = 1,
-  always_known = true,
-  })
-crafting.register_recipe({
-  type   = "grinding_stone",
-  output = "tech:mortar_pestle_granite",
-  items  = {'nodes_nature:granite_boulder', "group:granite_cobble", 'nodes_nature:sand'},
-  level  = 1,
-  always_known = true,
-  })
-crafting.register_recipe({
-  type   = "grinding_stone",
-  output = "tech:mortar_pestle_limestone",
-  items  = {'nodes_nature:limestone_boulder', "group:limestone_cobble", 'nodes_nature:sand'},
-  level  = 1,
-  always_known = true,
-  })
-----Wood--
-crafting.register_recipe({ --chopping_block
-  type   = "crafting_spot",
-  output = "tech:chopping_block",
-  items  = {'group:log'},
-  level  = 1,
-  always_known = true,
-  })
-crafting.register_recipe({
-  type   = "chopping_block",
-  output = "tech:chopping_block",
-  items  = {'group:log'},
-  level  = 1,
-  always_known = true,
-  })
-crafting.register_recipe({ --brick_makers_bench
-  type   = "crafting_spot",
-  output = "tech:brick_makers_bench",
-  items  = {'tech:stick 24'},
-  level  = 1,
-  always_known = true,
-  })
----- Iron ----
-crafting.register_recipe({ --hammer ingots into anvil
-  type   = "hammering_block",
-  output = "tech:anvil",
-  items  = {'tech:iron_ingot 4'},
-  level  = 1,
-  always_known = true,
-  })
-crafting.register_recipe({
-  type   = "anvil",
-  output = "tech:anvil",
-  items  = {'tech:iron_ingot 4'},
-  level  = 1,
-  always_known = true,
-  })
-crafting.register_recipe({ --carpentary from logs for bench and iron for tools
-  type   = "chopping_block",
-  output = "tech:carpentry_bench",
-  items  = {'tech:iron_ingot 4', 'nodes_nature:maraka_log 2'},
-  level  = 1,
-  always_known = true,
-  })
-crafting.register_recipe({
-  type   = "carpentry_bench",
-  output = "tech:carpentry_bench",
-  items  = {'tech:iron_ingot 4', 'nodes_nature:maraka_log 2'},
-  level  = 1,
-  always_known = true,
-  })
-crafting.register_recipe({ --masonry_bench from logs for bench and iron for tools
-  type   = "carpentry_bench",
-  output = "tech:masonry_bench",
-  items  = {'tech:iron_ingot 4', 'nodes_nature:maraka_log 2'},
-  level  = 1,
-  always_known = true,
-  })
-crafting.register_recipe({ --spinning wheel. wood,
-  type   = "carpentry_bench",
-  output = "tech:spinning_wheel",
-  items  = {'nodes_nature:maraka_log 2'},
-  level  = 1,
-  always_known = true,
-  })
-crafting.register_recipe({ --loom. wood, fibre for mechanisms
-  type   = "carpentry_bench",
-  output = "tech:loom",
-  items  = {'nodes_nature:maraka_log 2', 'tech:coarse_fibre 12'},
-  level  = 1,
-  always_known = true,
-  })
-crafting.register_recipe({ -- Glass furnace from bricks for the main structure and iron for the tools
-  type   = "brick_makers_bench",
-  output = "tech:glass_furnace",
-  items  = {'tech:iron_ingot', 'tech:loose_brick 3', 'tech:lime_mortar'},
-  level  = 1,
-  always_known = true,
-})
-
-
 minetest.register_node("tech:weaving_frame",{
         description   = S("Weaving Frame"),
         drawtype      = "nodebox",
@@ -849,62 +612,3 @@ minetest.register_node("tech:weaving_frame",{
         sounds        = nodes_nature.node_sound_wood_defaults(),
         on_rightclick = crafting.make_on_rightclick("hammering_block", 2, { x = 8, y = 3 }),
    })
--- new work stations
--- Clay shaping spot, for making clay items
-minetest.register_node("tech:clay_shaping_spot", {
-  description   = S("Clay Shaping Spot"),
-  tiles         = {"tech_station_clay_shaping_spot.png"},
-  drawtype      = "nodebox",
-  node_box      = {
-    type  = "fixed",
-    fixed = {-0.5, -0.5, -0.5, 0.5, -0.45, 0.5},
-    },
-  selection_box = {
-    type  = "fixed",
-    fixed = {-0.5, -0.5, -0.5, 0.5, -0.25, 0.5},
-    },
-  stack_max     = 1,
-  paramtype     = "light",
-  use_texture_alpha = c_alpha.clip,
-  walkable      = false,
-  buildable_to  = true,
-  floodable     = true,
-  groups        = {dig_immediate=3, falling_node = 1, temp_pass = 1,
-       nobones = 1},
-  sounds        = nodes_nature.node_sound_wood_defaults(),
-  sunlight_propagates = true,
-  on_rightclick = crafting.make_on_rightclick("clay_shaping_spot", 2, { x = 8, y = 3 }),
-  on_punch      = function(pos, node, player)
-    minetest.remove_node(pos)
-    end
-})
-crafting.register_recipe({ ----craft clay shaping spot for free
-  type   = "inv",
-  output = "tech:clay_shaping_spot",
-  items  = {},
-  level  = 1,
-  always_known = true,
-  })
-
---grinding_stone from craft spot
-crafting.register_recipe({
-  type   = "grinding_stone",
-  output = "tech:grinding_stone",
-  items  = {'nodes_nature:granite_boulder', 'nodes_nature:sand 8'},
-  level  = 1,
-  always_known = true,
-})
-crafting.register_recipe({ --weaving_frame
-  type   = "carpentry_bench",
-  output = "tech:weaving_frame",
-  items  = {'tech:stick 12', 'group:fibrous_plant 8'},
-  level  = 1,
-  always_known = true,
-})
-crafting.register_recipe({ --hammering block
-  type   = "chopping_block",
-  output = "tech:hammering_block",
-  items  = {'group:log'},
-  level  = 1,
-  always_known = true,
-})

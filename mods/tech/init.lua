@@ -16,11 +16,26 @@ c_alpha = minimal.compat_alpha
 
 local modpath = minetest.get_modpath('tech')
 
+--Register
+--some crafts are more convienently registered at the same time as the resource,
+--hence why not all are here.
+crafting.register_type("crafting_spot")
+crafting.register_type("clay_shaping_spot")
+crafting.register_type("weaving_frame")
+crafting.register_type("grinding_stone")
+crafting.register_type("mortar_and_pestle")
+crafting.register_type("anvil")
+crafting.register_type("carpentry_bench")
+crafting.register_type("brick_makers_bench")
+crafting.register_type("spinning_wheel")
+crafting.register_type("loom")
+crafting.register_type("glass_furnace")
+
 dofile(modpath .. "/lightsource_api.lua")
-dofile(modpath..'/craft_stations.lua')
+--dofile(modpath..'/craft_stations.lua')
 -------------------------------
 dofile(minetest.get_modpath("zero_loader").."/init.lua")
-zero_load('tech',{"common", "nodes", "crafts", "items"})
+zero_load('tech',{"common", "nodes", "crafts", "items", "crafts"})
 -------------------------------
 dofile(modpath..'/drugs.lua')
 dofile(modpath..'/storage.lua')
