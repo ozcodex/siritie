@@ -16,15 +16,13 @@ c_alpha = minimal.compat_alpha
 
 local modpath = minetest.get_modpath('tech')
 
-dofile(modpath .. "/lightsource_api.lua")
---dofile(modpath..'/craft_stations.lua')
 -------------------------------
 dofile(minetest.get_modpath("zero_loader").."/init.lua")
 zero_load('tech',{"common", "nodes", "items", "crafts"})
 -------------------------------
-dofile(modpath..'/drugs.lua')
-dofile(modpath..'/storage.lua')
-dofile(modpath..'/earthen_building.lua')
+dofile(modpath ..'/drugs.lua')
+dofile(modpath ..'/storage.lua')
+dofile(modpath ..'/earthen_building.lua')
 dofile(modpath .. "/beds.lua")
 dofile(modpath .. "/doors.lua")
 dofile(modpath .. "/torch.lua")

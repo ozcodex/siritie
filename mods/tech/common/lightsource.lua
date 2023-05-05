@@ -1,10 +1,3 @@
-----------------------------------------
--- Lightsource API
--- allows creating light sources using fuel, e.g. oil lamps, lanterns, etc.
-----------------------------------------
-
--- Internationalization
-local S = tech.S
 
 lightsource_description = {}
 
