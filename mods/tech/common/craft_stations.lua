@@ -2,7 +2,7 @@
 -- grouplist/banlistg {{group1, group_number}, {'stone', 1}}
 -- nodelist/banlistn {node_name, 'nodes_nature:sandstone'}
 -- msg string "stone or sandstone"
-local function on_place_loclim_spot(itemstack, placer, pointed_thing, grouplist, nodelist, msg, banlistg, banlistn)
+function on_place_loclim_spot(itemstack, placer, pointed_thing, grouplist, nodelist, msg, banlistg, banlistn)
    local ground = minetest.get_node(pointed_thing.under)
 
    --check lists to see if it's a valid substrate

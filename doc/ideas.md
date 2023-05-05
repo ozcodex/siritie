@@ -47,6 +47,8 @@ Changes to minetest:
 - add alchemical medicines for each disease
 - add more metals?
 - make the food decay, and conservation methods
+- take out craft stations from nodes_natures
+- restore the agricultural soil recipes
 
 done:
 
