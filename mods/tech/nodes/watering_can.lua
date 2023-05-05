@@ -35,6 +35,8 @@ minetest.register_node("tech:clay_watering_can", {
 		}
 	},
 	liquids_pointable = true,
+	groups = {dig_immediate = 3, pottery = 1, temp_pass = 1},
+	sounds = nodes_nature.node_sound_stone_defaults(),
 	on_use = function(itemstack, user, pointed_thing)
 		return liquid_store.on_use_empty_bucket(itemstack, user, pointed_thing)
 	end,
@@ -45,8 +47,6 @@ minetest.register_node("tech:clay_watering_can", {
 	on_timer =function(pos, elapsed)
 		return water_pot(pos, "tech:clay_watering_can", elapsed)
 	end,
-	groups = {dig_immediate = 3, pottery = 1, temp_pass = 1},
-	sounds = nodes_nature.node_sound_stone_defaults(),
 
 })
 
