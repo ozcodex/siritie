@@ -5,8 +5,8 @@
 -----------------------------------------------
 
 --firing difficulty
-local base_firing = ncrafting.base_firing
-local firing_int = ncrafting.firing_int
+base_firing = ncrafting.base_firing
+firing_int = ncrafting.firing_int
 sediment = sediment
 lightsource = lightsource
 lightsource_description = lightsource_description
@@ -135,7 +135,6 @@ liquid_store.register_stored_liquid(
 	},
 	S("Clay Water Pot with Freshwater"),
 	{dig_immediate = 2})
-
 
 --make freshwater Pot drinkable on click
 minetest.override_item("tech:clay_water_pot_freshwater",{

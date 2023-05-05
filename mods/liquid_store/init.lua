@@ -151,44 +151,7 @@ function liquid_store.on_use_empty_bucket(itemstack, user, pointed_thing)
 
 end
 
-
-
-
--- Register a new stored liquid...
---    source = name of the source node
---    nodename = name of the new bucket  (or nil if liquid is not takeable)
---    nodename_empty = name of the empty bucket
---    tiles  = textures of the new bucket
---    desc = text description of the bucket item
---    groups = (optional) groups of the bucket item, for example {water_bucket = 1}
---    force_renew = (optional) bool. Force the liquid source to renew if it has a
---                  source neighbour, even if defined as 'liquid_renewable = false'.
---                  Needed to avoid creating holes in sloping rivers.
--- This function can be called from any mod (that depends on liquid_store).
--- Also need to register the liquid itself seperately
-
-function liquid_store.register_stored_liquid(source, nodename, nodename_empty, tiles, node_box, desc, groups)
-
-	liquid_store.stored_liquids[nodename] = {
-		nodename = nodename,
-		source = source,
-		nodename_empty = nodename_empty
-	}
-
-
-	if nodename ~= nil then
-		minetest.register_node(nodename, {
-			description = desc,
-			tiles = tiles,
-			drawtype = "nodebox",
-			node_box = node_box,
-			paramtype = "light",
-			stack_max = 1,
-			liquids_pointable = true,
-			groups = groups,
-			sounds = nodes_nature.node_sound_defaults(),
-
-			on_use = function(itemstack, user, pointed_thing)
+function liquid_store.on_use_filled_bucket(source,nodename_empty,itemstack, user, pointed_thing)
 				-- Must be pointing to node
 				if pointed_thing.type ~= "node" then
 					return
@@ -238,6 +201,45 @@ function liquid_store.register_stored_liquid(source, nodename, nodename_empty, t
 
 				minetest.set_node(lpos, {name = source})
 				return handle_stacks(user, itemstack, nodename_empty)
+			end
+
+
+-- Register a new stored liquid...
+--    source = name of the source node
+--    nodename = name of the new bucket  (or nil if liquid is not takeable)
+--    nodename_empty = name of the empty bucket
+--    tiles  = textures of the new bucket
+--    desc = text description of the bucket item
+--    groups = (optional) groups of the bucket item, for example {water_bucket = 1}
+--    force_renew = (optional) bool. Force the liquid source to renew if it has a
+--                  source neighbour, even if defined as 'liquid_renewable = false'.
+--                  Needed to avoid creating holes in sloping rivers.
+-- This function can be called from any mod (that depends on liquid_store).
+-- Also need to register the liquid itself seperately
+
+function liquid_store.register_stored_liquid(source, nodename, nodename_empty, tiles, node_box, desc, groups)
+
+	liquid_store.stored_liquids[nodename] = {
+		nodename = nodename,
+		source = source,
+		nodename_empty = nodename_empty
+	}
+
+
+	if nodename ~= nil then
+		minetest.register_node(nodename, {
+			description = desc,
+			tiles = tiles,
+			drawtype = "nodebox",
+			node_box = node_box,
+			paramtype = "light",
+			stack_max = 1,
+			liquids_pointable = true,
+			groups = groups,
+			sounds = nodes_nature.node_sound_defaults(),
+
+			on_use = function(...)
+				liquid_store.on_use_filled_bucket(source,nodename_empty,...)
 			end,
 		})
 
