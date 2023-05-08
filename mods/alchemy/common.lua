@@ -1,32 +1,68 @@
--- alembic only accepts salt water
-liquid_store.register_stored_liquid(
-	"nodes_nature:salt_water_source",
-	"alchemy:clay_alembic_salt_water",
-	"alchemy:clay_alembic",
-	{
-		"alchemy_alembic_water.png",
-		"tech_pottery.png",
-		"tech_pottery.png",
-		"tech_pottery.png",
-		"tech_pottery.png",
-		"tech_pottery.png"
-	},
-	{
-		type = "fixed",
-		fixed = {
-		    -- bottom pot
-		    {-0.25, -0.125, -0.25, 0.25, 0, 0.25}, -- NodeBox1
-		    {-0.375, -0.25, -0.375, 0.375, -0.125, 0.375}, -- NodeBox2
-		    {-0.3125, -0.375, -0.3125, 0.3125, -0.25, 0.3125}, -- NodeBox3
-		    {-0.25, -0.5, -0.25, 0.25, -0.375, 0.25}, -- NodeBox4
+function alembic_process(pos, elapsed)
+	-- get block under alembic
+	local below_pos = {x = pos.x, y = pos.y - 1, z = pos.z}
+	local below_node = minetest.get_node(below_pos)
+	local below_name = below_node.name
+	-- get current temperature of the below block
+	local temp = climate.get_point_temp(below_pos)
 
-			-- Top pot
+	-- only continue if the block below is a clay water pot with water
+	if not (below_name == "tech:clay_water_pot_salt_water" or below_name == "tech:clay_water_pot_freshwater") then
+		-- stop the execution and try again later
+		return true
+	end
 
-			{-0.375, 0, -0.375, 0.375, 0.125, 0.375}, -- NodeBox2
-			{-0.3125, 0.125, -0.3125, 0.3125, 0.25, 0.3125}, -- NodeBox3
-			{-0.125, 0.25, -0.125, 0.125, 0.375, 0.125}, -- NodeBox4
-			{-0.1875, 0.375, -0.1875, 0.1875, 0.4375, 0.1875}, -- NodeBox5
-		},
-	},
-	S("Ceramic alembic with Salt Water"),
-	{dig_immediate = 2})
+	-- determine time based on temperature
+	local time
+	if temp > 70 then
+		time = 30 -- seconds
+	elseif temp > 50 then
+		time = 60 -- seconds
+	else
+		time = 120 -- seconds
+	end
+
+	-- decrease time elapsed
+	local meta = minetest.get_meta(pos)
+	local remaining = meta:get_float("remaining") or time
+	remaining = remaining - elapsed
+
+	-- if time elapsed, replace below block
+	if remaining <= 0 then
+		if below_name == "tech:clay_water_pot_salt_water" then
+			minetest.swap_node(below_pos, {name = "tech:clay_water_pot_freshwater"})
+			local inv = meta:get_inventory()
+			inv:add_item("main", "alchemy:salt 1")
+			update_alembic_infotext(pos)
+		elseif below_name == "tech:clay_water_pot_freshwater" then
+			minetest.swap_node(below_pos, {name = "tech:clay_water_pot"})
+		end
+		meta:set_float("remaining", time)
+	else
+		meta:set_float("remaining", remaining)
+	end
+
+	-- keep the timer running
+	return true
+end
+
+function update_alembic_infotext(pos)
+	local meta = minetest.get_meta(pos)
+	local inv = meta:get_inventory()
+	local infotext = "Contents: "
+	
+	if inv:is_empty("main") then
+		infotext = infotext.."empty"
+	else
+		--loop through each slot in the alembic inventory
+		for i = 1, inv:get_size("main") do
+			local stack = inv:get_stack("main", i)
+			if not stack:is_empty() then
+				infotext = infotext..stack:get_count().." "..minetest.registered_items[stack:get_name()].description..". "
+			end
+		end
+	end
+	minimal.infotext_set(pos,meta,infotext)
+end
+
+
