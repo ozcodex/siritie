@@ -3,14 +3,7 @@
 minetest.register_node("alchemy:alembic", {
 	description = "Ceramic alembic",
 	drawtype = "nodebox",
-	tiles = {
-		"alchemy_alembic_empty.png",
-		"tech_pottery.png",
-		"tech_pottery.png",
-		"tech_pottery.png",
-		"tech_pottery.png",
-		"tech_pottery.png"
-	},
+	tiles = {"tech_pottery.png"},
 	node_box = {
 		type = "fixed",
 		fixed = {
@@ -18,11 +11,16 @@ minetest.register_node("alchemy:alembic", {
 		    {-0.25, -0.125, -0.25, 0.25, 0, 0.25}, 
 		    {-0.375, -0.25, -0.375, 0.375, -0.125, 0.375}, 
 		    {-0.3125, -0.375, -0.3125, 0.3125, -0.25, 0.3125},
-		    {-0.25, -0.5, -0.25, 0.25, -0.375, 0.25}, -- base
+		    {-0.25, -0.5, -0.25, 0.25, -0.375, 0.25},
 			-- Top pot
 			{-0.375, 0, -0.375, 0.375, 0.125, 0.375},
 			{-0.3125, 0.125, -0.3125, 0.3125, 0.25, 0.3125},
 			{-0.1875, 0.25, -0.1875, 0.1875, 0.325, 0.1875}, 
+			{-0.0625, 0.325, -0.0625, 0.0625, 0.4, 0.0625},
+			-- Tube
+			{-0.025, 0.45, -0.5, 0.025, 0.4, 0},
+			{-0.025, -0.2, -0.5, 0.025, 0.4, -0.45},
+			{-0.025, -0.25, -0.5, 0.025, -0.2, 0},
 		},
 	},
 	liquids_pointable = true,
