@@ -125,24 +125,6 @@ crafting.register_recipe({
 --chopping_block
 --
 
---Sticks from woody plants
-crafting.register_recipe({
-	type = "chopping_block",
-	output = "tech:stick 2",
-	items = {"group:woody_plant"},
-	level = 1,
-	always_known = true,
-})
-
---Bulk sticks from woody plants
-crafting.register_recipe({
-	type = "chopping_block",
-	output = "tech:stick 24",
-	items = {"group:woody_plant 12"},
-	level = 1,
-	always_known = true,
-})
-
 --sticks from tree
 crafting.register_recipe({
 	type = "chopping_block",

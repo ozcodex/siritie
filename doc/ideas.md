@@ -9,13 +9,7 @@ new ideas:
 - give more damage to the stone knife
 - add sundial and disable the message of is the X day of the Season Y
 - fix creafting recipes:
-	- remove choping block from choping block
-	- change hammerig block recipe, make it require firing sticks
-	- remove the crafting of sticks from woodplants, from the choping block
-	- remove bulk recipes from choping block
 	- delete briks maker bench from crafting spot, and add to chopping block?
-	- remove dugout canoe from choping block and add to carpentry bench
-	- remove woodfire from sticks from choping block
 	- add basalt and limestone grinding stones, make the grinding stones from cobbles and not boulders
 	- move the basic bricks to the clay working spot (rammed earth and mudbrick)
 	- add mixing bucket to carpentry bench
@@ -70,3 +64,9 @@ already done:
 - Ceramic Watering Can
 - Alembic to extract salt from water
 - make the composter able to produce worms
+- remove choping block from choping block
+- remove the crafting of sticks from woodplants, from the choping block
+- remove bulk recipes from choping block
+- change hammerig block recipe, make it require firing sticks
+- remove woodfire from sticks from choping block
+- remove dugout canoe from choping block and add to carpentry bench

@@ -75,13 +75,6 @@ crafting.register_recipe({ --chopping_block
   level  = 1,
   always_known = true,
   })
-crafting.register_recipe({
-  type   = "chopping_block",
-  output = "tech:chopping_block",
-  items  = {'group:log'},
-  level  = 1,
-  always_known = true,
-  })
 crafting.register_recipe({ --brick_makers_bench
   type   = "crafting_spot",
   output = "tech:brick_makers_bench",
@@ -173,7 +166,7 @@ crafting.register_recipe({ --weaving_frame
 crafting.register_recipe({ --hammering block
   type   = "chopping_block",
   output = "tech:hammering_block",
-  items  = {'group:log'},
+  items  = {'group:log', 'inferno:fire_sticks'},
   level  = 1,
   always_known = true,
 })
