@@ -369,3 +369,11 @@ crafting.register_recipe({
 	level = 1,
 	always_known = true,
 })
+
+crafting.register_recipe({
+	type = "clay_shaping_spot",
+	output = "nodes_nature:clay 4",
+	items = {"tech:cooking_pot_unfired 1"},
+	level = 1,
+	always_known = true,
+})
