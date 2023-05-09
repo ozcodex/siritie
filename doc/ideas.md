@@ -1,54 +1,60 @@
-Changes to minetest:
+new ideas:
 
 - add charcoal powder to mortar and pestle
-- remove choping block from choping block
 - create black painting with charcoal powder
 - roasted iron powder to red painting
-- change hammerig block recipe, make it require firing sticks
 - Turn bones into bonemeal on the grinding stone
-- give more damage to the stone knife
-- add workbench as improved version of the crafting spot
-- add Pottery Bench as improved version of the clay shaping spot
-- Mixing bucket crafted in the chopping block as improved version of the mixing spot
-- threshing sledge as improved seed extractor.
-- ceramic idol, improved praying station (better chances)
-- delete briks maker bench from crafting spot, and add to chopping block
-- remove chopping block form choping block
-- remove sticks from woodplants form choping block
-- remove dugout canoe from choping block and add to carpentry bench
-- remove woodfire from sticks from choping block
-- change hammering block name to hammering log and retexture
-- add basalt and limestone grinding stones, make the grinding stones from cobbles and not boulders
-- move the basic bricks to the clay working spot (rammed earth and mudbrick)
-- pottery wheel from Limestone block and sticks 
-- add mixing bucket to carpentry bench
-- make carpentry bench cheaper (one iron ingot and any log)
-- add sundial and disable the message of is the X day of the Season Y
-- improve cooking, bring some benefits to making soup (depending on amount of ingredients?)
-- make the composter able to produce worms and worms eggs but with a low chance
-- make the input of the container smaller and the output bigger
-- create the hummus item, and make it being produced my the composter
-- add more blessings and curses with effects to the health
-- add more behaivor driven traits
+- add bonemeal as product of the composter
 - make meats and cooked food compostable
-- remove search bar in gui
+- give more damage to the stone knife
+- add sundial and disable the message of is the X day of the Season Y
+- fix creafting recipes:
+	- remove choping block from choping block
+	- change hammerig block recipe, make it require firing sticks
+	- remove the crafting of sticks from woodplants, from the choping block
+	- remove bulk recipes from choping block
+	- delete briks maker bench from crafting spot, and add to chopping block?
+	- remove dugout canoe from choping block and add to carpentry bench
+	- remove woodfire from sticks from choping block
+	- add basalt and limestone grinding stones, make the grinding stones from cobbles and not boulders
+	- move the basic bricks to the clay working spot (rammed earth and mudbrick)
+	- add mixing bucket to carpentry bench
+	- pottery wheel from Limestone block and sticks 
+	- make carpentry bench cheaper (one iron ingot and any log)
+	- change composter recipe to use wet loam and loam
+- improve working spaces:
+	- add workbench as improved version of the crafting spot
+	- add Pottery Bench as improved version of the clay shaping spot
+	- Mixing bucket crafted in the chopping block as improved version of the mixing spot
+	- threshing sledge as improved seed extractor.
+	- ceramic idol, improved praying station (better chances)
+	- change hammering block name to hammering log and retexture
+	- add pottery wheel as improved version of the clay shaping spot
+- improve cooking, bring some benefits to making soup (depending on amount of ingredients?)
+- add salt as cooking ingredient
+- make the composter able to produce worms eggs but with a low chance
+- add more blessings and curses with effects to the health
 - add new diseases and possitive effects
-- cooking pot with oil converts unkooked food in its own cooked version
-- change composter to use wet loam and loam
-- Alchemy glass equipment (alembic, retort, mortar and pestle, crucible, flask, beaker, test tube, funnel, pipette, etc)
-- Alchemy bench
+- make the cooking pot with oil convert unkooked food in its own cooked version
+- add Alchemy glass equipment (alembic, retort, mortar and pestle, crucible, flask, beaker, test tube, funnel, pipette, etc)
+- add Alchemy bench
 - sulfur, salt, extract minerals from soil, extract oils from plants
-- alcohol destilation from fermented tang
-- add more plants
-- add vinegar and sugar
+- add alcohol destilation from fermented tang
+- add vinegar and sugar from plants
+- add more plants ?
 - add alchemical medicines for each disease
-- add more metals?
 - make the food decay, and conservation methods
 - take out craft stations from nodes_natures
-- restore the agricultural soil recipes
+- add more behaivor driven traits
+- remove search bar in gui
+- add more metals?
 - Ceramic tea Pot?
+- add a Drying Rack to dry meats
+- add a refrigerator that runs on snow
+- use salt, sugar and vinegar to preserve food
 
-done:
+
+already done:
 
 - bring back the weaving frame and the chopping block
 - apply and improve the idol worshipping, now with blessings and curses
@@ -63,3 +69,4 @@ done:
 - enable back drinking cooking oil
 - Ceramic Watering Can
 - Alembic to extract salt from water
+- make the composter able to produce worms
