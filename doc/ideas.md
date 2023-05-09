@@ -1,6 +1,5 @@
 Changes to minetest:
 
-- ceramimc alembic (alembic)
 - add charcoal powder to mortar and pestle
 - remove choping block from choping block
 - create black painting with charcoal powder
