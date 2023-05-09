@@ -105,6 +105,23 @@ minetest.register_node("composter:composter_bin", {
         meta:set_int("compost", compost)
         meta:set_string("infotext", "Composter ("..compost.."% full)")
         meta:set_string("formspec", get_composter_formspec(compost))
-    end
+    end,
 
+    on_destruct = function(pos)
+        -- drops its contents when broken
+        local meta = minetest.get_meta(pos)
+        local inv = meta:get_inventory()
+        if inv then
+            for _, item in ipairs(inv:get_list("main")) do
+                if not item:is_empty() then
+                    minetest.add_item(pos, item)
+                end
+            end
+            for _, item in ipairs(inv:get_list("output")) do
+                if not item:is_empty() then
+                    minetest.add_item(pos, item)
+                end
+            end
+        end
+    end,
 })
