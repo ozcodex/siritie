@@ -45,8 +45,8 @@ minetest.register_node("composter:composter_bin", {
         meta:set_string("infotext", "Composter (0% full)")
          meta:set_string("formspec", get_composter_formspec(0))
         local inv = meta:get_inventory()
-        inv:set_size('main', 6)
-        inv:set_size('output', 6)
+        inv:set_size('main', 4)
+        inv:set_size('output', 8)
         local timer = minetest.get_node_timer(pos)
         timer:start(seconds_to_compost)
     end,

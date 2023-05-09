@@ -4,7 +4,7 @@
 -- See README.txt for licensing and other information.
 
 dofile(minetest.get_modpath("zero_loader").."/init.lua")
-zero_load('composter',{"common", "nodes", "crafts"})
+zero_load('composter',{"common", "nodes", "items", "crafts"})
 
 -- seconds before the next composting validation
 seconds_to_compost = 60
@@ -17,12 +17,25 @@ generate_items = {
   {
     name = "nodes_nature:loam",
     chance = 10,
-    cost = 1,
+    cost = 4,
   },
   {
-    name = "tech:wood_ash_block",
-    chance = 20,
-    cost = 2,
+    name = "composter:humus",
+    chance = 10,
+    cost = 3,
+  },
+  -- vermicompost from the growth of worms in the compost
+  {
+    name = "composter:vermicompost",
+    chance = 5,
+    cost = 1,
+  },
+  -- since there are worms growing in the composter there are
+  -- a small chance of getting the carcass of one of them.
+  {
+    name = "animals:carcass_invert_small",
+    chance = 1,
+    cost = 0,
   },
 }
 

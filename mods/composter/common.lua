@@ -1,13 +1,13 @@
 function get_composter_formspec(compost)
     local formspec = "size[8,4.8]"..
         "label[0,0;Composter: "..compost.."%]"..
-        "list[current_name;main;0,0.5;3,2]"..
-        "list[current_name;output;5,0.5;3,2]"..
+        "list[current_name;main;0,0.5;2,2]"..
+        "list[current_name;output;4,0.5;4,2]"..
         "list[current_player;main;0,3;8,4;]"..
         "listring[current_name;main]"..
         "listring[current_name;output]"..
         "listring[current_player;main]"..
-        "image[3.5,1;1,1;composter_arrow.png;]"
+        "image[2.5,1;1,1;composter_arrow.png;]"
     return formspec
 end
 
