@@ -5,3 +5,11 @@ crafting.register_recipe({
 	level = 1,
 	always_known = true,
 })
+
+crafting.register_recipe({
+	type = "grinding_stone",
+	output = "composter:bonemeal",
+	items = {"bones:bones"},
+	level = 1,
+	always_known = true,
+})

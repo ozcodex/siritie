@@ -3,13 +3,10 @@ new ideas:
 - add charcoal powder to mortar and pestle
 - create black painting with charcoal powder
 - roasted iron powder to red painting
-- Turn bones into bonemeal on the grinding stone
-- add bonemeal as product of the composter
 - make meats and cooked food compostable
 - give more damage to the stone knife
 - add sundial and disable the message of is the X day of the Season Y
 - fix creafting recipes:
-	- delete briks maker bench from crafting spot, and add to chopping block?
 	- add basalt and limestone grinding stones, make the grinding stones from cobbles and not boulders
 	- move the basic bricks to the clay working spot (rammed earth and mudbrick)
 	- add mixing bucket to carpentry bench
@@ -70,3 +67,5 @@ already done:
 - change hammerig block recipe, make it require firing sticks
 - remove woodfire from sticks from choping block
 - remove dugout canoe from choping block and add to carpentry bench
+- Turn bones into bonemeal on the grinding stone
+- add bonemeal as product of the composter
