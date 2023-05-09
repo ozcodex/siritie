@@ -63,3 +63,4 @@ done:
 - remove hammers
 - enable back drinking cooking oil
 - Ceramic Watering Can
+- Alembic to extract salt from water

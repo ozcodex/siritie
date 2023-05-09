@@ -1,27 +1,29 @@
 -- creates the ceramic alembic node
 
+local alambic_nodebox = {
+    -- bottom pot
+    {-0.25, -0.125, -0.25, 0.25, 0, 0.25}, 
+    {-0.375, -0.25, -0.375, 0.375, -0.125, 0.375}, 
+    {-0.3125, -0.375, -0.3125, 0.3125, -0.25, 0.3125},
+    {-0.25, -0.5, -0.25, 0.25, -0.375, 0.25},
+	-- Top pot
+	{-0.375, 0, -0.375, 0.375, 0.125, 0.375},
+	{-0.3125, 0.125, -0.3125, 0.3125, 0.25, 0.3125},
+	{-0.1875, 0.25, -0.1875, 0.1875, 0.325, 0.1875}, 
+	{-0.0625, 0.325, -0.0625, 0.0625, 0.4, 0.0625},
+	-- Tube
+	{-0.05, 0.4, -0.475, 0.05, 0.475, 0.025},
+	{-0.05, -0.2, -0.475, 0.05, 0.4, -0.4},
+	{-0.05, -0.2, -0.475, 0.05, -0.1, 0},
+}
+
 minetest.register_node("alchemy:alembic", {
-	description = "Ceramic alembic",
+	description = "Ceramic Alembic",
 	drawtype = "nodebox",
 	tiles = {"tech_pottery.png"},
 	node_box = {
 		type = "fixed",
-		fixed = {
-		    -- bottom pot
-		    {-0.25, -0.125, -0.25, 0.25, 0, 0.25}, 
-		    {-0.375, -0.25, -0.375, 0.375, -0.125, 0.375}, 
-		    {-0.3125, -0.375, -0.3125, 0.3125, -0.25, 0.3125},
-		    {-0.25, -0.5, -0.25, 0.25, -0.375, 0.25},
-			-- Top pot
-			{-0.375, 0, -0.375, 0.375, 0.125, 0.375},
-			{-0.3125, 0.125, -0.3125, 0.3125, 0.25, 0.3125},
-			{-0.1875, 0.25, -0.1875, 0.1875, 0.325, 0.1875}, 
-			{-0.0625, 0.325, -0.0625, 0.0625, 0.4, 0.0625},
-			-- Tube
-			{-0.025, 0.45, -0.5, 0.025, 0.4, 0},
-			{-0.025, -0.2, -0.5, 0.025, 0.4, -0.45},
-			{-0.025, -0.25, -0.5, 0.025, -0.2, 0},
-		},
+		fixed = alambic_nodebox,
 	},
 	liquids_pointable = true,
 	groups = {cracky=3, oddly_breakable_by_hand=3},
@@ -80,4 +82,29 @@ minetest.register_node("alchemy:alembic", {
         end
     end,
 
+})
+
+--unfired
+minetest.register_node("alchemy:alembic_unfired", {
+	description = S("Ceramic Alembic (unfired)"),
+	tiles = {
+		"nodes_nature_clay.png"
+	},
+	drawtype = "nodebox",
+	stack_max = minimal.stack_max_bulky,
+	paramtype = "light",
+	node_box = {
+		type = "fixed",
+		fixed = alambic_nodebox,
+	},
+	groups = {dig_immediate=3, temp_pass = 1, heatable = 20},
+	sounds = nodes_nature.node_sound_stone_defaults(),
+	on_construct = function(pos)
+		--length(i.e. difficulty of firing), interval for checks (speed)
+		ncrafting.set_firing(pos, base_firing, firing_int)
+	end,
+	on_timer = function(pos, elapsed)
+		--finished product, length
+		return ncrafting.fire_pottery(pos, "alchemy:alembic_unfired", "alchemy:alembic", base_firing)
+	end,
 })
