@@ -1,3 +1,6 @@
+base_firing = ncrafting.base_firing
+firing_int = ncrafting.firing_int
+
 --clay watering can with fresh water
 liquid_store.register_stored_liquid(
 	"nodes_nature:freshwater_source",
