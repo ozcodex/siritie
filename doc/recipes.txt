@@ -179,6 +179,12 @@ dyers table:
 dye pot:
 - dyed woven clothes
 
+ceramic alembic:
+- salt
+
+cooking pot:
+- soup
+
 ---- Tier 3 ----
 
 carpentry bench:

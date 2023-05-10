@@ -43,7 +43,7 @@ new ideas:
 - sulfur, salt, extract minerals from soil, extract oils from plants
 - add alcohol destilation from fermented tang
 - add vinegar and sugar from plants
-- add more plants ?
+- add one more plant, that produces berries
 - add alchemical medicines for each disease
 - make the food decay, and conservation methods
 - take out craft stations from nodes_natures
