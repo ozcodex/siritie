@@ -6,6 +6,7 @@ minetest.register_craftitem("composter:humus", {
     tool_capabilities = {
         groupcaps = {
             agricultural_soil = {},
+            sediment = {}
         },
     },
 })
@@ -18,6 +19,7 @@ minetest.register_craftitem("composter:vermicompost", {
     tool_capabilities = {
         groupcaps = {
             agricultural_soil = {},
+            sediment = {}
         },
     },
 })
@@ -30,6 +32,7 @@ minetest.register_craftitem("composter:bonemeal", {
     tool_capabilities = {
         groupcaps = {
             agricultural_soil = {},
+            sediment = {}
         },
     },
 })

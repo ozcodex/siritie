@@ -1,0 +1,225 @@
+---- Tier 0 ----
+
+barehand:
+- crafting spot
+- mixing spot
+- threshing spot
+- weaving spot
+- grinding spot
+- hammering spot
+- clay shaping spot
+- sleeping spot
+
+---- Tier 1 ----
+
+crafting spot:
+- lever
+- stick
+- stone knife
+- peeled anperla tuber
+- digging stick
+- small wood fire
+- large wood fire
+- chopping block
+- bricks maker bench
+- drystack
+- wattle
+- loose wattle
+- wattle door
+- wattle door frame
+- wattle trap door
+- torch
+- dye pot
+- dyers table
+- effigy
+- composter bin
+- fire sticks
+
+mixing spot:
+- loam
+- wet loam
+- agricultural soil
+- dirt stairs and slabs
+- rock bricks
+- snow compacting
+- charcoal split and stack
+- wood fire split and stack
+- wattle dismantling
+- roof tiles shapes
+
+threshing spot:
+- seed extraction
+
+weaving spot:
+- woven bag
+- wicker bag
+- woven basket
+- wicker basket
+- tatch
+- tatch stairs
+- tatch slabs
+- sleeping mat
+- primitive bed
+- woven hat
+- woven poncho
+- woven cape
+- woven leggins
+- woven blanket
+- rope ladder
+
+grinding spot:
+- granite adze
+- jade adze
+- basalt adze
+- stone club
+- basalt mortar and pestle
+- granite mortar and pestle
+- limestone mortar and pestle
+- grinding stone
+- bonemeal
+
+hammering spot:
+- limestone block
+- ironstone block
+- granite block
+- basalt block
+- gneiss block
+- jade block
+- limestone cobble
+- ironstone cobble
+- granite cobble
+- basalt cobble
+- gneiss cobble
+- jade cobble
+- anvil
+- crushed iron ore
+- roasted iron powder
+- iron smelting mix
+- iron ingot
+- green glass mix
+- clear glass mix
+- crushed lime
+
+clay shaping spot:
+- ceramic alembic making and dismantling
+- clay watering can making and dismantling
+- water pot making and dismantling
+- storage pot making and dismantling
+- oil lamp making and dismantling
+- cooking pot making and dismantling
+- Pottery breaking
+
+---- Tier 2 ----
+
+chopping block:
+- logs stairs and slabs
+- sticks from logs
+- sticks from log slabs
+- wood fire from logs
+- carpentry bench
+- hammering block
+- primitive wooden chest
+- wooden water pot
+
+anvil:
+- Iron Axe
+- Iron Shovel
+- Iron Mace
+- Iron Pickaxe
+- Iron door
+- Iron Trapdoor
+- iron ingot
+- iron fittings
+- iron chest
+- nails
+- pane casting tray
+- lantern case
+
+bricks maker bench:
+- glass furnace
+- mudbrick
+- rammed earth
+- mudbrick stairs and slabs
+- rammed earth stairs and slabs
+- lime mortar
+- loose bricks
+- loose roof tiles
+- brick and mortar
+- stone blocks with mortar
+
+dyers table:
+- bundle of plants, untreaten
+
+composter bin:
+- loam
+- humus
+- vermicompost
+- bonemeal
+- small invertebrate carcass
+
+mortar and pestle:
+- herbal medicine
+- tiku 
+- tang
+- peeled anperla tuber
+- mashed anperla tuber
+- bitter maraka flour
+- unbaked maraka cake
+- vegetable oil
+- painting kit white
+- painting kit glow
+
+grinding stone:
+- (*)same as gringing spot
+
+dyers table:
+- untreaten plant bundle
+- dye from treaten plants
+
+dye pot:
+- dyed woven clothes
+
+---- Tier 3 ----
+
+carpentry bench:
+- dugout canoe
+- masonry bench
+- spinning wheel
+- loom
+- bed
+- wooden door
+- wooden trapdoor
+- wooden chest
+- wooden ladder
+- wooden floor boards
+- wooden stairs
+- green glass window
+- clear glass window
+- wooden rope box
+
+hammering block:
+- (*)same as hammering spot
+
+glass furnace:
+- green glass bottle
+- clear glass bottle
+
+---- Tier 4 ----
+
+masonry bench:
+- stone bricks and slabs
+
+spinning wheel:
+- unretted cana bundle
+- coarse fibre
+- fine fibre
+
+loom:
+- fabric bag
+- mattress
+- coarse fabric
+- fine fabric
+- light and thick fabric hat
+- light and thick fabric cape
+- light and thick fabric trousers
+- light and thick fabric tunic

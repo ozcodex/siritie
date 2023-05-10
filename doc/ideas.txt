@@ -6,13 +6,24 @@ new ideas:
 - make meats and cooked food compostable
 - give more damage to the stone knife
 - add sundial and disable the message of is the X day of the Season Y
+- make bricks maker bench lower
+- change the model of the hammering block to include the hammer
 - fix creafting recipes:
+	- move rosted iron powder recipe to the mortar and pestle (or grinding stone?)
+	- move the lime mortar to the grinding stone
+	- add weaving frame to crafting spot and delete weaving spot
+	- add hammering block to crafting spot and delete hammering spot
 	- add basalt and limestone grinding stones, make the grinding stones from cobbles and not boulders
 	- move the basic bricks to the clay working spot (rammed earth and mudbrick)
 	- add mixing bucket to carpentry bench
 	- pottery wheel from Limestone block and sticks 
 	- make carpentry bench cheaper (one iron ingot and any log)
 	- change composter recipe to use wet loam and loam
+	- require stone hammer as ingredient for hammering block
+	- remove bulk recipes from mortar and pestle
+	- remove peeled anperla tuber from mortar and pestle
+	- remove anvil from anvil
+	- remove carpentry bench from carpentry bench
 - improve working spaces:
 	- add workbench as improved version of the crafting spot
 	- add Pottery Bench as improved version of the clay shaping spot
@@ -23,7 +34,7 @@ new ideas:
 	- add pottery wheel as improved version of the clay shaping spot
 - improve cooking, bring some benefits to making soup (depending on amount of ingredients?)
 - add salt as cooking ingredient
-- make the composter able to produce worms eggs but with a low chance
+- make the composter able to produce worms eggs but with a low chance?
 - add more blessings and curses with effects to the health
 - add new diseases and possitive effects
 - make the cooking pot with oil convert unkooked food in its own cooked version
