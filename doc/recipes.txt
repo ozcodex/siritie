@@ -10,12 +10,13 @@ barehand:
 soaking:
 - treaten plant bundle
 - unbittered maraka flour
-- potash
+- potash solution
 
 firing:
 - treaten plant bundle
 - charcoal block
 - roasted iron ore
+- potash
 
 ---- Tier 1 ----
 

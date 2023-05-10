@@ -1,7 +1,6 @@
 new ideas:
 
 - make meats and cooked food compostable
-- give more damage to the stone knife or bring back the spear?
 - make bricks maker bench lower
 - fix creafting recipes:
 	- move wattle to the weaving frame
@@ -62,7 +61,6 @@ already done:
 - apply and improve the idol worshipping, now with blessings and curses
 - add religion traits 
 - new working spot for all the pottery
-- remove the spear
 - fix an error in the code of glow worm
 - remove rings
 - add a file loader to better organization and standarization of the code
