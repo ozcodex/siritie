@@ -133,10 +133,10 @@ crafting.register_recipe({
 ----------------------------------------------------------
 --carbon black
 
-grafitti.register_grafitti("tech:cb_antiq", {image = "tech_paint_cb_antiq.png"})
 grafitti.register_grafitti("tech:cb_arrowl", {image = "tech_paint_cb_arrowl.png"})
 grafitti.register_grafitti("tech:cb_arrowr", {image = "tech_paint_cb_arrowr.png"})
 grafitti.register_grafitti("tech:cb_arrowu", {image = "tech_paint_cb_arrowu.png"})
+grafitti.register_grafitti("tech:cb_arrowd", {image = "tech_paint_cb_arrowd.png"})
 grafitti.register_grafitti("tech:cb_dot", {image = "tech_paint_cb_dot.png"})
 grafitti.register_grafitti("tech:cb_fig1", {image = "tech_paint_cb_fig1.png"})
 grafitti.register_grafitti("tech:cb_fig2", {image = "tech_paint_cb_fig2.png"})
@@ -147,17 +147,14 @@ grafitti.register_grafitti("tech:cb_lineh", {image = "tech_paint_cb_lineh.png"})
 grafitti.register_grafitti("tech:cb_linev", {image = "tech_paint_cb_linev.png"})
 grafitti.register_grafitti("tech:cb_odot", {image = "tech_paint_cb_odot.png"})
 grafitti.register_grafitti("tech:cb_o", {image = "tech_paint_cb_o.png"})
-grafitti.register_grafitti("tech:cb_spsq", {image = "tech_paint_cb_spsq.png"})
-grafitti.register_grafitti("tech:cb_tree", {image = "tech_paint_cb_tree.png"})
 grafitti.register_grafitti("tech:cb_xox", {image = "tech_paint_cb_xox.png"})
 grafitti.register_grafitti("tech:cb_x", {image = "tech_paint_cb_x.png"})
-grafitti.register_grafitti("tech:gp_arrowd", {image = "tech_paint_gp_arrowd.png"})
 
 grafitti.palette_build("tech:carbon_black_paint")
 
 grafitti.register_brush("tech:paint_carbon_black_paint", {
     description = S("Painting Kit (Carbon black paint)"),
-    inventory_image = "tech_paint_brush_carbon_black.png",
+    inventory_image = "tech_paint_brush_black.png",
     wield_image = "tech_paint_brush_black.png^[transformR270",
     palette = "tech:carbon_black_paint"
 })
@@ -172,3 +169,37 @@ crafting.register_recipe({
 
 ----------------------------------------------------------
 --red ochre
+
+grafitti.register_grafitti("tech:ro_arrowd", {image = "tech_paint_ro_arrowd.png"})
+grafitti.register_grafitti("tech:ro_arrowl", {image = "tech_paint_ro_arrowl.png"})
+grafitti.register_grafitti("tech:ro_arrowr", {image = "tech_paint_ro_arrowr.png"})
+grafitti.register_grafitti("tech:ro_arrowu", {image = "tech_paint_ro_arrowu.png"})
+grafitti.register_grafitti("tech:ro_dot", {image = "tech_paint_ro_dot.png"})
+grafitti.register_grafitti("tech:ro_fig1", {image = "tech_paint_ro_fig1.png"})
+grafitti.register_grafitti("tech:ro_fig2", {image = "tech_paint_ro_fig2.png"})
+grafitti.register_grafitti("tech:ro_hourglass1", {image = "tech_paint_ro_hourglass1.png"})
+grafitti.register_grafitti("tech:ro_hourglass2", {image = "tech_paint_ro_hourglass2.png"})
+grafitti.register_grafitti("tech:ro_hourglass3", {image = "tech_paint_ro_hourglass3.png"})
+grafitti.register_grafitti("tech:ro_lineh", {image = "tech_paint_ro_lineh.png"})
+grafitti.register_grafitti("tech:ro_linev", {image = "tech_paint_ro_linev.png"})
+grafitti.register_grafitti("tech:ro_odot", {image = "tech_paint_ro_odot.png"})
+grafitti.register_grafitti("tech:ro_o", {image = "tech_paint_ro_o.png"})
+grafitti.register_grafitti("tech:ro_xox", {image = "tech_paint_ro_xox.png"})
+grafitti.register_grafitti("tech:ro_x", {image = "tech_paint_ro_x.png"})
+
+grafitti.palette_build("tech:red_ochre_paint")
+
+grafitti.register_brush("tech:paint_red_ochre_paint", {
+    description = S("Painting Kit (Carbon black paint)"),
+    inventory_image = "tech_paint_brush_red.png",
+    wield_image = "tech_paint_brush_red.png^[transformR270",
+    palette = "tech:red_ochre_paint"
+})
+
+crafting.register_recipe({
+	type = "mortar_and_pestle",
+	output = "tech:paint_red_ochre_paint",
+	items = {'tech:crushed_iron_ore', 'tech:stick', 'group:fibrous_plant 4', 'tech:vegetable_oil 4'},
+	level = 1,
+	always_known = true,
+})

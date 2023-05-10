@@ -1,8 +1,5 @@
 new ideas:
 
-- add charcoal powder to mortar and pestle
-- create black painting with charcoal powder
-- roasted iron powder to red painting
 - make meats and cooked food compostable
 - give more damage to the stone knife
 - add sundial and disable the message of is the X day of the Season Y
@@ -54,6 +51,8 @@ new ideas:
 - add a Drying Rack to dry meats
 - add a refrigerator that runs on snow
 - use salt, sugar and vinegar to preserve food
+- add charcoal powder as medicine
+- add charcoal as compostable item and add biochar as composter prduct?
 
 
 already done:
@@ -80,3 +79,6 @@ already done:
 - remove dugout canoe from choping block and add to carpentry bench
 - Turn bones into bonemeal on the grinding stone
 - add bonemeal as product of the composter
+- add charcoal powder to mortar and pestle
+- create black painting with charcoal powder
+- crushed iron powder to red painting
