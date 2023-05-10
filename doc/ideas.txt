@@ -2,21 +2,8 @@ new ideas:
 
 - make meats and cooked food compostable
 - fix creafting recipes:
-	- move the blocks with mortar to the mixing bucket
-	- move the lime mortar to the grinding stone
-	- add weaving frame to crafting spot and delete weaving spot
-	- add hammering block to crafting spot and delete hammering spot
-	- add basalt and limestone grinding stones, make the grinding stones from cobbles and not boulders
-	- move the basic bricks to the clay working spot (rammed earth and mudbrick)
-	- add mixing bucket to carpentry bench
-	- pottery wheel from Limestone block and sticks 
-	- make carpentry bench cheaper (one iron ingot and any log)
-	- change composter recipe to use wet loam and loam
-	- require stone hammer as ingredient for hammering block
-	- remove bulk recipes from mortar and pestle
+	- pottery wheel from Limestone block and sticks
 	- remove peeled anperla tuber from mortar and pestle
-	- remove anvil from anvil
-	- remove carpentry bench from carpentry bench
 - improve working spaces:
 	- add workbench as improved version of the crafting spot
 	- add Pottery Bench as improved version of the clay shaping spot
@@ -89,3 +76,8 @@ already done:
 - split the mixing spot into bricks/slabs creation and pure mixing
 - add mixing bucket and mortar bucket
 - add limestone grinding stone
+- move lime mortar to the grinding stone
+- make carpentry bench cheaper (one iron ingot)
+- remove carpentry bench from carpentry bench
+- remove anvil from anvil
+- remove bulk recipes from mortar and pestle

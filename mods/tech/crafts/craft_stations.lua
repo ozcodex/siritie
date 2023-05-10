@@ -69,24 +69,10 @@ crafting.register_recipe({ --hammer ingots into anvil
   level  = 1,
   always_known = true,
   })
-crafting.register_recipe({
-  type   = "anvil",
-  output = "tech:anvil",
-  items  = {'tech:iron_ingot 4'},
-  level  = 1,
-  always_known = true,
-  })
 crafting.register_recipe({ --carpentary from logs for bench and iron for tools
   type   = "chopping_block",
   output = "tech:carpentry_bench",
-  items  = {'tech:iron_ingot 4', 'nodes_nature:maraka_log 2'},
-  level  = 1,
-  always_known = true,
-  })
-crafting.register_recipe({
-  type   = "carpentry_bench",
-  output = "tech:carpentry_bench",
-  items  = {'tech:iron_ingot 4', 'nodes_nature:maraka_log 2'},
+  items  = {'tech:iron_ingot 1', 'nodes_nature:maraka_log 2'},
   level  = 1,
   always_known = true,
   })

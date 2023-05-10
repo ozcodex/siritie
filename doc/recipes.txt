@@ -95,7 +95,9 @@ mixing bucket:
 - wet loam
 
 mortar bucket:
-
+- glass furnace
+- brick and mortar
+- stone blocks with mortar
 
 grinding stone:
 - granite adze
@@ -105,6 +107,7 @@ grinding stone:
 - basalt mortar and pestle
 - granite mortar and pestle
 - limestone mortar and pestle
+- lime mortar
 - Charcoal powder block
 - Roasted iron ore powder
 - bonemeal
@@ -120,16 +123,12 @@ chopping block:
 - wooden water pot
 
 bricks maker bench:
-- glass furnace
 - mudbrick
 - rammed earth
 - mudbrick stairs and slabs
 - rammed earth stairs and slabs
-- lime mortar
 - loose bricks
 - loose roof tiles
-- brick and mortar
-- stone blocks with mortar
 
 dyers table:
 - bundle of plants, untreaten
