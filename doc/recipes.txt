@@ -10,6 +10,7 @@ barehand:
 soaking:
 - treaten plant bundle
 - unbittered maraka flour
+- potash
 
 firing:
 - treaten plant bundle

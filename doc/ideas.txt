@@ -4,6 +4,7 @@ new ideas:
 - give more damage to the stone knife or bring back the spear?
 - make bricks maker bench lower
 - fix creafting recipes:
+	- move wattle to the weaving frame
 	- split the mixing spot into bricks/slabs creation and pure mixing
 	- move the blocks with mortar to the mixing bucket
 	- move the lime mortar to the grinding stone
