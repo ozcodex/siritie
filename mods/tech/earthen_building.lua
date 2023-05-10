@@ -355,7 +355,7 @@ crafting.register_recipe({
 
 ----Wattle from sticks
 crafting.register_recipe({
-	type = "crafting_spot",
+	type = "weaving_frame",
 	output = "tech:wattle",
 	items = {"tech:stick 6"},
 	level = 1,
@@ -374,7 +374,7 @@ crafting.register_recipe({
 
 ----Loose Wattle from sticks
 crafting.register_recipe({
-	type = "crafting_spot",
+	type = "weaving_frame",
 	output = "tech:wattle_loose",
 	items = {"tech:stick 3"},
 	level = 1,
@@ -410,7 +410,7 @@ crafting.register_recipe({
 
 ----Wattle door frame from sticks
 crafting.register_recipe({
-	type = "crafting_spot",
+	type = "weaving_frame",
 	output = "tech:wattle_door_frame",
 	items = {"tech:stick 6"},
 	level = 1,
