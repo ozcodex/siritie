@@ -122,7 +122,6 @@ grafitti.register_brush("tech:paint_glow_paint", {
     palette = "tech:glow_paint"
 })
 
-
 crafting.register_recipe({
 	type = "mortar_and_pestle",
 	output = "tech:paint_glow_paint",
@@ -134,7 +133,42 @@ crafting.register_recipe({
 ----------------------------------------------------------
 --carbon black
 
+grafitti.register_grafitti("tech:cb_antiq", {image = "tech_paint_cb_antiq.png"})
+grafitti.register_grafitti("tech:cb_arrowl", {image = "tech_paint_cb_arrowl.png"})
+grafitti.register_grafitti("tech:cb_arrowr", {image = "tech_paint_cb_arrowr.png"})
+grafitti.register_grafitti("tech:cb_arrowu", {image = "tech_paint_cb_arrowu.png"})
+grafitti.register_grafitti("tech:cb_dot", {image = "tech_paint_cb_dot.png"})
+grafitti.register_grafitti("tech:cb_fig1", {image = "tech_paint_cb_fig1.png"})
+grafitti.register_grafitti("tech:cb_fig2", {image = "tech_paint_cb_fig2.png"})
+grafitti.register_grafitti("tech:cb_hourglass1", {image = "tech_paint_cb_hourglass1.png"})
+grafitti.register_grafitti("tech:cb_hourglass2", {image = "tech_paint_cb_hourglass2.png"})
+grafitti.register_grafitti("tech:cb_hourglass3", {image = "tech_paint_cb_hourglass3.png"})
+grafitti.register_grafitti("tech:cb_lineh", {image = "tech_paint_cb_lineh.png"})
+grafitti.register_grafitti("tech:cb_linev", {image = "tech_paint_cb_linev.png"})
+grafitti.register_grafitti("tech:cb_odot", {image = "tech_paint_cb_odot.png"})
+grafitti.register_grafitti("tech:cb_o", {image = "tech_paint_cb_o.png"})
+grafitti.register_grafitti("tech:cb_spsq", {image = "tech_paint_cb_spsq.png"})
+grafitti.register_grafitti("tech:cb_tree", {image = "tech_paint_cb_tree.png"})
+grafitti.register_grafitti("tech:cb_xox", {image = "tech_paint_cb_xox.png"})
+grafitti.register_grafitti("tech:cb_x", {image = "tech_paint_cb_x.png"})
+grafitti.register_grafitti("tech:gp_arrowd", {image = "tech_paint_gp_arrowd.png"})
 
+grafitti.palette_build("tech:carbon_black_paint")
+
+grafitti.register_brush("tech:paint_carbon_black_paint", {
+    description = S("Painting Kit (Carbon black paint)"),
+    inventory_image = "tech_paint_brush_carbon_black.png",
+    wield_image = "tech_paint_brush_black.png^[transformR270",
+    palette = "tech:carbon_black_paint"
+})
+
+crafting.register_recipe({
+	type = "mortar_and_pestle",
+	output = "tech:paint_carbon_black_paint",
+	items = {'tech:crushed_charcoal_block', 'tech:stick', 'group:fibrous_plant 4', 'tech:vegetable_oil 4'},
+	level = 1,
+	always_known = true,
+})
 
 ----------------------------------------------------------
 --red ochre

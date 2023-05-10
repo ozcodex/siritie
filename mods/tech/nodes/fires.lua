@@ -45,6 +45,19 @@ minetest.register_node("tech:charcoal_block", {
 	end,
 })
 
+minetest.register_node("tech:crushed_charcoal_block", {
+	description = S("Charcoal Block"),
+	tiles = {"tech_crushed_charcoal.png"},
+	paramtype = "light",
+	stack_max = minimal.stack_max_bulky,
+	groups = {crumbly = 3, falling_node = 1, fertilizer = 1, flammable = 1},
+	sounds = nodes_nature.node_sound_dirt_defaults(),
+	on_burn = function(pos)
+		minimal.switch_node(pos, {name = "tech:large_charcoal_fire"})
+		minetest.check_for_falling(pos)
+	end,
+})
+
 
 minetest.register_node("tech:charcoal", {
 	description = S("Charcoal"),
