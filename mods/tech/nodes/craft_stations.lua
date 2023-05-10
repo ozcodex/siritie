@@ -570,7 +570,7 @@ minetest.register_node("tech:weaving_frame",{
    })
    --chopping_block --crude wood crafts,
    minetest.register_node("tech:chopping_block", {
-        description   = S("Chopping Block"),
+        description   = S("Chopping Log"),
         tiles         = {
                 "tech_chopping_block_top.png",
                 "tech_chopping_block_top.png",
@@ -582,7 +582,13 @@ minetest.register_node("tech:weaving_frame",{
         drawtype      = "nodebox",
         node_box      = {
                 type  = "fixed",
-                fixed = {-0.43, -0.5, -0.43, 0.43, 0.38, 0.43},
+                fixed = {
+                    {-0.4375, -0.5, -0.4375, 0.4375, 0.35, 0.4375},
+                    {-0.375, -0.5, 0.4375, 0.375, 0.35, 0.5},
+                    {-0.375, -0.5, -0.5, 0.375, 0.35, -0.4375},
+                    {0.4375, -0.5, -0.375, 0.5, 0.35, 0.375},
+                    {-0.5, -0.5, -0.375, -0.4375, 0.35, 0.375},
+                  },
                 },
         stack_max     = minimal.stack_max_bulky,
         paramtype     = "light",
@@ -594,7 +600,7 @@ minetest.register_node("tech:weaving_frame",{
    --hammering_block
    --crude hammering crushing jobs,
    minetest.register_node("tech:hammering_block", {
-        description   = S("Hammering Block"),
+        description   = S("Hammering Log"),
         tiles         = {
                 "tech_hammering_block_top.png",
                 "tech_chopping_block_top.png",
@@ -606,7 +612,13 @@ minetest.register_node("tech:weaving_frame",{
         drawtype      = "nodebox",
         node_box      = {
                 type  = "fixed",
-                fixed = {-0.47, -0.5, -0.47, 0.47, 0.31, 0.47},
+                fixed ={
+                      {-0.375, -0.5, -0.375, 0.375, 0.23, 0.375},
+                      {-0.3125, -0.5, 0.375, 0.3125, 0.23, 0.4375},
+                      {-0.3125, -0.5, -0.4375, 0.3125, 0.23, -0.375},
+                      {0.375, -0.5, -0.3125, 0.4375, 0.23, 0.3125},
+                      {-0.4375, -0.5, -0.3125, -0.375, 0.23, 0.3125},
+                  },
                 },
         stack_max     = minimal.stack_max_bulky,
         paramtype     = "light",
