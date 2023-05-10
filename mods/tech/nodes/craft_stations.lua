@@ -604,20 +604,24 @@ minetest.register_node("tech:weaving_frame",{
         tiles         = {
                 "tech_hammering_block_top.png",
                 "tech_chopping_block_top.png",
-                "tech_chopping_block.png",
-                "tech_chopping_block.png",
-                "tech_chopping_block.png",
-                "tech_chopping_block.png",
+                "tech_hammering_block_right.png",
+                "tech_hammering_block_left.png",
+                "tech_hammering_block_back.png",
+                "tech_hammering_block_front.png",
                 },
         drawtype      = "nodebox",
         node_box      = {
                 type  = "fixed",
                 fixed ={
-                      {-0.375, -0.5, -0.375, 0.375, 0.23, 0.375},
-                      {-0.3125, -0.5, 0.375, 0.3125, 0.23, 0.4375},
-                      {-0.3125, -0.5, -0.4375, 0.3125, 0.23, -0.375},
-                      {0.375, -0.5, -0.3125, 0.4375, 0.23, 0.3125},
-                      {-0.4375, -0.5, -0.3125, -0.375, 0.23, 0.3125},
+                    -- log
+                    {-0.375, -0.5, -0.375, 0.375, 0.250, 0.375},
+                    {-0.3125, -0.5, 0.375, 0.3125, 0.250, 0.4375},
+                    {-0.3125, -0.5, -0.4375, 0.3125, 0.250, -0.375},
+                    {0.375, -0.5, -0.3125, 0.4375, 0.250, 0.3125},
+                    {-0.4375, -0.5, -0.3125, -0.375, 0.250, 0.3125},
+                  -- hammer
+                    {-0.0625, 0.23, 0.0000, 0.0625, 0.36, 0.3125},
+                    {-0.0625, 0.23, 0.1250, 0.2500, 0.3125, 0.1875}
                   },
                 },
         stack_max     = minimal.stack_max_bulky,
