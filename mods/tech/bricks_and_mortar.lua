@@ -280,7 +280,7 @@ crafting.register_recipe({
 
 --mix mortar
 crafting.register_recipe({
-	type = "brick_makers_bench",
+	type = "grinding_stone",
 	output = "tech:lime_mortar 4",
 	items = {"tech:slaked_lime", "nodes_nature:sand 3"},
 	level = 1,
@@ -451,7 +451,7 @@ minetest.register_node("tech:bricks_and_mortar", {
 stairs.register_stair_and_slab(
 	"bricks_and_mortar",
 	"tech:bricks_and_mortar",
-	"brick_makers_bench",
+	"mortar_bucket",
 	"true",
 	{cracky = 2},
 	{"tech_bricks_and_mortar.png"},
@@ -478,7 +478,7 @@ crafting.register_recipe({
 
 --mix with mortar
 crafting.register_recipe({
-	type = "brick_makers_bench",
+	type = "mortar_bucket",
 	output = "tech:bricks_and_mortar 12",
 	items = {"tech:lime_mortar", "tech:loose_brick 12"},
 	level = 1,
@@ -748,7 +748,7 @@ crafting.register_recipe({
 
 --switch inner/outer
 crafting.register_recipe({
-	type = "mixing_spot",
+	type = "brick_makers_bench",
 	output = "tech:roof_tile_ic",
 	items = {"tech:roof_tile"},
 	level = 1,
@@ -756,7 +756,7 @@ crafting.register_recipe({
 })
 
 crafting.register_recipe({
-	type = "mixing_spot",
+	type = "brick_makers_bench",
 	output = "tech:roof_tile_oc",
 	items = {"tech:roof_tile"},
 	level = 1,
@@ -764,7 +764,7 @@ crafting.register_recipe({
 })
 
 crafting.register_recipe({
-	type = "mixing_spot",
+	type = "brick_makers_bench",
 	output = "tech:roof_tile",
 	items = {"tech:roof_tile_ic"},
 	level = 1,
@@ -772,7 +772,7 @@ crafting.register_recipe({
 })
 
 crafting.register_recipe({
-	type = "mixing_spot",
+	type = "brick_makers_bench",
 	output = "tech:roof_tile",
 	items = {"tech:roof_tile_oc"},
 	level = 1,
@@ -848,7 +848,7 @@ for i in ipairs(list) do
 	})
 
 	crafting.register_recipe({
-		type = "brick_makers_bench",
+		type = "mortar_bucket",
 		output = "tech:"..name.."_block_mortar 4",
 		items = {"nodes_nature:"..name.."_block 3", "tech:lime_mortar"},
 		level = 1,

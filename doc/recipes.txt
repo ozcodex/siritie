@@ -11,12 +11,14 @@ soaking:
 - treaten plant bundle
 - unbittered maraka flour
 - potash solution
+- slanked lime
 
 firing:
 - treaten plant bundle
 - charcoal block
 - roasted iron ore
 - potash
+- quicklime
 
 ---- Tier 1 ----
 
@@ -33,11 +35,8 @@ crafting spot:
 - grinding stone
 - weaving frame
 - drystack
-- wattle
-- loose wattle
-- wattle door
-- wattle door frame
-- wattle trap door
+- mixing bucket
+- mortar bucket
 - torch
 - dye pot
 - dyers table
@@ -46,9 +45,6 @@ crafting spot:
 - fire sticks
 
 mixing spot:
-- loam
-- wet loam
-- agricultural soil
 - dirt stairs and slabs
 - rock bricks
 - snow compacting
@@ -87,6 +83,19 @@ weaving frame:
 - woven leggins
 - woven blanket
 - rope ladder
+- wattle
+- loose wattle
+- wattle door
+- wattle door frame
+- wattle trap door
+
+mixing bucket:
+- agricultural soil
+- loam
+- wet loam
+
+mortar bucket:
+
 
 grinding stone:
 - granite adze

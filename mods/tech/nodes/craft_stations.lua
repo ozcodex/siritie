@@ -549,10 +549,33 @@ minetest.register_node("tech:weaving_frame",{
 })
    --grinding stone
    --for grinding stone tools
-   minetest.register_node("tech:grinding_stone",{
-        description   = S("Grinding stone"),
+   minetest.register_node("tech:grinding_stone_granite",{
+        description   = S("Granite grinding stone"),
         drawtype      = "nodebox",
         tiles         = {"nodes_nature_granite.png"},
+        stack_max     = minimal.stack_max_bulky,
+        paramtype     = "light",
+        paramtype2    = "facedir",
+        groups        = {falling_node = 1, dig_immediate = 3, craftedby = 1},
+        node_box      = {
+                type  = "fixed",
+                fixed = {
+                        {-0.3750, -0.5000, -0.3125,  0.3750, -0.4375,  0.3125},
+                        {-0.4375, -0.4375, -0.3750,  0.4375, -0.1875,  0.3750},
+                        {-0.1875, -0.1875,  0.0000,  0.0000, -0.0625,  0.2500},
+                        { 0.4375, -0.3750, -0.3125,  0.5000, -0.1875,  0.3125},
+                        {-0.5000, -0.3750, -0.3125, -0.4375, -0.1875,  0.3125},
+                        {-0.3750, -0.3750, -0.4375,  0.3750, -0.1875, -0.3750},
+                        {-0.3750, -0.3750,  0.3750,  0.3750, -0.1875,  0.4375},
+                        }
+                },
+        sounds        = nodes_nature.node_sound_stone_defaults(),
+        on_rightclick = crafting.make_on_rightclick("grinding_stone", 2, { x = 8, y = 3 }),
+   })
+   minetest.register_node("tech:grinding_stone_limestone",{
+        description   = S("Limestone grinding stone"),
+        drawtype      = "nodebox",
+        tiles         = {"nodes_nature_limestone.png"},
         stack_max     = minimal.stack_max_bulky,
         paramtype     = "light",
         paramtype2    = "facedir",

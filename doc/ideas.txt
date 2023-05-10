@@ -2,7 +2,6 @@ new ideas:
 
 - make meats and cooked food compostable
 - fix creafting recipes:
-	- split the mixing spot into bricks/slabs creation and pure mixing
 	- move the blocks with mortar to the mixing bucket
 	- move the lime mortar to the grinding stone
 	- add weaving frame to crafting spot and delete weaving spot
@@ -87,3 +86,6 @@ already done:
 - add sundial and disable the message of is the X day of the Season Y
 - make bricks maker bench lower
 - move wattle to the weaving frame
+- split the mixing spot into bricks/slabs creation and pure mixing
+- add mixing bucket and mortar bucket
+- add limestone grinding stone

@@ -418,7 +418,7 @@ end
 
 function agricultural_soil.register_recipe(agri_soil)
     crafting.register_recipe({
-            type = "mixing_spot",
+            type = "mixing_bucket",
             output = agri_soil.dry_node_name,
             items = {agri_soil.sediment.dry_node_name.." 1","group:fertilizer 1"},
             level = 1,
@@ -428,7 +428,7 @@ end
 
 function agricultural_soil.register_recipe_wet(agri_soil)
     crafting.register_recipe({
-            type = "mixing_spot",
+            type = "mixing_bucket",
             output = agri_soil.wet_node_name,
             items = {agri_soil.sediment.wet_node_name.." 1","group:fertilizer 1"},
             level = 1,
@@ -550,7 +550,7 @@ local soil_list = {
 
 -- Recipes for loam
 crafting.register_recipe({
-	type = "mixing_spot",
+	type = "mixing_bucket",
 	output = "nodes_nature:loam 3",
 	items = {"nodes_nature:clay 1","nodes_nature:silt 1","nodes_nature:sand 1"},
 	level = 1,
@@ -558,7 +558,7 @@ crafting.register_recipe({
 })
 
 crafting.register_recipe({
-	type = "mixing_spot",
+	type = "mixing_bucket",
 	output = "nodes_nature:loam_wet 3",
 	items = {"nodes_nature:clay_wet 1","nodes_nature:silt_wet 1","nodes_nature:sand_wet 1"},
 	level = 1,

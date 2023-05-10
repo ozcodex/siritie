@@ -112,7 +112,7 @@ crafting.register_recipe({ --loom. wood, fibre for mechanisms
   always_known = true,
   })
 crafting.register_recipe({ -- Glass furnace from bricks for the main structure and iron for the tools
-  type   = "brick_makers_bench",
+  type   = "mortar_bucket",
   output = "tech:glass_furnace",
   items  = {'tech:iron_ingot', 'tech:loose_brick 3', 'tech:lime_mortar'},
   level  = 1,
@@ -130,8 +130,15 @@ crafting.register_recipe({ ----craft clay shaping spot for free
 --grinding_stone from craft spot
 crafting.register_recipe({
   type   = "crafting_spot",
-  output = "tech:grinding_stone",
+  output = "tech:grinding_stone_granite",
   items  = {'group:granite_cobble 4', 'nodes_nature:sand 8'},
+  level  = 1,
+  always_known = true,
+})
+crafting.register_recipe({
+  type   = "crafting_spot",
+  output = "tech:grinding_stone_limestone",
+  items  = {'group:limestone_cobble 4', 'nodes_nature:sand 8'},
   level  = 1,
   always_known = true,
 })

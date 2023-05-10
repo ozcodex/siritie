@@ -25,6 +25,8 @@ dofile(minetest.get_modpath("crafting") .. "/gui.lua")
 dofile(minetest.get_modpath("crafting") .. "/stations.lua")
 
 crafting.register_type("mixing_spot")
+crafting.register_type("mixing_bucket")
+crafting.register_type("mortar_bucket")
 crafting.register_type("threshing_spot")
 crafting.register_type("hammering_block")
 crafting.register_type("chopping_block")
