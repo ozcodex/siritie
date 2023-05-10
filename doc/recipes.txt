@@ -4,11 +4,17 @@ barehand:
 - crafting spot
 - mixing spot
 - threshing spot
-- weaving spot
-- grinding spot
-- hammering spot
 - clay shaping spot
 - sleeping spot
+
+soaking:
+- treaten plant bundle
+- unbittered maraka flour
+
+firing:
+- treaten plant bundle
+- charcoal block
+- roasted iron ore
 
 ---- Tier 1 ----
 
@@ -22,6 +28,8 @@ crafting spot:
 - large wood fire
 - chopping block
 - bricks maker bench
+- grinding stone
+- weaving frame
 - drystack
 - wattle
 - loose wattle
@@ -50,7 +58,18 @@ mixing spot:
 threshing spot:
 - seed extraction
 
-weaving spot:
+clay shaping spot:
+- ceramic alembic making and dismantling
+- clay watering can making and dismantling
+- water pot making and dismantling
+- storage pot making and dismantling
+- oil lamp making and dismantling
+- cooking pot making and dismantling
+- Pottery breaking
+
+---- Tier 2 ----
+
+weaving frame:
 - woven bag
 - wicker bag
 - woven basket
@@ -67,7 +86,7 @@ weaving spot:
 - woven blanket
 - rope ladder
 
-grinding spot:
+grinding stone:
 - granite adze
 - jade adze
 - basalt adze
@@ -75,41 +94,9 @@ grinding spot:
 - basalt mortar and pestle
 - granite mortar and pestle
 - limestone mortar and pestle
-- grinding stone
+- Charcoal powder block
+- Roasted iron ore powder
 - bonemeal
-
-hammering spot:
-- limestone block
-- ironstone block
-- granite block
-- basalt block
-- gneiss block
-- jade block
-- limestone cobble
-- ironstone cobble
-- granite cobble
-- basalt cobble
-- gneiss cobble
-- jade cobble
-- anvil
-- crushed iron ore
-- roasted iron powder
-- iron smelting mix
-- iron ingot
-- green glass mix
-- clear glass mix
-- crushed lime
-
-clay shaping spot:
-- ceramic alembic making and dismantling
-- clay watering can making and dismantling
-- water pot making and dismantling
-- storage pot making and dismantling
-- oil lamp making and dismantling
-- cooking pot making and dismantling
-- Pottery breaking
-
----- Tier 2 ----
 
 chopping block:
 - logs stairs and slabs
@@ -120,20 +107,6 @@ chopping block:
 - hammering block
 - primitive wooden chest
 - wooden water pot
-
-anvil:
-- Iron Axe
-- Iron Shovel
-- Iron Mace
-- Iron Pickaxe
-- Iron door
-- Iron Trapdoor
-- iron ingot
-- iron fittings
-- iron chest
-- nails
-- pane casting tray
-- lantern case
 
 bricks maker bench:
 - glass furnace
@@ -156,21 +129,6 @@ composter bin:
 - vermicompost
 - bonemeal
 - small invertebrate carcass
-
-mortar and pestle:
-- herbal medicine
-- tiku 
-- tang
-- peeled anperla tuber
-- mashed anperla tuber
-- bitter maraka flour
-- unbaked maraka cake
-- vegetable oil
-- painting kit white
-- painting kit glow
-
-grinding stone:
-- (*)same as gringing spot
 
 dyers table:
 - untreaten plant bundle
@@ -203,14 +161,61 @@ carpentry bench:
 - clear glass window
 - wooden rope box
 
+mortar and pestle:
+- herbal medicine
+- tiku 
+- tang
+- peeled anperla tuber
+- mashed anperla tuber
+- bitter maraka flour
+- unbaked maraka cake
+- vegetable oil
+- painting kit white
+- painting kit glow
+- painting kit black
+- painting kit red
+
 hammering block:
-- (*)same as hammering spot
+- limestone block
+- ironstone block
+- granite block
+- basalt block
+- gneiss block
+- jade block
+- limestone cobble
+- ironstone cobble
+- granite cobble
+- basalt cobble
+- gneiss cobble
+- jade cobble
+- anvil
+- crushed iron ore
+- roasted iron powder
+- iron smelting mix
+- iron ingot
+- green glass mix
+- clear glass mix
+- crushed lime
 
 glass furnace:
 - green glass bottle
 - clear glass bottle
 
 ---- Tier 4 ----
+
+anvil:
+- Iron Axe
+- Iron Shovel
+- Iron Mace
+- Iron Pickaxe
+- Iron door
+- Iron Trapdoor
+- iron ingot
+- iron fittings
+- iron chest
+- nails
+- pane casting tray
+- lantern case
 
 masonry bench:
 - stone bricks and slabs

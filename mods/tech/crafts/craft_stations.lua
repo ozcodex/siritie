@@ -23,27 +23,6 @@ crafting.register_recipe({ ----craft threshing spot for free
   level  = 1,
   always_known = true,
   })
-crafting.register_recipe({ --weaving_frame for free (location limited)
-  type   = "inv",
-  output = "tech:weaving_spot",
-  items  = {},
-  level  = 1,
-  always_known = true,
-  })
-crafting.register_recipe({ ----grinding_stone for free (location limited)
-  type   = "inv",
-  output = "tech:grinding_spot",
-  items  = {},
-  level  = 1,
-  always_known = true,
-  })
-crafting.register_recipe({ --hammering block for free (location limited)
-  type   = "inv",
-  output = "tech:hammering_spot",
-  items  = {},
-  level  = 1,
-  always_known = true,
-  })
 ---- Boulders ----
 --grind a mortar_and_pestle
 crafting.register_recipe({
@@ -150,14 +129,14 @@ crafting.register_recipe({ ----craft clay shaping spot for free
 
 --grinding_stone from craft spot
 crafting.register_recipe({
-  type   = "grinding_stone",
+  type   = "crafting_spot",
   output = "tech:grinding_stone",
-  items  = {'nodes_nature:granite_boulder', 'nodes_nature:sand 8'},
+  items  = {'group:granite_cobble 4', 'nodes_nature:sand 8'},
   level  = 1,
   always_known = true,
 })
 crafting.register_recipe({ --weaving_frame
-  type   = "carpentry_bench",
+  type   = "crafting_spot",
   output = "tech:weaving_frame",
   items  = {'tech:stick 12', 'group:fibrous_plant 8'},
   level  = 1,

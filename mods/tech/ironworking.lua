@@ -200,7 +200,7 @@ minetest.register_node("tech:roasted_iron_ore_powder", {
 
 --recipe
 crafting.register_recipe({
-	type = "hammering_block",
+	type = "grinding_stone",
 	output = "tech:roasted_iron_ore_powder",
 	items = {'tech:roasted_iron_ore 2'},
 	level = 1,

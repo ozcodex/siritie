@@ -7,6 +7,8 @@ new ideas:
 - change the model of the hammering block to include the hammer
 - fix creafting recipes:
 	- move rosted iron powder recipe to the mortar and pestle (or grinding stone?)
+	- split the mixing spot into bricks/slabs creation and pure mixing
+	- move the blocks with mortar to the mixing bucket
 	- move the lime mortar to the grinding stone
 	- add weaving frame to crafting spot and delete weaving spot
 	- add hammering block to crafting spot and delete hammering spot
@@ -34,8 +36,9 @@ new ideas:
 - make the composter able to produce worms eggs but with a low chance?
 - add more blessings and curses with effects to the health
 - add new diseases and possitive effects
-- make the cooking pot with oil convert unkooked food in its own cooked version
+- make the cooking pot with oil convert unkooked food in its own cooked version or create a clay smoker
 - add Alchemy glass equipment (alembic, retort, mortar and pestle, crucible, flask, beaker, test tube, funnel, pipette, etc)
+- add Alchemy iron equipment (scale, tongs, etc)
 - add Alchemy bench
 - sulfur, salt, extract minerals from soil, extract oils from plants
 - add alcohol destilation from fermented tang
@@ -53,7 +56,7 @@ new ideas:
 - use salt, sugar and vinegar to preserve food
 - add charcoal powder as medicine
 - add charcoal as compostable item and add biochar as composter prduct?
-
+- add a new stat: dirtiness and add soap to clean it
 
 already done:
 
@@ -82,3 +85,6 @@ already done:
 - add charcoal powder to mortar and pestle
 - create black painting with charcoal powder
 - crushed iron powder to red painting
+- remove grinding, hammering and weaving spots
+- add weaving frame and grinding stone to crafting spot
+- change grinding stone recipe to work with cobbles instead of boulder

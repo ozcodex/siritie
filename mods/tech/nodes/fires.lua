@@ -46,7 +46,7 @@ minetest.register_node("tech:charcoal_block", {
 })
 
 minetest.register_node("tech:crushed_charcoal_block", {
-	description = S("Charcoal Block"),
+	description = S("Charcoal Powder Block"),
 	tiles = {"tech_crushed_charcoal.png"},
 	paramtype = "light",
 	stack_max = minimal.stack_max_bulky,

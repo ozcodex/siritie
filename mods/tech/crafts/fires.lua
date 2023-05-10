@@ -62,6 +62,13 @@ crafting.register_recipe({
 	always_known = true,
 })
 
+crafting.register_recipe({
+	type = "grinding_stone",
+	output = "tech:crushed_charcoal_block",
+	items = {'tech:charcoal_block'},
+	level = 1,
+	always_known = true,
+})
 
 --fires  / block
 crafting.register_recipe({

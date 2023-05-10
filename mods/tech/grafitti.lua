@@ -190,7 +190,7 @@ grafitti.register_grafitti("tech:ro_x", {image = "tech_paint_ro_x.png"})
 grafitti.palette_build("tech:red_ochre_paint")
 
 grafitti.register_brush("tech:paint_red_ochre_paint", {
-    description = S("Painting Kit (Carbon black paint)"),
+    description = S("Painting Kit (Red Ochre paint)"),
     inventory_image = "tech_paint_brush_red.png",
     wield_image = "tech_paint_brush_red.png^[transformR270",
     palette = "tech:red_ochre_paint"
