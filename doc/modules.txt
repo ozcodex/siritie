@@ -1,0 +1,67 @@
+animals: animal mobs
+
+artifacts: Undercity items
+
+backpacks: api for bags
+
+bed_rest: api for beds
+
+bones: api for bones
+
+canoe: api for small boats
+
+climate: weather and temperature system
+
+clothing: api for clothes
+
+crafting: api for crafting system (shared Minetest content)
+
+creative: enables creative mode
+
+doors: api for doors
+
+exile_env_sounds: environmental sound effects
+
+grafitti: api for paint
+
+health: the health system
+
+inferno: fires and flammability
+
+lightning: thunder and lightning
+
+liquid_store: api for water vessels
+
+lore: character and story system
+
+mapgen: biomes and decorations
+
+megamorph: mapgen Undercity structures
+
+minimal: core essential and commonly used code
+
+mobkit: mobs api (shared Minetest content)
+
+naturalslopeslib: stepped hillsides api (shared Minetest content)
+
+ncrafting: in world crafting functions e.g. soaking, baking
+
+nodes_nature: natural world blocks and associated processes
+
+player_api: player models etc (shared Minetest content)
+
+player_monoids: api for assisting with player physics (shared Minetest content)
+
+ropes: api for ropes and rope ladders
+
+sfinv: inventory api (shared Minetest content)
+
+spears: throwable spears api (shared Minetest content)
+
+stairs: slabs and stairs api
+
+tech: most player crafted items
+
+volcano: mapgen spawns volcanoes and lava tubes
+
+wielded_light: player holdable light effects (shared Minetest content)

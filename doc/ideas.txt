@@ -1,5 +1,6 @@
-new ideas:
+----------------- New Ideas --------------------
 
+- update the modules.txt file to include the new modules
 - make meats and cooked food compostable
 - add alcohol extraction to the alembic (from tang)
 - wiha fermentation process:
@@ -52,6 +53,63 @@ new ideas:
 - make the food decay, and conservation methods
 - add a refrigerator that runs on snow
 - use salt, sugar and vinegar to preserve food
+- fix translation templates to include all the actual strings
+- redesign the runes of painting kits
+- add a basalt hammer as alternative club
+- make the basalt hammer be required to create the hammering log
+- alternatice hammering log with granite
 
-already done:
+
+--------------- Already done -------------------
+
 ADD MORE TRAITS
+
+
+------------ Inhereit form Exile ----------------
+
+Right-click to turn torches/lamps off (+require lighting them like with fires)
+
+Degradation of perishable building materials (e.g. mudbrick -> clay, log -> rotten). 
+    Gives an advantage to sophisticated building materials.
+
+Pottery wheel and more sophisticated glazed pottery.
+
+Watering can (make soil wet).
+
+Scythe
+
+More-sophisticated medicines, e.g. needing a apothecary kit, can heal for toxins.
+
+Glassware (windows, bottles, distillery, solar still).
+
+Chair (small bed rest effect, but better for crafting).
+
+Cooking: bulk cooking method (cauldron - add food and water to it, take out by bowlful)
+
+Death screen — name and days survived (also put in Breaktaker, maybe a Highscores page?). 
+
+Acquired character traits (see each life becomes meaningfully unique)
+
+Artifacts (loot): scuba, tree grower.
+
+Dangerous “pandora’s box” loot.
+
+More `megamorph` biomes: gardens, waste dumps, public baths, transporter room, laboratory, storage dumps, factories.
+
+Searching through the junk of a people who destroyed themselves should also be a dubious/bad idea.
+
+More mobs: land predator, and more of everything in general, leather.
+
+Effects currently handled by low-thirst/hunger/low-body-temp/etc., could be turned into effects (e.g. malnutrition, hypothermia).
+
+Food decay.
+
+Punch with torch for firelighter?
+
+Easy start option (start with axe, bag, clothes, water pot, mattress, food).
+
+Dynamism and decoration for underground city.
+
+Some items need inventory images with space around edges (e.g. wattle).
+
+`Character` tab (lore) might need a scroll bar.
