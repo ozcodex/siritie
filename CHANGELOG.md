@@ -1,5 +1,24 @@
 # Changelog:
 
+## [2023-05-10][2023-05-10__0.4] — 0.4
+  - Ozcodex's restructuration
+  - Add idol worshipping, with blessings, curses and traits
+  - New working spot for all the pottery
+  - Implement a composter block to turn organics into fertilizer
+  - Add Ceramic Watering Can to water blocks and Alembic to extract salt from water
+  - Turn bones into bonemeal on the grinding stone
+  - Add charcoal powder to mortar and pestle
+  - Implements black and red painting
+  - Add sundial to get info about the date
+  - Adds a great rebalance of all recipes
+  - Bring back the weaving frame, the chopping block and the hammering log
+  - Adds Mixing Bucket and Mortar Bucket
+  - Remove rings and hammers
+  - Remove grinding, hammering and weaving spots
+  - Remove crafting recipes on workspaces that creates themselves
+  - Remove bulk recipes
+
+
 ## [2023-04-07][2023-04-07__0.3.9e] — 0.3.9e
   - Add theme song "Earth and Stone" by Kevin Hartnell
   - Wattle connects to drystack

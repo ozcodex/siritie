@@ -3,7 +3,6 @@ new ideas:
 - make meats and cooked food compostable
 - fix creafting recipes:
 	- pottery wheel from Limestone block and sticks
-	- remove peeled anperla tuber from mortar and pestle
 - improve working spaces:
 	- add workbench as improved version of the crafting spot
 	- add Pottery Bench as improved version of the clay shaping spot
