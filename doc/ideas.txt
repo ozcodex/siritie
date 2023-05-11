@@ -58,6 +58,7 @@
 - add a basalt hammer as alternative club
 - make the basalt hammer be required to create the hammering log
 - alternatice hammering log with granite
+- extract sulfur from volcanic ashes
 
 
 --------------- Already done -------------------
