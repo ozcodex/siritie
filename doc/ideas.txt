@@ -1,82 +1,67 @@
 new ideas:
 
 - make meats and cooked food compostable
-- fix creafting recipes:
-	- pottery wheel from Limestone block and sticks
+- add alcohol extraction to the alembic (from tang)
+- wiha fermentation process:
+	- crush wiha to get wiha mash
+	- mix wiha mash with water to get wiha must
+	- process on the alembic the wiha must to get sugar and wiha dregs.
+	- add mushroom sportes to the wiha must to create unfermente wiha cider
+	- ferment the wiha cider
+	- distill the fermented wiha cider in the alembic to get wiha vinegar
 - improve working spaces:
-	- add workbench as improved version of the crafting spot
-	- add Pottery Bench as improved version of the clay shaping spot
-	- Mixing bucket crafted in the chopping block as improved version of the mixing spot
-	- threshing sledge as improved seed extractor.
+	- pottery wheel from Limestone block and sticks as improved version of the clay shaping spot
 	- ceramic idol, improved praying station (better chances)
-	- change hammering block name to hammering log and retexture
-	- add pottery wheel as improved version of the clay shaping spot
+	- add workbench as improved version of the crafting spot
+	- threshing sledge as improved seed extractor.
 - improve cooking, bring some benefits to making soup (depending on amount of ingredients?)
-- add salt as cooking ingredient
-- make the composter able to produce worms eggs but with a low chance?
+- add salt and sugar as cooking ingredient
+- add more behaivor driven traits:
+	- food related (add a counter each time a food is ingested):
+		Vegetarian (after 5 days eating mostly plants)
+		Omnivore (if the amount of eaten plants and meat are similar)
+		Carnivore (after 5 days eating mostly meat)
+		Vegan (after 10 days eating only plants)
+		Ascetic (after 5 days without eating)
+	- effects based (add a counter of each time the player got the effect):
+		Alcoholic (after getting drunk 20% or more of the days)
+		Sober (after 10 days without getting drunk any time)
+		Metabolism Enhanceer (after getting High on Stimulants 5 times)
+		Stimulant Junkie (after using stimulants more than 5% of the days)
+		Parasite Resistant (after successfully treating 3 cases of intestinal parasites)
+		Iron Stomach (after recovering from food poisoning 5 times)
+		Liver of Steel (after surviving hepatotoxicity)
+		Hardcore Partier (after recovering from a hangover 5 times)
+		Fungal Fighter (after successfully treating 3 cases of fungal infections)
+		Sandstorm Nomad (after recovering from Dust Fever 5 times)
+		Brain Brawler (after surviving neurotoxicity 3 times)
+		Sun Shield (after surviving photosensitivity 5 times)
+	- survivalist: 
+		Novice Outdoorsman (after 3 days) +4
+		Begginer Forager (after 7 days) +5
+		Intermediate Scavenger (after 12) +8
+		Advanced Survivor (after 20 days, one season)
+		Wilderness Expert (after 40 days, two seasons)
+		Master Survivalist (after 80 days, whole year)
+		Seasoned Explorer (after 160 days, two years)
+		Elite Bushcrafter (after 400 days, five years)
+		Legendary Adventurer (after 800 days, ten years)
 - add more blessings and curses with effects to the health
 - add new diseases and possitive effects
-- make the cooking pot with oil convert unkooked food in its own cooked version or create a clay smoker
+- create a clay smoker
 - add Alchemy glass equipment (alembic, retort, mortar and pestle, crucible, flask, beaker, test tube, funnel, pipette, etc)
 - add Alchemy iron equipment (scale, tongs, etc)
 - add Alchemy bench
 - sulfur, salt, extract minerals from soil, extract oils from plants
 - add alcohol destilation from fermented tang
 - add vinegar and sugar from plants
-- add one more plant, that produces berries
 - add alchemical medicines for each disease
-- make the food decay, and conservation methods
-- take out craft stations from nodes_natures
-- add more behaivor driven traits
-- remove search bar in gui
-- add more metals?
-- Ceramic tea Pot?
 - add a Drying Rack to dry meats
+- add charcoal powder as medicine
+- add a new stat: dirtiness and add soap to clean it (potash + vegetable oil on the mortar and pestle, needs to be cured)
+- make the food decay, and conservation methods
 - add a refrigerator that runs on snow
 - use salt, sugar and vinegar to preserve food
-- add charcoal powder as medicine
-- add charcoal as compostable item and add biochar as composter prduct?
-- add a new stat: dirtiness and add soap to clean it (potash + vegetable oil on the mortar and pestle, needs to be cured)
 
 already done:
 
-- bring back the weaving frame and the chopping block
-- apply and improve the idol worshipping, now with blessings and curses
-- add religion traits 
-- new working spot for all the pottery
-- fix an error in the code of glow worm
-- remove rings
-- add a file loader to better organization and standarization of the code
-- implement a composter block to turn organics into fertilizer
-- remove hammers
-- enable back drinking cooking oil
-- Ceramic Watering Can
-- Alembic to extract salt from water
-- make the composter able to produce worms
-- remove choping block from choping block
-- remove the crafting of sticks from woodplants, from the choping block
-- remove bulk recipes from choping block
-- change hammerig block recipe, make it require firing sticks
-- remove woodfire from sticks from choping block
-- remove dugout canoe from choping block and add to carpentry bench
-- Turn bones into bonemeal on the grinding stone
-- add bonemeal as product of the composter
-- add charcoal powder to mortar and pestle
-- create black painting with charcoal powder
-- crushed iron powder to red painting
-- remove grinding, hammering and weaving spots
-- add weaving frame and grinding stone to crafting spot
-- change grinding stone recipe to work with cobbles instead of boulder
-- move rosted iron powder recipe to the grinding stone
-- add a hammer to the model of the hammering block and change the recipe to make sense
-- add sundial and disable the message of is the X day of the Season Y
-- make bricks maker bench lower
-- move wattle to the weaving frame
-- split the mixing spot into bricks/slabs creation and pure mixing
-- add mixing bucket and mortar bucket
-- add limestone grinding stone
-- move lime mortar to the grinding stone
-- make carpentry bench cheaper (one iron ingot)
-- remove carpentry bench from carpentry bench
-- remove anvil from anvil
-- remove bulk recipes from mortar and pestle

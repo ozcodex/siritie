@@ -1,0 +1,6 @@
+
+--- Religion Based--
+Atheist if the player have never prayed.
+Doubter if the player have prayed less than 50% of the days
+Adherent if the player have prayed more than 50% of the days
+Devotee if the player have prayed more than 75% of the days
