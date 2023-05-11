@@ -107,13 +107,51 @@ local function sfinv_get(self, player, context)
 --generate traits
   local traits = "\n "
   if prayers == 0 then
-    traits = traits..'Atheist'
+    traits = traits..'Atheist. '
   elseif prayers <= days*(1/2) then
-    traits = traits..'Doubter'
+    traits = traits..'Doubter. '
   elseif prayers <= days*(3/4) then
-    traits = traits..'Adherent'
+    traits = traits..'Adherent. '
   else
-    traits = traits..'Devotee'
+    traits = traits..'Devotee. '
+  end
+
+  if lives <= 2 then
+    traits = traits..'Newborn. '
+  elseif lives <= 3 then
+    traits = traits..'Resilient. '
+  elseif lives <= 5 then
+    traits = traits..'Phoenix. '
+  elseif lives <= 10 then
+    traits = traits..'Old Soul. '
+  elseif lives <= 20 then
+    traits = traits..'Reincarnated. '
+  elseif lives <= 30 then
+    traits = traits..'Immortal. '
+  elseif lives <= 50 then
+    traits = traits..'Eternal. '
+  else
+    traits = traits..'Transcendent. '
+  end
+
+  if days >= 3 and days <= 7 then
+    traits = traits..'Novice Outdoorsman. '
+  elseif days <= 12 then
+    traits = traits..'Beginner Forager. '
+  elseif days <= 20 then
+    traits = traits..'Intermediate Scavenger. '
+  elseif days <= 10 then
+    traits = traits..'Advanced Survivor. '
+  elseif days <= 80 then
+    traits = traits..'Wilderness Expert. '
+  elseif days <= 160 then
+    traits = traits..'Master Survivalist. '
+  elseif days <= 400 then
+    traits = traits..'Seasoned Explorer. '
+  elseif days <= 800 then
+    traits = traits..'Elite Bushcrafter. '
+  else
+    traits = traits..'Legendary Adventurer. '
   end
 
   local y = 4.1

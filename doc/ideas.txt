@@ -36,16 +36,6 @@ new ideas:
 		Sandstorm Nomad (after recovering from Dust Fever 5 times)
 		Brain Brawler (after surviving neurotoxicity 3 times)
 		Sun Shield (after surviving photosensitivity 5 times)
-	- survivalist: 
-		Novice Outdoorsman (after 3 days) +4
-		Begginer Forager (after 7 days) +5
-		Intermediate Scavenger (after 12) +8
-		Advanced Survivor (after 20 days, one season)
-		Wilderness Expert (after 40 days, two seasons)
-		Master Survivalist (after 80 days, whole year)
-		Seasoned Explorer (after 160 days, two years)
-		Elite Bushcrafter (after 400 days, five years)
-		Legendary Adventurer (after 800 days, ten years)
 - add more blessings and curses with effects to the health
 - add new diseases and possitive effects
 - create a clay smoker
@@ -64,4 +54,4 @@ new ideas:
 - use salt, sugar and vinegar to preserve food
 
 already done:
-
+ADD MORE TRAITS

@@ -1,6 +1,30 @@
 
---- Religion Based--
-Atheist if the player have never prayed.
-Doubter if the player have prayed less than 50% of the days
-Adherent if the player have prayed more than 50% of the days
-Devotee if the player have prayed more than 75% of the days
+--- Religion Based ---
+
+* Atheist if the player have never prayed.
+* Doubter if the player have prayed less than 50% of the days
+* Adherent if the player have prayed more than 50% of the days
+* Devotee if the player have prayed more than 75% of the days
+
+--- Based on the survived days ---
+
+* Novice Outdoorsman after survived 3 days
+* Begginer Forager after survived 7 days
+* Intermediate Scavenger after survived 12 days
+* Advanced Survivor after survived 20 days, one season
+* Wilderness Expert after survived 40 days, two seasons
+* Master Survivalist after survived 80 days, whole year
+* Seasoned Explorer after survived 160 days, two years
+* Elite Bushcrafter after survived 400 days, five years
+* Legendary Adventurer after survived 800 days, ten years
+
+--- Based on the lived lives ---
+
+* Newborn if only have lived 1 or 2 lifes
+* Resilient after more than 3 lives
+* Phoenix up to 5 lives
+* Old Soul after 6 or more lives
+* Reincarnated less than 10 lived lives
+* Immortal up to 20 lives
+* Eternal less than 30 lives
+* Transcendent more than 50 lives
