@@ -1,95 +1,65 @@
 # Siritie
-Created by Ozcodex, from Exile v0.3.9e by Dokimi, with contributions from Mantar.
-for `Minetest 5.3+`
 
-Siritie is a challenging survival game where you must fight to survive in a 
-harsh world.
-Make tough decisions, adapt to your environment and learn to survive in a world
-that is both accurate and mystical.
+Siritie is a challenging survival game that will put your skills to the test as
+you fight to survive in a harsh and mystical world. Created by Ozcodex, Siritie
+is a derivation of the original game _Exile v0.3.9e_ by Dokimi, with
+contributions from Mantar. The game is designed for `Minetest 5.3+` and offers
+an immersive and exciting gameplay experience.
 
 ## Installation
 
-Clone into your minetest/games folder.
-
+To get started with Siritie, simply clone the repository into your
+`minetest/games` folder and you're good to go!
 
 ## Gameplay
 
-Challenging, at times brutal, wilderness survival with simple technology.
-Use your wits to find food, water, and shelter before succumbing to the
-elements, while exploring the mysterious world, and developing your capacities 
-to endure your exile.
+In Siritie, you'll find yourself in a wilderness survival scenario with limited resources, simple technology, and dynamic weather conditions. You'll need to rely on your wits to find food, water, and shelter, while exploring the mysterious world and developing your skills to endure your exile. You'll need to be careful, however, as the world is full of dangers, and one wrong move could spell the end of your adventure.
 
 ### Features
-*Player health effects* — Hypothermia, exhaustion, disease, …  
-*Dynamic natural world* — Seasonal weather, erosion, water flows through soil, 
-*Plausible building materials* — Make shelters from the rain, kilns, smelters, 
-*Realistic crafting* — Make tools, clothing, and food from natural materials.
+
+*Player physical conditions* - Battle against the elements, the hunger and 
+various illnesses, including hypothermia, exhaustion, and disease, as you strive
+to survive.
+*Dynamic living world* - Immerse yourself in a world with ever-changing seasonal
+weather patterns, erosion, and water flows through soil, adding to the realism
+and challenge.
+*Realistic building materials* - Build your own shelter from the rain, create
+kilns and smelters, and use realistic and sustainable materials to craft your
+tools and equipment.
+*Authentic crafting* - Gather natural resources and materials to create tools,
+clothing, and food that are crucial for your survival, making your experience
+more immersive.
+*A Hint of Mysticism* -  Explore the mystical realm of alchemy, and seek
+blessings by offering prayers to the gods. It's uncertain whether these gods
+truly exist, or if the magical elements even hold any real power.
+*Unique Characters* - Each character in Siritie is unique, born with a
+backstory, name, and land of origin, with distinctive characteristics that shape
+their journey through the game.
+
+### Tips and Tricks
+
+As you explore and survive in Siritie, you will discover that there are many different strategies that may work, and part of the fun is figuring out what does, and catastrophically does not, work. Here are some early advices you might pass through to ensure your survival:
+
+The first step is to find a comfortable shelter that will help regulate your body temperature and protect you from hypothermia or heat stroke.
+
+Once you have a shelter, it's important to conserve your energy by doing tasks such as crafting, organizing, and planning while you rest. Extreme weather can sap your energy quickly, so avoid walking around in snowstorms or other dangerous weather.
+
+If you're in a situation where you need to build a shelter, it's essential to have a fireplace or plenty of torches to regulate temperature. Consider going underground in caves that are deep enough to be safe from the weather. Collect water in pots from cave drips or rainwater, and seek out plants and food that quench your thirst. As a last resort, you can try to melt ice or dig a pit in wet ground and wait for water to flow into it.
+
+To sustain yourself, you can catch animals with clubs and explore farming for a sustainable food source. Simple grass clothing can be woven quickly and can be a lifesaver, while better clothes can be made by soaking bundles of the right kind of plants. Keep an eye on "health effects," as you may have eaten something bad or have a terrible disease. Some plants have useful medicinal effects, but be careful not to overdose.
+
+Fibrous plants, sticks and stones are fine as initial tools, but woodcutting requires better tools for harder woods. Build stairs and shelters around your base to save energy and protect you from extremes. Use sticks to build a ladder or pole to shimmy up, to get to high places or descend carefully.
+
+Not every step in crafting can be done at a work station, so consider the environment and industry you need to create to advance. Build ovens, kilns, and furnaces just as you would in real life, and start a fire with access to air and a sealed chamber that gets heated up. Blocks are hotter than slabs, and charcoal is hotter than wood. Fires can be temporarily extinguished by punching while holding sediment, and charcoal can be made by creating a wood fire sealed up to limit airflow.
+
+If you're looking to make green or clear glass, sand and wood-ash can be made into green glass, but clear glass requires the ash to be soaked, dried, and roasted. Glass can be melted onto iron trays to make panes for real windows! Iron smelting is hard and requires plenty of charcoal and a space below the iron mixture for slag to drain out.
+
+Overall, surviving in extreme weather conditions is all about being prepared and knowing what to do. With the right knowledge, anyone can make it through even the toughest situations.
 
 ## World Settings
-Valleys is the standard `mapgen` for _Exile_. `Carpathian` is also supported,
+
+Valleys is the standard `mapgen` for _Siritie_. `Carpathian` is also supported,
 for a somewhat more difficult and slower-paced game.
-
-## Gameplay Guide
-Many different strategies might work, and part of the fun is figuring out 
-what does, and catastrophically does not, work.
-
-Here are some early steps you might pass though:
-1. **Craft**   basic tools. **Find** a suitable camp site quickly before you get tired.
-1. **Build**   a bed to rest in, plus shelter, and maybe fires for warmth.
-1. **Weave**   rudimentary clothing and blankets to begin improving your rest rate.
-1. **Make**    a kiln, and fire pots. **Harvest** wild foods from trees while you wait.
-1. **Collect** water with pots, and build up a freshwater supply, into a cistern if needed.
-1. **Farm**    food plants, herbs, and fibrous canes to build up supplies.
-1. **Explore** and gather mineral resources for more advanced tools.
-
-You start in spring. Maybe some pangs of winter linger, so beware the night.
-Enjoy the rains while you can. Soon the hot, dry weather of summer will arrive.
-Running out of water, or becoming exhausted from the heat, is a real risk.
-After that will come the sub-zero conditions of winter.
-Starvation and freezing are hard to avoid without preparation.
-
-### Some Tips and Tricks
-- **Beds**           are important: If you’re exhausted you get hypothermia/heat stroke.
-                     Get under shelter in a nice temperature.
-- **Time**:          Do your crafting, organizing, planning while you rest.
-- **Weather**:       Extremes sap your energy.
-                     Like real life, walking around in a snowstorm is a bad idea!
-- **Temperature**:   Build a shelter, with a fire place or lots of torches.
-                     You can also go underground; caves sufficiently deep are safe from weather.
-- **Water**:         You can drink cave drips (click them).
-                     Water pots collect rain water.
-                     Some plants, and food quench your thirst.
-                     If you’re desperate, you can try to melt ice, 
-                     or dig a seepage pit in wet ground and wait for water to flow into it.
-- **Food**:          Eat things and see if you live!
-                     You can catch animals with clubs (right-click while wielding).
-- **Clothing**:      Simple grass clothing can be woven quickly, and can be a lifesaver.
-                     Better clothes can be made by soaking bundles of the right kind of plants.
-- **Farming**:       Digging tools also can till soil.
-                     Punching depleted agricultural soils with fertilizers will restore them.
-- **Illness**:       Keep an eye on “health effects.”
-                     You may have eaten something bad, or have a terrible disease.
-- **Drugs**:         Some plants have useful medicinal effects.
-                     Be careful not to overdose, however.
-- **Spelunking**:    Go deep enough underground and you might find something….
-- **Woodcutting**:   Hardwood trees are more difficult to cut than soft wood.
-                     You will need better tools for those.
-- **Climbing**:      Build stairs and shelters around your base.
-                     This will save you energy and protect you from extremes.
-                     You can use sticks to build a ladder, or a pole to shimmy up, 
-                     to get to high places, or descend if you’re careful.
-- **Environment**:   Not every step in crafting can be done at a work station.
-                     Some things need to be fired, or soaked in water, etc.
-- **Industry**:      Build ovens, kilns, furnaces the same as you would for real.
-                     Start a fire with access to air, and a sealed chamber that gets heated up.
-- **Fires**:         Blocks are hotter than slabs. Charcoal is hotter than wood.
-                     Fires can be temporarily extinguished by punching while them holding sediment.
-- **Charcoal**:      Make it as you would for real — make a wood fire sealed up to limit airflow.
-- **Glassmaking**:   Sand and wood-ash can be made into green glass.
-                     The ash must be soaked, dried, and roasted to make clear glass — 
-                     Glass can be melted onto iron trays to make panes for real windows!
-- **Iron smelting**: This is hard. It needs plenty of charcoal, 
-                     and a space below the iron mixture for slag to drain out.
 
 ## Settings for Multiplayer
 The variable `time_speed` defaults to `72`, and at this rate a player who logs
@@ -107,16 +77,15 @@ a LAN server can probably handle `0.2` seconds.
 - [Wield3d](https://github.com/stujones11/wield3d) is recommended.
 
 ## Development
-_Exile_ is open-source software — that means the game is as good as you choose
+_Siritie_ is open-source software - that means the game is as good as you choose
 to make it. It also means development can be erratic and haphazard at times, so be patient!
 
-_Exile_ is currently in “Alpha,” therefore you can expect that there may be bugs, missing features, performance issues, and perhaps compatibility-breaking updates.
-Despite this, _Exile_ does have enough features to be a playable game and should be stable and mostly bug-free.
-
-See the [GitHub repository](https://codeberg.org/Mantar/Exile) for known bugs, and to report new ones.
+_Siritie_ is currently in “Alpha,” therefore you can expect that there may be bugs, missing features, performance issues, and perhaps compatibility-breaking updates.
+Despite this, _Siritie_ does have enough features to be a playable game and should be stable and mostly bug-free.
 
 ## Credits
-Gratitude is due to all those whose mods have been adapted for use in _Exile_ (see `./mod/` folders for details).
+I would like to express our heartfelt gratitude to Dokimi for creating the original game Exile, which served as the foundation for Siritie's development. Also, thanks to Mantar for updating and contributing to the original game, which has indirectly contributed to the development of Siritie. 
 
-Thanks also to all who have given feedback, fixes, etc.  
-A full, up-to-date list of contributors can be found on the GitHub repository, under the `Insights` tab.
+Gratitude is due to all those whose mods have been adapted for use in _Siritie_ (see `./mod/` folders for details).
+
+Thanks also to all who have given feedback, fixes, etc. 
