@@ -74,7 +74,7 @@ function water_pot(pos, pot_name, elapsed)
 	return true
 end
 
-local oil_lamp_desc = lightsource_description.new(
+oil_lamp_desc = lightsource_description.new(
     {lit_name = "tech:clay_oil_lamp", unlit_name = "tech:clay_oil_lamp_unlit",
      fuel_name = "tech:vegetable_oil", max_fuel = 3100,
      burn_rate = 5, refill_ratio = 1/2, put_out_by_moisture = true})
