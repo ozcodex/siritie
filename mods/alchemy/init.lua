@@ -30,17 +30,17 @@ alembic_processes = {
 	-- source: products, subproduct and time in seconds
 	["tech:clay_water_pot_salt_water"] = {
 		products = {"alchemy:salt 2"},
-		subproduct = "tech:clay_water_pot_freshwater"
+		subproduct = "tech:clay_water_pot_freshwater",
 		time = 120
 	},
 	["tech:tang"] = {
-		products = {"alchemy:alcohol 1", "alchemy:salt 1"},
-		subproduct = "tech:clay_water_pot_freshwater"
+		products = {"alchemy:alcohol 1"},
+		subproduct = "tech:clay_water_pot_freshwater",
 		time = 180
 	},
 	["tech:clay_water_pot_freshwater"] = {
 		products = {},
-		subproduct = "tech:clay_water_pot"
+		subproduct = "tech:clay_water_pot",
 		time = 60
 	}
 }

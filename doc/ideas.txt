@@ -1,10 +1,9 @@
 ----------------- New Ideas --------------------
 
-- add alcohol extraction to the alembic (from tang)
 - make the paths work with wet soil
 - make that walking over path consume less energy
 - add a hoe to turn the sediment into agricultural soil?
-- update the modules.txt file to include the new modules
+- update the modules.txt file to include the new modules or merge new mods with existing ones
 - make meats and cooked food compostable
 - add infotext to pots
 - wiha fermentation process:
@@ -42,6 +41,7 @@
 		Brain Brawler (after surviving neurotoxicity 3 times)
 		Sun Shield (after surviving photosensitivity 5 times)
 - add more blessings and curses with effects to the health
+- enable pure alcohol drinking, giving liver failure.
 - add new diseases and possitive effects
 - create a clay smoker
 - add Alchemy glass equipment (alembic, retort, mortar and pestle, crucible, flask, beaker, test tube, funnel, pipette, etc)
@@ -66,17 +66,17 @@
 - alchemy processes: calcination, distillation, dissolution, fermentation, filtration.
 - make the smelter probe work with glass
 - add more randomness, probabilities
-
+- give boost based on traits
+- add an api to lower blocks node box if they are on top of a slab
 
 --------------- Already done -------------------
 
 - add more traits
 - roof ridge tiles for uneven roof shapes
 - make paths with the digging stick
+- add alcohol extraction to the alembic (from tang)
 
 ------------ Inhereit form Exile ----------------
-
-Watering can (make soil wet).
 
 Acquired character traits (see each life becomes meaningfully unique)
 

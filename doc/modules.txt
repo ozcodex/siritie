@@ -1,3 +1,7 @@
+alchemy
+composter
+religion
+
 animals: animal mobs
 
 artifacts: Undercity items
@@ -14,7 +18,7 @@ climate: weather and temperature system
 
 clothing: api for clothes
 
-crafting: api for crafting system (shared Minetest content)
+crafting: api for crafting system
 
 creative: enables creative mode
 
@@ -40,23 +44,23 @@ megamorph: mapgen Undercity structures
 
 minimal: core essential and commonly used code
 
-mobkit: mobs api (shared Minetest content)
+mobkit: mobs api
 
-naturalslopeslib: stepped hillsides api (shared Minetest content)
+naturalslopeslib: stepped hillsides api
 
 ncrafting: in world crafting functions e.g. soaking, baking
 
 nodes_nature: natural world blocks and associated processes
 
-player_api: player models etc (shared Minetest content)
+player_api: player models etc
 
-player_monoids: api for assisting with player physics (shared Minetest content)
+player_monoids: api for assisting with player physics
 
 ropes: api for ropes and rope ladders
 
-sfinv: inventory api (shared Minetest content)
+sfinv: inventory api
 
-spears: throwable spears api (shared Minetest content)
+spears: throwable spears api
 
 stairs: slabs and stairs api
 
@@ -64,4 +68,6 @@ tech: most player crafted items
 
 volcano: mapgen spawns volcanoes and lava tubes
 
-wielded_light: player holdable light effects (shared Minetest content)
+wielded_light: player holdable light effects
+
+zero_loader: api for loading files and make includes easier
