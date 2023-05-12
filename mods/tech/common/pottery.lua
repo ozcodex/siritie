@@ -83,6 +83,16 @@ oil_lamp_desc = lightsource_description.new(
 --Register water stores
 --source, nodename, nodename_empty, tiles, node_box, desc, groups
 
+-- clay pot nodebox
+clay_pot_nodebox = {
+	{-0.25, 0.375, -0.25, 0.25, 0.5, 0.25}, -- NodeBox1
+	{-0.375, -0.25, -0.375, 0.375, 0.3125, 0.375}, -- NodeBox2
+	{-0.3125, -0.375, -0.3125, 0.3125, -0.25, 0.3125}, -- NodeBox3
+	{-0.25, -0.5, -0.25, 0.25, -0.375, 0.25}, -- NodeBox4
+	{-0.3125, 0.3125, -0.3125, 0.3125, 0.375, 0.3125}, -- NodeBox5
+}
+
+
 --clay pot with salt water
 liquid_store.register_stored_liquid(
 	"nodes_nature:salt_water_source",
@@ -98,13 +108,7 @@ liquid_store.register_stored_liquid(
 	},
 	{
 		type = "fixed",
-		fixed = {
-			{-0.25, 0.375, -0.25, 0.25, 0.5, 0.25}, -- NodeBox1
-			{-0.375, -0.25, -0.375, 0.375, 0.3125, 0.375}, -- NodeBox2
-			{-0.3125, -0.375, -0.3125, 0.3125, -0.25, 0.3125}, -- NodeBox3
-			{-0.25, -0.5, -0.25, 0.25, -0.375, 0.25}, -- NodeBox4
-			{-0.3125, 0.3125, -0.3125, 0.3125, 0.375, 0.3125}, -- NodeBox5
-		}
+		fixed = clay_pot_nodebox
 	},
 	S("Clay Water Pot with Salt Water"),
 	{dig_immediate = 2})
@@ -125,13 +129,7 @@ liquid_store.register_stored_liquid(
 	},
 	{
 		type = "fixed",
-		fixed = {
-			{-0.25, 0.375, -0.25, 0.25, 0.5, 0.25}, -- NodeBox1
-			{-0.375, -0.25, -0.375, 0.375, 0.3125, 0.375}, -- NodeBox2
-			{-0.3125, -0.375, -0.3125, 0.3125, -0.25, 0.3125}, -- NodeBox3
-			{-0.25, -0.5, -0.25, 0.25, -0.375, 0.25}, -- NodeBox4
-			{-0.3125, 0.3125, -0.3125, 0.3125, 0.375, 0.3125}, -- NodeBox5
-		}
+		fixed = clay_pot_nodebox
 	},
 	S("Clay Water Pot with Freshwater"),
 	{dig_immediate = 2})

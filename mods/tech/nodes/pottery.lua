@@ -37,13 +37,7 @@ minetest.register_node("tech:clay_water_pot", {
 	paramtype = "light",
 	node_box = {
 		type = "fixed",
-		fixed = {
-			{-0.25, 0.375, -0.25, 0.25, 0.5, 0.25}, -- NodeBox1
-			{-0.375, -0.25, -0.375, 0.375, 0.3125, 0.375}, -- NodeBox2
-			{-0.3125, -0.375, -0.3125, 0.3125, -0.25, 0.3125}, -- NodeBox3
-			{-0.25, -0.5, -0.25, 0.25, -0.375, 0.25}, -- NodeBox4
-			{-0.3125, 0.3125, -0.3125, 0.3125, 0.375, 0.3125}, -- NodeBox5
-		}
+		fixed = clay_pot_nodebox
 	},
 	liquids_pointable = true,
 	on_use = function(itemstack, user, pointed_thing)
@@ -77,13 +71,7 @@ minetest.register_node("tech:clay_water_pot_unfired", {
 	paramtype = "light",
 	node_box = {
 		type = "fixed",
-		fixed = {
-			{-0.25, 0.375, -0.25, 0.25, 0.5, 0.25}, -- NodeBox1
-			{-0.375, -0.25, -0.375, 0.375, 0.3125, 0.375}, -- NodeBox2
-			{-0.3125, -0.375, -0.3125, 0.3125, -0.25, 0.3125}, -- NodeBox3
-			{-0.25, -0.5, -0.25, 0.25, -0.375, 0.25}, -- NodeBox4
-			{-0.3125, 0.3125, -0.3125, 0.3125, 0.375, 0.3125}, -- NodeBox5
-		}
+		fixed = clay_pot_nodebox
 	},
 	groups = {dig_immediate=3, temp_pass = 1, heatable = 20},
 	sounds = nodes_nature.node_sound_stone_defaults(),
