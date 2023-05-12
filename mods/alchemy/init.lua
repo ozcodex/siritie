@@ -34,7 +34,7 @@ alembic_processes = {
 		time = 120
 	},
 	["tech:tang"] = {
-		products = {"alchemy:alcohol 1"},
+		products = {"alchemy:alcohol 1","alchemy:salt 1"},
 		subproduct = "tech:clay_water_pot_freshwater",
 		time = 180
 	},

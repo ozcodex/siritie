@@ -38,7 +38,7 @@ minetest.register_node("alchemy:alembic", {
         local inv = meta:get_inventory()
         inv:set_size('main', alembic_inv_size)
         minimal.infotext_set(pos,meta,
-     	"Note: put over a clay pot with salt water and apply heat to dasanilizate it")
+     	"Note: To distill products, place the alembic over a clay pot filled with liquids and apply heat.")
         local timer = minetest.get_node_timer(pos)
         timer:start(alembic_check_interval)
     end,
@@ -48,22 +48,20 @@ minetest.register_node("alchemy:alembic", {
     on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
         local meta = minetest.get_meta(pos)
         local inv = meta:get_inventory()
-        local player_inv = clicker:get_inventory()
+		local player_pos = clicker:get_pos()
 
-        -- loop through each slot in the alembic inventory
-        for i = 1, inv:get_size("main") do
-            local stack = inv:get_stack("main", i)
-            if not stack:is_empty() then
-                -- add the item stack to the player inventory
-                local leftover = player_inv:add_item("main", stack)
-                -- if there are leftover items, put them back in the alembic inventory
-                if not leftover:is_empty() then
-                    inv:set_stack("main", i, leftover)
-                else
-                    inv:set_stack("main", i, ItemStack(""))
-                end
-            end
-        end
+		-- loop through each slot in the alembic inventory
+		for i = 1, inv:get_size("main") do
+        	local player_inv = clicker:get_inventory()
+		    local stack = inv:get_stack("main", i)
+		    if not stack:is_empty() then
+		        -- add the item stack to the player inventory and save the leftover items
+		        local leftover = player_inv:add_item("main", stack)
+				minetest.item_drop(leftover, clicker, player_pos)
+				inv:set_stack("main", i, ItemStack(""))
+			end
+		end
+
         --update the infotext
         update_alembic_infotext(pos)
     end,
