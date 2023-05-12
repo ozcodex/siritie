@@ -19,6 +19,9 @@ firing:
 - roasted iron ore
 - potash
 - quicklime
+- glass
+- iron bloom
+- lime from slanked lime
 
 ---- Tier 1 ----
 
@@ -129,6 +132,7 @@ bricks maker bench:
 - rammed earth stairs and slabs
 - loose bricks
 - loose roof tiles
+- roof tiles
 
 dyers table:
 - bundle of plants, untreaten
