@@ -21,6 +21,8 @@ firing:
 - quicklime
 - glass
 - iron bloom
+
+airing:
 - lime from slanked lime
 
 ---- Tier 1 ----
@@ -34,12 +36,11 @@ crafting spot:
 - small wood fire
 - large wood fire
 - chopping block
-- bricks maker bench
+- brickworks bench
 - grinding stone
 - weaving frame
 - drystack
 - mixing bucket
-- mortar bucket
 - torch
 - dye pot
 - dyers table
@@ -70,6 +71,38 @@ clay shaping spot:
 
 ---- Tier 2 ----
 
+chopping block:
+- logs stairs and slabs
+- sticks from logs
+- sticks from log slabs
+- wood fire from logs
+- carpentry bench
+- hammering log
+- primitive wooden chest
+- wooden water pot
+
+brickworks bench:
+- mudbrick
+- rammed earth
+- mudbrick stairs and slabs
+- rammed earth stairs and slabs
+- loose bricks
+- loose roof tiles
+- roof tiles
+
+grinding stone:
+- granite adze
+- jade adze
+- basalt adze
+- stone club
+- basalt mortar and pestle
+- granite mortar and pestle
+- limestone mortar and pestle
+- lime mortar
+- Charcoal powder block
+- Roasted iron ore powder
+- bonemeal
+
 weaving frame:
 - woven bag
 - wicker bag
@@ -93,49 +126,14 @@ weaving frame:
 - wattle trap door
 
 mixing bucket:
+- mortar bucket
 - agricultural soil
 - loam
 - wet loam
 
-mortar bucket:
-- glass furnace
-- brick and mortar
-- stone blocks with mortar
-
-grinding stone:
-- granite adze
-- jade adze
-- basalt adze
-- stone club
-- basalt mortar and pestle
-- granite mortar and pestle
-- limestone mortar and pestle
-- lime mortar
-- Charcoal powder block
-- Roasted iron ore powder
-- bonemeal
-
-chopping block:
-- logs stairs and slabs
-- sticks from logs
-- sticks from log slabs
-- wood fire from logs
-- carpentry bench
-- hammering block
-- primitive wooden chest
-- wooden water pot
-
-bricks maker bench:
-- mudbrick
-- rammed earth
-- mudbrick stairs and slabs
-- rammed earth stairs and slabs
-- loose bricks
-- loose roof tiles
-- roof tiles
-
 dyers table:
 - bundle of plants, untreaten
+- dye from treaten plants
 
 composter bin:
 - loam
@@ -143,10 +141,6 @@ composter bin:
 - vermicompost
 - bonemeal
 - small invertebrate carcass
-
-dyers table:
-- untreaten plant bundle
-- dye from treaten plants
 
 dye pot:
 - dyed woven clothes
@@ -175,21 +169,7 @@ carpentry bench:
 - clear glass window
 - wooden rope box
 
-mortar and pestle:
-- herbal medicine
-- tiku 
-- tang
-- peeled anperla tuber
-- mashed anperla tuber
-- bitter maraka flour
-- unbaked maraka cake
-- vegetable oil
-- painting kit white
-- painting kit glow
-- painting kit black
-- painting kit red
-
-hammering block:
+hammering log:
 - limestone block
 - ironstone block
 - granite block
@@ -211,9 +191,24 @@ hammering block:
 - clear glass mix
 - crushed lime
 
-glass furnace:
-- green glass bottle
-- clear glass bottle
+mortar bucket:
+- glass furnace
+- brick and mortar
+- stone blocks with mortar
+
+mortar and pestle:
+- herbal medicine
+- tiku 
+- tang
+- peeled anperla tuber
+- mashed anperla tuber
+- bitter maraka flour
+- unbaked maraka cake
+- vegetable oil
+- painting kit white
+- painting kit glow
+- painting kit black
+- painting kit red
 
 ---- Tier 4 ----
 
@@ -248,3 +243,7 @@ loom:
 - light and thick fabric cape
 - light and thick fabric trousers
 - light and thick fabric tunic
+
+glass furnace:
+- green glass bottle
+- clear glass bottle
