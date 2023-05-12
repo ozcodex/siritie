@@ -38,7 +38,7 @@ minetest.register_node("alchemy:alembic", {
         inv:set_size('main', alembic_inv_size)
         meta:set_string("formspec", get_alembic_formspec(pos))
 		
-		minimal.infotext_set(pos,meta,"Note: To distill products, place the alembic over a clay pot and apply heat.")
+		update_alembic_infotext(pos)
         
         local timer = minetest.get_node_timer(pos)
         timer:start(alembic_check_interval)
