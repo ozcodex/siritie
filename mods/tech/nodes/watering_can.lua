@@ -18,21 +18,7 @@ minetest.register_node("tech:clay_watering_can", {
 	paramtype = "light",
 	node_box = {
 		type = "fixed",
-		fixed = {
-			-- lid
-			{-0.2, 0.2,-0.2, 0.2, 0.3, 0.2},
-			-- handle
-            {-0.05, 0.05, -0.25, 0.05, 0.15, -0.45}, -- upper
-            {-0.05, -0.1, -0.35, 0.05, 0.05, -0.45}, -- mid
-            {-0.05, -0.2, -0.25, 0.05, -0.1, -0.45}, -- low
-            -- spout
-            {-0.1, 0.1, 0.25, 0.1, 0.2, 0.5}, -- upper
-            {-0.1, -0.4, 0.25, 0.1, 0.1, 0.4},
-            -- body
-            {-0.25, -0.4, -0.25, 0.25, 0.2, 0.25},
-            -- base
-            {-0.3, -0.5,-0.4, 0.3, -0.35, 0.4},
-		}
+		fixed = watering_can_nodebox
 	},
 	liquids_pointable = true,
 	groups = {dig_immediate = 3, pottery = 1, temp_pass = 1},
@@ -66,21 +52,7 @@ minetest.register_node("tech:clay_watering_can_unfired", {
 	paramtype = "light",
 	node_box = {
 		type = "fixed",
-		fixed = {
-			-- lid
-			{-0.2, 0.2,-0.2, 0.2, 0.3, 0.2},
-			-- handle
-            {-0.05, 0.05, -0.25, 0.05, 0.15, -0.45}, -- upper
-            {-0.05, -0.1, -0.35, 0.05, 0.05, -0.45}, -- mid
-            {-0.05, -0.2, -0.25, 0.05, -0.1, -0.45}, -- low
-            -- spout
-            {-0.1, 0.1, 0.25, 0.1, 0.2, 0.5}, -- upper
-            {-0.1, -0.4, 0.25, 0.1, 0.1, 0.4},
-            -- body
-            {-0.25, -0.4, -0.25, 0.25, 0.2, 0.25},
-            -- base
-            {-0.3, -0.5,-0.4, 0.3, -0.35, 0.4},
-		}
+		fixed = watering_can_nodebox
 	},
 	groups = {dig_immediate=3, temp_pass = 1, heatable = 20},
 	sounds = nodes_nature.node_sound_stone_defaults(),
