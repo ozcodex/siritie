@@ -569,3 +569,27 @@ crafting.register_recipe({
 -- see red_ochre above
 sediment.register_all_sed_and_agri_variants(sediment_list)
 sediment.register_soil_variants(soil_list)
+
+-- path nodes
+for _, sed in pairs(sediment_list) do
+    local params = {
+        name = sed.dry_node_name.."_path",
+        description = S("@1 Path", sed.description),
+        tiles = {string.gsub(sed.dry_node_name, ":", "_").."_path.png",sed.texture_name},
+        groups = merge_tables(sed.groups, {path = 1}),
+        sounds = sed.sound,
+        paramtype = "light",
+        paramtype2 = "facedir",
+        drop = sed.dry_node_name,
+        drawtype = "nodebox",
+        node_box = {
+            type = "fixed",
+            fixed = {
+                {-0.5, -0.5, -0.5, 0.5, 0.4375, 0.5},
+            },
+        },
+        _wet_name = sed.dry_node_name.."_path",
+        _wet_salty_name = sed.dry_node_name.."_path",
+    }
+    minetest.register_node(sed.dry_node_name.."_path", params)
+end

@@ -40,7 +40,7 @@ minetest.register_tool("tech:digging_stick", {
 	groups = {shovel = 1, craftedby = 1},
 	sound = {breaks = "tech_tool_breaks"},
 	on_place = function(itemstack, placer, pointed_thing)
-		return till_soil(itemstack, placer, pointed_thing, base_use)
+		return path_making(itemstack, placer, pointed_thing, base_use)
 	end
 })
 

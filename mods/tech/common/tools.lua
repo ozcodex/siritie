@@ -55,7 +55,55 @@ function till_soil(itemstack, placer, pointed_thing, uses)
 
 end
 
+function path_making(itemstack, placer, pointed_thing, uses)
+	if pointed_thing.type ~= "node" then
+		return
+	end
 
+
+
+	local under = minetest.get_node(pointed_thing.under)
+	-- am I clicking on something with existing on_rightclick function?
+	local def = minetest.registered_nodes[under.name]
+	if def and def.on_rightclick then
+		return def.on_rightclick(pointed_thing.under, under, placer, itemstack)
+	end
+
+	local p = {x=pointed_thing.under.x, y=pointed_thing.under.y+1, z=pointed_thing.under.z}
+	local above = minetest.get_node(p)
+
+	-- return if any of the nodes is not registered
+	local node_name = under.name
+	local nodedef = minetest.registered_nodes[node_name]
+
+	if not nodedef then
+		return
+	end
+	if not minetest.registered_nodes[above.name] then
+		return
+	end
+
+	-- check if the node above the pointed thing is air
+	if above.name ~= "air" then
+		return
+	end
+
+	--living surface level sediment
+
+	local sediments = {
+	    [1] = 'loam', [2] = 'clay', [3] = 'silt', [4] = 'sand', [5] = 'gravel'
+	}
+	if nodedef.groups['sediment'] then
+		local path_node = "nodes_nature:"..sediments[nodedef.groups['sediment']].."_path"
+		if minetest.registered_nodes[path_node] then
+			minetest.swap_node(pointed_thing.under, {name = path_node})
+			minetest.sound_play("nodes_nature_dig_crumbly", {pos = pointed_thing.under, gain = 0.5,})
+			itemstack:add_wear(65535/(uses-1))
+			return itemstack
+		end
+	end
+
+end
 --------------------------
 --1st level
 --Crude emergency tools

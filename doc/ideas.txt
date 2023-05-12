@@ -1,7 +1,8 @@
 ----------------- New Ideas --------------------
 
-- make paths with the digging stick
-- add a hoe to turn the sediment into agricultural soil
+- make the paths work with wet soil
+- make that walking over path consume less energy
+- add a hoe to turn the sediment into agricultural soil?
 - update the modules.txt file to include the new modules
 - make meats and cooked food compostable
 - add alcohol extraction to the alembic (from tang)
@@ -68,8 +69,9 @@
 
 --------------- Already done -------------------
 
-ADD MORE TRAITS
+- add more traits
 - roof ridge tiles for uneven roof shapes
+- make paths with the digging stick
 
 ------------ Inhereit form Exile ----------------
 
