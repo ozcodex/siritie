@@ -1,0 +1,15 @@
+Each 20 in game days a new season start.
+a year takes 80 days.
+
+Seasons:
+- Birth: good climate, clear
+- Thirst: hot climate, frecuent dust storm
+- Retreat: the climate starts to chill 
+- Hunger: very cold climate
+
+The day is divided in:
+
+- morning
+- afternoon
+- evening
+- small hours
