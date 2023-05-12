@@ -1,11 +1,12 @@
 ----------------- New Ideas --------------------
 
+- add alcohol extraction to the alembic (from tang)
 - make the paths work with wet soil
 - make that walking over path consume less energy
 - add a hoe to turn the sediment into agricultural soil?
 - update the modules.txt file to include the new modules
 - make meats and cooked food compostable
-- add alcohol extraction to the alembic (from tang)
+- add infotext to pots
 - wiha fermentation process:
 	- crush wiha to get wiha mash
 	- mix wiha mash with water to get wiha must

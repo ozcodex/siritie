@@ -1,3 +1,19 @@
+alembic_processes = {
+	-- source: products and subproduct
+	["tech:clay_water_pot_salt_water"] = {
+		products = {"alchemy:salt 2"},
+		subproduct = "tech:clay_water_pot_freshwater"
+	},
+	["tech:tang"] = {
+		products = {"alchemy:alcohol 1", "alchemy:salt 1"},
+		subproduct = "tech:clay_water_pot_freshwater"
+	},
+	["tech:clay_water_pot_freshwater"] = {
+		products = {},
+		subproduct = "tech:clay_water_pot"
+	}
+}
+
 function alembic_process(pos, elapsed)
 	-- get block under alembic
 	local below_pos = {x = pos.x, y = pos.y - 1, z = pos.z}
@@ -7,7 +23,7 @@ function alembic_process(pos, elapsed)
 	local temp = climate.get_point_temp(below_pos)
 
 	-- only continue if the block below is a clay water pot with water
-	if not (below_name == "tech:clay_water_pot_salt_water" or below_name == "tech:clay_water_pot_freshwater") then
+	if not alembic_processes[below_name] then
 		-- stop the execution and try again later
 		return true
 	end
@@ -22,20 +38,22 @@ function alembic_process(pos, elapsed)
 		time = 120 -- seconds
 	end
 
-	-- decrease time elapsed
+	-- take meta and inventory
 	local meta = minetest.get_meta(pos)
 	local remaining = meta:get_float("remaining") or time
+	local inv = meta:get_inventory()
+	-- decrease time elapsed
 	remaining = remaining - elapsed
 
 	-- if time elapsed, replace below block
 	if remaining <= 0 then
-		if below_name == "tech:clay_water_pot_salt_water" then
-			minetest.swap_node(below_pos, {name = "tech:clay_water_pot_freshwater"})
-			local inv = meta:get_inventory()
-			inv:add_item("main", "alchemy:salt 1")
+		if process then
+			local process = alembic_processes[source_name]
+			for _, product in ipairs(process.products) do
+				inv:add_item("main", product)
+		    end
 			update_alembic_infotext(pos)
-		elseif below_name == "tech:clay_water_pot_freshwater" then
-			minetest.swap_node(below_pos, {name = "tech:clay_water_pot"})
+			minetest.swap_node(below_pos, {name = process.subproduct})
 		end
 		meta:set_float("remaining", time)
 	else

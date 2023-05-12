@@ -36,7 +36,7 @@ minetest.register_node("alchemy:alembic", {
         local meta = minetest.get_meta(pos)
         meta:set_string("status", "")
         local inv = meta:get_inventory()
-        inv:set_size('main', 1)
+        inv:set_size('main', alembic_inv_size)
         minimal.infotext_set(pos,meta,
      	"Note: put over a clay pot with salt water and apply heat to dasanilizate it")
         local timer = minetest.get_node_timer(pos)

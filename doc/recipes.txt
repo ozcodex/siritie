@@ -17,12 +17,12 @@ firing:
 - treaten plant bundle
 - charcoal block
 - roasted iron ore
-- potash
 - quicklime
 - glass
 - iron bloom
 
 airing:
+- potash
 - lime from slanked lime
 
 ---- Tier 1 ----
@@ -147,6 +147,7 @@ dye pot:
 
 ceramic alembic:
 - salt
+- alcohol
 
 cooking pot:
 - soup
