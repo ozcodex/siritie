@@ -40,7 +40,7 @@ minetest.register_node("alchemy:alembic", {
         minimal.infotext_set(pos,meta,
      	"Note: put over a clay pot with salt water and apply heat to dasanilizate it")
         local timer = minetest.get_node_timer(pos)
-        timer:start(10)
+        timer:start(alembic_check_interval)
     end,
 
     on_timer = alembic_process,
