@@ -34,11 +34,12 @@ minetest.register_node("alchemy:alembic", {
 
 	on_construct = function(pos)
         local meta = minetest.get_meta(pos)
-        meta:set_string("status", "")
         local inv = meta:get_inventory()
         inv:set_size('main', alembic_inv_size)
-        minimal.infotext_set(pos,meta,
-     	"Note: To distill products, place the alembic over a clay pot filled with liquids and apply heat.")
+        meta:set_string("formspec", get_alembic_formspec(pos))
+		
+		minimal.infotext_set(pos,meta,"Note: To distill products, place the alembic over a clay pot and apply heat.")
+        
         local timer = minetest.get_node_timer(pos)
         timer:start(alembic_check_interval)
     end,
@@ -46,24 +47,8 @@ minetest.register_node("alchemy:alembic", {
     on_timer = alembic_process,
 
     on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
-        local meta = minetest.get_meta(pos)
-        local inv = meta:get_inventory()
-		local player_pos = clicker:get_pos()
-
-		-- loop through each slot in the alembic inventory
-		for i = 1, inv:get_size("main") do
-        	local player_inv = clicker:get_inventory()
-		    local stack = inv:get_stack("main", i)
-		    if not stack:is_empty() then
-		        -- add the item stack to the player inventory and save the leftover items
-		        local leftover = player_inv:add_item("main", stack)
-				minetest.item_drop(leftover, clicker, player_pos)
-				inv:set_stack("main", i, ItemStack(""))
-			end
-		end
-
-        --update the infotext
-        update_alembic_infotext(pos)
+    	local player_name = clicker:get_player_name()
+        minetest.show_formspec(player_name, "composter:alembic", get_alembic_formspec(pos))
     end,
 
     on_destruct = function(pos)
@@ -78,6 +63,14 @@ minetest.register_node("alchemy:alembic", {
                 end
             end
         end
+    end,
+
+    allow_metadata_inventory_move = function(pos, from_list, from_index, to_list, to_index, count, player)
+        return 0
+    end,
+
+    allow_metadata_inventory_put = function(pos, listname, index, stack, player)
+        return 0
     end,
 
 })

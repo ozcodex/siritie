@@ -22,7 +22,7 @@ by removing it.
 
 
 alembic_inv_size = 4 -- slots
-alembic_check_interval = 10 -- seconds
+alembic_check_interval = 1 -- seconds
 alembic_working_temperature = 100 -- celcius
 ambient_temperature_time = 300 -- seconds
 
