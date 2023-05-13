@@ -1,7 +1,3 @@
-alchemy
-composter
-religion
-
 animals: animal mobs
 
 artifacts: Undercity items

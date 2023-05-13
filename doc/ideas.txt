@@ -1,22 +1,17 @@
 ---------------- Upcomming --------------------
 
+- make meats, soup and cooked food compostable
+- make the composter use the group value as generated compost
+- make able to eat mashed whiha
 
 ----------------- New Ideas --------------------
 
-- make able to eat mashed whiha
-- mashed wiha as cooking ingredient
-- make the paths work with wet soil
-- make that walking over path consume less energy
-- add a hoe to turn the sediment into agricultural soil?
-- update the modules.txt file to include the new modules or merge new mods with existing ones
-- make meats and cooked food compostable
-- add salt (reduce thrist but enhances hunger, too much causes negative effects) as cooking ingredient
-- add sugar(energy booster) as cooking ingredient
 - improve working spaces:
 	- pottery wheel from Limestone block and sticks as improved version of the clay shaping spot
 	- ceramic idol, improved praying station (better chances? pray more than once?)
 	- add workbench as improved version of the crafting spot
 	- threshing sledge as improved seed extractor.
+	- alternative hammering log with granite
 - add more behaivor driven traits:
 	- food related (add a counter each time a food is ingested):
 		Vegetarian (after 5 days eating mostly plants)
@@ -37,42 +32,56 @@
 		Sandstorm Nomad (after recovering from Dust Fever 5 times)
 		Brain Brawler (after surviving neurotoxicity 3 times)
 		Sun Shield (after surviving photosensitivity 5 times)
-- add new diseases and possitive effects
-- add more blessings and curses with effects to the health
-- give boost based on traits
-- enable pure alcohol drinking, giving liver failure.
-- create a clay smoker for safe bulk cooking
-- add Alchemy glass equipment (retort, vessel)
-- add Alchemy iron equipment (scale, tongs)
-- add alcehmy ceramic equipment (Alchemy Mortarium, Elemental Crucible)
-- add Alchemy bench
-- add alchemical medicines for each disease
-- add charcoal powder as medicine
-- add a new stat: hygiene if submerge in water slowly increases
+- alchemy improvement:
+	- a easier way to get large amounts of alcohol, from sugar and Tartar Salt (Tartaris Syrup)
+	- enable pure alcohol drinking, giving liver failure.
+	- add Alchemy glass equipment (retort, vessel)
+	- add Alchemy iron equipment (scale, tongs)
+	- add alcehmy ceramic equipment (Alchemy Mortarium, Elemental Crucible)
+	- add alchemy recipes
+	- add Alchemy bench
+	- add alchemical medicines for each disease
 - food rework:
+	- improve the GUI
 	- make the food decay
 	- add a refrigerator that runs on snow
 	- use salt, sugar and vinegar to preserve food
 	- add a Drying Rack to dry meats
+	- add salt (reduce thrist but enhances hunger, too much causes negative effects) as cooking condiment
+	- add sugar(energy booster) as cooking condiment
+- improvement on tech module:
+	- draw a whole tech map tree including future changes
+	- refactor the remaining files
+	- organize tech/textures folder followin the same naming convention
+- new advanced metal
+	- add aluminium
+	- decorative items from aluminium
+	- cooking utensils from aluminium
+	- aluminium water containers
+	- aluminium roof tiles
+	- aluminium windows
+- underground improvement
+	- add more randomness, probabilities
+	- add books or tablets on the under ground city with recipes for alchemy
+	- add alchemy materials to the underground city, specially volcanic ash
+	- add a arcana container that has to be broken to be opened with common lot on the underground
+- add a new stat: hygiene if submerge in water slowly increases
+- add new diseases and possitive effects
+- add more blessings and curses with effects to the health
+- give boost based on traits
+- create a clay smoker for safe bulk cooking
+- add charcoal powder as medicine
 - fix translation templates to include all the actual strings
-- organize tech/textures folder followin the same naming convention
 - add an api to lower blocks node box if they are on top of a slab
 - redesign the runes of painting kits
 - add a basalt hammer as alternative club
 - make the basalt hammer be required to create the hammering log
-- alternative hammering log with granite
 - make the smelter probe work with glass
-- add more randomness, probabilities
-- add books or tablets on the under ground city with recipes for alchemy
-- add alchemy materials to the underground city, specially volcanic ash
-- add a arcana container that has to be broken to be opened with common lot on the under ground
-- a easier way to get large amounts of alcohol, from sugar and Tartar Salt (Tartaris Syrup)
 - aurifex can be used for glazing pottery
-- decorative items from aluminium
-- cooking utensils from aluminium
-- aluminium water containers
-- aluminium roof tiles
-- aluminium windows 
+- add debug tool: meta reader
+- make the paths work with wet soil
+- make that walking over path consume less energy
+- add a hoe to turn the sediment into agricultural soil?
 
 
 --------------- Already done -------------------
