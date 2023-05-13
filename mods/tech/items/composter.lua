@@ -1,6 +1,6 @@
-minetest.register_craftitem("composter:humus", {
+minetest.register_craftitem("tech:humus", {
     description = S("Humus"),
-    inventory_image = "composter_humus.png",
+    inventory_image = "tech_humus.png",
     stack_max = minimal.stack_max_medium/2,
     groups = { fertilizer = 1 },
     tool_capabilities = {
@@ -11,9 +11,9 @@ minetest.register_craftitem("composter:humus", {
     },
 })
 
-minetest.register_craftitem("composter:vermicompost", {
+minetest.register_craftitem("tech:vermicompost", {
     description = S("Vermicompost"),
-    inventory_image = "composter_vermicompost.png",
+    inventory_image = "tech_vermicompost.png",
     stack_max = minimal.stack_max_medium/2,
     groups = { fertilizer = 1 },
     tool_capabilities = {
@@ -24,9 +24,9 @@ minetest.register_craftitem("composter:vermicompost", {
     },
 })
 
-minetest.register_craftitem("composter:bonemeal", {
+minetest.register_craftitem("tech:bonemeal", {
     description = S("Bonemeal"),
-    inventory_image = "composter_bonemeal.png",
+    inventory_image = "tech_bonemeal.png",
     stack_max = minimal.stack_max_medium/2,
     groups = { fertilizer = 1 },
     tool_capabilities = {

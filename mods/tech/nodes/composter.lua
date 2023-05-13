@@ -1,10 +1,10 @@
-minetest.register_node("composter:composter_bin", {
+minetest.register_node("tech:composter_bin", {
     description = S("Composter Bin"),
-    tiles = {"composter_bin_top.png",
-    "composter_bin.png",
-    "composter_bin.png",
-    "composter_bin.png",
-    "composter_bin.png"},
+    tiles = {"tech_composter_bin_top.png",
+    "tech_composter_bin.png",
+    "tech_composter_bin.png",
+    "tech_composter_bin.png",
+    "tech_composter_bin.png"},
     drawtype = "nodebox",
     stack_max = 1,
     paramtype = "light",
@@ -57,7 +57,7 @@ minetest.register_node("composter:composter_bin", {
         local compost = meta:get_int("compost")
         meta:set_string("infotext", "Composter ("..compost.."% full)")
 
-        minetest.show_formspec(player_name, "composter:composter_bin", get_composter_formspec(compost))
+        minetest.show_formspec(player_name, "tech:composter_bin", get_composter_formspec(compost))
     end,
 
     allow_metadata_inventory_move = function(pos, from_list, from_index, to_list, to_index, count, player)
