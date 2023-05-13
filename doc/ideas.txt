@@ -10,6 +10,8 @@
 
 ----------------- New Ideas --------------------
 
+- make able to eat mashed whiha
+- mashed wiha as cooking ingredient
 - make the paths work with wet soil
 - make that walking over path consume less energy
 - add a hoe to turn the sediment into agricultural soil?
@@ -69,6 +71,7 @@
 - make the smelter probe work with glass
 - add more randomness, probabilities
 - add books or tablets on the under ground city with recipes for alchemy
+- add alchemy materials to the underground city, specially volcanic ash
 - add a arcana container that has to be broken to be opened with common lot on the under ground
 - a easier way to get large amounts of alcohol, from sugar and Tartar Salt (Tartaris Syrup)
 - aurifex can be used for glazing pottery

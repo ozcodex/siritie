@@ -17,6 +17,14 @@ local alambic_nodebox = {
 	{-0.05, -0.2, -0.475, 0.05, -0.1, 0},
 }
 
+local pot_nodebox = {
+	{-0.25, 0.375, -0.25, 0.25, 0.5, 0.25}, -- NodeBox1
+    {-0.375, -0.25, -0.375, 0.375, 0.3125, 0.375}, -- NodeBox2
+    {-0.3125, -0.375, -0.3125, 0.3125, -0.25, 0.3125}, -- NodeBox3
+    {-0.25, -0.5, -0.25, 0.25, -0.375, 0.25}, -- NodeBox4
+    {-0.3125, 0.3125, -0.3125, 0.3125, 0.375, 0.3125}, -- NodeBox5
+}
+
 minetest.register_node("tech:alembic", {
 	description = "Ceramic Alembic",
 	drawtype = "nodebox",
@@ -98,4 +106,104 @@ minetest.register_node("tech:alembic_unfired", {
 		--finished product, length
 		return ncrafting.fire_pottery(pos, "tech:alembic_unfired", "tech:alembic", base_firing)
 	end,
+})
+
+--Pot of wiha must, must be left to ferment
+minetest.register_node("tech:wiha_must_pot", {
+  description = S("Wiha Must (unfermented)"),
+  tiles = {
+    "tech_pot_wiha_must.png",
+    "tech_pottery.png",
+    "tech_pottery.png",
+    "tech_pottery.png",
+    "tech_pottery.png",
+    "tech_pottery.png"
+  },
+  drawtype = "nodebox",
+  stack_max = 1,--minimal.stack_max_bulky,
+  paramtype = "light",
+  node_box = {
+    type = "fixed",
+    fixed = pot_nodebox
+  },
+  groups = {dig_immediate=3, pottery = 1, temp_pass = 1},
+  sounds = nodes_nature.node_sound_stone_defaults(),
+
+  on_dig = function(pos, node, digger)
+    -- save ferment progress
+    if minetest.is_protected(pos, digger:get_player_name()) then
+	    return false
+	  end
+
+	  local meta = minetest.get_meta(pos)
+	  local ferment = meta:get_int("ferment")
+
+	  local new_stack = ItemStack("tech:wiha_must_pot")
+	  local stack_meta = new_stack:get_meta()
+	  stack_meta:set_int("ferment", ferment)
+
+
+	  minetest.remove_node(pos)
+	  local player_inv = digger:get_inventory()
+	  if player_inv:room_for_item("main", new_stack) then
+	    player_inv:add_item("main", new_stack)
+	  else
+	    minetest.add_item(pos, new_stack)
+	  end
+  end,
+
+  on_construct = function(pos)
+    --duration of ferment
+    local meta = minetest.get_meta(pos)
+    meta:set_int("ferment", math.random(300,360))
+    --ferment
+    minetest.get_node_timer(pos):start(5)
+  end,
+
+  after_place_node = function(pos, placer, itemstack, pointed_thing)
+      local meta = minetest.get_meta(pos)
+	  local stack_meta = itemstack:get_meta()
+	  local ferment = stack_meta:get_int("ferment")
+	  if ferment >0 then
+	    meta:set_int("ferment", ferment)
+	  end
+  end,
+
+  on_timer =function(pos, elapsed)
+    local meta = minetest.get_meta(pos)
+    local ferment = meta:get_int("ferment")
+    if ferment < 1 then
+      minetest.swap_node(pos, {name = "tech:wiha_cider_pot"})
+      --minetest.check_for_falling(pos)
+      return false
+    else
+      --ferment if at right temp
+      local temp = climate.get_point_temp(pos)
+      if temp > 10 and temp < 34 then
+        meta:set_int("ferment", ferment - 1)
+      end
+      return true
+    end
+  end,
+})
+
+minetest.register_node("tech:wiha_cider_pot", {
+  description = S("Wiha Cider"),
+  tiles = {
+    "tech_pot_wiha_cider.png",
+    "tech_pottery.png",
+    "tech_pottery.png",
+    "tech_pottery.png",
+    "tech_pottery.png",
+    "tech_pottery.png"
+  },
+  drawtype = "nodebox",
+  stack_max = 1,--minimal.stack_max_bulky,
+  paramtype = "light",
+  node_box = {
+    type = "fixed",
+    fixed = pot_nodebox
+  },
+  groups = {dig_immediate=3, pottery = 1, temp_pass = 1},
+  sounds = nodes_nature.node_sound_stone_defaults(),
 })

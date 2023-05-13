@@ -25,6 +25,10 @@ airing:
 - potash
 - lime from slanked lime
 
+fermenting:
+- tang
+- wiha cider
+
 ---- Tier 1 ----
 
 crafting spot:
@@ -148,6 +152,8 @@ dye pot:
 ceramic alembic:
 - salt
 - alcohol
+- sugar
+- vinegar
 
 cooking pot:
 - soup
@@ -206,6 +212,8 @@ mortar and pestle:
 - bitter maraka flour
 - unbaked maraka cake
 - vegetable oil
+- mashed wiha
+- wiha must
 - painting kit white
 - painting kit glow
 - painting kit black

@@ -38,11 +38,21 @@ alembic_processes = {
         subproduct = "tech:clay_water_pot",
         time = 60
     },
+    ["tech:wiha_must_pot"] = {
+        products = {"tech:sugar"},
+        subproduct = "tech:clay_water_pot",
+        time = 90
+    },
+    ["tech:wiha_cider_pot"] = {
+        products = {"tech:vinegar 1"},
+        subproduct = "tech:clay_water_pot",
+        time = 150
+    },
     ["tech:clay_water_pot_potash"] = {
         products = {"tech:potash"},
         subproduct = "tech:clay_water_pot",
         time = 60
-    }
+    },
 }
 
 function get_alembic_formspec(pos)

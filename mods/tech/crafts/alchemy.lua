@@ -13,3 +13,19 @@ crafting.register_recipe({
 	level = 1,
 	always_known = true,
 })
+
+crafting.register_recipe({
+	type = "mortar_and_pestle",
+	output = "tech:mashed_wiha 1",
+	items = {"nodes_nature:wiha 12"},
+	level = 1,
+	always_known = true,
+})
+
+crafting.register_recipe({
+	type = "mortar_and_pestle",
+	output = "tech:wiha_must_pot 1",
+	items = {"tech:mashed_wiha","nodes_nature:nebiyi 6","tech:clay_water_pot_freshwater"},
+	level = 1,
+	always_known = true,
+})
