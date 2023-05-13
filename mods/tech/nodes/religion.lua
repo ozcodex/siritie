@@ -1,10 +1,8 @@
--- religion/nodes.lua
--- Minetest mod: religion
 
 minetest.register_node("religion:efigy", {
 	description = S("Effigy"),
-	inventory_image = "efigy_inv.png",
-	wield_image = "efigy_inv.png",
+	inventory_image = "tech_efigy_inv.png",
+	wield_image = "tech_efigy_inv.png",
 	tiles = {"tech_thatch.png"},
 	stack_max = 1,
 	drawtype = "nodebox",
