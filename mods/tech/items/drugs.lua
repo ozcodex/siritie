@@ -15,13 +15,13 @@ minetest.register_craftitem("tech:herbal_medicine", {
     effects_list = minetest.deserialize(effects_list) or {}
 
     --remove parasites
-    if random()<0.33 then
+    if math.random()<0.33 then
   		HEALTH.remove_new_effect(user, {"Intestinal Parasites"})
   	end
 
     --cure/reduce food poisoning and infections
     --see how effective the dose is
-    local cfp = random()
+    local cfp = math.random()
     if cfp <0.25 then
       --cure up to severe
       HEALTH.remove_new_effect(user, {"Food Poisoning", 3})

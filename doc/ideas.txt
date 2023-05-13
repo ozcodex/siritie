@@ -1,18 +1,13 @@
 ---------------- Upcomming --------------------
 
-- wiha fermentation process:
-	- crush wiha to get wiha mash
-	- mix wiha mash with water to get wiha must
-	- process on the alembic the wiha must to get sugar and wiha dregs.
-	- add mushroom sportes to the wiha must to create unfermente wiha cider
-	- ferment the wiha cider
-	- distill the fermented wiha cider in the alembic to get wiha vinegar
 
 ----------------- New Ideas --------------------
 
 - make able to eat mashed whiha
-- mashed wiha as cooking ingredient
+- mashed wiha as cooking ingredient and compostable
 - make the paths work with wet soil
+- add wiha dregs and make it compostable
+- add clay pot of vinegar
 - make that walking over path consume less energy
 - add a hoe to turn the sediment into agricultural soil?
 - update the modules.txt file to include the new modules or merge new mods with existing ones
@@ -88,6 +83,7 @@
 - roof ridge tiles for uneven roof shapes
 - make paths with the digging stick
 - add alcohol extraction to the alembic (from tang)
+- wiha fermentation process, sugar and vinegar
 
 ------------ Inhereit form Exile ----------------
 
