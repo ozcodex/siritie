@@ -17,7 +17,7 @@ local alambic_nodebox = {
 	{-0.05, -0.2, -0.475, 0.05, -0.1, 0},
 }
 
-minetest.register_node("alchemy:alembic", {
+minetest.register_node("tech:alembic", {
 	description = "Ceramic Alembic",
 	drawtype = "nodebox",
 	tiles = {"tech_pottery.png"},
@@ -76,7 +76,7 @@ minetest.register_node("alchemy:alembic", {
 })
 
 --unfired
-minetest.register_node("alchemy:alembic_unfired", {
+minetest.register_node("tech:alembic_unfired", {
 	description = S("Ceramic Alembic (unfired)"),
 	tiles = {
 		"nodes_nature_clay.png"
@@ -96,6 +96,6 @@ minetest.register_node("alchemy:alembic_unfired", {
 	end,
 	on_timer = function(pos, elapsed)
 		--finished product, length
-		return ncrafting.fire_pottery(pos, "alchemy:alembic_unfired", "alchemy:alembic", base_firing)
+		return ncrafting.fire_pottery(pos, "tech:alembic_unfired", "tech:alembic", base_firing)
 	end,
 })
