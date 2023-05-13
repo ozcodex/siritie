@@ -1,13 +1,5 @@
------------------ New Ideas --------------------
+---------------- Upcomming --------------------
 
-- make the paths work with wet soil
-- make that walking over path consume less energy
-- add a hoe to turn the sediment into agricultural soil?
-- update the modules.txt file to include the new modules or merge new mods with existing ones
-- make meats and cooked food compostable
-- add infotext to pots
-- add salt (reduce thrist but enhances hunger, too much causes negative effects) as cooking ingredient
-- add sugar(energy booster) as cooking ingredient
 - wiha fermentation process:
 	- crush wiha to get wiha mash
 	- mix wiha mash with water to get wiha must
@@ -15,6 +7,16 @@
 	- add mushroom sportes to the wiha must to create unfermente wiha cider
 	- ferment the wiha cider
 	- distill the fermented wiha cider in the alembic to get wiha vinegar
+
+----------------- New Ideas --------------------
+
+- make the paths work with wet soil
+- make that walking over path consume less energy
+- add a hoe to turn the sediment into agricultural soil?
+- update the modules.txt file to include the new modules or merge new mods with existing ones
+- make meats and cooked food compostable
+- add salt (reduce thrist but enhances hunger, too much causes negative effects) as cooking ingredient
+- add sugar(energy booster) as cooking ingredient
 - improve working spaces:
 	- pottery wheel from Limestone block and sticks as improved version of the clay shaping spot
 	- ceramic idol, improved praying station (better chances? pray more than once?)
@@ -45,8 +47,9 @@
 - give boost based on traits
 - enable pure alcohol drinking, giving liver failure.
 - create a clay smoker for safe bulk cooking
-- add Alchemy glass equipment (alembic, retort, crucible, vessel, beaker)
+- add Alchemy glass equipment (retort, vessel)
 - add Alchemy iron equipment (scale, tongs)
+- add alcehmy ceramic equipment (Alchemy Mortarium, Elemental Crucible)
 - add Alchemy bench
 - add alchemical medicines for each disease
 - add charcoal powder as medicine
@@ -66,7 +69,7 @@
 - make the smelter probe work with glass
 - add more randomness, probabilities
 - add books or tablets on the under ground city with recipes for alchemy
-- add a container that has to be broken to be opened with common lot on the under ground city
+- add a arcana container that has to be broken to be opened with common lot on the under ground
 - a easier way to get large amounts of alcohol, from sugar and Tartar Salt (Tartaris Syrup)
 - aurifex can be used for glazing pottery
 - decorative items from aluminium
