@@ -1,3 +1,5 @@
+check: https://webapp1.dlib.indiana.edu/newton/reference/glossary.do
+
 Processes:
 
 calcination, distillation, dissolution, fermentation, mixing.
@@ -7,14 +9,15 @@ Code Names:
 Osidian: Nightstone
 Olivine: Peridot
 Sulfur: Brimstone
-Zeolites: Air Stones
+Zeolites: Nephritic Stone
 Sulfuric Acid: Vitriol
 Alumina: Star Dust
 Potassium Carbonate: Tartar Salt
 Potassium Nitrate: Saltpeter
 Gunpowder: Serpentine
-Caustic Slurry: Abyssal Solution
+Caustic Slurry: Acrimoniac
 Caustic Soda: Death Salt
+Feldspar: Aurifex
 
 Recipes:
 
@@ -23,7 +26,6 @@ Recipes:
 * Slurry (Distilation) produces Caustic Soda, as ingredient
 * Aluminum mix (Melting) produces Aluminum, as a new metal
 
-
 * Basalt + Water produces Obsidian, that can be used as catalyst
 	Product:Obsidian
 	Mixing: -
@@ -31,7 +33,7 @@ Recipes:
 	Fuel: Alcohol
 	Solvent: Water Clay Pot
 	Catalyst: -
-	Subproduct: -
+	Subproduct: Empty Clay Pot
 
 * Crushed Basalt + Sulfuric Acid produces Olivine, that can be used as catalyst
     Product: Olivine
@@ -40,7 +42,7 @@ Recipes:
     Fuel: -
     Solvent: Sulfuric Acid Clay Pot
     Catalyst: -
-    Subproduct: -
+    Subproduct: Empty Clay Pot
 
 * Roasted Iron Powder + Pulverized Volcanic Ash + Zeolites produces sulfur, as ingredient.
     Product: Sulfur
@@ -58,7 +60,7 @@ Recipes:
     Fuel: -
     Solvent: Potash Solution Clay Pot
     Catalyst: Obsidian
-    Subproduct: -
+    Subproduct: Empty Clay Pot
 
 * Sulfur  + Vinegar + Iron produces Sulfuric Acid, an ingredient
     Product: Sulfuric Acid Clay Pot
@@ -67,7 +69,7 @@ Recipes:
     Fuel: Alcohol
     Solvent: Vinegar Clay Pot
     Catalyst: -
-    Subproduct: -
+    Subproduct: Empty Clay Pot
 
 * Clay + Sulfuric Acid produces Alumina, as ingredient
     Product: Alumina
@@ -76,7 +78,7 @@ Recipes:
     Fuel: -
     Solvent: Sulfuric Acid Clay Pot
     Catalyst: Zeolites
-    Subproduct: -
+    Subproduct: Empty Clay Pot
 
 * Wet Clay + Sulfuric Acid produces Potassium Nitrate, as ingredient
     Product: Potassium Nitrate
@@ -85,7 +87,7 @@ Recipes:
     Fuel: -
     Solvent: Sulfuric Acid Clay Pot
     Catalyst: -
-    Subproduct: -
+    Subproduct: Empty Clay Pot
 
 * Potash + Water + Limestone produces Potassium Carbonate, as ingredient
     Product: Potassium Carbonate
@@ -94,7 +96,7 @@ Recipes:
     Fuel: -
     Solvent: Water Clay Pot
     Catalyst: -
-    Subproduct: -
+    Subproduct: Empty Clay Pot
 
 * Potassium  + Sulfur + Pulverized Charcoal + Sugar produces Gunpowder
     Product: Gunpowder
@@ -103,7 +105,7 @@ Recipes:
     Fuel: Alcohol
     Solvent: Water Clay Pot
     Catalyst: Sugar
-    Subproduct: -
+    Subproduct: Empty Clay Pot
 
 * Pulverized charcoal + Vinegar produces Activated carbon
     Product: Activated Carbon
@@ -112,7 +114,7 @@ Recipes:
     Fuel: Alcohol
     Solvent: Vinegar Clay Pot
     Catalyst: Olivine
-    Subproduct: -
+    Subproduct: Empty Clay Pot
 
 * Salt + Quicklime + Water + Obsidian produces Slurry
     Product: Slurry
@@ -121,7 +123,7 @@ Recipes:
     Fuel: Alcohol
     Solvent: Water Clay Pot
     Catalyst: Obsidian
-    Subproduct: -
+    Subproduct: Empty Clay Pot
 
 * Vegetable Oil + Caustic Soda produces Soap, can be used to cleaning
     Product: Soap Paste (un cured)
@@ -130,7 +132,7 @@ Recipes:
     Fuel: Alcohol
     Solvent: Water Clay Pot
     Catalyst: -
-    Subproduct: -
+    Subproduct: Empty Clay Pot
 
 * Alumina + Carbon produces Aluminum mix
     Product: Aluminium mix
@@ -141,4 +143,13 @@ Recipes:
     Catalyst: Olivine
     Subproduct: -
 
+
+-------------------
+Extra ideas:
+
+extract quartz powder from gneiss
+heat up jade boulder to crack it, then hammer it to a chance of getting a jade gem
+or crack it with the hammer first and then heat it up for a chance of getting a jade gem
+
+Creating Elixir of Life from quartz powder and gunpowder, calcinated Star Dust, vitriol as solvent, and jade as catalyst.
 

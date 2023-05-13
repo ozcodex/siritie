@@ -6,6 +6,8 @@
 - update the modules.txt file to include the new modules or merge new mods with existing ones
 - make meats and cooked food compostable
 - add infotext to pots
+- add salt (reduce thrist but enhances hunger, too much causes negative effects) as cooking ingredient
+- add sugar(energy booster) as cooking ingredient
 - wiha fermentation process:
 	- crush wiha to get wiha mash
 	- mix wiha mash with water to get wiha must
@@ -15,11 +17,9 @@
 	- distill the fermented wiha cider in the alembic to get wiha vinegar
 - improve working spaces:
 	- pottery wheel from Limestone block and sticks as improved version of the clay shaping spot
-	- ceramic idol, improved praying station (better chances)
+	- ceramic idol, improved praying station (better chances? pray more than once?)
 	- add workbench as improved version of the crafting spot
 	- threshing sledge as improved seed extractor.
-- improve cooking, bring some benefits to making soup (depending on amount of ingredients?)
-- add salt and sugar as cooking ingredient
 - add more behaivor driven traits:
 	- food related (add a counter each time a food is ingested):
 		Vegetarian (after 5 days eating mostly plants)
@@ -40,39 +40,41 @@
 		Sandstorm Nomad (after recovering from Dust Fever 5 times)
 		Brain Brawler (after surviving neurotoxicity 3 times)
 		Sun Shield (after surviving photosensitivity 5 times)
-- add more blessings and curses with effects to the health
-- enable pure alcohol drinking, giving liver failure.
 - add new diseases and possitive effects
-- create a clay smoker
-- add Alchemy glass equipment (alembic, retort, mortar and pestle, crucible, flask, beaker, test tube, funnel, pipette, etc)
-- add Alchemy iron equipment (scale, tongs, etc)
+- add more blessings and curses with effects to the health
+- give boost based on traits
+- enable pure alcohol drinking, giving liver failure.
+- create a clay smoker for safe bulk cooking
+- add Alchemy glass equipment (alembic, retort, crucible, vessel, beaker)
+- add Alchemy iron equipment (scale, tongs)
 - add Alchemy bench
-- sulfur, salt, extract minerals from soil, extract oils from plants
-- add alcohol destilation from fermented tang
-- add vinegar and sugar from plants
 - add alchemical medicines for each disease
-- add a Drying Rack to dry meats
 - add charcoal powder as medicine
-- add a new stat: dirtiness and add soap to clean it (potash + vegetable oil on the mortar and pestle, needs to be cured)
-- make the food decay, and conservation methods
-- add a refrigerator that runs on snow
-- use salt, sugar and vinegar to preserve food
+- add a new stat: hygiene if submerge in water slowly increases
+- food rework:
+	- make the food decay
+	- add a refrigerator that runs on snow
+	- use salt, sugar and vinegar to preserve food
+	- add a Drying Rack to dry meats
 - fix translation templates to include all the actual strings
+- organize tech/textures folder followin the same naming convention
+- add an api to lower blocks node box if they are on top of a slab
 - redesign the runes of painting kits
 - add a basalt hammer as alternative club
 - make the basalt hammer be required to create the hammering log
-- alternatice hammering log with granite
-- extract sulfur from volcanic ashes
-- alchemy processes: calcination, distillation, dissolution, fermentation, filtration.
+- alternative hammering log with granite
 - make the smelter probe work with glass
 - add more randomness, probabilities
-- give boost based on traits
-- add an api to lower blocks node box if they are on top of a slab
-- add an acid to alchemy
-- organize tech/textures folder followin the same naming convention
 - add books or tablets on the under ground city with recipes for alchemy
 - add a container that has to be broken to be opened with common lot on the under ground city
-- a easier way to get large amounts of alcohol, maybe from sugar
+- a easier way to get large amounts of alcohol, from sugar and Tartar Salt (Tartaris Syrup)
+- aurifex can be used for glazing pottery
+- decorative items from aluminium
+- cooking utensils from aluminium
+- aluminium water containers
+- aluminium roof tiles
+- aluminium windows 
+
 
 --------------- Already done -------------------
 
