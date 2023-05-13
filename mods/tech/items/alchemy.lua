@@ -13,7 +13,8 @@ minetest.register_craftitem("tech:alcohol", {
 minetest.register_craftitem("tech:mashed_wiha", {
 	description = S("Mashed Wiha"),
 	inventory_image = "tech_mashed_wiha.png",
-	stack_max = minimal.stack_max_medium,
+	stack_max = minimal.stack_max_medium/2,
+	groups = {compostable = 1},
 })
 
 minetest.register_craftitem("tech:sugar", {
@@ -22,8 +23,9 @@ minetest.register_craftitem("tech:sugar", {
 	stack_max = minimal.stack_max_medium,
 })
 
-minetest.register_craftitem("tech:vinegar", {
-	description = S("Vinegar"),
-	inventory_image = "tech_vinegar.png",
-	stack_max = minimal.stack_max_medium,
+minetest.register_craftitem("tech:wiha_dregs", {
+	description = S("Whiha Dregs"),
+	inventory_image = "tech_wiha_dregs.png",
+	stack_max = minimal.stack_max_medium/2,
+	groups = {compostable = 1},
 })

@@ -4,10 +4,8 @@
 ----------------- New Ideas --------------------
 
 - make able to eat mashed whiha
-- mashed wiha as cooking ingredient and compostable
+- mashed wiha as cooking ingredient
 - make the paths work with wet soil
-- add wiha dregs and make it compostable
-- add clay pot of vinegar
 - make that walking over path consume less energy
 - add a hoe to turn the sediment into agricultural soil?
 - update the modules.txt file to include the new modules or merge new mods with existing ones

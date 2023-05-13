@@ -44,8 +44,8 @@ alembic_processes = {
         time = 90
     },
     ["tech:wiha_cider_pot"] = {
-        products = {"tech:vinegar 1"},
-        subproduct = "tech:clay_water_pot",
+        products = {"tech:wiha_dregs"},
+        subproduct = "tech:vinegar_pot",
         time = 150
     },
     ["tech:clay_water_pot_potash"] = {

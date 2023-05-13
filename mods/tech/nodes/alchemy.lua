@@ -207,3 +207,24 @@ minetest.register_node("tech:wiha_cider_pot", {
   groups = {dig_immediate=3, pottery = 1, temp_pass = 1},
   sounds = nodes_nature.node_sound_stone_defaults(),
 })
+
+minetest.register_node("tech:vinegar_pot", {
+  description = S("Vinegar Pot"),
+  tiles = {
+    "tech_pot_vinegar.png",
+    "tech_pottery.png",
+    "tech_pottery.png",
+    "tech_pottery.png",
+    "tech_pottery.png",
+    "tech_pottery.png"
+  },
+  drawtype = "nodebox",
+  stack_max = 1,--minimal.stack_max_bulky,
+  paramtype = "light",
+  node_box = {
+    type = "fixed",
+    fixed = pot_nodebox
+  },
+  groups = {dig_immediate=3, pottery = 1, temp_pass = 1},
+  sounds = nodes_nature.node_sound_stone_defaults(),
+})
