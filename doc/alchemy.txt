@@ -1,0 +1,144 @@
+Processes:
+
+calcination, distillation, dissolution, fermentation, mixing.
+
+Code Names:
+
+Osidian: Nightstone
+Olivine: Peridot
+Sulfur: Brimstone
+Zeolites: Air Stones
+Sulfuric Acid: Vitriol
+Alumina: Star Dust
+Potassium Carbonate: Tartar Salt
+Potassium Nitrate: Saltpeter
+Gunpowder: Serpentine
+Caustic Slurry: Abyssal Solution
+Caustic Soda: Death Salt
+
+Recipes:
+
+* Tang (Distillation) produces alcohol, that is used as fuel in the alchemical process.
+* Salt Water (Distillation) produces Salt, that is used as ingredient.
+* Slurry (Distilation) produces Caustic Soda, as ingredient
+* Aluminum mix (Melting) produces Aluminum, as a new metal
+
+
+* Basalt + Water produces Obsidian, that can be used as catalyst
+	Product:Obsidian
+	Mixing: -
+	Calcination: Basalt
+	Fuel: Alcohol
+	Solvent: Water Clay Pot
+	Catalyst: -
+	Subproduct: -
+
+* Crushed Basalt + Sulfuric Acid produces Olivine, that can be used as catalyst
+    Product: Olivine
+    Mixing: Crushed Basalt
+    Calcination: -
+    Fuel: -
+    Solvent: Sulfuric Acid Clay Pot
+    Catalyst: -
+    Subproduct: -
+
+* Roasted Iron Powder + Pulverized Volcanic Ash + Zeolites produces sulfur, as ingredient.
+    Product: Sulfur
+    Mixing: Roasted Iron Powder
+    Calcination: Pulverized Volcanic Ash
+    Fuel: Alcohol
+    Solvent: -
+    Catalyst: Zeolites
+    Subproduct: -
+
+* Pulverized Volcanic Ash + Potash + Obsidian produces zeolites, a catalyst.
+    Product: Zeolites
+    Mixing: Pulverized Volcanic Ash
+    Calcination: -
+    Fuel: -
+    Solvent: Potash Solution Clay Pot
+    Catalyst: Obsidian
+    Subproduct: -
+
+* Sulfur  + Vinegar + Iron produces Sulfuric Acid, an ingredient
+    Product: Sulfuric Acid Clay Pot
+    Mixing: Iron Ingot, Empty Clay Pot
+    Calcination: Sulfur
+    Fuel: Alcohol
+    Solvent: Vinegar Clay Pot
+    Catalyst: -
+    Subproduct: -
+
+* Clay + Sulfuric Acid produces Alumina, as ingredient
+    Product: Alumina
+    Mixing: Clay
+    Calcination: -
+    Fuel: -
+    Solvent: Sulfuric Acid Clay Pot
+    Catalyst: Zeolites
+    Subproduct: -
+
+* Wet Clay + Sulfuric Acid produces Potassium Nitrate, as ingredient
+    Product: Potassium Nitrate
+    Mixing: Wet Clay, Wood Ash
+    Calcination: -
+    Fuel: -
+    Solvent: Sulfuric Acid Clay Pot
+    Catalyst: -
+    Subproduct: -
+
+* Potash + Water + Limestone produces Potassium Carbonate, as ingredient
+    Product: Potassium Carbonate
+    Mixing: Limestone, Potash
+    Calcination: -
+    Fuel: -
+    Solvent: Water Clay Pot
+    Catalyst: -
+    Subproduct: -
+
+* Potassium  + Sulfur + Pulverized Charcoal + Sugar produces Gunpowder
+    Product: Gunpowder
+    Mixing: Pulverized Charcoal, Sulfur
+    Calcination: Potassium Nitrate
+    Fuel: Alcohol
+    Solvent: Water Clay Pot
+    Catalyst: Sugar
+    Subproduct: -
+
+* Pulverized charcoal + Vinegar produces Activated carbon
+    Product: Activated Carbon
+    Mixing: -
+    Calcination: Pulverized charcoal
+    Fuel: Alcohol
+    Solvent: Vinegar Clay Pot
+    Catalyst: Olivine
+    Subproduct: -
+
+* Salt + Quicklime + Water + Obsidian produces Slurry
+    Product: Slurry
+    Mixing: Quicklime
+    Calcination: Salt
+    Fuel: Alcohol
+    Solvent: Water Clay Pot
+    Catalyst: Obsidian
+    Subproduct: -
+
+* Vegetable Oil + Caustic Soda produces Soap, can be used to cleaning
+    Product: Soap Paste (un cured)
+    Mixing: Caustic Soda, Potassium Carbonate
+    Calcination: Vegetable Oil
+    Fuel: Alcohol
+    Solvent: Water Clay Pot
+    Catalyst: -
+    Subproduct: -
+
+* Alumina + Carbon produces Aluminum mix
+    Product: Aluminium mix
+    Mixing: Charcoal Powder, Potassium Carbonate
+    Calcination: Alumina
+    Fuel: Alcohol
+    Solvent: -
+    Catalyst: Olivine
+    Subproduct: -
+
+

@@ -68,6 +68,11 @@
 - add more randomness, probabilities
 - give boost based on traits
 - add an api to lower blocks node box if they are on top of a slab
+- add an acid to alchemy
+- organize tech/textures folder followin the same naming convention
+- add books or tablets on the under ground city with recipes for alchemy
+- add a container that has to be broken to be opened with common lot on the under ground city
+- a easier way to get large amounts of alcohol, maybe from sugar
 
 --------------- Already done -------------------
 
