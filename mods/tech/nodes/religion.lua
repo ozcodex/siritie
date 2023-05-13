@@ -1,5 +1,5 @@
 
-minetest.register_node("religion:efigy", {
+minetest.register_node("tech:efigy", {
 	description = S("Effigy"),
 	inventory_image = "tech_efigy_inv.png",
 	wield_image = "tech_efigy_inv.png",
