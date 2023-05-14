@@ -81,6 +81,7 @@
 - make the paths work with wet soil
 - make that walking over path consume less energy
 - add a hoe to turn the sediment into agricultural soil?
+- add masonry tools to the masonry bench model
 
 
 --------------- Already done -------------------
@@ -91,6 +92,10 @@
 - add alcohol extraction to the alembic (from tang)
 - wiha fermentation process, sugar and vinegar
 - draw a whole tech map tree including future changes
+- remove slag stairs and slabs, why to build them if they are trash?
+- remove boulders from built blocks, some actions are irreversible
+- change the mixing spot to be a crafteable craftstation
+- great rework on the recipes of newly created masonry toolset craftstation
 
 ------------ Inhereit form Exile ----------------
 

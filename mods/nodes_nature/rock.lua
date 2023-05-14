@@ -219,15 +219,6 @@ for i in ipairs(rock_list) do
 			always_known = true,
 		})
 
-		--recycle block (e.g. so can get iron ore)
-		crafting.register_recipe({
-			type = "mixing_spot",
-			output = "nodes_nature:"..name.."_boulder",
-			items = {"nodes_nature:"..name.."_block"},
-			level = 1,
-			always_known = true,
-		})
-
 		--stairs and slabs
 
 		--brick
@@ -292,7 +283,6 @@ for i in ipairs(rock_list) do
                          sounds = nodes_nature.node_sound_stone_defaults(),
                    })
                 end
-
 end
 
 ------------------------------------------------------------------
