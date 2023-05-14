@@ -5,6 +5,8 @@
 - make able to eat mashed whiha
 - maraka nuts also produce vegetable oil
 - apply all the suggestions of crafting recipes
+- refactor the remaining files
+- organize tech/textures folder followin the same naming convention
 
 ----------------- New Ideas --------------------
 
@@ -50,10 +52,6 @@
 	- use salt, sugar and vinegar to preserve food
 	- add salt (reduce thrist but enhances hunger, too much causes negative effects) as cooking condiment
 	- add sugar(energy booster) as cooking condiment
-- improvement on tech module:
-	- draw a whole tech map tree including future changes
-	- refactor the remaining files
-	- organize tech/textures folder followin the same naming convention
 - new advanced metal
 	- add aluminium
 	- decorative items from aluminium
@@ -92,6 +90,7 @@
 - make paths with the digging stick
 - add alcohol extraction to the alembic (from tang)
 - wiha fermentation process, sugar and vinegar
+- draw a whole tech map tree including future changes
 
 ------------ Inhereit form Exile ----------------
 

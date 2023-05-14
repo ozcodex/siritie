@@ -9,13 +9,6 @@ crafting.register_recipe({ ----craft crafting spot for free
   level  = 1,
   always_known = true,
   })
-crafting.register_recipe({ ----craft mixing spot for free
-  type   = "inv",
-  output = "tech:mixing_spot",
-  items  = {},
-  level  = 1,
-  always_known = true,
-  })
 crafting.register_recipe({ ----craft threshing spot for free
   type   = "inv",
   output = "tech:threshing_spot",
@@ -23,6 +16,15 @@ crafting.register_recipe({ ----craft threshing spot for free
   level  = 1,
   always_known = true,
   })
+-- Mixing spot replacement
+crafting.register_recipe({
+  type   = "tech:crafting_spot",
+  output = "tech:mixing_spot",
+  items  = {'tech:stick 24','group:fibrous_plant 2'},
+  level  = 1,
+  always_known = true,
+  })
+
 ---- Boulders ----
 --grind a mortar_and_pestle
 crafting.register_recipe({

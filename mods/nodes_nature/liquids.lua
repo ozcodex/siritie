@@ -231,7 +231,7 @@ minetest.register_node("nodes_nature:snow_block", {
 
 
 crafting.register_recipe({
-	type = "mixing_spot",
+	type = "mixing_bucket",
 	output = "nodes_nature:snow_block",
 	items = {"nodes_nature:snow 2"},
 	level = 1,
@@ -239,7 +239,7 @@ crafting.register_recipe({
 })
 
 crafting.register_recipe({
-	type = "mixing_spot",
+	type = "mixing_bucket",
 	output = "nodes_nature:snow 2",
 	items = {"nodes_nature:snow_block"},
 	level = 1,
@@ -247,7 +247,7 @@ crafting.register_recipe({
 })
 
 crafting.register_recipe({
-	type = "mixing_spot",
+	type = "mixing_bucket",
 	output = "nodes_nature:snow_block 2",
 	items = {"nodes_nature:ice"},
 	level = 1,
@@ -255,7 +255,7 @@ crafting.register_recipe({
 })
 
 crafting.register_recipe({
-	type = "mixing_spot",
+	type = "mixing_bucket",
 	output = "nodes_nature:ice",
 	items = {"nodes_nature:snow_block 2"},
 	level = 1,

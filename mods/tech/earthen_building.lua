@@ -308,7 +308,7 @@ minetest.override_item("stairs:slab_thatch",
 
 ----craft drystack from gravel
 crafting.register_recipe({
-	type = "crafting_spot",
+	type = "brick_makers_bench",
 	output = "tech:drystack 2",
 	items = {"nodes_nature:gravel 3"},
 	level = 1,
@@ -317,7 +317,7 @@ crafting.register_recipe({
 
 --recycle drystack with some loss
 crafting.register_recipe({
-	type = "mixing_spot",
+	type = "brick_makers_bench",
 	output = "nodes_nature:gravel",
 	items = {"tech:drystack"},
 	level = 1,
@@ -345,7 +345,7 @@ crafting.register_recipe({
 
 --recycle rammed_earth with some loss
 crafting.register_recipe({
-	type = "mixing_spot",
+	type = "brick_makers_bench",
 	output = "nodes_nature:clay",
 	items = {"tech:rammed_earth"},
 	level = 1,
