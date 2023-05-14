@@ -694,3 +694,40 @@ end
 
 register_hammering_block("basalt")
 register_hammering_block("granite")
+
+minetest.register_node("tech:wattle_workstation", {
+    description   = S("Wattle Workstation"),
+    tiles         = {"tech_stick.png",},
+    drawtype      = "nodebox",
+    node_box      = {
+    type  = "fixed",
+    fixed = {
+      -- vertical sticks
+        { -0.4375, -0.5000,  0.3125, -0.3125,  0.1250,  0.4375},
+        { -0.0625, -0.5000,  0.1250,  0.0625, -0.0625,  0.2500},
+        {  0.2500, -0.5000, -0.0625,  0.3750,  0.0000,  0.0625},
+
+        { -0.3125, -0.5000, -0.4375, -0.1875,  0.0625, -0.3125},
+        { -0.0625, -0.5000, -0.2500,  0.0625, -0.0625, -0.1250},
+        {  0.3750, -0.5000, -0.4375,  0.5000,  0.1250, -0.3125},
+
+        -- horizontal sticks
+        { -0.3750, -0.1250, -0.3125,  0.4375, -0.0625, -0.2500},
+        { -0.5000, -0.1875,  0.2500,  0.1250, -0.1250,  0.3125},
+        { -0.1250, -0.2500,  0.0625,  0.4375, -0.1875,  0.1250},
+
+        { -0.1250, -0.3750, -0.3125, -0.0625, -0.3125,  0.3125},
+      }
+    },
+    selection_box = {
+        type = "fixed",
+        fixed = {
+            {-0.3125, -0.5, -0.3125, 0.25, -0.0625, 0.3125},
+        },
+    },
+    stack_max     = minimal.stack_max_bulky,
+    paramtype     = "light",
+    groups        = {dig_immediate=3, falling_node = 1, temp_pass = 1, craftedby = 1},
+    sounds        = nodes_nature.node_sound_wood_defaults(),
+    on_rightclick = crafting.make_on_rightclick("wattle_workstation", 2, { x = 8, y = 3 }),
+})

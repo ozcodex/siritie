@@ -141,7 +141,7 @@ minetest.register_node('tech:wattle', {
 		 "tech_wattle.png",
 		 "tech_wattle.png",
 		 "tech_wattle.png" },
-	inventory_image = "tech_wattle.png",
+	inventory_image = "tech_wattle_inv.png",
 	wield_image = "tech_wattle.png",
 	stack_max = minimal.stack_max_bulky * 3,
 	groups = {choppy = 3, oddly_breakable_by_hand = 1, flammable = 2},
@@ -354,7 +354,7 @@ crafting.register_recipe({
 
 ----Wattle from sticks
 crafting.register_recipe({
-	type = "weaving_frame",
+	type = "wattle_workstation",
 	output = "tech:wattle",
 	items = {"tech:stick 6"},
 	level = 1,
@@ -364,7 +364,7 @@ crafting.register_recipe({
 
 --recycle wattle with some loss
 crafting.register_recipe({
-	type = "mixing_spot",
+	type = "wattle_workstation",
 	output = "tech:stick 4",
 	items = {"tech:wattle"},
 	level = 1,
@@ -373,7 +373,7 @@ crafting.register_recipe({
 
 ----Loose Wattle from sticks
 crafting.register_recipe({
-	type = "weaving_frame",
+	type = "wattle_workstation",
 	output = "tech:wattle_loose",
 	items = {"tech:stick 3"},
 	level = 1,
@@ -382,7 +382,7 @@ crafting.register_recipe({
 
 --recycle loose wattle with some loss
 crafting.register_recipe({
-	type = "mixing_spot",
+	type = "wattle_workstation",
 	output = "tech:stick 2",
 	items = {"tech:wattle_loose"},
 	level = 1,
@@ -391,7 +391,7 @@ crafting.register_recipe({
 
 --convert loose wattle to wattle
 crafting.register_recipe({
-	type = "mixing_spot",
+	type = "wattle_workstation",
 	output = "tech:wattle",
 	items = {"tech:wattle_loose 2"},
 	level = 1,
@@ -400,7 +400,7 @@ crafting.register_recipe({
 
 --convert wattle to loose wattle
 crafting.register_recipe({
-	type = "mixing_spot",
+	type = "wattle_workstation",
 	output = "tech:wattle_loose 2",
 	items = {"tech:wattle"},
 	level = 1,
@@ -409,7 +409,7 @@ crafting.register_recipe({
 
 ----Wattle door frame from sticks
 crafting.register_recipe({
-	type = "weaving_frame",
+	type = "wattle_workstation",
 	output = "tech:wattle_door_frame",
 	items = {"tech:stick 6"},
 	level = 1,
@@ -417,7 +417,7 @@ crafting.register_recipe({
 })
 --convert wattle to wattle door frame
 crafting.register_recipe({
-	type = "mixing_spot",
+	type = "wattle_workstation",
 	output = "tech:wattle_door_frame",
 	items = {"tech:wattle"},
 	level = 1,
@@ -425,7 +425,7 @@ crafting.register_recipe({
 })
 --convert wattle door frame to wattle
 crafting.register_recipe({
-	type = "mixing_spot",
+	type = "wattle_workstation",
 	output = "tech:wattle",
 	items = {"tech:wattle_door_frame"},
 	level = 1,
@@ -443,7 +443,7 @@ crafting.register_recipe({
 
 ----Wicker basket from sticks
 crafting.register_recipe({
-	type = "weaving_frame",
+	type = "wattle_workstation",
 	output = "tech:wicker_storage_basket",
 	items = {"tech:stick 96"},
 	level = 1,

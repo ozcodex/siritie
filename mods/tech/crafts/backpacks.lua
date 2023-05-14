@@ -9,7 +9,7 @@ crafting.register_recipe({
 
 ----wicker from sticks
 crafting.register_recipe({
-	type = "weaving_frame",
+	type = "wattle_workstation",
 	output = "backpacks:backpack_wicker_bag 1",
 	items = {"tech:stick 48"},
 	level = 1,

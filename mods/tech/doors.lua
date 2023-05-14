@@ -21,7 +21,7 @@ doors.register("door_wattle", {
 
 doors.register_trapdoor("tech:trapdoor_wattle", {
 	description = S("Wattle Trapdoor"),
-	inventory_image = "tech_trapdoor_wattle.png",
+	inventory_image = "tech_trapdoor_wattle_inv.png",
 	wield_image = "tech_trapdoor_wattle.png",
 	tile_front = "tech_trapdoor_wattle.png",
 	tile_side = "tech_trapdoor_wattle_side.png",
@@ -89,7 +89,7 @@ doors.register_trapdoor("tech:trapdoor_iron", {
 
 --wattle panels plus something to tie them on
 crafting.register_recipe({
-	type = "weaving_frame",
+	type = "wattle_workstation",
 	output = "doors:door_wattle",
 	items = {"tech:wattle 2", "group:fibrous_plant 2", "tech:stick 2"},
 	level = 1,
@@ -98,7 +98,7 @@ crafting.register_recipe({
 
 --wattle panels plus something to tie them on
 crafting.register_recipe({
-	type = "weaving_frame",
+	type = "wattle_workstation",
 	output = "tech:trapdoor_wattle",
 	items = {"tech:wattle", "group:fibrous_plant", "tech:stick"},
 	level = 1,
@@ -108,7 +108,7 @@ crafting.register_recipe({
 
 --recycle with some loss
 crafting.register_recipe({
-	type = "mixing_spot",
+	type = "wattle_workstation",
 	output = "tech:wattle 2",
 	items = {"doors:door_wattle"},
 	level = 1,
@@ -116,7 +116,7 @@ crafting.register_recipe({
 })
 
 crafting.register_recipe({
-	type = "mixing_spot",
+	type = "wattle_workstation",
 	output = "tech:wattle",
 	items = {"tech:trapdoor_wattle"},
 	level = 1,

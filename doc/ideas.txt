@@ -97,6 +97,7 @@
 - remove boulders from built blocks, some actions are irreversible
 - change the mixing spot to be a crafteable craftstation
 - great rework on the recipes of newly created masonry toolset craftstation
+- add a new craft station, the wattlework station
 
 ------------ Inhereit form Exile ----------------
 
