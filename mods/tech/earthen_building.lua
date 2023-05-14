@@ -279,14 +279,13 @@ minetest.register_node('tech:thatch', {
 	end,
 })
 
-stairs.stairs.register_slab(
+stairs.register_slab(
 	"thatch",
 	"tech:thatch",
 	"weaving_frame",
 	"false",
 	{snappy=3, flammable=1, fall_damage_add_percent = -15},
 	{"tech_thatch.png"},
-	"Thatch Stair",
 	"Thatch Slab",
 	minimal.stack_max_bulky * 8,
 	nodes_nature.node_sound_leaves_defaults()
