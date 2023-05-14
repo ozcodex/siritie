@@ -62,19 +62,3 @@ crafting.register_recipe({
 	always_known = true,
 })
 
---Combine broken pottery slabs and vice versa
-crafting.register_recipe({
-	type = "clay_shaping_spot",
-	output = "tech:broken_pottery_block",
-	items = {"tech:broken_pottery 2"},
-	level = 1,
-	always_known = true,
-})
-
-crafting.register_recipe({
-	type = "clay_shaping_spot",
-	output = "tech:broken_pottery 2",
-	items = {"tech:broken_pottery_block"},
-	level = 1,
-	always_known = true,
-})

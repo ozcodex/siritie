@@ -11,19 +11,6 @@ sediment = sediment
 lightsource = lightsource
 lightsource_description = lightsource_description
 
--- Broken pottery full blocks and soil
-local broken_pottery =
-   sediment.new({name = "broken_pottery_block",
-		 description = S("Broken Pottery"),
-		 hardness = sediment.hardness.soft,
-		 fertility = 5, sound = sediment.sounds.gravel,
-		 sound_wet = sediment.sounds.gravel_wet,
-		 texture_name = "tech_broken_pottery.png", mod_name = "tech"})
-sediment.register_dry(broken_pottery)
-sediment.register_wet(broken_pottery)
-sediment.register_wet_salty(broken_pottery)
-sediment.register_agri_soil_variants(broken_pottery)
-
 -------------------------------------------------------------------
 --THIS SHOULD BE MOVED somewhere GENERALIZED to handle non-pottery pots
 function water_pot(pos, pot_name, elapsed)

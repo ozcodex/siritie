@@ -16,6 +16,7 @@
 	- add workbench as improved version of the crafting spot
 	- threshing sledge as improved seed extractor.
 	- alternative hammering log with granite
+	- fire pit, is like the wood fire, but can be fueled
 - add more behaivor driven traits:
 	- food related (add a counter each time a food is ingested):
 		Vegetarian (after 5 days eating mostly plants)
