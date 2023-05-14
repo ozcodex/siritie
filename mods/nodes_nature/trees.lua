@@ -211,10 +211,15 @@ for i in ipairs(tree_list) do
 	})
 
 	--stairs and slabs
+	local crafting_station = "chopping_block"
+	if treename == "maraka" then
+		-- maraka tree is harder must be worked on carpentry bench
+		crafting_station = "carpentry_bench"
+	end
 	stairs.register_stair_and_slab(
 		treename.."_log",
 		"nodes_nature:"..treename.."_log",
-		"chopping_block",
+		crafting_station,
 		"false",
 		{choppy = hardness, flammable = 8 - flamesusceptibility,
 		 woodslab = 1},

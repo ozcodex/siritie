@@ -658,36 +658,39 @@ minetest.register_node("tech:weaving_frame",{
         on_rightclick = crafting.make_on_rightclick("chopping_block", 2, { x = 8, y = 3 }),
    })
 
-   --hammering_block
-   --crude hammering crushing jobs,
-   minetest.register_node("tech:hammering_block", {
+local function register_hammering_block(material)
+    minetest.register_node("tech:hammering_block_" .. material, {
         description   = S("Hammering Log"),
         tiles         = {
-                "tech_hammering_block_top.png",
-                "tech_chopping_block_top.png",
-                "tech_hammering_block_right.png",
-                "tech_hammering_block_left.png",
-                "tech_hammering_block_back.png",
-                "tech_hammering_block_front.png",
-                },
+            "tech_hammering_block_top_"..material..".png",
+            "tech_chopping_block_top.png",
+            "tech_hammering_block_right_"..material..".png",
+            "tech_hammering_block_left_"..material..".png",
+            "tech_hammering_block_back_"..material..".png",
+            "tech_hammering_block_front_"..material..".png",
+        },
         drawtype      = "nodebox",
         node_box      = {
-                type  = "fixed",
-                fixed ={
-                    -- log
-                    {-0.375, -0.5, -0.375, 0.375, 0.250, 0.375},
-                    {-0.3125, -0.5, 0.375, 0.3125, 0.250, 0.4375},
-                    {-0.3125, -0.5, -0.4375, 0.3125, 0.250, -0.375},
-                    {0.375, -0.5, -0.3125, 0.4375, 0.250, 0.3125},
-                    {-0.4375, -0.5, -0.3125, -0.375, 0.250, 0.3125},
-                  -- hammer
-                    {-0.0625, 0.23, 0.0000, 0.0625, 0.36, 0.3125},
-                    {-0.0625, 0.23, 0.1250, 0.2500, 0.3125, 0.1875}
-                  },
-                },
+        type  = "fixed",
+        fixed = {
+            -- log
+            {-0.375, -0.5, -0.375, 0.375, 0.250, 0.375},
+            {-0.3125, -0.5, 0.375, 0.3125, 0.250, 0.4375},
+            {-0.3125, -0.5, -0.4375, 0.3125, 0.250, -0.375},
+            {0.375, -0.5, -0.3125, 0.4375, 0.250, 0.3125},
+            {-0.4375, -0.5, -0.3125, -0.375, 0.250, 0.3125},
+          -- hammer
+            {-0.0625, 0.23, 0.0000, 0.0625, 0.36, 0.3125},
+            {-0.0625, 0.23, 0.1250, 0.2500, 0.3125, 0.1875}
+          }
+        },
         stack_max     = minimal.stack_max_bulky,
         paramtype     = "light",
         groups        = {dig_immediate=3, falling_node = 1, temp_pass = 1, craftedby = 1},
         sounds        = nodes_nature.node_sound_wood_defaults(),
         on_rightclick = crafting.make_on_rightclick("hammering_block", 2, { x = 8, y = 3 }),
-   })
+    })
+end
+
+register_hammering_block("basalt")
+register_hammering_block("granite")

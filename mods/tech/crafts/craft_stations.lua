@@ -139,8 +139,16 @@ crafting.register_recipe({ --weaving_frame
 })
 crafting.register_recipe({ --hammering block
   type   = "chopping_block",
-  output = "tech:hammering_block",
+  output = "tech:hammering_block_granite",
   items  = {'group:log', 'inferno:fire_sticks', 'group:basalt_cobble', 'group:fibrous_plant 2'},
   level  = 1,
   always_known = true,
 })
+crafting.register_recipe({ --hammering block
+  type   = "chopping_block",
+  output = "tech:hammering_block_basalt",
+  items  = {'group:log', 'inferno:fire_sticks', 'group:granite_cobble', 'group:fibrous_plant 2'},
+  level  = 1,
+  always_known = true,
+})
+
