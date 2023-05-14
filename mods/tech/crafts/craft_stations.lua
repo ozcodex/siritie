@@ -152,3 +152,11 @@ crafting.register_recipe({ --hammering block
   always_known = true,
 })
 
+crafting.register_recipe({ 
+  type   = "crafting_spot",
+  output = "tech:wattle_workstation",
+  items  = {'tech:stick 12'},
+  level  = 1,
+  always_known = true,
+})
+

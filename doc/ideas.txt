@@ -70,12 +70,10 @@
 - add more blessings and curses with effects to the health
 - give boost based on traits
 - create a clay smoker for safe bulk cooking
-- add charcoal powder as medicine
+- add activated coal as medicine
 - fix translation templates to include all the actual strings
 - add an api to lower blocks node box if they are on top of a slab
 - redesign the runes of painting kits
-- add a basalt hammer as alternative club
-- make the basalt hammer be required to create the hammering log
 - make the smelter probe work with glass
 - aurifex can be used for glazing pottery
 - add debug tool: meta reader
