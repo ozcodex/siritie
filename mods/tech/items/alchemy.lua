@@ -24,7 +24,7 @@ minetest.register_craftitem("tech:sugar", {
 })
 
 minetest.register_craftitem("tech:wiha_dregs", {
-	description = S("Whiha Dregs"),
+	description = S("Wiha Dregs"),
 	inventory_image = "tech_wiha_dregs.png",
 	stack_max = minimal.stack_max_medium/2,
 	groups = {compostable = 1},

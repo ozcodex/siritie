@@ -149,20 +149,11 @@ Extra ideas:
 
 extract quartz powder from gneiss
 heat up jade boulder to crack it, then hammer it to a chance of getting a jade gem
-or crack it with the hammer first and then heat it up for a chance of getting a jade gem
 
 Creating Elixir of Life from quartz powder and gunpowder, calcinated Star Dust, vitriol as solvent, and jade as catalyst.
 
-thermite: iron oxide + aluminum mix, helps to melt things in an Athanor
-
-aqua regia: vitriol + saltpeter
 
 add new disseases: heavy metals poisoning, asbestosis, chemical burns
-
-Potassium permanganate and glycerin to start temite?
- Al+S mix as a starter (maybe mixed with a bit of gunpowder to make a sparkler?)
-
-extract oil form maraka nuts or from certain wood (Oil of terebinth?)
 
 amonia from vermicompost, potash and water using zeolites as catalyst
 
@@ -171,29 +162,22 @@ alchemical super fertilizer saltpeter+ amonia
 alcohol + vinegar + coal + salt + vitriol + amonia = ether (cure-all sulfa drug)
 
 
+-- Even more crazy ideas (gold?) --
 
-Bezoar
-    A quasi-legendary stone with universal curative properties found in the bodies of certain animals. The name is occasionally transferred analogically to other medicinal substances, such as Bezoardicum minerale (mineral bezoar, a precipitate of antimony pentoxide produced by the action of aqua fortis on butter of antimony).
+thermite: iron oxide + aluminum mix, helps to melt gold in an Athanor
 
+Potassium permanganate and glycerin to start temite?
+ Al+S mix as a starter (maybe mixed with a bit of gunpowder to make a sparkler?)
 
-Calcanthum
-    The residue produced by strongly roasting blue vitriol (copper sulfate); it is composed mostly of copper oxide.
+aqua regia: vitriol + saltpeter with jade as catalyst 
 
+the gold will be extracted (traces) from aurifex powder using aqua regia
 
 Chrysopoeia
     The transmutation of baser metals into gold.
 
-
 glaure Augurelli
     Identity is uncertain, although it has been variously identified as a component of gold
-
-Regulus
-    The metallic component refined from an ore. Most often applied by Newton and other chymists to metallic antimony or alloys thereof.
-
-
-Spagyria
-    A branch of chymistry concerned with the separation of compound bodies into their constituents and their recombination, generally with an eye toward their medicinal use.
-
 
 
 

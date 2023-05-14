@@ -3,6 +3,8 @@
 - make meats, soup and cooked food compostable
 - make the composter use the group value as generated compost
 - make able to eat mashed whiha
+- maraka nuts also produce vegetable oil
+- apply all the suggestions of crafting recipes
 
 ----------------- New Ideas --------------------
 
@@ -46,7 +48,6 @@
 	- make the food decay
 	- add a refrigerator that runs on snow
 	- use salt, sugar and vinegar to preserve food
-	- add a Drying Rack to dry meats
 	- add salt (reduce thrist but enhances hunger, too much causes negative effects) as cooking condiment
 	- add sugar(energy booster) as cooking condiment
 - improvement on tech module:
