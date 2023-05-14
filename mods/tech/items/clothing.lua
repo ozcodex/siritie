@@ -1,8 +1,3 @@
-----------------------------------------------------------
---CLOTHING
-
--- Internationalization
-local S = tech.S
 
 ----------------------------------------------------------------
 --PRIMITIVE
@@ -18,15 +13,6 @@ player_api.register_cloth("tech:woven_hat", {
 	customfields= {temp_min = 1, temp_max = 1}
 })
 
-
-crafting.register_recipe({
-	type = "weaving_frame",
-	output = "tech:woven_hat",
-	items = {'group:fibrous_plant 24'},
-	level = 1,
-	always_known = true,
-})
-
 --Cape
 player_api.register_cloth("tech:woven_cape", {
 	description = S("Woven Cape"),
@@ -37,15 +23,6 @@ player_api.register_cloth("tech:woven_cape", {
 	customfields= {temp_min = 2, temp_max = 1}
 })
 
-crafting.register_recipe({
-	type = "weaving_frame",
-	output = "tech:woven_cape",
-	items = {'group:fibrous_plant 48'},
-	level = 1,
-	always_known = true,
-})
-
-
 --Poncho
 player_api.register_cloth("tech:woven_poncho", {
 	description = S("Woven Poncho"),
@@ -55,15 +32,6 @@ player_api.register_cloth("tech:woven_poncho", {
 	groups = {cloth = 2, clothing_shirt = 1,},
 	customfields= {temp_min = 2, temp_max = 1}
 })
-
-crafting.register_recipe({
-	type = "weaving_frame",
-	output = "tech:woven_poncho",
-	items = {'group:fibrous_plant 48'},
-	level = 1,
-	always_known = true,
-})
-
 
 
 --Leggings
@@ -76,14 +44,6 @@ player_api.register_cloth("tech:woven_leggings", {
 	customfields= {temp_min = 1, temp_max = 0}
 })
 
-crafting.register_recipe({
-	type = "weaving_frame",
-	output = "tech:woven_leggings",
-	items = {'group:fibrous_plant 36'},
-	level = 1,
-	always_known = true,
-})
-
 --Blanket
 player_api.register_cloth("tech:woven_blanket", {
 	description = S("Woven Blanket"),
@@ -93,14 +53,6 @@ player_api.register_cloth("tech:woven_blanket", {
 	groups = {blanket=1, clothing_blanket=1, cloth=6},
 	customfields = {temp_min = 3, temp_max = -2}
 })
-crafting.register_recipe({
-	type = "weaving_frame",
-	output = "tech:woven_blanket",
-	items = {'group:fibrous_plant 60'},
-	level = 1,
-	always_known = true,
-})
-
 
 ----------------------------------------------------------------
 --FABRIC
@@ -119,15 +71,6 @@ player_api.register_cloth("tech:light_fabric_hat", {
 	customfields= {temp_min = 2, temp_max = 1}
 })
 
-crafting.register_recipe({
-	type = "loom",
-	output = "tech:light_fabric_hat",
-	items = {'tech:fine_fabric'},
-	level = 1,
-	always_known = true,
-})
-
-
 --Thick Hat
 player_api.register_cloth("tech:thick_fabric_hat", {
 	description = S("Thick Fabric Hat"),
@@ -138,15 +81,6 @@ player_api.register_cloth("tech:thick_fabric_hat", {
 	customfields= {temp_min = 4, temp_max = -1}
 })
 
-crafting.register_recipe({
-	type = "loom",
-	output = "tech:thick_fabric_hat",
-	items = {'tech:fine_fabric 2'},
-	level = 1,
-	always_known = true,
-})
-
-
 --light Cape
 player_api.register_cloth("tech:light_fabric_cape", {
 	description = S("Light Fabric Cape"),
@@ -156,15 +90,6 @@ player_api.register_cloth("tech:light_fabric_cape", {
 	groups = {cloth = 5, cape = 1, clothing_cape=1},
 	customfields= {temp_min = 3, temp_max = 3}
 })
-
-crafting.register_recipe({
-	type = "loom",
-	output = "tech:light_fabric_cape",
-	items = {'tech:fine_fabric 3'},
-	level = 1,
-	always_known = true,
-})
-
 --Thick Cape
 player_api.register_cloth("tech:thick_fabric_cape", {
 	description = S("Thick Fabric Cape"),
@@ -174,15 +99,6 @@ player_api.register_cloth("tech:thick_fabric_cape", {
 	groups = {cloth = 5, cape = 1, clothing_cape=1},
 	customfields= {temp_min = 6, temp_max = -2}
 })
-
-crafting.register_recipe({
-	type = "loom",
-	output = "tech:thick_fabric_cape",
-	items = {'tech:fine_fabric 6'},
-	level = 1,
-	always_known = true,
-})
-
 
 --Light Trousers
 player_api.register_cloth("tech:light_fabric_trousers", {
@@ -194,15 +110,6 @@ player_api.register_cloth("tech:light_fabric_trousers", {
 	customfields= {temp_min = 3, temp_max = 2}
 })
 
-crafting.register_recipe({
-	type = "loom",
-	output = "tech:light_fabric_trousers",
-	items = {'tech:fine_fabric 4'},
-	level = 1,
-	always_known = true,
-})
-
-
 --Thick Trousers
 player_api.register_cloth("tech:thick_fabric_trousers", {
 	description = S("Thick Fabric Trousers"),
@@ -212,15 +119,6 @@ player_api.register_cloth("tech:thick_fabric_trousers", {
 	groups = {cloth = 3, clothing_pants=1},
 	customfields= {temp_min = 6, temp_max = -2}
 })
-
-crafting.register_recipe({
-	type = "loom",
-	output = "tech:thick_fabric_trousers",
-	items = {'tech:fine_fabric 8'},
-	level = 1,
-	always_known = true,
-})
-
 
 --Light Tunic
 player_api.register_cloth("tech:light_fabric_tunic", {
@@ -232,15 +130,6 @@ player_api.register_cloth("tech:light_fabric_tunic", {
 	customfields= {temp_min = 3, temp_max = 2}
 })
 
-crafting.register_recipe({
-	type = "loom",
-	output = "tech:light_fabric_tunic",
-	items = {'tech:fine_fabric 4'},
-	level = 1,
-	always_known = true,
-})
-
-
 --Thick Tunic
 player_api.register_cloth("tech:thick_fabric_tunic", {
 	description = S("Thick Fabric Tunic"),
@@ -249,12 +138,4 @@ player_api.register_cloth("tech:thick_fabric_tunic", {
 	stack_max = minimal.stack_max_bulky,
 	groups = {cloth = 2, clothing_shirt = 1,},
 	customfields= {temp_min = 6, temp_max = -2}
-})
-
-crafting.register_recipe({
-	type = "loom",
-	output = "tech:thick_fabric_tunic",
-	items = {'tech:fine_fabric 8'},
-	level = 1,
-	always_known = true,
 })

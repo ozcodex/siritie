@@ -1,11 +1,11 @@
 ---------------- Upcomming --------------------
 
-- make meats, soup and cooked food compostable
+- make meats and cooked food compostable
 - make the composter use the group value as generated compost
 - make able to eat mashed whiha
 - maraka nuts also produce vegetable oil
 - apply all the suggestions of crafting recipes
-- refactor the remaining files
+- refactor the remaining files in tech folder
 - organize tech/textures folder followin the same naming convention
 
 ----------------- New Ideas --------------------
@@ -38,6 +38,7 @@
 		Brain Brawler (after surviving neurotoxicity 3 times)
 		Sun Shield (after surviving photosensitivity 5 times)
 - alchemy improvement:
+	- add amphora for tang and wiha cider
 	- a easier way to get large amounts of alcohol, from sugar and Tartar Salt (Tartaris Syrup)
 	- enable pure alcohol drinking, giving liver failure.
 	- add Alchemy glass equipment (retort, vessel)
@@ -65,6 +66,23 @@
 	- add books or tablets on the under ground city with recipes for alchemy
 	- add alchemy materials to the underground city, specially volcanic ash
 	- add a arcana container that has to be broken to be opened with common lot on the underground
+	- acrana container can be a sealed ceramic urn
+- Masonry toolset rework:
+	-remove all the sairs and slabs recipes
+	- make the toolset able to make all the stairs and slabs
+	- also make it able to undo stairs
+	- add the slab combining to all the slabs
+- GUI rework:
+	- remove the breaktaker
+	- remove the sound and effect on spawning
+	- change the welcome message
+	- improve the lore of the sentence of exile
+- make ceramics fragile and probable to break, use groups
+- make the composter produce silt instead of loam
+- add a way to recicle broken pottery
+- ceramic pendulum sismograph (based on the Seismoscope by Zhang Heng)
+- new working station: animal cage for breeding, requires specific food
+- add a new item: the scythe
 - add a new stat: hygiene if submerge in water slowly increases
 - add new diseases and possitive effects
 - add more blessings and curses with effects to the health
