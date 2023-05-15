@@ -69,6 +69,14 @@ crafting.register_recipe({
 	always_known = true,
 })
 
+crafting.register_recipe({
+	type = "mortar_and_pestle",
+	output = "tech:vegetable_oil",
+	items = {'nodes_nature:maraka_nut 6'},
+	level = 1,
+	always_known = true,
+})
+
 --
 --chopping_block
 --
