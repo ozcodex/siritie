@@ -29,3 +29,27 @@ crafting.register_recipe({
 	level = 1,
 	always_known = true,
 })
+
+crafting.register_recipe({
+	type = "hammering_block",
+	output = "tech:crushed_basalt",
+	items = {"group:basalt_cobble 8"},
+	level = 1,
+	always_known = true,
+})
+
+crafting.register_recipe({
+	type = "hammering_block",
+	output = "tech:crushed_gneiss",
+	items = {"group:gneiss_cobble 8"},
+	level = 1,
+	always_known = true,
+})
+
+crafting.register_recipe({
+	type = "grinding_stone",
+	output = "tech:quartz_powder",
+	items = {"tech:crushed_gneiss"},
+	level = 1,
+	always_known = true,
+})

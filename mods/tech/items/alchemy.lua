@@ -15,3 +15,4 @@ minetest.register_craftitem("tech:sugar", {
 	inventory_image = "tech_sugar.png",
 	stack_max = minimal.stack_max_medium,
 })
+

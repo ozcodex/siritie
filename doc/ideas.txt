@@ -1,16 +1,15 @@
 ---------------- Upcomming --------------------
 
 - apply all the suggestions of crafting recipes
+- fishtrap
 
 ----------------- New Ideas --------------------
 
 - improve working spaces:
-	- pottery wheel from Limestone boulder and sticks as improved version of the clay shaping spot
 	- ceramic idol, improved praying station (better chances? pray more than once?)
 	- add workbench as improved version of the crafting spot
 	- threshing sledge as improved seed extractor.
-	- alternative hammering log with granite
-	- fire pit, is like the wood fire, but can be fueled, resist flood andr rain.
+	- fire pit, is like the wood fire, but can be fueled, resist flood and rain.
 	- add a spore extraction spot
 - add more behaivor driven traits:
 	- food related (add a counter each time a food is ingested):
@@ -51,8 +50,6 @@
 	- add sugar(energy booster) as cooking condiment
 - new advanced metal
 	- add aluminium
-	- decorative items from aluminium
-	- cooking utensils from aluminium
 	- aluminium water containers
 	- aluminium roof tiles
 	- aluminium windows
@@ -97,8 +94,7 @@
 - add masonry tools to the masonry bench model
 - change the inventory image for the wattlework station
 - add basic controls to the documentation
-- fishtrap
-- make burnt wiha flammable
+
 
 --------------- Already done -------------------
 
@@ -124,6 +120,8 @@
 - wiha dregs get burnt if left near to fire
 - make able to extract oil also from maraka nut
 - pottery wheel from Limestone boulder and sticks as improved version of the clay shaping spot
+- alternative hammering log with granite
+- make burnt wiha flammable
 
 ------------ Inhereit form Exile ----------------
 

@@ -87,9 +87,6 @@ minetest.register_node("tech:mixing_spot", {
   sounds        = nodes_nature.node_sound_wood_defaults(),
   sunlight_propagates = true,
   on_rightclick = crafting.make_on_rightclick("mixing_spot", 2, { x = 8, y = 3 }),
-  on_punch      = function(pos, node, player)
-    minetest.remove_node(pos)
-    end
   })
 --Threshing spot
 --extracting seeds from plants

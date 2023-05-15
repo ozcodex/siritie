@@ -313,7 +313,44 @@ minetest.register_node("tech:burnt_dregs", {
     type = "fixed",
     fixed = smaller_mash_pile_nodebox,
   },
+  groups = {crumbly = 3, falling_node = 1, dig_immediate = 3, temp_pass = 1, compostable = 9, flammable=1},
+  sounds = nodes_nature.node_sound_dirt_defaults()
+  on_burn = function(pos)
+    if math.random()<0.5 then
+      minimal.switch_node(pos, {name = "tech:wood_ash"})
+      minetest.check_for_falling(pos)
+    else
+      minetest.remove_node(pos)
+    end
+  end,
+})
+
+minetest.register_node("tech:crushed_basalt", {
+  description = S("Crushed Basalt"),
+  tiles = {"tech_crushed_basalt.png"},
+  stack_max = minimal.stack_max_bulky,
+  paramtype = "light",
+  sunlight_propagates = true,
   groups = {crumbly = 3, falling_node = 1, dig_immediate = 3, temp_pass = 1, compostable = 9},
   sounds = nodes_nature.node_sound_dirt_defaults()
 })
 
+minetest.register_node("tech:crushed_gneiss", {
+  description = S("Crushed Gneiss"),
+  tiles = {"tech_crushed_gneiss.png"},
+  stack_max = minimal.stack_max_bulky,
+  paramtype = "light",
+  sunlight_propagates = true,
+  groups = {crumbly = 3, falling_node = 1, dig_immediate = 3, temp_pass = 1, compostable = 9},
+  sounds = nodes_nature.node_sound_dirt_defaults()
+})
+
+minetest.register_node("tech:quartz_powder", {
+  description = S("Quartz Powder"),
+  tiles = {"tech_quartz_powder.png"},
+  stack_max = minimal.stack_max_bulky,
+  paramtype = "light",
+  sunlight_propagates = true,
+  groups = {crumbly = 3, falling_node = 1, dig_immediate = 3, temp_pass = 1, compostable = 9},
+  sounds = nodes_nature.node_sound_dirt_defaults()
+})
