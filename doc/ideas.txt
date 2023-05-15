@@ -99,7 +99,8 @@
 - make that walking over path consume less energy
 - add a hoe to turn the sediment into agricultural soil?
 - add masonry tools to the masonry bench model
-
+- chenge the inventory image for the wattlework station
+- add basic controls to the documentation
 
 --------------- Already done -------------------
 
