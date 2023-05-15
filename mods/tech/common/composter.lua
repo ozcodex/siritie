@@ -25,14 +25,14 @@ generate_items = {
     cost = 3,
   },
   {
-    name = "nodes_nature:loam",
+    name = "nodes_nature:silt",
     chance = 10,
-    cost = 4,
+    cost = 8,
   },
   -- vermicompost from the growth of worms in the compost
   {
     name = "tech:vermicompost",
-    chance = 5,
+    chance = 3,
     cost = 1,
   },
   -- Bonemeal as subproduct of the composting process
@@ -73,9 +73,10 @@ function process_compostable_items(inv, compost)
             local name = item:get_name()
             local def = minetest.registered_items[name]
             if def and def.groups and def.groups.compostable then
+                print(def.groups.compostable)
                 if compost < 100 then
                     inv:remove_item("main", ItemStack(name .. " 1"))
-                    compost = compost + 1
+                    compost = compost + def.groups.compostable
                 end
             end
         end

@@ -1,10 +1,8 @@
 ---------------- Upcomming --------------------
 
-- make meats and cooked food compostable
-- make the composter use the group value as generated compost
+- apply all the suggestions of crafting recipes
 - make able to eat mashed whiha
 - maraka nuts also produce vegetable oil
-- apply all the suggestions of crafting recipes
 
 ----------------- New Ideas --------------------
 
@@ -75,8 +73,11 @@
 	- remove the sound and effect on spawning
 	- change the welcome message
 	- improve the lore of the sentence of exile
-- make ceramics fragile and probable to break, use groups
-- make the composter produce silt instead of loam
+- pottery rework
+	- clay mixing bucket to undo unfired pottery 
+	- move cooking pot and alembic to the pottery wheel
+	- add a mug and a jug to drink for (and not drink an entire pot)
+	- make ceramics fragile and probable to break, use groups
 - add a way to recicle broken pottery
 - ceramic pendulum sismograph (based on the Seismoscope by Zhang Heng)
 - new working station: animal cage for breeding, requires specific food
@@ -97,9 +98,8 @@
 - make that walking over path consume less energy
 - add a hoe to turn the sediment into agricultural soil?
 - add masonry tools to the masonry bench model
-- chenge the inventory image for the wattlework station
+- change the inventory image for the wattlework station
 - add basic controls to the documentation
-- add a mug and a jug to drink for (and not drink an entire pot)
 
 --------------- Already done -------------------
 
@@ -116,6 +116,9 @@
 - add a new craft station, the wattlework station
 - refactor the remaining files in tech folder
 - organize tech/textures folder followin the same naming convention
+- make meats and cooked food compostable
+- make the composter use groups for generated compost
+- make the composter produce silt instead of loam
 
 ------------ Inhereit form Exile ----------------
 
