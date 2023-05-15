@@ -12,3 +12,10 @@ crafting.register_recipe({
 	level = 1,
 	always_known = true,
 })
+crafting.register_recipe({
+	type = "mixing_bucket",
+	output = "tech:clay_mixing_bucket",
+	items = {"tech:mixing_bucket", "nodes_nature:clay"},
+	level = 1,
+	always_known = true,
+})

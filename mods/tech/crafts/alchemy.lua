@@ -7,7 +7,7 @@ crafting.register_recipe({
 })
 
 crafting.register_recipe({
-	type = "clay_shaping_spot",
+	type = "clay_mixing",
 	output = "nodes_nature:clay 5",
 	items = {"tech:alembic_unfired"},
 	level = 1,
