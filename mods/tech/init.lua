@@ -21,14 +21,12 @@ dofile(minetest.get_modpath("zero_loader").."/init.lua")
 zero_load('tech',{"common", "nodes", "items", "crafts"})
 -------------------------------
 dofile(modpath ..'/earthen_building.lua')
-dofile(modpath .. "/doors.lua")
 dofile(modpath .. "/torch.lua")
 dofile(modpath .. "/ironworking.lua")
 dofile(modpath .. "/woodworking.lua")
 dofile(modpath .. "/fibreworking.lua")
 dofile(modpath .. "/glassworking.lua")
 dofile(modpath .. "/grafitti.lua")
-dofile(modpath .. "/cooking_pot.lua")
 dofile(modpath .. "/lantern.lua")
 -------------------------------
 
