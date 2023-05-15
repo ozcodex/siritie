@@ -2,10 +2,24 @@
 
 barehand:
 - crafting spot
-- mixing spot
 - threshing spot
 - clay shaping spot
 - sleeping spot
+
+firing:
+- treaten plant bundle
+- charcoal block
+- roasted iron ore
+- quicklime
+- green glass ingot
+- clear glass ingot
+- iron bloom
+- pottery firing
+
+airing:
+- quicklime from slanked lime
+- fermenting tang
+- fermenting wiha cider
 
 soaking:
 - treaten plant bundle
@@ -13,44 +27,34 @@ soaking:
 - potash solution
 - slanked lime
 
-firing:
-- treaten plant bundle
-- charcoal block
-- roasted iron ore
-- quicklime
-- glass
-- iron bloom
-
-airing:
-- potash
-- lime from slanked lime
-
-fermenting:
-- tang
-- wiha cider
-
 ---- Tier 1 ----
 
 crafting spot:
+- mixing bucket
 - lever
+- composter bin
 - stick
-- stone knife
 - peeled anperla tuber
+- torch
+- stone knife
 - digging stick
+- effigy
 - small wood fire
 - large wood fire
+- masonry toolset
 - chopping block
 - brickworks bench
-- grinding stone
+- grinding stone granite
+- grinding stone limestone
 - weaving frame
-- drystack
-- mixing bucket
-- torch
+- wattlework station
 - dye pot
 - dyers table
-- effigy
-- composter bin
+- stone spear
 - fire sticks
+
+threshing spot:
+- seed extraction
 
 mixing spot:
 - dirt stairs and slabs
@@ -61,16 +65,14 @@ mixing spot:
 - wattle dismantling
 - roof tiles shapes
 
-threshing spot:
-- seed extraction
-
 clay shaping spot:
-- ceramic alembic making and dismantling
-- clay watering can making and dismantling
-- water pot making and dismantling
-- storage pot making and dismantling
-- oil lamp making and dismantling
-- cooking pot making and dismantling
+- sundial
+- ceramic alembic 
+- clay watering can 
+- water pot 
+- storage pot 
+- oil lamp 
+- cooking pot 
 - Pottery breaking
 
 ---- Tier 2 ----
@@ -145,9 +147,6 @@ composter bin:
 - vermicompost
 - bonemeal
 - small invertebrate carcass
-
-dye pot:
-- dyed woven clothes
 
 ceramic alembic:
 - salt
