@@ -25,6 +25,18 @@ local pot_nodebox = {
     {-0.3125, 0.3125, -0.3125, 0.3125, 0.375, 0.3125}, -- NodeBox5
 }
 
+local mash_pile_nodebox = {
+  {-0.3, -0.5, -0.3, 0.3, -0.3, 0.3},
+  {-0.25, -0.3, -0.25, 0.25, -0.1, 0.25}, 
+  {-0.2, -0.1, -0.2, 0.2, 0, 0.2},
+}
+
+local smaller_mash_pile_nodebox = {
+  {-0.25, -0.45, -0.25, 0.25, -0.3, 0.25},
+  {-0.2, -0.3, -0.2, 0.2, -0.15, 0.2},
+  {-0.15, -0.15, -0.15, 0.15, -0.05, 0.15},
+}
+
 minetest.register_node("tech:alembic", {
 	description = "Ceramic Alembic",
 	drawtype = "nodebox",
@@ -228,3 +240,80 @@ minetest.register_node("tech:vinegar_pot", {
   groups = {dig_immediate=3, pottery = 1, temp_pass = 1},
   sounds = nodes_nature.node_sound_stone_defaults(),
 })
+
+-- wiha
+minetest.register_node("tech:mashed_wiha", {
+  description = S("Mashed Wiha"),
+  tiles = {"tech_mashed_wiha.png"},
+  inventory_image = "tech_mashed_wiha_inv.png",
+  stack_max = minimal.stack_max_medium/2,
+  paramtype = "light",
+  sunlight_propagates = true,
+  drawtype = "nodebox",
+  node_box = {
+    type = "fixed",
+    fixed = mash_pile_nodebox,
+  },
+  groups = {crumbly = 3, falling_node = 1, dig_immediate = 3, temp_pass = 1, edible = 1, compostable = 12},
+  sounds = nodes_nature.node_sound_dirt_defaults(),
+
+  on_construct = function(pos)
+    minetest.get_node_timer(pos):start(math.random(10,20))
+  end,
+  on_timer = function(pos, elapsed)
+    if climate.get_point_temp(pos) > 90 then
+      minetest.swap_node(pos, {name = "tech:burnt_dregs"})
+      return false
+    end
+    if math.random() > 0.9 then
+      minimal.switch_node(pos, {name = "tech:wiha_dregs"})
+      return false
+    end
+    return true
+  end,
+})
+
+minetest.register_node("tech:wiha_dregs", {
+  description = S("Wiha Dregs"),
+  tiles = {"tech_wiha_dregs.png"},
+  inventory_image = "tech_wiha_dregs_inv.png",
+  stack_max = minimal.stack_max_medium/2,
+  paramtype = "light",
+  sunlight_propagates = true,
+  drawtype = "nodebox",
+  node_box = {
+    type = "fixed",
+    fixed = smaller_mash_pile_nodebox,
+  },
+  groups = {crumbly = 3, falling_node = 1, dig_immediate = 3, temp_pass = 1, heatable=100, compostable = 6},
+  sounds = nodes_nature.node_sound_dirt_defaults(),
+
+  on_construct = function(pos)
+    minetest.get_node_timer(pos):start(math.random(30,60))
+  end,
+  on_timer = function(pos, elapsed)
+    if climate.get_point_temp(pos) > 90 then
+      minetest.swap_node(pos, {name = "tech:burnt_dregs"})
+      return false
+    end
+    return true
+  end,
+})
+
+
+minetest.register_node("tech:burnt_dregs", {
+  description = S("Burnt Dregs"),
+  tiles = {"tech_burnt_dregs.png"},
+  inventory_image = "tech_burnt_dregs_inv.png",
+  stack_max = minimal.stack_max_medium/2,
+  paramtype = "light",
+  sunlight_propagates = true,
+  drawtype = "nodebox",
+  node_box = {
+    type = "fixed",
+    fixed = smaller_mash_pile_nodebox,
+  },
+  groups = {crumbly = 3, falling_node = 1, dig_immediate = 3, temp_pass = 1, compostable = 9},
+  sounds = nodes_nature.node_sound_dirt_defaults()
+})
+

@@ -18,6 +18,7 @@
 
 food_table = {
 	--name	     	      	               hp  th  hu   en  temp, replacewithitem (not implemented yet)
+	["tech:mashed_wiha"]                = { 0, 48,  24,-10,  0 },
 	["tech:maraka_bread_cooked"]        = { 0,  0,  24, 14,  0 },
 	["tech:maraka_bread_burned"]        = { 0,  0,  12,  7,  0 },
 	["tech:peeled_anperla_cooked"]      = { 0,  2,  12,  7,  0 },
@@ -90,6 +91,7 @@ bake_table = {
 
 food_harm_table = {
 	--name                     { {tag, chance, severity}, {t, c, s}, etc }
+	["tech:mashed_wiha"]             = { { "Food Poisoning",      0.100, 1} },
 	["tech:maraka_bread_cooked"]     = { { "Food Poisoning",      0.001, 1} },
 	["tech:maraka_bread_burned"]     = { { "Food Poisoning",      0.001, 1} },
 	["tech:peeled_anperla_cooked"]   = { { "Food Poisoning",      0.002, 1} },
