@@ -16,7 +16,7 @@
 	- add workbench as improved version of the crafting spot
 	- threshing sledge as improved seed extractor.
 	- alternative hammering log with granite
-	- fire pit, is like the wood fire, but can be fueled
+	- fire pit, is like the wood fire, but can be fueled, resist flood andr rain.
 - add more behaivor driven traits:
 	- food related (add a counter each time a food is ingested):
 		Vegetarian (after 5 days eating mostly plants)
@@ -101,6 +101,7 @@
 - add masonry tools to the masonry bench model
 - chenge the inventory image for the wattlework station
 - add basic controls to the documentation
+
 
 --------------- Already done -------------------
 
