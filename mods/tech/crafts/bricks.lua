@@ -34,6 +34,8 @@ crafting.register_recipe({
 	always_known = true,
 })
 
+-- bricks cannot be undone, since they are mixed with sand
+
 --mix with mortar
 crafting.register_recipe({
 	type = "mortar_bucket",
@@ -49,6 +51,15 @@ crafting.register_recipe({
 	type = "brick_makers_bench",
 	output = "tech:roof_tile_loose_unfired",
 	items = {'nodes_nature:clay_wet 6'},
+	level = 1,
+	always_known = true,
+})
+
+-- roof tiles canbe undone, since they are done with pure clay
+crafting.register_recipe({
+	type = "clay_mixing",
+	output = "nodes_nature:clay 6",
+	items = {'tech:roof_tile_loose_unfired'},
 	level = 1,
 	always_known = true,
 })

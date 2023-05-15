@@ -1,6 +1,6 @@
 -- clay watering
 crafting.register_recipe({
-	type = "clay_shaping_spot",
+	type = "pottery_wheel",
 	output = "tech:clay_watering_can_unfired 1",
 	items = {"nodes_nature:clay_wet 5"},
 	level = 1,

@@ -1,5 +1,5 @@
 crafting.register_recipe({
-	type = "clay_shaping_spot",
+	type = "pottery_wheel",
 	output = "tech:alembic_unfired 1",
 	items = {"nodes_nature:clay_wet 5", "tech:stick 2"},
 	level = 1,
