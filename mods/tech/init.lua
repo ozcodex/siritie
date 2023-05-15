@@ -22,8 +22,6 @@ zero_load('tech',{"common", "nodes", "items", "crafts"})
 -------------------------------
 dofile(modpath .. "/ironworking.lua")
 dofile(modpath .. "/woodworking.lua")
-dofile(modpath .. "/fibreworking.lua")
-dofile(modpath .. "/glassworking.lua")
 dofile(modpath .. "/grafitti.lua")
 dofile(modpath .. "/lantern.lua")
 -------------------------------
