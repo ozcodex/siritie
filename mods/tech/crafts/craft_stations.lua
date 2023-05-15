@@ -117,7 +117,7 @@ crafting.register_recipe({ ----craft clay shaping spot for free
 
 --grinding_stone from craft spot
 crafting.register_recipe({
-  type   = "crafting_spot",
+  type   = "grinding_stone",
   output = "tech:grinding_stone_granite",
   items  = {'group:granite_cobble 4', 'nodes_nature:sand 8'},
   level  = 1,
