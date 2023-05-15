@@ -75,7 +75,6 @@
 	- change the welcome message
 	- improve the lore of the sentence of exile
 - pottery rework
-	- clay mixing bucket to undo unfired pottery 
 	- move cooking pot and alembic to the pottery wheel
 	- add a mug and a jug to drink for (and not drink an entire pot)
 	- make ceramics fragile and probable to break, use groups
@@ -101,6 +100,7 @@
 - add masonry tools to the masonry bench model
 - change the inventory image for the wattlework station
 - add basic controls to the documentation
+- fishtrap
 
 --------------- Already done -------------------
 
@@ -120,6 +120,7 @@
 - make meats and cooked food compostable
 - make the composter use groups for generated compost
 - make the composter produce silt instead of loam
+- clay mixing bucket to undo unfired pottery 
 
 ------------ Inhereit form Exile ----------------
 
