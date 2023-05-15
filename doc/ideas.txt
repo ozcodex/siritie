@@ -5,8 +5,6 @@
 - make able to eat mashed whiha
 - maraka nuts also produce vegetable oil
 - apply all the suggestions of crafting recipes
-- refactor the remaining files in tech folder
-- organize tech/textures folder followin the same naming convention
 
 ----------------- New Ideas --------------------
 
@@ -116,6 +114,8 @@
 - change the mixing spot to be a crafteable craftstation
 - great rework on the recipes of newly created masonry toolset craftstation
 - add a new craft station, the wattlework station
+- refactor the remaining files in tech folder
+- organize tech/textures folder followin the same naming convention
 
 ------------ Inhereit form Exile ----------------
 
