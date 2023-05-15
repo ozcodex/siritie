@@ -20,5 +20,3 @@ local modpath = minetest.get_modpath('tech')
 dofile(minetest.get_modpath("zero_loader").."/init.lua")
 zero_load('tech',{"common", "nodes", "items", "crafts"})
 -------------------------------
-dofile(modpath .. "/woodworking.lua")
--------------------------------
