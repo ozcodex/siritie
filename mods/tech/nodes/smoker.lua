@@ -126,3 +126,35 @@ minetest.register_node("tech:smoker", {
     end,
 
 })
+
+
+--unfired
+minetest.register_node("tech:smoker_unfired", {
+    description = S("Clay Smoker (unfired)"),
+    tiles = {
+        "nodes_nature_clay.png",
+        "nodes_nature_clay.png",
+        "nodes_nature_clay.png",
+        "nodes_nature_clay.png",
+        "nodes_nature_clay.png",
+        "nodes_nature_clay.png"
+    },
+    drawtype = "nodebox",
+    stack_max = minimal.stack_max_bulky,
+    paramtype = "light",
+    node_box = {
+        type = "fixed",
+        fixed = smoker_nodebox
+    },
+    groups = {dig_immediate=3, temp_pass = 1, heatable = 20},
+    sounds = nodes_nature.node_sound_stone_defaults(),
+    on_construct = function(pos)
+        --length(i.e. difficulty of firing), interval for checks (speed)
+        ncrafting.set_firing(pos, base_firing, firing_int)
+    end,
+    on_timer = function(pos, elapsed)
+        --finished product, length
+        return ncrafting.fire_pottery(pos, "tech:smoker_unfired", "tech:smoker", base_firing)
+    end,
+})
+
