@@ -1,15 +1,23 @@
 ---------------- Upcomming --------------------
 
 - apply all the suggestions of crafting recipes
+- add amphora for tang and wiha cider
+- ceramic pendulum sismograph (based on the Seismoscope by Zhang Heng)
+- add Alchemy glass equipment (retort, vessel)
+- add alcehmy ceramic equipment (Alchemy Mortarium, Elemental Crucible)
+- add Alchemy bench
+- a easier way to get large amounts of alcohol, from sugar and Tartar Salt (Tartaris Syrup)
+- add aluminium
+- aluminium water containers
+- aluminium roof tiles
+- aluminium windows
+- add a mug and a jug to drink from (and not drink an entire pot)
 
 ----------------- New Ideas --------------------
 
 - improve working spaces:
 	- ceramic idol, improved praying station (better chances? pray more than once?)
-	- add workbench as improved version of the crafting spot
-	- threshing sledge as improved seed extractor.
 	- fire pit, is like the wood fire, but can be fueled, resist flood and rain.
-	- add a spore extraction spot
 - add more behaivor driven traits:
 	- food related (add a counter each time a food is ingested):
 		Vegetarian (after 5 days eating mostly plants)
@@ -30,16 +38,6 @@
 		Sandstorm Nomad (after recovering from Dust Fever 5 times)
 		Brain Brawler (after surviving neurotoxicity 3 times)
 		Sun Shield (after surviving photosensitivity 5 times)
-- alchemy improvement:
-	- add amphora for tang and wiha cider
-	- a easier way to get large amounts of alcohol, from sugar and Tartar Salt (Tartaris Syrup)
-	- enable pure alcohol drinking, giving liver failure.
-	- add Alchemy glass equipment (retort, vessel)
-	- add Alchemy iron equipment (scale, tongs)
-	- add alcehmy ceramic equipment (Alchemy Mortarium, Elemental Crucible)
-	- add alchemy recipes
-	- add Alchemy bench
-	- add alchemical medicines for each disease
 - food rework:
 	- improve the GUI
 	- make the food decay
@@ -47,11 +45,6 @@
 	- use salt, sugar and vinegar to preserve food
 	- add salt (reduce thrist but enhances hunger, too much causes negative effects) as cooking condiment
 	- add sugar(energy booster) as cooking condiment
-- new advanced metal
-	- add aluminium
-	- aluminium water containers
-	- aluminium roof tiles
-	- aluminium windows
 - underground improvement
 	- add more randomness, probabilities
 	- add books or tablets on the under ground city with recipes for alchemy
@@ -68,24 +61,21 @@
 	- remove the sound and effect on spawning
 	- change the welcome message
 	- improve the lore of the sentence of exile
-- pottery rework
-	- add a mug and a jug to drink for (and not drink an entire pot)
+	- fix translation templates to include all the actual strings
+	- redesign the runes of painting kits
+- pottery rework:
 	- make ceramics fragile and probable to break, use groups
+	- aurifex can be used for glazing pottery
+	- glazed pottery less probable to break
 - add a way to recicle broken pottery
-- ceramic pendulum sismograph (based on the Seismoscope by Zhang Heng)
 - new working station: animal cage for breeding, requires specific food
-- add a new item: the scythe
+- add a new item: the scythe, cuts the plant leaving a sprout to grow again
 - add a new stat: hygiene if submerge in water slowly increases
 - add new diseases and possitive effects
 - add more blessings and curses with effects to the health
 - give boost based on traits
-- create a clay smoker for safe bulk cooking
-- add activated coal as medicine
-- fix translation templates to include all the actual strings
 - add an api to lower blocks node box if they are on top of a slab
-- redesign the runes of painting kits
 - make the smelter probe work with glass
-- aurifex can be used for glazing pottery
 - add debug tool: meta reader
 - make the paths work with wet soil
 - make that walking over path consume less energy
@@ -93,6 +83,7 @@
 - add masonry tools to the masonry bench model
 - change the inventory image for the wattlework station
 - add basic controls to the documentation
+- add alchemical medicines for each disease
 
 
 --------------- Already done -------------------
@@ -121,7 +112,8 @@
 - pottery wheel from Limestone boulder and sticks as improved version of the clay shaping spot
 - alternative hammering log with granite
 - make burnt wiha flammable
-- fishtrap
+- Add a new tool: the fishtrap
+- create a clay smoker for safe bulk cooking
 
 ------------ Inhereit form Exile ----------------
 
