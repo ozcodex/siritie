@@ -79,6 +79,21 @@ clay_pot_nodebox = {
 	{-0.3125, 0.3125, -0.3125, 0.3125, 0.375, 0.3125}, -- NodeBox5
 }
 
+clay_amphora_nodebox = {
+        {-0.0625, 0.1875, -0.25, 0, 0.25, -0.0625},
+		{-0.0625, 0.125, -0.0625, 0.0625, 0.4375, 0.0625},
+		{-0.1875, 0.0625, -0.1875, 0.1875, 0.125, 0.1875},
+		{-0.25, 0, -0.25, 0.25, 0.0625, 0.25},
+		{-0.25, -0.3125, -0.25, 0.25, 0, 0.25},
+		{-0.1875, -0.375, -0.1875, 0.1875, -0.3125, 0.1875},
+		{-0.1875, -0.5, -0.1875, 0.1875, -0.4375, 0.1875},
+		{-0.125, -0.4375, -0.125, 0.125, -0.375, 0.125},
+		{-0.125, 0.125, -0.125, 0.125, 0.1875, 0.125},
+		{-0.125, 0.375, -0.125, 0.125, 0.4375, 0.125},
+		{-0.0625, -0.0625, -0.3125, 0, 0.25, -0.25},
+		{0, -0.0625, 0.25, 0.0625, 0.25, 0.3125},
+		{0, 0.1875, 0.0625, 0.0625, 0.25, 0.25},
+    }
 
 --clay pot with salt water
 liquid_store.register_stored_liquid(
@@ -144,3 +159,22 @@ minetest.override_item("tech:clay_water_pot_freshwater",{
 		end
 	end
 })
+
+liquid_store.register_stored_liquid(
+	"nodes_nature:freshwater_source",
+	"tech:clay_amphora_freshwater",
+	"tech:clay_amphora",
+	{
+		"tech_amphora_water.png",
+		"tech_pottery.png",
+		"tech_pottery.png",
+		"tech_pottery.png",
+		"tech_pottery.png",
+		"tech_pottery.png"
+	},
+	{
+		type = "fixed",
+		fixed = clay_amphora_nodebox
+	},
+	S("Clay Amphora with Freshwater"),
+	{dig_immediate = 2})
