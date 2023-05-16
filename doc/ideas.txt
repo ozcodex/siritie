@@ -1,7 +1,6 @@
 ---------------- Upcomming --------------------
 
 - apply all the suggestions of crafting recipes
-- fishtrap
 
 ----------------- New Ideas --------------------
 
@@ -122,6 +121,7 @@
 - pottery wheel from Limestone boulder and sticks as improved version of the clay shaping spot
 - alternative hammering log with granite
 - make burnt wiha flammable
+- fishtrap
 
 ------------ Inhereit form Exile ----------------
 

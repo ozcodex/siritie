@@ -743,10 +743,6 @@ for i in ipairs(searooted_list) do
 	local dominantcolor = searooted_list[i][12] or "green"
 
 	local g = {snappy = 3, flora = 1, flora_sea = 1, compostable = 1}
-	--use seaweed as fertilizer
-	if type == "seaweed" then
-		g.fertilizer = 1
-	end
 
 	if dyecandidate then
 	   g.ncrafting_dye_candidate = dyecandidate

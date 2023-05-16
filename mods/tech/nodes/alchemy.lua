@@ -314,7 +314,8 @@ minetest.register_node("tech:burnt_dregs", {
     fixed = smaller_mash_pile_nodebox,
   },
   groups = {crumbly = 3, falling_node = 1, dig_immediate = 3, temp_pass = 1, compostable = 9, flammable=1},
-  sounds = nodes_nature.node_sound_dirt_defaults()
+  sounds = nodes_nature.node_sound_dirt_defaults(),
+  
   on_burn = function(pos)
     if math.random()<0.5 then
       minimal.switch_node(pos, {name = "tech:wood_ash"})
