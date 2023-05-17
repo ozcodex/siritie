@@ -25,7 +25,7 @@ crafting.register_recipe({
 crafting.register_recipe({
 	type = "mortar_and_pestle",
 	output = "tech:wiha_must_pot 1",
-	items = {"tech:mashed_wiha","nodes_nature:nebiyi 6","tech:clay_water_pot_freshwater"},
+	items = {"tech:mashed_wiha","nodes_nature:nebiyi 6","tech:clay_amphora_freshwater"},
 	level = 1,
 	always_known = true,
 })
@@ -50,6 +50,22 @@ crafting.register_recipe({
 	type = "grinding_stone",
 	output = "tech:quartz_powder",
 	items = {"tech:crushed_gneiss"},
+	level = 1,
+	always_known = true,
+})
+
+crafting.register_recipe({
+	type = "pottery_wheel",
+	output = "tech:clay_amphora_unfired 1",
+	items = {"nodes_nature:clay_wet 5"},
+	level = 1,
+	always_known = true,
+})
+
+crafting.register_recipe({
+	type = "clay_mixing",
+	output = "nodes_nature:clay 5",
+	items = {"tech:clay_amphora_unfired"},
 	level = 1,
 	always_known = true,
 })

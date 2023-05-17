@@ -1,7 +1,6 @@
 ---------------- Upcomming --------------------
 
 - apply all the suggestions of crafting recipes
-- add amphora for tang and wiha cider
 - ceramic pendulum sismograph (based on the Seismoscope by Zhang Heng)
 - add Alchemy glass equipment (retort, vessel)
 - add alcehmy ceramic equipment (Alchemy Mortarium, Elemental Crucible)
@@ -18,14 +17,14 @@
 - improve working spaces:
 	- ceramic idol, improved praying station (better chances? pray more than once?)
 	- fire pit, is like the wood fire, but can be fueled, resist flood and rain.
-- add more behaivor driven traits:
-	- food related (add a counter each time a food is ingested):
+- traits rework:
+	- food related (add a counter each time a food is ingested) traits:
 		Vegetarian (after 5 days eating mostly plants)
 		Omnivore (if the amount of eaten plants and meat are similar)
 		Carnivore (after 5 days eating mostly meat)
 		Vegan (after 10 days eating only plants)
 		Ascetic (after 5 days without eating)
-	- effects based (add a counter of each time the player got the effect):
+	- effects based (add a counter of each time the player got the effect) traits:
 		Alcoholic (after getting drunk 20% or more of the days)
 		Sober (after 10 days without getting drunk any time)
 		Metabolism Enhanceer (after getting High on Stimulants 5 times)
@@ -38,6 +37,8 @@
 		Sandstorm Nomad (after recovering from Dust Fever 5 times)
 		Brain Brawler (after surviving neurotoxicity 3 times)
 		Sun Shield (after surviving photosensitivity 5 times)
+	lore based traits:
+		Traits based on the commited crimes.
 - food rework:
 	- improve the GUI
 	- make the food decay
@@ -45,12 +46,15 @@
 	- use salt, sugar and vinegar to preserve food
 	- add salt (reduce thrist but enhances hunger, too much causes negative effects) as cooking condiment
 	- add sugar(energy booster) as cooking condiment
+	- add recipes
+	- extact condiments from plants.
 - underground improvement
 	- add more randomness, probabilities
 	- add books or tablets on the under ground city with recipes for alchemy
 	- add alchemy materials to the underground city, specially volcanic ash
 	- add a arcana container that has to be broken to be opened with common lot on the underground
 	- acrana container can be a sealed ceramic urn
+	- add boooks or pages with lore, that are collectible
 - Masonry toolset rework:
 	-remove all the sairs and slabs recipes
 	- make the toolset able to make all the stairs and slabs
@@ -62,6 +66,7 @@
 	- change the welcome message
 	- improve the lore of the sentence of exile
 	- fix translation templates to include all the actual strings
+	- Translate the game to esperanto
 	- redesign the runes of painting kits
 - pottery rework:
 	- make ceramics fragile and probable to break, use groups
@@ -79,11 +84,13 @@
 - add debug tool: meta reader
 - make the paths work with wet soil
 - make that walking over path consume less energy
+- make slabs and stairs version of paths
 - add a hoe to turn the sediment into agricultural soil?
 - add masonry tools to the masonry bench model
 - change the inventory image for the wattlework station
 - add basic controls to the documentation
 - add alchemical medicines for each disease
+- add bees and honey 
 
 
 --------------- Already done -------------------
@@ -114,6 +121,7 @@
 - make burnt wiha flammable
 - Add a new tool: the fishtrap
 - create a clay smoker for safe bulk cooking
+- add amphora for tang and wiha cider
 
 ------------ Inhereit form Exile ----------------
 

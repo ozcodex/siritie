@@ -1,3 +1,20 @@
+local clay_amphora_nodebox = {
+        {-0.0625, 0.1875, -0.25, 0, 0.25, -0.0625},
+    {-0.0625, 0.125, -0.0625, 0.0625, 0.4375, 0.0625},
+    {-0.1875, 0.0625, -0.1875, 0.1875, 0.125, 0.1875},
+    {-0.25, 0, -0.25, 0.25, 0.0625, 0.25},
+    {-0.25, -0.3125, -0.25, 0.25, 0, 0.25},
+    {-0.1875, -0.375, -0.1875, 0.1875, -0.3125, 0.1875},
+    {-0.1875, -0.5, -0.1875, 0.1875, -0.4375, 0.1875},
+    {-0.125, -0.4375, -0.125, 0.125, -0.375, 0.125},
+    {-0.125, 0.125, -0.125, 0.125, 0.1875, 0.125},
+    {-0.125, 0.375, -0.125, 0.125, 0.4375, 0.125},
+    {-0.0625, -0.0625, -0.3125, 0, 0.25, -0.25},
+    {0, -0.0625, 0.25, 0.0625, 0.25, 0.3125},
+    {0, 0.1875, 0.0625, 0.0625, 0.25, 0.25},
+    }
+
+
 --Pot of new Tang, must be left to ferment
 minetest.register_node("tech:tang_unfermented", {
   description = S("Tang (unfermented)"),
@@ -14,13 +31,7 @@ minetest.register_node("tech:tang_unfermented", {
   paramtype = "light",
   node_box = {
     type = "fixed",
-    fixed = {
-      {-0.25, 0.375, -0.25, 0.25, 0.5, 0.25}, -- NodeBox1
-      {-0.375, -0.25, -0.375, 0.375, 0.3125, 0.375}, -- NodeBox2
-      {-0.3125, -0.375, -0.3125, 0.3125, -0.25, 0.3125}, -- NodeBox3
-      {-0.25, -0.5, -0.25, 0.25, -0.375, 0.25}, -- NodeBox4
-      {-0.3125, 0.3125, -0.3125, 0.3125, 0.375, 0.3125}, -- NodeBox5
-    }
+    fixed = clay_amphora_nodebox
   },
   groups = {dig_immediate=3, pottery = 1, temp_pass = 1},
   sounds = nodes_nature.node_sound_stone_defaults(),
@@ -78,13 +89,7 @@ minetest.register_node("tech:tang", {
   paramtype = "light",
   node_box = {
     type = "fixed",
-    fixed = {
-      {-0.25, 0.375, -0.25, 0.25, 0.5, 0.25}, -- NodeBox1
-      {-0.375, -0.25, -0.375, 0.375, 0.3125, 0.375}, -- NodeBox2
-      {-0.3125, -0.375, -0.3125, 0.3125, -0.25, 0.3125}, -- NodeBox3
-      {-0.25, -0.5, -0.25, 0.25, -0.375, 0.25}, -- NodeBox4
-      {-0.3125, 0.3125, -0.3125, 0.3125, 0.375, 0.3125}, -- NodeBox5
-    }
+    fixed = clay_amphora_nodebox
   },
   groups = {dig_immediate=3, pottery = 1, temp_pass = 1},
   sounds = nodes_nature.node_sound_stone_defaults(),

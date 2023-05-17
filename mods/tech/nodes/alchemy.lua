@@ -37,6 +37,22 @@ local smaller_mash_pile_nodebox = {
   {-0.15, -0.15, -0.15, 0.15, -0.05, 0.15},
 }
 
+local clay_amphora_nodebox = {
+        {-0.0625, 0.1875, -0.25, 0, 0.25, -0.0625},
+    {-0.0625, 0.125, -0.0625, 0.0625, 0.4375, 0.0625},
+    {-0.1875, 0.0625, -0.1875, 0.1875, 0.125, 0.1875},
+    {-0.25, 0, -0.25, 0.25, 0.0625, 0.25},
+    {-0.25, -0.3125, -0.25, 0.25, 0, 0.25},
+    {-0.1875, -0.375, -0.1875, 0.1875, -0.3125, 0.1875},
+    {-0.1875, -0.5, -0.1875, 0.1875, -0.4375, 0.1875},
+    {-0.125, -0.4375, -0.125, 0.125, -0.375, 0.125},
+    {-0.125, 0.125, -0.125, 0.125, 0.1875, 0.125},
+    {-0.125, 0.375, -0.125, 0.125, 0.4375, 0.125},
+    {-0.0625, -0.0625, -0.3125, 0, 0.25, -0.25},
+    {0, -0.0625, 0.25, 0.0625, 0.25, 0.3125},
+    {0, 0.1875, 0.0625, 0.0625, 0.25, 0.25},
+    }
+
 minetest.register_node("tech:alembic", {
 	description = "Ceramic Alembic",
 	drawtype = "nodebox",
@@ -136,7 +152,7 @@ minetest.register_node("tech:wiha_must_pot", {
   paramtype = "light",
   node_box = {
     type = "fixed",
-    fixed = pot_nodebox
+    fixed = clay_amphora_nodebox
   },
   groups = {dig_immediate=3, pottery = 1, temp_pass = 1},
   sounds = nodes_nature.node_sound_stone_defaults(),
@@ -214,7 +230,7 @@ minetest.register_node("tech:wiha_cider_pot", {
   paramtype = "light",
   node_box = {
     type = "fixed",
-    fixed = pot_nodebox
+    fixed = clay_amphora_nodebox
   },
   groups = {dig_immediate=3, pottery = 1, temp_pass = 1},
   sounds = nodes_nature.node_sound_stone_defaults(),
@@ -235,7 +251,7 @@ minetest.register_node("tech:vinegar_pot", {
   paramtype = "light",
   node_box = {
     type = "fixed",
-    fixed = pot_nodebox
+    fixed = clay_amphora_nodebox
   },
   groups = {dig_immediate=3, pottery = 1, temp_pass = 1},
   sounds = nodes_nature.node_sound_stone_defaults(),
