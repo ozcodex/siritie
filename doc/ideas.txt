@@ -1,9 +1,7 @@
 ---------------- Upcomming --------------------
 
 - apply all the suggestions of crafting recipes
-- ceramic pendulum seismograph (based on the Seismoscope by Zhang Heng)
 - add Alchemy glass equipment (retort, vessel)
-- add alcehmy ceramic equipment (Alchemy Mortarium, Elemental Crucible)
 - add Alchemy bench
 - a easier way to get large amounts of alcohol, from sugar and Tartar Salt (Tartaris Syrup)
 - add aluminium
@@ -91,6 +89,7 @@
 - add basic controls to the documentation
 - add alchemical medicines for each disease
 - add bees and honey 
+- wood poles, like sticks, decorative, reach higher places
 
 
 --------------- Already done -------------------
@@ -122,6 +121,8 @@
 - Add a new tool: the fishtrap
 - create a clay smoker for safe bulk cooking
 - add amphora for tang and wiha cider
+- ceramic pendulum seismograph (based on the Seismoscope by Zhang Heng)
+- add alcehmy ceramic equipment (Alchemy Mortarium, Elemental Crucible)
 
 ------------ Inhereit form Exile ----------------
 
