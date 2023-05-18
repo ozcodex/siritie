@@ -1,7 +1,7 @@
 ---------------- Upcomming --------------------
 
 - apply all the suggestions of crafting recipes
-- ceramic pendulum sismograph (based on the Seismoscope by Zhang Heng)
+- ceramic pendulum seismograph (based on the Seismoscope by Zhang Heng)
 - add Alchemy glass equipment (retort, vessel)
 - add alcehmy ceramic equipment (Alchemy Mortarium, Elemental Crucible)
 - add Alchemy bench
@@ -10,7 +10,6 @@
 - aluminium water containers
 - aluminium roof tiles
 - aluminium windows
-- add a mug and a jug to drink from (and not drink an entire pot)
 
 ----------------- New Ideas --------------------
 
@@ -72,6 +71,7 @@
 	- make ceramics fragile and probable to break, use groups
 	- aurifex can be used for glazing pottery
 	- glazed pottery less probable to break
+	- add a mug and a jug to drink from (and not drink an entire pot)
 - add a way to recicle broken pottery
 - new working station: animal cage for breeding, requires specific food
 - add a new item: the scythe, cuts the plant leaving a sprout to grow again

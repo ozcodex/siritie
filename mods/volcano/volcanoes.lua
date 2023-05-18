@@ -6,7 +6,6 @@
 
 local modpath = minetest.get_modpath(minetest.get_current_modname())
 
-
 --
 local water_level = tonumber(minetest.get_mapgen_setting("water_level"))
 local mapgen_seed = tonumber(minetest.get_mapgen_setting("seed"))
@@ -37,7 +36,7 @@ end
 local depth_maxwidth = -30 -- point of maximum width
 local slope_max = 2 --i.e. 2*300 = 600 radius
 local radius_lining = 5 -- cf vent radius
-local radius_cone_max =  (max_height - depth_maxwidth) * slope_max + radius_lining + 20
+local radius_cone_max = (max_height - depth_maxwidth) * slope_max + radius_lining + 20
 local slope_min = 1
 
 local caldera_min = 4 -- minimum radius of caldera
@@ -49,7 +48,7 @@ local depth_base = -50 -- point where the mountain root starts expanding
 
 local radius_vent = 8 -- approximate minimum radius of vent - noise adds a lot to this
 
-local depth_maxwidth_dist = depth_maxwidth-depth_base
+local depth_maxwidth_dist = depth_maxwidth - depth_base
 
 --nodes
 local snow_line = 165 -- above this elevation snow is added to the dirt type
@@ -63,13 +62,13 @@ local c_snow = minetest.get_content_id("nodes_nature:snow")
 local c_high_soil = minetest.get_content_id("nodes_nature:highland_soil")
 local c_moss = minetest.get_content_id("nodes_nature:moss")
 
-local c_lava =  minetest.get_content_id("nodes_nature:lava_source")
+local c_lava = minetest.get_content_id("nodes_nature:lava_source")
 local c_basalt = minetest.get_content_id("nodes_nature:basalt")
 local c_boulder = minetest.get_content_id("nodes_nature:basalt_boulder")
 local c_cobble = {}
- c_cobble[1] = minetest.get_content_id("nodes_nature:basalt_cobble1")
- c_cobble[2] = minetest.get_content_id("nodes_nature:basalt_cobble2")
- c_cobble[3] = minetest.get_content_id("nodes_nature:basalt_cobble3")
+c_cobble[1] = minetest.get_content_id("nodes_nature:basalt_cobble1")
+c_cobble[2] = minetest.get_content_id("nodes_nature:basalt_cobble2")
+c_cobble[3] = minetest.get_content_id("nodes_nature:basalt_cobble3")
 
 local c_air = minetest.get_content_id("air")
 
@@ -78,7 +77,10 @@ local c_cone = c_basalt
 ------------------------------------------------------------------------
 -- offset for alignment
 local get_corner = function(pos)
-	return {x = math.floor((pos.x+32) / volcano_region_size) * volcano_region_size - 32, z = math.floor((pos.z+32) / volcano_region_size) * volcano_region_size - 32}
+	return {
+		x = math.floor((pos.x + 32) / volcano_region_size) * volcano_region_size - 32,
+		z = math.floor((pos.z + 32) / volcano_region_size) * volcano_region_size - 32,
+	}
 end
 
 ------------------------------------------------------------------------
@@ -94,7 +96,6 @@ end
 -------------------------------------------------------------------
 --location and type
 local get_volcano = function(pos)
-
 	local corner_xz = get_corner(pos)
 	local next_seed = math.random(1, 1000000000)
 	math.randomseed(corner_xz.x + corner_xz.z * 2 ^ 8 + mapgen_seed)
@@ -109,7 +110,7 @@ local get_volcano = function(pos)
 	local depth_lava
 
 	if state < state_extinct then
-		depth_lava = - math.random(1, math.abs(depth_root)) -- extinct, put the lava somewhere deep.
+		depth_lava = -math.random(1, math.abs(depth_root)) -- extinct, put the lava somewhere deep.
 	elseif state < state_dormant then
 		depth_lava = depth_peak - math.random(5, 50) -- dormant
 	else
@@ -119,27 +120,30 @@ local get_volcano = function(pos)
 	local caldera = math.random() * (caldera_max - caldera_min) + caldera_min
 
 	math.randomseed(next_seed)
-	return {location = location, depth_peak = depth_peak, depth_lava = depth_lava, slope = slope, state = state, caldera = caldera}
+	return {
+		location = location,
+		depth_peak = depth_peak,
+		depth_lava = depth_lava,
+		slope = slope,
+		state = state,
+		caldera = caldera,
+	}
 end
-
-
 
 -----------------------------------------------------------------------------
 local perlin_params = {
 	offset = 0,
 	scale = 1,
-	spread = {x=30, y=30, z=30},
+	spread = { x = 30, y = 30, z = 30 },
 	seed = -40681,
 	octaves = 3,
-	persist = 0.7
+	persist = 0.7,
 }
 
 local nvals_perlin_buffer = {}
 local nobj_perlin = nil
 local data = {}
 local p2data = {}
-
-
 
 -----------------------------------------------------------
 minetest.register_on_generated(function(minp, maxp, seed)
@@ -160,25 +164,26 @@ minetest.register_on_generated(function(minp, maxp, seed)
 
 	-- early out if the volcano is too far away to matter
 	-- The plus 20 is because the noise being added will generally be in the 0-20 range, see the "distance" calculation below
-	if volcano.location.x - base_radius - 20 > maxp.x
-	or volcano.location.x + base_radius + 20 < minp.x
-	or volcano.location.z - base_radius - 20 > maxp.z
-	or volcano.location.z + base_radius + 20 < minp.z
+	if
+		volcano.location.x - base_radius - 20 > maxp.x
+		or volcano.location.x + base_radius + 20 < minp.x
+		or volcano.location.z - base_radius - 20 > maxp.z
+		or volcano.location.z + base_radius + 20 < minp.z
 	then
 		return
 	end
 
 	local vm, emin, emax = minetest.get_mapgen_object("voxelmanip")
-	local area = VoxelArea:new{MinEdge=emin, MaxEdge=emax}
+	local area = VoxelArea:new({ MinEdge = emin, MaxEdge = emax })
 	vm:get_data(data)
 	vm:get_param2_data(p2data)
 
 	local sidelen = mapgen_chunksize * 16 --length of a mapblock
-	local chunk_lengths = {x = sidelen, y = sidelen, z = sidelen} --table of chunk edges
+	local chunk_lengths = { x = sidelen, y = sidelen, z = sidelen } --table of chunk edges
 
 	nobj_perlin = nobj_perlin or minetest.get_perlin_map(perlin_params, chunk_lengths)
 	local nvals_perlin = nobj_perlin:get_3d_map_flat(minp, nvals_perlin_buffer)
-	local noise_area = VoxelArea:new{MinEdge=minp, MaxEdge=maxp}
+	local noise_area = VoxelArea:new({ MinEdge = minp, MaxEdge = maxp })
 	local noise_iterator = noise_area:iterp(minp, maxp)
 
 	local x_coord = volcano.location.x
@@ -187,14 +192,13 @@ minetest.register_on_generated(function(minp, maxp, seed)
 	local caldera = volcano.caldera
 	local state = volcano.state
 
-
 	-------------------------------------------------
 	for vi, x, y, z in area:iterp_xyz(minp, maxp) do
 		local vi3d = noise_iterator()
 
-		local distance_perturbation = (nvals_perlin[vi3d]+1)*10
-		local distance = vector.distance({x=x, y=y, z=z}, {x=x_coord, y=y, z=z_coord}) - distance_perturbation
-
+		local distance_perturbation = (nvals_perlin[vi3d] + 1) * 10
+		local distance = vector.distance({ x = x, y = y, z = z }, { x = x_coord, y = y, z = z_coord })
+			- distance_perturbation
 
 		-- Determine what materials to use at this y level
 		local c_top
@@ -207,24 +211,24 @@ minetest.register_on_generated(function(minp, maxp, seed)
 				c_filler = c_ocean_sed
 			elseif y > snow_line then
 				c_top = c_high_soil
-				c_filler =  c_gravel
+				c_filler = c_gravel
 				c_dust = c_snow
 			elseif y > snow_line - snow_border then
 				c_top = c_high_soil
-				c_filler =  c_gravel
-				if math.random()>0.25 then
+				c_filler = c_gravel
+				if math.random() > 0.25 then
 					c_dust = c_snow
 				end
-			elseif y > snow_line - snow_border *2 then
+			elseif y > snow_line - snow_border * 2 then
 				c_top = c_high_soil
-				c_filler =  c_gravel
-				if math.random()>0.5 then
+				c_filler = c_gravel
+				if math.random() > 0.5 then
 					c_dust = c_snow
 				end
-			elseif y > snow_line - snow_border *3 then
+			elseif y > snow_line - snow_border * 3 then
 				c_top = c_dune_soil
-				c_filler =  c_gravel
-				if math.random()>0.75 then
+				c_filler = c_gravel
+				if math.random() > 0.75 then
 					c_dust = c_snow
 				end
 			else
@@ -285,52 +289,58 @@ minetest.register_on_generated(function(minp, maxp, seed)
 				data[vi] = pipestuff
 			elseif distance < radius_lining then
 				data[vi] = liningstuff
-			elseif distance < radius_lining + ((y - depth_base)/depth_maxwidth_dist) * base_radius then
+			elseif distance < radius_lining + ((y - depth_base) / depth_maxwidth_dist) * base_radius then
 				data[vi] = c_cone
 			end
 		elseif y < depth_peak + 5 then -- cone
 			local current_elevation = y - depth_maxwidth
 			local peak_elevation = depth_peak - depth_maxwidth
-			if current_elevation > peak_elevation - caldera and distance < current_elevation - peak_elevation + caldera then
+			if
+				current_elevation > peak_elevation - caldera
+				and distance < current_elevation - peak_elevation + caldera
+			then
 				data[vi] = c_air -- caldera
 			elseif distance < radius_vent then
 				data[vi] = pipestuff
 			elseif distance < radius_lining then
 				data[vi] = liningstuff
-			elseif distance <  current_elevation * -volcano.slope + base_radius then
+			elseif distance < current_elevation * -volcano.slope + base_radius then
 				data[vi] = c_cone
 				if data[vi + area.ystride] == c_air and c_dust ~= nil then
-				   local die = math.random()
-				   if c_dust ~= c_boulder then
-				      if die > 0.98 then
-					 c_dust = c_boulder
-				      elseif die>0.95 then
-					 c_dust = c_cobble[math.random(1,3)]
-					 p2data[vi + area.ystride] = math.random(0,3)
-				      end
-				   end
-				   data[vi + area.ystride] = c_dust
+					local die = math.random()
+					if c_dust ~= c_boulder then
+						if die > 0.98 then
+							c_dust = c_boulder
+						elseif die > 0.95 then
+							c_dust = c_cobble[math.random(1, 3)]
+							p2data[vi + area.ystride] = math.random(0, 3)
+						end
+					end
+					data[vi + area.ystride] = c_dust
 				end
-			elseif c_top ~= nil and c_filler ~= nil and distance < current_elevation * -volcano.slope + base_radius + nvals_perlin[vi3d] +1.5 then
+			elseif
+				c_top ~= nil
+				and c_filler ~= nil
+				and distance < current_elevation * -volcano.slope + base_radius + nvals_perlin[vi3d] + 1.5
+			then
 				data[vi] = c_top
 				if data[vi - area.ystride] == c_top then
 					data[vi - area.ystride] = c_filler
 				end
 				if data[vi + area.ystride] == c_air then
-				   local die = math.random()
+					local die = math.random()
 					if die > 0.995 then
-					   data[vi + area.ystride] = c_boulder
-					elseif	die > 0.985 then
-					   data[vi + area.ystride] = c_cobble[math.random(1,3)]
-					   p2data[vi + area.ystride] = math.random(0,3)
+						data[vi + area.ystride] = c_boulder
+					elseif die > 0.985 then
+						data[vi + area.ystride] = c_cobble[math.random(1, 3)]
+						p2data[vi + area.ystride] = math.random(0, 3)
 					elseif die > 0.95 then
-					   data[vi + area.ystride] = c_moss
+						data[vi + area.ystride] = c_moss
 					elseif c_dust ~= nil then
-					   data[vi + area.ystride] = c_dust
+						data[vi + area.ystride] = c_dust
 					end
 				end
 			end
-
 		end
 	end
 
@@ -338,7 +348,7 @@ minetest.register_on_generated(function(minp, maxp, seed)
 	vm:set_data(data)
 	vm:set_param2_data(p2data)
 	--calc lighting
-	vm:set_lighting({day = 0, night = 0})
+	vm:set_lighting({ day = 0, night = 0 })
 	vm:calc_lighting()
 	vm:update_liquids()
 	--write it to world
@@ -348,14 +358,17 @@ end)
 ----------------------------------------------------------------------------------------------
 -- Debugging and sightseeing commands
 
-minetest.register_privilege("findvolcano", { description = "Allows players to use a console command to find volcanoes", give_to_singleplayer = false})
+minetest.register_privilege(
+	"findvolcano",
+	{ description = "Allows players to use a console command to find volcanoes", give_to_singleplayer = false }
+)
 
 function round(val, decimal)
-  if (decimal) then
-    return math.floor( (val * 10^decimal) + 0.5) / (10^decimal)
-  else
-    return math.floor(val+0.5)
-  end
+	if decimal then
+		return math.floor((val * 10 ^ decimal) + 0.5) / (10 ^ decimal)
+	else
+		return math.floor(val + 0.5)
+	end
 end
 
 local send_volcano_state = function(pos, name)
@@ -364,9 +377,11 @@ local send_volcano_state = function(pos, name)
 	if volcano == nil then
 		return false
 	end
-	local location = {x=math.floor(volcano.location.x), y=volcano.depth_peak, z=math.floor(volcano.location.z)}
-	local text = "Peak at " .. minetest.pos_to_string(location)
-		.. ", Slope: " .. tostring(round(volcano.slope, 2))
+	local location = { x = math.floor(volcano.location.x), y = volcano.depth_peak, z = math.floor(volcano.location.z) }
+	local text = "Peak at "
+		.. minetest.pos_to_string(location)
+		.. ", Slope: "
+		.. tostring(round(volcano.slope, 2))
 		.. ", State: "
 	if volcano.state < state_extinct then
 		text = text .. "Extinct"
@@ -382,23 +397,27 @@ end
 
 local send_nearby_states = function(pos, name)
 	local retval = false
-	retval = send_volcano_state({x=pos.x-volcano_region_size, y=0, z=pos.z+volcano_region_size}, name) or retval
-	retval = send_volcano_state({x=pos.x, y=0, z=pos.z+volcano_region_size}, name) or retval
-	retval = send_volcano_state({x=pos.x+volcano_region_size, y=0, z=pos.z+volcano_region_size}, name) or retval
-	retval = send_volcano_state({x=pos.x-volcano_region_size, y=0, z=pos.z}, name) or retval
+	retval = send_volcano_state({ x = pos.x - volcano_region_size, y = 0, z = pos.z + volcano_region_size }, name)
+		or retval
+	retval = send_volcano_state({ x = pos.x, y = 0, z = pos.z + volcano_region_size }, name) or retval
+	retval = send_volcano_state({ x = pos.x + volcano_region_size, y = 0, z = pos.z + volcano_region_size }, name)
+		or retval
+	retval = send_volcano_state({ x = pos.x - volcano_region_size, y = 0, z = pos.z }, name) or retval
 	retval = send_volcano_state(pos, name) or retval
-	retval = send_volcano_state({x=pos.x+volcano_region_size, y=0, z=pos.z}, name) or retval
-	retval = send_volcano_state({x=pos.x-volcano_region_size, y=0, z=pos.z-volcano_region_size}, name) or retval
-	retval = send_volcano_state({x=pos.x, y=0, z=pos.z-volcano_region_size}, name) or retval
-	retval = send_volcano_state({x=pos.x+volcano_region_size, y=0, z=pos.z-volcano_region_size}, name) or retval
+	retval = send_volcano_state({ x = pos.x + volcano_region_size, y = 0, z = pos.z }, name) or retval
+	retval = send_volcano_state({ x = pos.x - volcano_region_size, y = 0, z = pos.z - volcano_region_size }, name)
+		or retval
+	retval = send_volcano_state({ x = pos.x, y = 0, z = pos.z - volcano_region_size }, name) or retval
+	retval = send_volcano_state({ x = pos.x + volcano_region_size, y = 0, z = pos.z - volcano_region_size }, name)
+		or retval
 	return retval
 end
 
 minetest.register_chatcommand("findvolcano", {
-    params = "pos", -- Short parameter description
-    description = "find the volcanoes near the player's map region, or in the map region containing pos if provided",
-    func = function(name, param)
-		if minetest.check_player_privs(name, {findvolcano = true}) then
+	params = "pos", -- Short parameter description
+	description = "find the volcanoes near the player's map region, or in the map region containing pos if provided",
+	func = function(name, param)
+		if true or minetest.check_player_privs(name, { findvolcano = true }) then
 			local pos = {}
 			pos.x, pos.y, pos.z = string.match(param, "^([%d.-]+)[, ] *([%d.-]+)[, ] *([%d.-]+)$")
 			pos.x = tonumber(pos.x)
@@ -425,3 +444,52 @@ minetest.register_chatcommand("findvolcano", {
 		end
 	end,
 })
+
+--- function to find the nearest volcano
+
+function find_nearest_volcano(pos)
+	-- look arround for volcanoes
+	local nearest_distance
+	local nearest_position
+	local nearest_state
+	for dx = -1, 1 do
+		for dz = -1, 1 do
+			local position = { x = pos.x + (dx * volcano_region_size), y = 0, z = pos.z + (dz * volcano_region_size) }
+			local corner_xz = get_corner(position)
+			local volcano = get_volcano(position)
+			local status
+			local location
+			local distance
+			if volcano ~= nil then
+				location = {
+					x = math.floor(volcano.location.x),
+					y = volcano.depth_peak,
+					z = math.floor(volcano.location.z),
+				}
+				if volcano.state < state_extinct then
+					status = "extinct"
+				elseif volcano.state < state_dormant then
+					status = "dormant"
+				else
+					status = "active"
+				end
+				distance = math.floor(math.abs(math.sqrt((pos.x - location.x) ^ 2 + (pos.z - location.z) ^ 2)))
+				-- check if is nearest than the nearst and replace it
+				if nearest_distance == nil or distance < nearest_distance then
+					nearest_distance = distance
+					nearest_position = location
+					nearest_state = status
+				end
+			end
+		end
+	end
+	if nearest_distance and nearest_position and nearest_state then
+		return {
+			location = nearest_position,
+			state = nearest_state,
+			distance = nearest_distance,
+		}
+	else
+		return nil
+	end
+end
