@@ -14,15 +14,15 @@ and change its status, when right clicked it will show a message with the
 direction (north, south, east, west, northeast, northwest, southeast, southwest).
 --]]
 
-seismoscope_min_time = 1 --60 * 5 -- 5 minutes
-seismoscope_max_time = 5 --60 * 10 -- 10 minutes
+seismoscope_min_time = 60 * 5 -- 5 minutes
+seismoscope_max_time = 60 * 10 -- 10 minutes
 
 -- the status of the nearest volcano will be affect the seismoscope
 -- chances of detecting an earthquake
 seismoscope_detection_chance = {
-	extinct = 0.1 + 1,
-	dormant = 0.3 + 1,
-	active = 0.5 + 1,
+	extinct = 0.1,
+	dormant = 0.3,
+	active = 0.5,
 }
 
 -- if volcano distances are less than near_threshold, the seismoscope will
@@ -42,18 +42,19 @@ get_cardinal_direction = function(initial_pos, target_pos)
 		return "zenit"
 	end
 
-	local angle = math.atan2(-dz, dx) * (180 / math.pi) + 180
-	local index = math.floor((angle + 22.5) / 45) % 8 + 1
+	local angle = math.atan2(dz, dx) * (180 / math.pi)
+	print(angle)
+	local index = (math.floor((angle + 22.5) / 45) % 8) + 1
 
 	local directions = {
-		"north",
-		"northeast",
 		"east",
-		"southeast",
-		"south",
-		"southwest",
-		"west",
+		"northeast",
+		"north",
 		"northwest",
+		"west",
+		"southwest",
+		"south",
+		"southeast",
 	}
 
 	return directions[index]

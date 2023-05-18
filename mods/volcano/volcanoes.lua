@@ -21,8 +21,8 @@ local mapgen_chunksize = tonumber(minetest.get_mapgen_setting("chunksize"))
 local volcano_region_size = region_mapblocks * mapgen_chunksize * 16
 
 --type probabilities
-local p_active = 0.15
-local p_dormant = 0.3
+local p_active = 0.05
+local p_dormant = 0.4
 local p_extinct = 0.15
 local state_dormant = 1 - p_active
 local state_extinct = 1 - p_active - p_dormant
