@@ -1,6 +1,5 @@
 ---------------- Upcomming --------------------
 
-- a easier way to get large amounts of alcohol, from sugar and Tartar Salt (Tartaris Syrup)
 - aluminium water containers
 - aluminium roof tiles
 - aluminium windows
@@ -86,6 +85,31 @@
 - add alchemical medicines for each disease
 - add bees and honey 
 - wood poles, like sticks, decorative, reach higher places
+- Clothing Accesories
+- robots npcs, had to repair and fuel them
+- antique machines in the underground
+- traps in the underground
+- robots can give info, interact throug mesages, tell lore, or interchange items
+- procedural generated stories
+- minigames against the robots, different kind of robots
+- unlockeable grafitti simbols
+- word search games (decyphering a password)
+- picklocking chests 
+- clay tablets, a way to record information
+- electricity, but only from antique devices
+- unique materials that only can be got from locked chests or trading whit robots
+- the animal from who lether are obtain went extint
+- bones, a lot of bones on the underground
+- different machines got activated from different fuels
+- portable food (soup?)
+- traits: incansable, determinado, no se da por vencido facilmente
+- decorarion banners or paintings that can be made as pixel art
+- papermaking?
+- decorative elements, a flower pot
+- snowman from snow and gravel, it must melt
+- mystical masks with effects?
+- musical instruments
+- fossils, archeology
 
 
 --------------- Already done -------------------
@@ -123,6 +147,7 @@
 - add Alchemy bench
 - add aluminium
 - add alchemy recipes to the bench
+- a easier way to get large amounts of alcohol, from sugar and Tartar Salt (Tartaris Syrup)
 
 ------------ Inhereit form Exile ----------------
 
