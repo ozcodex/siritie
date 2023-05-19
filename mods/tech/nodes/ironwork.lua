@@ -272,7 +272,7 @@ minetest.register_node("tech:aluminium_mix", {
 	sounds = nodes_nature.node_sound_stone_defaults(),
 	on_construct = function(pos)
 		--length(i.e. difficulty of firing), interval for checks (speed)
-		set_roast_iron(pos, 50, 10)
+		set_roast_iron(pos, 30, 3)
 	end,
 	on_timer = function(pos, elapsed)
 		--finished product, length, heat, smelt

@@ -1,9 +1,6 @@
 ---------------- Upcomming --------------------
 
-- apply all the suggestions of crafting recipes
-
 - a easier way to get large amounts of alcohol, from sugar and Tartar Salt (Tartaris Syrup)
-- add aluminium
 - aluminium water containers
 - aluminium roof tiles
 - aluminium windows
@@ -124,6 +121,8 @@
 - add alcehmy ceramic equipment (Alchemy Mortarium, Elemental Crucible)
 - add Alchemy glass equipment (retort, vessel)
 - add Alchemy bench
+- add aluminium
+- add alchemy recipes to the bench
 
 ------------ Inhereit form Exile ----------------
 

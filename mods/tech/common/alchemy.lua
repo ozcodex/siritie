@@ -15,7 +15,6 @@ doesn't have a GUI. Products can be retrieved by right-clicking the alembic or
 by removing it.
 ]]
 
-
 alembic_inv_size = 4 -- slots
 alembic_check_interval = 1 -- seconds
 alembic_working_temperature = 100 -- celcius
@@ -24,57 +23,64 @@ ambient_temperature_time = 300 -- seconds
 alembic_processes = {
     -- source: products, subproduct and time in seconds
     ["tech:clay_water_pot_salt_water"] = {
-        products = {"tech:salt 2"},
+        products = { "tech:salt 2" },
         subproduct = "tech:clay_water_pot_freshwater",
-        time = 120
+        time = 120,
     },
     ["tech:tang"] = {
-        products = {"tech:alcohol 1"},
-        subproduct = "tech:clay_water_pot_freshwater",
-        time = 180
+        products = { "tech:alcohol 1" },
+        subproduct = "tech:clay_amphora_freshwater",
+        time = 180,
     },
     ["tech:clay_water_pot_freshwater"] = {
         products = {},
         subproduct = "tech:clay_water_pot",
-        time = 60
+        time = 60,
     },
     ["tech:wiha_must_pot"] = {
-        products = {"tech:sugar"},
-        subproduct = "tech:clay_water_pot",
-        time = 90
+        products = { "tech:sugar" },
+        subproduct = "tech:clay_amphora_freshwater",
+        time = 90,
     },
     ["tech:wiha_cider_pot"] = {
-        products = {"tech:wiha_dregs"},
+        products = { "tech:wiha_dregs" },
         subproduct = "tech:vinegar_pot",
-        time = 150
+        time = 150,
+    },
+    ["tech:acrimoniac_amphora"] = {
+        products = { "tech:death_salt" },
+        subproduct = "tech:clay_amphora",
+        time = 150,
     },
     ["tech:clay_water_pot_potash"] = {
-        products = {"tech:potash"},
+        products = { "tech:potash" },
         subproduct = "tech:clay_water_pot",
-        time = 60
+        time = 60,
     },
 }
 
 function get_alembic_formspec(pos)
-    local below_pos = {x = pos.x, y = pos.y - 1, z = pos.z}
+    local below_pos = { x = pos.x, y = pos.y - 1, z = pos.z }
     local below_node = minetest.get_node(below_pos)
     if alembic_processes[below_node.name] then
         process = minetest.registered_items[below_node.name].description
-    else 
+    else
         process = "Nothing"
     end
-    local formspec = "size[8,4.8]"..
-        "label[0,0;Processing: "..process.."]"..
-        "list[current_name;main;3,0.7;2,2]"..
-        "list[current_player;main;0,3;8,4;]"..
-        "listring[current_name;main]"..
-        "listring[current_player;main]"
+    local formspec = "size[8,4.8]"
+        .. "label[0,0;Processing: "
+        .. process
+        .. "]"
+        .. "list[current_name;main;3,0.7;2,2]"
+        .. "list[current_player;main;0,3;8,4;]"
+        .. "listring[current_name;main]"
+        .. "listring[current_player;main]"
     return formspec
 end
 
 function alembic_process(pos, elapsed)
     -- get block under alembic
-    local below_pos = {x = pos.x, y = pos.y - 1, z = pos.z}
+    local below_pos = { x = pos.x, y = pos.y - 1, z = pos.z }
     local below_node = minetest.get_node(below_pos)
 
     -- get current temperature of the below block
@@ -106,14 +112,14 @@ function alembic_process(pos, elapsed)
         for _, product in ipairs(process.products) do
             inv:add_item("main", product)
         end
-        minetest.swap_node(below_pos, {name = process.subproduct})
+        minetest.swap_node(below_pos, { name = process.subproduct })
         meta:set_float("remaining", time)
     else
         meta:set_float("remaining", remaining)
     end
     update_alembic_infotext(pos)
-	-- keep the timer running
-	return true
+    -- keep the timer running
+    return true
 end
 
 function update_alembic_infotext(pos)
@@ -121,28 +127,31 @@ function update_alembic_infotext(pos)
     local inv = meta:get_inventory()
     local infotext = ""
     -- get block under alembic
-    local below_pos = {x = pos.x, y = pos.y - 1, z = pos.z}
+    local below_pos = { x = pos.x, y = pos.y - 1, z = pos.z }
     local below_node = minetest.get_node(below_pos)
     -- if below node is processable add info to infotext
     if alembic_processes[below_node.name] then
-        infotext = "Processing: "..minetest.registered_items[below_node.name].description..". "
-    else 
+        infotext = "Processing: " .. minetest.registered_items[below_node.name].description .. ". "
+    else
         -- if below node is not processable add default note to infotext
         infotext = "Note: To distill products, place the alembic over a clay pot filled with liquids and apply heat. "
     end
     -- add inventory info to the infotext
-    infotext = infotext.."\nContents: "
+    infotext = infotext .. "\nContents: "
     if inv:is_empty("main") then
-        infotext = infotext.."empty"
+        infotext = infotext .. "empty"
     else
         --loop through each slot in the alembic inventory
         for i = 1, inv:get_size("main") do
             local stack = inv:get_stack("main", i)
             if not stack:is_empty() then
-                infotext = infotext..stack:get_count().." "..minetest.registered_items[stack:get_name()].description..". "
+                infotext = infotext
+                    .. stack:get_count()
+                    .. " "
+                    .. minetest.registered_items[stack:get_name()].description
+                    .. ". "
             end
         end
     end
-    minimal.infotext_set(pos,meta,infotext)
+    minimal.infotext_set(pos, meta, infotext)
 end
-

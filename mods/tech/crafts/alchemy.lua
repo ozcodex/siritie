@@ -47,6 +47,14 @@ crafting.register_recipe({
 })
 
 crafting.register_recipe({
+	type = "hammering_block",
+	output = "tech:crushed_granite",
+	items = { "group:granite_cobble 8" },
+	level = 1,
+	always_known = true,
+})
+
+crafting.register_recipe({
 	type = "grinding_stone",
 	output = "tech:quartz_powder",
 	items = { "tech:crushed_gneiss" },
@@ -295,6 +303,7 @@ crafting.register_recipe({
 	output = "tech:aurifex",
 	items = {
 		"tech:crushed_gneiss",
+		"tech:crushed_granite",
 		"tech:brimstone",
 		"tech:nightstone",
 	},

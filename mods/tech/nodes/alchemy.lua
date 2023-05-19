@@ -412,6 +412,16 @@ minetest.register_node("tech:crushed_gneiss", {
   sounds = nodes_nature.node_sound_dirt_defaults(),
 })
 
+minetest.register_node("tech:crushed_granite", {
+  description = S("Crushed Granite"),
+  tiles = { "tech_crushed_granite.png" },
+  stack_max = minimal.stack_max_bulky,
+  paramtype = "light",
+  sunlight_propagates = true,
+  groups = { crumbly = 3, falling_node = 1, dig_immediate = 3, temp_pass = 1, compostable = 9 },
+  sounds = nodes_nature.node_sound_dirt_defaults(),
+})
+
 minetest.register_node("tech:quartz_powder", {
   description = S("Quartz Powder"),
   tiles = { "tech_quartz_powder.png" },
