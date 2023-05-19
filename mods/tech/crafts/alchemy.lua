@@ -121,3 +121,207 @@ crafting.register_recipe({
 	level = 1,
 	always_known = true,
 })
+
+-- alchemy Bench
+
+crafting.register_recipe({
+	type = "carpentry_bench",
+	output = "tech:alchemy_bench",
+	items = {
+		"tech:iron_ingot 1",
+		"nodes_nature:maraka_log 2",
+		"tech:glass_retort",
+		"tech:clay_crucible",
+		"tech:clay_mortar",
+	},
+	level = 1,
+	always_known = true,
+})
+
+-- alchemy recipes
+crafting.register_recipe({
+	type = "alchemy_bench",
+	output = "tech:nightstone",
+	items = {
+		"group:basalt_cobble",
+		"tech:alcohol",
+	},
+	level = 1,
+	always_known = true,
+})
+
+crafting.register_recipe({
+	type = "alchemy_bench",
+	output = "tech:nephritic_stone",
+	items = {
+		"nodes_nature:volcanic_ash",
+		"tech:potash",
+	},
+	level = 1,
+	always_known = true,
+})
+
+crafting.register_recipe({
+	type = "alchemy_bench",
+	output = "tech:activated_carbon",
+	items = {
+		"tech:crushed_charcoal_block",
+		"tech:alcohol",
+		"tech:nephritic_stone",
+	},
+	level = 1,
+	always_known = true,
+})
+
+crafting.register_recipe({
+	type = "alchemy_bench",
+	output = "tech:brimstone",
+	items = {
+		"tech:roasted_iron_ore",
+		"nodes_nature:volcanic_ash",
+		"tech:alcohol",
+		"tech:nephritic_stone",
+	},
+	level = 1,
+	always_known = true,
+})
+
+crafting.register_recipe({
+	type = "alchemy_bench",
+	output = "tech:star_dust",
+	items = {
+		"nodes_nature:clay",
+		"tech:aurifex",
+		"tech:nephritic_stone",
+	},
+	level = 1,
+	always_known = true,
+})
+
+crafting.register_recipe({
+	type = "alchemy_bench",
+	output = "tech:saltpeter",
+	items = {
+		"nodes_nature:clay_wet",
+		"tech:wood_ash",
+		"tech:sugar",
+	},
+	level = 1,
+	always_known = true,
+})
+
+crafting.register_recipe({
+	type = "alchemy_bench",
+	output = "tech:serpentine",
+	items = {
+		"tech:crushed_charcoal_block",
+		"nodes_nature:clay_wet",
+		"tech:brimstone",
+		"tech:sugar",
+		"tech:alcohol",
+	},
+	level = 1,
+	always_known = true,
+})
+
+crafting.register_recipe({
+	type = "alchemy_bench",
+	output = "tech:soap_uncured",
+	items = {
+		"tech:death_salt",
+		"tech:tartar_salt",
+		"tech:vegetable_oil",
+		"tech:alcohol",
+		"tech:salt",
+	},
+	level = 1,
+	always_known = true,
+})
+
+crafting.register_recipe({
+	type = "alchemy_bench",
+	output = "tech:tartar_salt",
+	items = {
+		"tech:crushed_lime",
+		"tech:potash",
+		"tech:salt",
+	},
+	level = 1,
+	always_known = true,
+})
+
+crafting.register_recipe({
+	type = "alchemy_bench",
+	output = "tech:aluminium_mix",
+	items = {
+		"tech:crushed_charcoal_block",
+		"tech:tartar_salt",
+		"tech:star_dust",
+		"tech:alcohol",
+		"tech:peridot",
+	},
+	level = 1,
+	always_known = true,
+})
+
+crafting.register_recipe({
+	type = "alchemy_bench",
+	output = "tech:acrimoniac_amphora",
+	items = {
+		"tech:quicklime",
+		"tech:salt",
+		"tech:nightstone",
+		"tech:vinegar_pot",
+	},
+	level = 1,
+	always_known = true,
+})
+
+crafting.register_recipe({
+	type = "alchemy_bench",
+	output = "tech:vitriol_vessel",
+	items = {
+		"tech:iron_ingot",
+		"tech:glass_vessel",
+		"tech:brimstone",
+		"tech:peridot",
+	},
+	level = 1,
+	always_known = true,
+})
+
+crafting.register_recipe({
+	type = "alchemy_bench",
+	output = "tech:aurifex",
+	items = {
+		"tech:crushed_gneiss",
+		"tech:brimstone",
+		"tech:nightstone",
+	},
+	level = 1,
+	always_known = true,
+})
+
+crafting.register_recipe({
+	type = "alchemy_bench",
+	output = "tech:elixir_vitae",
+	items = {
+		"tech:quartz_powder",
+		"tech:serpentine",
+		"tech:star_dust",
+		"tech:alcohol",
+	},
+	level = 1,
+	always_known = true,
+})
+
+crafting.register_recipe({
+	type = "alchemy_bench",
+	output = "tech:peridot",
+	items = {
+		"tech:crushed_basalt",
+		"tech:alcohol",
+	},
+	level = 1,
+	always_known = true,
+})

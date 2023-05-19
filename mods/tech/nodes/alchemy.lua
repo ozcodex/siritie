@@ -92,6 +92,20 @@ local glass_vessel_nodebox = {
   { -0.125, 0.125, -0.0625, 0.125, 0.1875, 0.0625 },
 }
 
+local alchemy_bench_nodebox = {
+  { -0.4375, 0, -0.4375, 0.4375, 0.125, 0.4375 }, -- top
+  { -0.375, -0.5, -0.375, -0.25, 0, -0.25 }, -- leg4
+  { -0.375, -0.5, 0.25, -0.25, 2.98023e-08, 0.375 }, -- leg3
+  { 0.25, -0.5, 0.25, 0.375, 2.98023e-08, 0.375 }, -- leg2
+  { 0.25, -0.5, -0.375, 0.375, 2.98023e-08, -0.25 }, -- leg1
+  { -0.3125, -0.125, -0.3125, 0.3125, 1.49012e-08, 0.3125 }, -- apron
+  { -0.3125, 0.125, -0.3125, -0.125, 0.1875, -0.125 }, -- retort1
+  { 0.125, 0.125, 0.1875, 0.3125, 0.25, 0.375 }, -- crucible
+  { -0.3125, 0.1875, -0.3125, -0.1875, 0.25, -0.125 }, -- retort2
+  { -0.25, 0.25, -0.25, -0.125, 0.3125, -0.1875 }, -- retort3
+  { -0.0625, 0.125, 0.0625, 0.125, 0.3125, 0.25 }, -- mortar
+}
+
 minetest.register_node("tech:alembic", {
   description = "Ceramic Alembic",
   drawtype = "nodebox",
@@ -540,4 +554,147 @@ minetest.register_node("tech:glass_vessel", {
     type = "fixed",
     fixed = { -0.25, -0.5, -0.25, 0.25, 0.1875, 0.3125 },
   },
+})
+
+--- Alchemy Bench
+
+minetest.register_node("tech:alchemy_bench", {
+  description = S("Alchemy Bench"),
+  tiles = {
+    "tech_alchemy_bench_top.png",
+    "tech_alchemy_bench_bottom.png",
+    "tech_alchemy_bench_side1.png",
+    "tech_alchemy_bench_side2.png",
+    "tech_alchemy_bench_side3.png",
+    "tech_alchemy_bench_side4.png",
+  },
+  use_texture_alpha = c_alpha.blend,
+  -- inventory_image = "tech_alchemy_bench_inv.png",
+  drawtype = "nodebox",
+  stack_max = minimal.stack_max_bulky,
+  paramtype = "light",
+  node_box = {
+    type = "fixed",
+    fixed = alchemy_bench_nodebox,
+  },
+  stack_max = minimal.stack_max_bulky,
+  paramtype = "light",
+  paramtype2 = "facedir",
+  groups = { dig_immediate = 3, falling_node = 1, temp_pass = 1, craftedby = 1 },
+  sounds = nodes_nature.node_sound_wood_defaults(),
+  on_rightclick = crafting.make_on_rightclick("alchemy_bench", 2, { x = 8, y = 3 }),
+})
+
+minetest.register_node("tech:acrimoniac_amphora", {
+  description = S("Acrimoniac Amphora"),
+  tiles = {
+    "tech_acrimoniac_amphora.png",
+    "tech_pottery.png",
+    "tech_pottery.png",
+    "tech_pottery.png",
+    "tech_pottery.png",
+    "tech_pottery.png",
+  },
+  drawtype = "nodebox",
+  stack_max = 1, --minimal.stack_max_bulky,
+  paramtype = "light",
+  node_box = {
+    type = "fixed",
+    fixed = clay_amphora_nodebox,
+  },
+  groups = { dig_immediate = 3, pottery = 1, temp_pass = 1 },
+  sounds = nodes_nature.node_sound_stone_defaults(),
+})
+
+minetest.register_node("tech:vitriol_vessel", {
+  description = S("Vitriol Vessel"),
+  tiles = {
+    "tech_vitriol_vessel_top.png",
+    "tech_vitriol_vessel_bottom.png",
+    "tech_vitriol_vessel_side.png",
+  },
+  inventory_image = "tech_vitriol_vessel_inv.png",
+  drawtype = "nodebox",
+  stack_max = minimal.stack_max_bulky,
+  paramtype = "light",
+  node_box = {
+    type = "fixed",
+    fixed = glass_vessel_nodebox,
+  },
+  sunlight_prpagates = true,
+  groups = { dig_immediate = 2, pottery = 1, temp_pass = 1 },
+  sounds = nodes_nature.node_sound_stone_defaults(),
+  use_texture_alpha = c_alpha.blend,
+  selection_box = {
+    type = "fixed",
+    fixed = { -0.25, -0.5, -0.25, 0.25, 0.1875, 0.3125 },
+  },
+})
+
+minetest.register_node("tech:elixir_vitae", {
+  description = S("Elixir Vitae"),
+  tiles = {
+    "tech_elixir_vitae_top.png",
+    "tech_elixir_vitae_bottom.png",
+    "tech_elixir_vitae_side.png",
+  },
+  inventory_image = "tech_elixir_vitae_inv.png",
+  drawtype = "nodebox",
+  stack_max = minimal.stack_max_bulky,
+  paramtype = "light",
+  node_box = {
+    type = "fixed",
+    fixed = glass_vessel_nodebox,
+  },
+  sunlight_prpagates = true,
+  groups = { dig_immediate = 2, pottery = 1, temp_pass = 1 },
+  sounds = nodes_nature.node_sound_stone_defaults(),
+  use_texture_alpha = c_alpha.blend,
+  selection_box = {
+    type = "fixed",
+    fixed = { -0.25, -0.5, -0.25, 0.25, 0.1875, 0.3125 },
+  },
+})
+
+minetest.register_node("tech:soap_uncured", {
+  description = S("Soap (uncured)"),
+  tiles = { "tech_soap_uncured.png" },
+  stack_max = minimal.stack_max_medium / 6,
+  paramtype = "light",
+  drawtype = "nodebox",
+  node_box = {
+    type = "fixed",
+    fixed = { -4 / 16, -0.5, -4 / 16, 4 / 16, -2 / 16, 4 / 16 },
+  },
+  groups = {
+    snappy = 3,
+    falling_node = 1,
+    dig_immediate = 3,
+  },
+  sounds = nodes_nature.node_sound_dirt_defaults(),
+  on_construct = function(pos)
+    minetest.get_node_timer(pos):start(math.random(120, 300))
+  end,
+  on_timer = function(pos, elapsed)
+    minetest.swap_node(pos, { name = "tech:soap" })
+    return true
+  end,
+})
+
+minetest.register_node("tech:soap", {
+  description = S("Soap"),
+  tiles = { "tech_soap.png" },
+  stack_max = minimal.stack_max_medium / 3,
+  paramtype = "light",
+  drawtype = "nodebox",
+  node_box = {
+    type = "fixed",
+    fixed = { -3 / 16, -0.5, -2 / 16, 3 / 16, -4 / 16, 2 / 16 },
+  },
+  groups = {
+    crumbly = 3,
+    falling_node = 1,
+    dig_immediate = 3,
+  },
+  sounds = nodes_nature.node_sound_dirt_defaults(),
 })

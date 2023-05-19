@@ -45,6 +45,7 @@ crafting.register_type("glass_furnace")
 crafting.register_type("wattle_workstation")
 crafting.register_type("clay_mixing")
 crafting.register_type("pottery_wheel")
+crafting.register_type("alchemy_bench")
 
 if minetest.global_exists("awards") then
 	awards.register_on_unlock(function(name, award)

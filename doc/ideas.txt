@@ -1,8 +1,7 @@
 ---------------- Upcomming --------------------
 
 - apply all the suggestions of crafting recipes
-- add Alchemy glass equipment (retort, vessel)
-- add Alchemy bench
+
 - a easier way to get large amounts of alcohol, from sugar and Tartar Salt (Tartaris Syrup)
 - add aluminium
 - aluminium water containers
@@ -123,6 +122,8 @@
 - add amphora for tang and wiha cider
 - ceramic pendulum seismograph (based on the Seismoscope by Zhang Heng)
 - add alcehmy ceramic equipment (Alchemy Mortarium, Elemental Crucible)
+- add Alchemy glass equipment (retort, vessel)
+- add Alchemy bench
 
 ------------ Inhereit form Exile ----------------
 
