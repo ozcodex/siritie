@@ -708,3 +708,102 @@ minetest.register_node("tech:soap", {
   },
   sounds = nodes_nature.node_sound_dirt_defaults(),
 })
+
+-- ferment sugar to get alcohol
+minetest.register_node("tech:tartaris_syrup_amphora", {
+  description = S("Tartaris Syrup (unfermented)"),
+  tiles = {
+    "tech_pot_tartaris_syrup.png",
+    "tech_pottery.png",
+    "tech_pottery.png",
+    "tech_pottery.png",
+    "tech_pottery.png",
+    "tech_pottery.png",
+  },
+  drawtype = "nodebox",
+  stack_max = 1, --minimal.stack_max_bulky,
+  paramtype = "light",
+  node_box = {
+    type = "fixed",
+    fixed = clay_amphora_nodebox,
+  },
+  groups = { dig_immediate = 3, pottery = 1, temp_pass = 1 },
+  sounds = nodes_nature.node_sound_stone_defaults(),
+
+  on_dig = function(pos, node, digger)
+    -- save ferment progress
+    if minetest.is_protected(pos, digger:get_player_name()) then
+      return false
+    end
+
+    local meta = minetest.get_meta(pos)
+    local ferment = meta:get_int("ferment")
+
+    local new_stack = ItemStack("tech:tartaris_syrup_amphora")
+    local stack_meta = new_stack:get_meta()
+    stack_meta:set_int("ferment", ferment)
+
+    minetest.remove_node(pos)
+    local player_inv = digger:get_inventory()
+    if player_inv:room_for_item("main", new_stack) then
+      player_inv:add_item("main", new_stack)
+    else
+      minetest.add_item(pos, new_stack)
+    end
+  end,
+
+  on_construct = function(pos)
+    --duration of ferment
+    local meta = minetest.get_meta(pos)
+    meta:set_int("ferment", math.random(300, 360))
+    --ferment
+    minetest.get_node_timer(pos):start(5)
+  end,
+
+  after_place_node = function(pos, placer, itemstack, pointed_thing)
+    local meta = minetest.get_meta(pos)
+    local stack_meta = itemstack:get_meta()
+    local ferment = stack_meta:get_int("ferment")
+    if ferment > 0 then
+      meta:set_int("ferment", ferment)
+    end
+  end,
+
+  on_timer = function(pos, elapsed)
+    local meta = minetest.get_meta(pos)
+    local ferment = meta:get_int("ferment")
+    if ferment < 1 then
+      minetest.swap_node(pos, { name = "tech:fermented_tartaris_syrup_amphora" })
+      --minetest.check_for_falling(pos)
+      return false
+    else
+      --ferment if at right temp
+      local temp = climate.get_point_temp(pos)
+      if temp > 10 and temp < 34 then
+        meta:set_int("ferment", ferment - 1)
+      end
+      return true
+    end
+  end,
+})
+
+minetest.register_node("tech:fermented_tartaris_syrup_amphora", {
+  description = S("Fermented Tartaris Syrup"),
+  tiles = {
+    "tech_pot_fermented_tartaris_syrup.png",
+    "tech_pottery.png",
+    "tech_pottery.png",
+    "tech_pottery.png",
+    "tech_pottery.png",
+    "tech_pottery.png",
+  },
+  drawtype = "nodebox",
+  stack_max = 1, --minimal.stack_max_bulky,
+  paramtype = "light",
+  node_box = {
+    type = "fixed",
+    fixed = clay_amphora_nodebox,
+  },
+  groups = { dig_immediate = 3, pottery = 1, temp_pass = 1 },
+  sounds = nodes_nature.node_sound_stone_defaults(),
+})

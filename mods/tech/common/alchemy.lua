@@ -38,7 +38,7 @@ alembic_processes = {
         time = 60,
     },
     ["tech:wiha_must_pot"] = {
-        products = { "tech:sugar" },
+        products = { "tech:sugar 12" },
         subproduct = "tech:clay_amphora_freshwater",
         time = 90,
     },
@@ -51,6 +51,16 @@ alembic_processes = {
         products = { "tech:death_salt" },
         subproduct = "tech:clay_amphora",
         time = 150,
+    },
+    ["tech:tartaris_syrup_amphora"] = {
+        products = { "tech:alcohol 12" },
+        subproduct = "tech:clay_amphora",
+        time = 150,
+    },
+    ["tech:tang_unfermented"] = {
+        products = { "tech:sugar 12" },
+        subproduct = "tech:clay_amphora_freshwater",
+        time = 90,
     },
     ["tech:clay_water_pot_potash"] = {
         products = { "tech:potash" },

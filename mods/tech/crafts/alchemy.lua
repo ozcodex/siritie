@@ -334,3 +334,15 @@ crafting.register_recipe({
 	level = 1,
 	always_known = true,
 })
+
+crafting.register_recipe({
+	type = "alchemy_bench",
+	output = "tech:fermented_tartaris_syrup_amphora",
+	items = {
+		"tech:tartar_salt",
+		"tech:sugar 12",
+		"tech:clay_amphora_freshwater",
+	},
+	level = 1,
+	always_known = true,
+})
