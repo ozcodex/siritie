@@ -187,8 +187,6 @@ Food decay.
 
 Punch with torch for firelighter?
 
-Easy start option (start with axe, bag, clothes, water pot, mattress, food).
-
 Dynamism and decoration for underground city.
 
 Some items need inventory images with space around edges (e.g. wattle).

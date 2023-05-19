@@ -1,4 +1,26 @@
 --[[
+
+Processes:
+
+calcination, distillation, dissolution, fermentation, mixing.
+
+Code Names:
+
+Osidian: Nightstone
+Olivine: Peridot
+Sulfur: Brimstone
+Zeolites: Nephritic Stone
+Sulfuric Acid: Vitriol
+Alumina: Star Dust
+Potassium Carbonate: Tartar Salt
+Potassium Nitrate: Saltpeter
+Gunpowder: Serpentine
+Caustic Slurry: Acrimoniac
+Caustic Soda: Death Salt
+Feldspar: Aurifex
+
+-- Alembic
+
 The alembic is a device used to distill products from liquids stored in clay
 pots. It can operate at temperatures higher than the given temperature
 (default = 100°C), but it can also work at ambient temperature, taking much
@@ -13,6 +35,8 @@ If there isn't enough space in the alembic's inventory, any additional products
 will be lost. The alembic has a set number of inventory slots (default = 4) and
 doesn't have a GUI. Products can be retrieved by right-clicking the alembic or
 by removing it.
+
+
 ]]
 
 alembic_inv_size = 4 -- slots

@@ -1,47 +1,4 @@
-check: https://webapp1.dlib.indiana.edu/newton/reference/glossary.do
 
-Processes:
-
-calcination, distillation, dissolution, fermentation, mixing.
-
-Code Names:
-
-Osidian: Nightstone
-Olivine: Peridot
-Sulfur: Brimstone
-Zeolites: Nephritic Stone
-Sulfuric Acid: Vitriol
-Alumina: Star Dust
-Potassium Carbonate: Tartar Salt
-Potassium Nitrate: Saltpeter
-Gunpowder: Serpentine
-Caustic Slurry: Acrimoniac
-Caustic Soda: Death Salt
-Feldspar: Aurifex
-
-Recipes:
-
-* Tang (Distillation) produces alcohol, that is used as fuel in the alchemical process.
-* Salt Water (Distillation) produces Salt, that is used as ingredient.
-* Slurry (Distilation) produces Caustic Soda, as ingredient
-* Aluminum mix (Melting) produces Aluminum, as a new metal
-
-* Basalt + Water produces Obsidian, that can be used as catalyst
-* Crushed Basalt + Sulfuric Acid produces Olivine, that can be used as catalyst
-* Roasted Iron Powder + Pulverized Volcanic Ash + Zeolites produces sulfur, as ingredient.
-* Pulverized Volcanic Ash + Potash + Obsidian produces zeolites, a catalyst.
-* Sulfur  + Vinegar + Iron produces Sulfuric Acid, an ingredient
-* Clay + Sulfuric Acid produces Alumina, as ingredient
-* Wet Clay + Sulfuric Acid produces Potassium Nitrate, as ingredient
-* Potash + Water + Limestone produces Potassium Carbonate, as ingredient
-* Potassium  + Sulfur + Pulverized Charcoal + Sugar produces Gunpowder
-* Pulverized charcoal + Vinegar produces Activated carbon
-* Salt + Quicklime + Water + Obsidian produces Slurry
-* Vegetable Oil + Caustic Soda produces Soap, can be used to cleaning
-* Alumina + Carbon produces Aluminum mix
-
-
--------------------
 Extra ideas:
 
 extract quartz powder from gneiss
@@ -52,11 +9,13 @@ Creating Elixir of Life from quartz powder and gunpowder, calcinated Star Dust, 
 
 add new disseases: heavy metals poisoning, asbestosis, chemical burns
 
-amonia from vermicompost, potash and water using zeolites as catalyst
+Vermicastings (Terra Essence) and fermented Vermicastings (Fermented Terra Essence)
 
-alchemical super fertilizer saltpeter+ amonia
+amonia (Primordial Soil Extract) from fermented Vermicastings, potash and water using zeolites as catalyst
 
-alcohol + vinegar + coal + salt + vitriol + amonia = ether (cure-all sulfa drug)
+alchemical super fertilizer (Terravita Tonic) saltpeter+ amonia
+
+alcohol + vinegar + coal + salt + vitriol + amonia = Panacea (cure-all sulfa drug)
 
 
 -- Even more crazy ideas (gold?) --
@@ -68,7 +27,7 @@ Potassium permanganate and glycerin to start temite?
 
 aqua regia: vitriol + saltpeter with jade as catalyst 
 
-the gold will be extracted (traces) from aurifex powder using aqua regia
+the gold will be extracted (traces) from aurifex powder using aqua regia or alkahest
 
 Chrysopoeia
     The transmutation of baser metals into gold.
@@ -77,7 +36,8 @@ glaure Augurelli
     Identity is uncertain, although it has been variously identified as a component of gold
 
 
-
+------------
+make the current gold statues rarest or bronce, brass or azofar
 
 
 
