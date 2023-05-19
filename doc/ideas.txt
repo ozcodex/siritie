@@ -110,7 +110,9 @@
 - mystical masks with effects?
 - musical instruments
 - fossils, archeology
-
+- add new disseases: heavy metals poisoning, asbestosis, chemical burns
+- alchemical furnace (Athanor) to gold and fine metals work
+- make the current gold statues rarest or bronce, brass or azofar
 
 --------------- Already done -------------------
 

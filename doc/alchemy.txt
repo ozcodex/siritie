@@ -1,65 +1,89 @@
+Materiales Presentes en la Naturaleza:
 
-Extra ideas:
-
-extract quartz powder from gneiss
-heat up jade boulder to crack it, then hammer it to a chance of getting a jade gem
-
-Creating Elixir of Life from quartz powder and gunpowder, calcinated Star Dust, vitriol as solvent, and jade as catalyst.
-
-
-add new disseases: heavy metals poisoning, asbestosis, chemical burns
-
-Vermicastings (Terra Essence) and fermented Vermicastings (Fermented Terra Essence)
-
-amonia (Primordial Soil Extract) from fermented Vermicastings, potash and water using zeolites as catalyst
-
-alchemical super fertilizer (Terravita Tonic) saltpeter+ amonia
-
-alcohol + vinegar + coal + salt + vitriol + amonia = Panacea (cure-all sulfa drug)
+    • Arcilla, Limo, Arena, Grava y otros tipos de suelos
+    • Granito (Cuarzo y feldespato alcalino, cristales de moscovita)
+    • Piedra Caliza (calcita y trazas de carbonato de hierro)
+    • Basalto (Silice y Silicato de Magnesio, cristales de olivino y obsidiana)
+    • Gneis (Cuarzo, Feldespato y Mica, cristales de biotita)
+    • Mineral de hierro (Oxido de Hierro)
+    • Jade (Silicato de Calcio y Magnesio, Silicato de Sodio y Aluminio)
+    • Arena Volcanica (Magnetita, Oxido de Titanio, dióxido de silicio, óxido de aluminio y azufre)
+    • Plantas y Hongos diversos
+    • Agua y Agua de Mar
+    • Hielo y Nieve
 
 
--- Even more crazy ideas (gold?) --
+Materiales Extraidos:
 
-thermite: iron oxide + aluminum mix, helps to melt gold in an Athanor
+    • Sal de la destilación del agua de Mar
+    • Azucar de la evaporacion de extractos de Frutas
+    • Alcohol de la fermentación y evaporacion de extractos de Frutas
+    • Lixiviados de la Composta producida por gusanos e insectos
+    • Carbon y Ceniza de la quema de plantas
+    • Cal Viva (Oxido de Calcio) de la Calcinacion de la Calcita
+    • Hidroxido de Calcio de la hidratacion de la Cal viva
+    • Compost de origen vegetal producido por descomposicion
+    • Harina de Hueso producto de la molienda de huesos o descomposicion de cadaveres
+    • Vinagre producido por el añejamiento de extractos de frutas mezcladas con hongos
+    • Aceite Vegetal producido por diversas plantas
+    • Hierro obtenido mediante la fundicion en un horno del Mineral de hierro
+    • Potasa de la hidratacion de ceniza (Hidroxido de potasio)
+    • Fosfato de calcio de la calcinacion de la harina de hueso
+    • Oxido de Hierro anhidrico de la calcinacion de mineral de hierro
+    • Termita de Oxido de Hierro anhidrico y Alumina
+    • Sulfuro de Aluminio de mezclar Aluminio y Azufre a altas temperaturas
+    • Polvora de la mezcla de Azufre, Nitrato de Potasio, Carbon y Azucar
 
-Potassium permanganate and glycerin to start temite?
- Al+S mix as a starter (maybe mixed with a bit of gunpowder to make a sparkler?)
+Procesos de Extraccion que necesitar revisarse:
 
-aqua regia: vitriol + saltpeter with jade as catalyst 
+    • Carbonato de Calcio extraido del hidroxido de calcio mezclado con dioxido de carbono y precipitado.
+    • Amoniaco de los Lixiviados de origen animal.
+    • Azufre extraido de la Arena Volcanica
+    • Alumina (Oxido de Aluminio) extraida del Feldespato
+    • nitrato de sodio de la destilacion del agua de Mar
+    • Nitrato de Potasio de la potasa y el nitrato de sodio
+    • Carbonato de Potasio extraido de la Potasa y la Calcita
+    • Acido Sulfurico
+    • Jabon obtenido mediante la saponificación de la Pasta de Jabon
+    • Soda Caustica (hidróxido sódico)
+    • Pasta de Jabon formada de la mezca de Aceites Vegetales, Carbonato de Potasio, Sal y Soda Caustica
+    • Carbon activado de la Calcinacion del Carbon y su posterior mezcla con Vinagre
+    • Aluminio extraido de la Alumina
+    • Acido Sulfurico de la Mezcla de Azufre, hierro y agua
+    • Soda Caustica extraida de la Cal Viva mezclada con Amoniaco
+    • Acido Nitrico de Amoniaco, Nitrato de Potasio y Agua
+    • Agua Regia del Acido Nitrico y Acido Clorhidrico
+    • Carbonato de Sodio de Calcita, Potasa y Sal
+    • Agua Carbonatada de mezclar carbonato de sodio, vinagre y agua
+    • Bicarbonato de Sodio de Mezclar carbonato de sodio con agua carbonatada
+    • Anhídrido acético de vinagre y alcohol
+    • Bisulfato de sodio del acido sulfurico y carbonato de sodio, luego mezclado con hidróxido de sodio.
+    • ácido clorhídrico de acido sulfurico y sal
+    • Ácido clorosulfúrico de ácido clorhídrico y Bisulfato de sodio
+    • Fenilamina del Carbon, mezclandolo con ácido sulfúrico y Acido Nitrico
+    • Sulfamida producida de Amoniaco, Anhídrido acético , Bicarbonato Sodico, Acido clorosulfúrico y fenilamina
 
-the gold will be extracted (traces) from aurifex powder using aqua regia or alkahest
+Materiales de Fantasia (Tambien necesitan revisarse):
 
-Chrysopoeia
-    The transmutation of baser metals into gold.
+    • Elixir de la Vida Eterna: Cuarzo, Polvora, Alumina, Agua Regia y Alcohol Mezclados
+    • Super Ferfilizante de Amoniaco y Potasa
+    • Combustible Alquimico de mezclar Termita con Sulfuro de Aluminio
+    • Augurelli Glaure (Mineral de Oro) de tratar el Feldespato con Agua Regia
 
-glaure Augurelli
-    Identity is uncertain, although it has been variously identified as a component of gold
+Procedimientos:
 
+    • Mezcla simple (solo se pueden mezclar 2 ingredientes a la vez)
+    • Mezcla a alta temperatura
+    • Mezcla en presencia de un catalizador (el catalizador se va desgastando pero no se consume)
+    • Paso del tiempo (fermentacion, saponificacion, decantacion, compostacion)
+    • Hidratacion (sumergir en agua)
+    • Disolucion (Mezclar con un solvente, generalmente un acido)
+    • Destilacion (Separacion por evaporacion, puede producir un subproducto)
+    • Calcinacion (Exponer directamente al fuego)
+    • Fundicion (Calentar a altas temperaturas en un horno)
+    • Tamizado (Separacion de minerales presentes en una roca)
 
-------------
-make the current gold statues rarest or bronce, brass or azofar
+Materiales que quizas necesite añadir:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    • Pirita para extraer azufre
+    • Bauxita para extraer aluminio

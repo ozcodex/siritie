@@ -18,6 +18,17 @@ Gunpowder: Serpentine
 Caustic Slurry: Acrimoniac
 Caustic Soda: Death Salt
 Feldspar: Aurifex
+Vermicastings: Terra Essence
+Amonia: Primordial Soil Extract
+Alchemical Fertilizer: Terravita Tonic
+Sulfa drug: Panacea
+Thermite: Pyroforge Synthesis
+Aluminium Sulfide: Inferno Igniter
+Alchemical Fuel: Alchymia Flamis
+Nitric Acid: Nitorium Nitrum
+Aqua Regia: Alkahest
+
+
 
 -- Alembic
 
