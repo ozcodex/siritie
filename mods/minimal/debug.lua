@@ -113,8 +113,20 @@ local function createTieredTable(craftingData)
     return tieredTable
 end
 
--- write to files after all has been loaded
+-- get the tools required for a node
+local function getToolsForNode(node_name)
+    local tools = {}
+    local drops = minetest.get_node_drops(node_name, "")
+    for _, item_name in ipairs(drops) do
+        local item_def = minetest.registered_items[item_name]
+        if item_def and item_def.tool_capabilities then
+            tools[item_name] = item_def.tool_capabilities
+        end
+    end
+    return tools
+end
 
+-- write to files after all has been loaded
 minetest.after(0, function()
     local items = minetest.registered_items
     local item_file = io.open(minetest.get_worldpath() .. "/items.txt", "w")
