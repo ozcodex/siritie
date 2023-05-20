@@ -313,7 +313,7 @@ minetest.register_node("tech:mashed_wiha", {
   description = S("Mashed Wiha"),
   tiles = { "tech_mashed_wiha.png" },
   inventory_image = "tech_mashed_wiha_inv.png",
-  stack_max = minimal.stack_max_medium / 2,
+  stack_max = minimal.stack_max_large,
   paramtype = "light",
   sunlight_propagates = true,
   drawtype = "nodebox",
@@ -344,7 +344,7 @@ minetest.register_node("tech:wiha_dregs", {
   description = S("Wiha Dregs"),
   tiles = { "tech_wiha_dregs.png" },
   inventory_image = "tech_wiha_dregs_inv.png",
-  stack_max = minimal.stack_max_medium / 2,
+  stack_max = minimal.stack_max_large,
   paramtype = "light",
   sunlight_propagates = true,
   drawtype = "nodebox",
@@ -371,7 +371,7 @@ minetest.register_node("tech:burnt_dregs", {
   description = S("Burnt Dregs"),
   tiles = { "tech_burnt_dregs.png" },
   inventory_image = "tech_burnt_dregs_inv.png",
-  stack_max = minimal.stack_max_medium / 2,
+  stack_max = minimal.stack_max_large,
   paramtype = "light",
   sunlight_propagates = true,
   drawtype = "nodebox",
@@ -669,7 +669,7 @@ minetest.register_node("tech:elixir_vitae", {
 minetest.register_node("tech:soap_uncured", {
   description = S("Soap (uncured)"),
   tiles = { "tech_soap_uncured.png" },
-  stack_max = minimal.stack_max_medium / 6,
+  stack_max = minimal.stack_max_bulky,
   paramtype = "light",
   drawtype = "nodebox",
   node_box = {
@@ -694,7 +694,7 @@ minetest.register_node("tech:soap_uncured", {
 minetest.register_node("tech:soap", {
   description = S("Soap"),
   tiles = { "tech_soap.png" },
-  stack_max = minimal.stack_max_medium / 3,
+  stack_max = minimal.stack_max_heavy,
   paramtype = "light",
   drawtype = "nodebox",
   node_box = {

@@ -1,0 +1,18 @@
+Code lineaments:
+
+Each mod should have 4 folders or files:
+	- common for the code that is shared through the nodes or items
+	- items for the declaration of the items of the mod
+	- crafts for the recipes to crafting nodes and items
+	- nodes for the creation of nodes, this include the calls to gereation functions
+
+if the previous are folders, inside the files should have a descriptive name of the type or the category of the nodes/items declared.
+
+The nodeboxes should be declared at the beggining of the nodes file.
+
+The textures folder should be divided into folders if there are more than one type of node/item, and the textures should have a descriptive name.
+
+Whenever is possible call default actions (on_dig, on_right_click, on_construct, etc...) from the minimal mod.
+
+Infotext always should be setted through the functions in minimal mod.
+

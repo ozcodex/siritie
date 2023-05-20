@@ -60,6 +60,7 @@
 	- fix translation templates to include all the actual strings
 	- Translate the game to esperanto
 	- redesign the runes of painting kits
+	- rework the infotext func in minimal
 - pottery rework:
 	- make ceramics fragile and probable to break, use groups
 	- aurifex can be used for glazing pottery
@@ -113,6 +114,7 @@
 - add new disseases: heavy metals poisoning, asbestosis, chemical burns
 - alchemical furnace (Athanor) to gold and fine metals work
 - make the current gold statues rarest or bronce, brass or azofar
+- add back broken pottery block
 
 --------------- Already done -------------------
 
@@ -150,6 +152,8 @@
 - add aluminium
 - add alchemy recipes to the bench
 - a easier way to get large amounts of alcohol, from sugar and Tartar Salt (Tartaris Syrup)
+- move clay oil lamp to the pottery wheel
+- remove large fire wood from crafting
 
 ------------ Inhereit form Exile ----------------
 

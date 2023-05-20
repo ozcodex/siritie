@@ -1,7 +1,11 @@
 minimal = {
-	stack_max_bulky = 2,
+	stack_min = 1,
+	stack_max_bulky = 4,
+	stack_max_heavy = 8,
+	stack_max_large = 12,
 	stack_max_medium = 24,
-	stack_max_light = 288,
+	stack_max_small = 32,
+	stack_max_light = 64,
 	--hand base abilities
 	hand_punch_int = 0.8,
 	hand_max_lvl = 1,
@@ -13,28 +17,26 @@ minimal = {
 
 	t_scale2 = 3,
 	t_scale1 = 6,
-
 }
-exile = minimal -- Adding to begin transition to renamed minimal as exile.
+
 minimal.S = minetest.get_translator("minimal")
 minimal.FS = function(...)
 	return minetest.formspec_escape(minimal.S(...))
 end
-local modpath=minetest.get_modpath('minimal')
-dofile(modpath..'/item_names.lua')
-dofile(modpath..'/compat.lua')
-dofile(modpath..'/settingswarn.lua')
-dofile(modpath..'/aliases.lua')
-dofile(modpath..'/overrides.lua')
-dofile(modpath..'/protection.lua')
-dofile(modpath..'/utility.lua')
-dofile(modpath..'/infotext.lua')
-dofile(modpath..'/metadata.lua')
-dofile(modpath..'/debug.lua')
+local modpath = minetest.get_modpath("minimal")
+dofile(modpath .. "/item_names.lua")
+dofile(modpath .. "/compat.lua")
+dofile(modpath .. "/settingswarn.lua")
+dofile(modpath .. "/aliases.lua")
+dofile(modpath .. "/overrides.lua")
+dofile(modpath .. "/protection.lua")
+dofile(modpath .. "/utility.lua")
+dofile(modpath .. "/infotext.lua")
+dofile(modpath .. "/metadata.lua")
 
 -- GUI related stuff
 
-function minimal.set_hotbar(player,pref) 
+function minimal.set_hotbar(player, pref)
 	if pref == "true" then
 		-- use wide hotbar
 		player:hud_set_hotbar_image("gui_hotbar16.png")
@@ -45,29 +47,26 @@ function minimal.set_hotbar(player,pref)
 	end
 end
 
-
 minetest.register_chatcommand("hud16", {
 	params = "true or false",
 	description = "Toggle wide hud hotbar on or off for player",
 	func = function(name, param)
-	local player = minetest.get_player_by_name(name)
-	local meta = player:get_meta()
-	local hud16=meta:get_string("hud16") or minetest.settings:get("exile_hud_wide_hotbar") or "false"
-	if param and param ~="" then
-		local wlist = "/hud16:\n"..
-		"Toggle wide HUD hotbar off or on for you."
-		return false, wlist
-	end
-	if hud16 == "true" then
-		hud16 = "false"
-	else
-		hud16 = "true"
-	end
-	meta:set_string("hud16", hud16)
-	minimal.set_hotbar(player,hud16)
+		local player = minetest.get_player_by_name(name)
+		local meta = player:get_meta()
+		local hud16 = meta:get_string("hud16") or minetest.settings:get("exile_hud_wide_hotbar") or "false"
+		if param and param ~= "" then
+			local wlist = "/hud16:\n" .. "Toggle wide HUD hotbar off or on for you."
+			return false, wlist
+		end
+		if hud16 == "true" then
+			hud16 = "false"
+		else
+			hud16 = "true"
+		end
+		meta:set_string("hud16", hud16)
+		minimal.set_hotbar(player, hud16)
 	end,
 })
-
 
 minetest.register_on_joinplayer(function(player)
 	-- Set formspec prepend
@@ -84,11 +83,10 @@ minetest.register_on_joinplayer(function(player)
 	player:set_formspec_prepend(formspec)
 	-- Set hotbar textures
 	local meta = player:get_meta()
-	local hud = meta:get_string("hud16") or minetest.settings:get('exile_hud_wide_hotbar') or 'false'
-	minimal.set_hotbar(player,hud)
+	local hud = meta:get_string("hud16") or minetest.settings:get("exile_hud_wide_hotbar") or "false"
+	minimal.set_hotbar(player, hud)
 	player:hud_set_hotbar_selected_image("gui_hotbar_selected.png")
 end)
-
 
 --[[
 function minimal.get_hotbar_bg(x,y)
@@ -104,32 +102,37 @@ end
 minetest.register_item(":", {
 	type = "none",
 	wield_image = "wieldhand.png",
-	wield_scale = {x=1,y=1,z=2.5},
+	wield_scale = { x = 1, y = 1, z = 2.5 },
 	liquids_pointable = true,
 	tool_capabilities = {
 		full_punch_interval = minimal.hand_punch_int,
 		max_drop_level = minimal.hand_max_lvl,
 		groupcaps = {
-			choppy = {times={[3]=minimal.hand_chop}, uses=0, maxlevel=minimal.hand_max_lvl},
-			crumbly = {times={[3]=minimal.hand_crum}, uses=0, maxlevel=minimal.hand_max_lvl},
-			snappy = {times={[3]=minimal.hand_snap}, uses=0, maxlevel=minimal.hand_max_lvl},
-			oddly_breakable_by_hand = {times={[1]=minimal.hand_crum*minimal.t_scale1,[2]=minimal.hand_crum*minimal.t_scale2,[3]=minimal.hand_crum}, uses=0},
+			choppy = { times = { [3] = minimal.hand_chop }, uses = 0, maxlevel = minimal.hand_max_lvl },
+			crumbly = { times = { [3] = minimal.hand_crum }, uses = 0, maxlevel = minimal.hand_max_lvl },
+			snappy = { times = { [3] = minimal.hand_snap }, uses = 0, maxlevel = minimal.hand_max_lvl },
+			oddly_breakable_by_hand = {
+				times = {
+					[1] = minimal.hand_crum * minimal.t_scale1,
+					[2] = minimal.hand_crum * minimal.t_scale2,
+					[3] = minimal.hand_crum,
+				},
+				uses = 0,
+			},
 		},
-		damage_groups = {fleshy=minimal.hand_dmg},
-	}
+		damage_groups = { fleshy = minimal.hand_dmg },
+	},
 })
 
-
 minetest.register_on_joinplayer(function(player)
-      local p_name = player:get_player_name()
-      --Custom small inventory
-      minetest.get_inventory({type="player", name=p_name}):set_size("main", 16)
-      --enable shadows if using minetest 5.6.0+
-      if minimal.mt_required_version(5,6,0) then
-	 minetest.log("action", "MT5.6.0+, enabling shadows for "..p_name)
-	 player:set_lighting({
-	    shadows = { intensity = 0.33 }
-      })
-      end
+	local p_name = player:get_player_name()
+	--Custom small inventory
+	minetest.get_inventory({ type = "player", name = p_name }):set_size("main", 16)
+	--enable shadows if using minetest 5.6.0+
+	if minimal.mt_required_version(5, 6, 0) then
+		minetest.log("action", "MT5.6.0+, enabling shadows for " .. p_name)
+		player:set_lighting({
+			shadows = { intensity = 0.33 },
+		})
+	end
 end)
-
