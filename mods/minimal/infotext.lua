@@ -270,16 +270,16 @@ end
 -- updates infotext merging all keys following the fixed order
 function minimal.infotext_update(pos)
 	local meta = minetest.get_meta(pos)
-	local text = ""
+	local output = ""
 	-- loop through fixed order keys
-	for _, key in ipairs(minimal.infotext.fixed_order) do
+	for _, key in ipairs(infotext.fixed_order) do
 		local value = meta:get_string("infotext_" .. key)
 		-- owner is a special case
 		if key == "Owner" then
 			value = meta:get_string("owner")
 		end
 		if value ~= "" then
-			text = text .. "\n" .. minimal.S(key) .. ": " .. value
+			output = output .. "\n" .. minimal.S(key) .. ": " .. value
 		end
 	end
 	meta:set_string("infotext", output)

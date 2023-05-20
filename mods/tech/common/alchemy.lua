@@ -51,7 +51,7 @@ by removing it.
 ]]
 
 alembic_inv_size = 4 -- slots
-alembic_check_interval = 1 -- seconds
+alembic_check_interval = 20 -- seconds
 alembic_working_temperature = 100 -- celcius
 ambient_temperature_time = 300 -- seconds
 
@@ -176,16 +176,20 @@ function update_alembic_infotext(pos)
     local below_node = minetest.get_node(below_pos)
     -- if below node is processable add info to infotext
     if alembic_processes[below_node.name] then
-        infotext = "Processing: " .. minetest.registered_items[below_node.name].description .. ". "
+        infotext = S("Processing ") .. minetest.registered_items[below_node.name].description .. "."
+        minimal.infotext_set_key(pos, "Status", infotext)
+        minimal.infotext_del_key(pos, "Note")
     else
         -- if below node is not processable add default note to infotext
-        infotext = "Note: To distill products, place the alembic over a clay pot filled with liquids and apply heat. "
+        infotext = S("To distill products, place the alembic over a clay pot filled with liquids and apply heat.")
+        minimal.infotext_set_key(pos, "Note", infotext)
+        minimal.infotext_set_key(pos, "Status", S("Inactive"))
     end
     -- add inventory info to the infotext
-    infotext = infotext .. "\nContents: "
     if inv:is_empty("main") then
-        infotext = infotext .. "empty"
+        infotext = S("empty")
     else
+        infotext = ""
         --loop through each slot in the alembic inventory
         for i = 1, inv:get_size("main") do
             local stack = inv:get_stack("main", i)
@@ -198,5 +202,5 @@ function update_alembic_infotext(pos)
             end
         end
     end
-    minimal.infotext_set(pos, meta, infotext)
+    minimal.infotext_set_key(pos, "Contents", infotext)
 end
