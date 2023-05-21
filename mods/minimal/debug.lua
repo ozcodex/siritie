@@ -107,15 +107,19 @@ end
 
 -- get the tools required for a node
 local function getAllTools()
-    local tools = {}
+    -- check if global is declared, if not load it
+    if all_tools then
+        return all_tools
+    end
+    all_tools = {}
 
     for item_name, item_def in pairs(minetest.registered_items) do
         if item_def.tool_capabilities then
-            insertInto(tools, item_name)
+            insertInto(all_tools, item_name)
         end
     end
 
-    return tools
+    return all_tools
 end
 
 -- Helper function that tells if a tool can break a given node
@@ -143,11 +147,6 @@ end
 
 -- get the tools required for a node
 local function getToolsForNode(node_name)
-    -- check if global is declared, if not load it
-    if not all_tools then
-        all_tools = getAllTools()
-    end
-
     local item_def = minetest.registered_items[node_name]
     local tools = {}
 
@@ -157,7 +156,7 @@ local function getToolsForNode(node_name)
     end
 
     -- Iterate over the registered tools
-    for _, toolName in ipairs(all_tools) do
+    for _, toolName in ipairs(getAllTools()) do
         -- check if tool can break the node
         if toolCanBreakNode(toolName, node_name) then
             insertInto(tools, toolName)
@@ -195,7 +194,7 @@ end
 
 -- checks if item is in at least one of the previous tiers
 local function isInPreviousTiers(tieredTable, item, tier)
-    for i = 1, tier - 1 do
+    for i = 0, tier - 1 do
         if findInTable(tieredTable[i], item) then
             return true
         end
@@ -204,36 +203,26 @@ local function isInPreviousTiers(tieredTable, item, tier)
 end
 
 -- checks if item is in at least one of the previous tiers
-local function isMinableWithPreviousTiers(tieredTable, item, tier)
-    for i = 1, tier - 1 do
-        --TODO: find the tools in tier
-        -- loop through the all tools list
-        -- check if tool is in tier
-        -- then validate if node can be mined with that tool
-        if findInTable(tieredTable[i], item) then
-            return true
+local function isMinableWithPreviousTiers(tieredTable, node, tier)
+    for i = 0, tier - 1 do
+        for _, tool in ipairs(getAllTools()) do
+            if findInTable(tieredTable[i], tool) then
+                if toolCanBreakNode(tool, node) then
+                    -- if at least one tool can mine this node is minable
+                    return true
+                end
+            end
         end
     end
     return false
 end
 
 local function buildTieredTable(tieredTable, craftingRecipes, tier)
-    --[[
-    look all the crafting types
-    take each recipe
-    take the items for that recipe
-    determine if the recipe is crafteable in current tier
-    check if items exist in one of the previous tiers
-    if item is group iterate over all the items in that group
-    if at least one item of the group is in one of the previous tiers the group is crafteable
-    if all items/groups are crafteables then the recipe is crafteable
-    if the recipe is crafteable add the output to the current tier
-    also, for each item in the item list and for each node in group check if is minable with the tools from previous tiers
-    recursively add the next tier
-    if one tier ends being empty finish execution
-    ]]
-
-    for _, craftingType in pairs(craftingData) do
+    if not tieredTable[tier] then
+        -- Initialize the table for the current tier
+        tieredTable[tier] = {}
+    end
+    for _, craftingType in pairs(craftingRecipes) do
         -- loop through all recipes
         for _, recipe in ipairs(craftingType) do
             -- assume recipe is crafteable
@@ -246,23 +235,65 @@ local function buildTieredTable(tieredTable, craftingRecipes, tier)
                 -- check if item is group
                 if isGroup(item) then
                     local group = sanitizeGroup(item)
-                    local isGroupCrafteable = true
+                    local isGroupCrafteable = false
                     for _, node in ipairs(getGroupedNodes(group)) do
+                        local node = sanitizeItem(node)
                         -- if at least one node is crafteable then the group is crafteable
-                        if not isInPreviousTiers(tieredTable, node, tier) then
-                            isGroupCrafteable = false
+                        if isInPreviousTiers(tieredTable, node, tier) then
+                            isGroupCrafteable = true
                         end
                         -- check if item is minable with tools in previous tiers
+                        if
+                            isMinableWithPreviousTiers(tieredTable, node, tier)
+                            and not isOutputNode(node, craftingRecipes)
+                            and not isInPreviousTiers(tieredTable, node, tier)
+                        then
+                            -- add it to current tier
+                            insertInto(tieredTable[tier], node)
+                        end
                     end
                     -- if group is not crafteable then recipe is not crafteable
                     if not isGroupCrafteable then
+                        print("no " .. group .. " nodes available")
                         isItemCrafteable = false
                     end
                 else
                     -- is a normal item, check for they in previous tiers
+                    if not isInPreviousTiers(tieredTable, item, tier) then
+                        isItemCrafteable = false
+                    end
+                    -- check if item is minable, so it can be added to current tier
+                    if
+                        isMinableWithPreviousTiers(tieredTable, item, tier)
+                        and not isOutputNode(item, craftingRecipes)
+                        and not isInPreviousTiers(tieredTable, item, tier)
+                    then
+                        -- add it to current tier
+                        insertInto(tieredTable[tier], item)
+                    end
+                end
+                if not isItemCrafteable then
+                    -- with at least one item in the recipe that is not obteinable
+                    isRecipeCrafteable = false
+                end
+            end
+            if isRecipeCrafteable then
+                local item = sanitizeItem(recipe.output)
+                -- if the recipe can be completed, add the output item to tier
+                -- only add it if it doesn't exist in previous tiers
+                if not isInPreviousTiers(tieredTable, item, tier) then
+                    insertInto(tieredTable[tier], item)
                 end
             end
         end
+    end
+
+    print("tier_" .. tier .. ":" .. #tieredTable[tier] .. " items")
+    -- if tier is empty finish the recursion
+    if #tieredTable[tier] == 0 or tier > 20 then
+        return tieredTable
+    else
+        return buildTieredTable(tieredTable, craftingRecipes, tier + 1)
     end
 end
 
@@ -348,6 +379,11 @@ local function createTieredTable(craftingRecipes)
             "tech:roasted_iron_ore",
             "tech:roof_tile_loose",
             "tech:slaked_lime",
+            -- free starting recipes
+            "tech:sleeping_spot",
+            "tech:crafting_spot",
+            "tech:threshing_spot",
+            "tech:clay_shaping_spot",
         },
     }
     --recursively add tiers
@@ -359,9 +395,6 @@ end
 
 -- write to files after all has been loaded
 minetest.after(0, function()
-    --declare all tools as global
-    all_tools = getAllTools()
-
     local items = minetest.registered_items
     local item_file = io.open(minetest.get_worldpath() .. "/items.txt", "w")
     local recipes_file = io.open(minetest.get_worldpath() .. "/recipes.txt", "w")
@@ -381,10 +414,7 @@ minetest.after(0, function()
             recipes_file:write("-----------------------------------------\n\n")
             recipes_file:write(tier .. ":\n\n")
             for _, node in ipairs(nodes) do
-                local recipeItems = table.concat(node.items or { "nothing" }, ", ")
-                recipes_file:write(
-                    "\t" .. node.output .. " crafted through " .. node.type .. " using " .. recipeItems .. "\n"
-                )
+                recipes_file:write(node .. "\n")
             end
         end
         recipes_file:close()

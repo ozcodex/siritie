@@ -154,6 +154,7 @@
 - a easier way to get large amounts of alcohol, from sugar and Tartar Salt (Tartaris Syrup)
 - move clay oil lamp to the pottery wheel
 - remove large fire wood from crafting
+- make maximum fish trap the same limit as fish stack
 
 ------------ Inhereit form Exile ----------------
 
