@@ -1,7 +1,12 @@
 -- sanitize item recipe
--- removes the space and the number at the end of a recipe item
+-- removes the space (one or zero spaces) and the number at the end of a recipe item
 local function sanitizeItem(item)
-    return string.gsub(item, " %d+$", "")
+    return string.gsub(item, "[_%s]?%d?$", "")
+end
+
+-- remove the initial "group:" to get group name
+local function sanitizeGroup(group)
+    return string.gsub(sanitizeItem(group), "^group:", "")
 end
 
 local function areTableEqual(table1, table2)
@@ -188,161 +193,165 @@ local function getGroupedNodes(group)
 end
 --------------------------------------------------------------------------------
 
-local function processTier0Item(tool, item, tieredTable, tier)
-    -- special case: is a group
-    if isGroup(item) then
-        -- remove the "group:" at the beginning of the name
-        local group = (string.sub(sanitizeItem(item), 7))
-
-        -- get all the nodes in the group
-        local group_nodes = getGroupedNodes(group)
-
-        -- for each node, check if it is breakable by hand
-        for node_name, _ in pairs(group_nodes) do
-            -- only add nodes breakable by hand
-            local tools = getToolsForNode(node_name)
-            if findInTable(tools, tool) then
-                insertInto(tieredTable["tier_" .. tier], {
-                    output = sanitizeItem(node_name),
-                    items = { "player_api:hand" },
-                    type = "gathering",
-                })
-            end
-        end
-    else
-        -- only add nodes breakable by the given tool
-        local tools = getToolsForNode(item)
-        if findInTable(tools, tool) then
-            insertInto(tieredTable["tier_" .. tier], {
-                output = sanitizeItem(item),
-                items = { "player_api:hand" },
-                type = "gathering",
-            })
+-- checks if item is in at least one of the previous tiers
+local function isInPreviousTiers(tieredTable, item, tier)
+    for i = 1, tier - 1 do
+        if findInTable(tieredTable[i], item) then
+            return true
         end
     end
+    return false
 end
 
--- Recursive function to build the hierarchical table
-local function buildTieredTable(tieredTable, craftingData, tier)
-    -- build the previous tier nodes mergin all the previous tiers tables
-    local previous_tier_nodes
-    for i = 0, tier - 1 do
-        if previous_tier_nodes then
-            previous_tier_nodes = mergeTables(previous_tier_nodes, tieredTable["tier_" .. i])
-        else
-            previous_tier_nodes = tieredTable["tier_" .. i]
+-- checks if item is in at least one of the previous tiers
+local function isMinableWithPreviousTiers(tieredTable, item, tier)
+    for i = 1, tier - 1 do
+        --TODO: find the tools in tier
+        -- loop through the all tools list
+        -- check if tool is in tier
+        -- then validate if node can be mined with that tool
+        if findInTable(tieredTable[i], item) then
+            return true
         end
     end
-    -- for each crafting recipe in craftingData chack if all the items are in the previous tier nodes list
-    -- if so, add the recipe output to the current tier, excluding the items that currently are in a previous tier
-    for craftingType, craftingRecipes in pairs(craftingData) do
-        for _, recipe in ipairs(craftingRecipes) do
-            -- for each item in the recipe
+    return false
+end
+
+local function buildTieredTable(tieredTable, craftingRecipes, tier)
+    --[[
+    look all the crafting types
+    take each recipe
+    take the items for that recipe
+    determine if the recipe is crafteable in current tier
+    check if items exist in one of the previous tiers
+    if item is group iterate over all the items in that group
+    if at least one item of the group is in one of the previous tiers the group is crafteable
+    if all items/groups are crafteables then the recipe is crafteable
+    if the recipe is crafteable add the output to the current tier
+    also, for each item in the item list and for each node in group check if is minable with the tools from previous tiers
+    recursively add the next tier
+    if one tier ends being empty finish execution
+    ]]
+
+    for _, craftingType in pairs(craftingData) do
+        -- loop through all recipes
+        for _, recipe in ipairs(craftingType) do
+            -- assume recipe is crafteable
+            local isRecipeCrafteable = true
+            -- loop over the items
             for _, item in ipairs(recipe.items) do
-                -- Check if item is not the output of any recipe (like tier 0)
-                if not isOutputNode(item, craftingData) then
-                    -- only add nodes breakable by tools defined on previous tiers
-                    -- loop over all the tools and check if they are defined in the previous tier nodes list
-                    for _, tool in ipairs(all_tools) do
-                        if findInTable(previous_tier_nodes, tool) then
-                            processTier0Item(tool, item, tieredTable, 0)
+                local item = sanitizeItem(item)
+                -- assume item is crafteable
+                local isItemCrafteable = true
+                -- check if item is group
+                if isGroup(item) then
+                    local group = sanitizeGroup(item)
+                    local isGroupCrafteable = true
+                    for _, node in ipairs(getGroupedNodes(group)) do
+                        -- if at least one node is crafteable then the group is crafteable
+                        if not isInPreviousTiers(tieredTable, node, tier) then
+                            isGroupCrafteable = false
                         end
+                        -- check if item is minable with tools in previous tiers
                     end
-                end
-            end
-
-            -- check if the recipe output is not already in the previous tier nodes list
-            if not allNodesInTable({ recipe.output }, previous_tier_nodes) then
-                -- check if all the items of the recipe are in the previous tier nodes list
-                if allNodesInTable(recipe.items, previous_tier_nodes) then
-                    if not tieredTable["tier_" .. tier] then
-                        tieredTable["tier_" .. tier] = {} -- Initialize the table for the current tier
+                    -- if group is not crafteable then recipe is not crafteable
+                    if not isGroupCrafteable then
+                        isItemCrafteable = false
                     end
-                    insertInto(tieredTable["tier_" .. tier], {
-                        output = sanitizeItem(recipe.output),
-                        items = recipe.items,
-                        type = craftingType,
-                    })
-                end
-                -- make it work for groups
-                -- if all the items are not in the previous tier nodes list, check if they are groups
-                -- then find if at least one of the items of the group is in the previous tier nodes list
-                local crafteable = true
-                for _, item in ipairs(recipe.items) do
-                    -- Check if item is a group
-                    if isGroup(item) then
-                        -- remove the "group:" at the beginning of the name
-                        local group = (string.sub(sanitizeItem(item), 7))
-
-                        -- get all the nodes in the group
-                        local group_nodes = getGroupedNodes(group)
-
-                        -- for each node, check if it is in the previous tier nodes list
-                        -- if none of the nodes in the group is in the previous tier nodes list, the recipe is not crafteable
-                        -- but if at least one is in the list, the recipe is crafteable
-                        local group_crafteable = false
-                        for node_name, _ in pairs(group_nodes) do
-                            if findInTable(previous_tier_nodes, node_name) then
-                                group_crafteable = true
-                            end
-                        end
-                        -- if the group is not crafteable, the recipe is not crafteable
-                        if not group_crafteable then
-                            crafteable = false
-                        end
-                    else
-                        -- check if the item is in the previous tier nodes list
-                        if not findInTable(previous_tier_nodes, item) then
-                            crafteable = false
-                        end
-                    end
-                end
-                -- if the recipe is crafteable, add it to the current tier
-                if crafteable then
-                    if not tieredTable["tier_" .. tier] then
-                        tieredTable["tier_" .. tier] = {} -- Initialize the table for the current tier
-                    end
-                    insertInto(tieredTable["tier_" .. tier], {
-                        output = sanitizeItem(recipe.output),
-                        items = recipe.items,
-                        type = craftingType,
-                    })
+                else
+                    -- is a normal item, check for they in previous tiers
                 end
             end
         end
     end
-    -- if current tier went empty, stop the recursion
-    -- else continue building the table for next tier
-    if tieredTable["tier_" .. tier] and #tieredTable["tier_" .. tier] > 0 then
-        return buildTieredTable(tieredTable, craftingData, tier + 1)
-    else
-        return tieredTable
-    end
 end
 
--- Main function to create the tiered table
-local function createTieredTable(craftingData)
+local function createTieredTable(craftingRecipes)
     local tieredTable = {
-        tier_0 = {},
+        -- starting with tier 0
+        [0] = {
+            -- basic tool
+            "player_api:hand_pale",
+            -- nature items
+            "nodes_nature:alaf",
+            "nodes_nature:anperla",
+            "nodes_nature:basalt_boulder",
+            "nodes_nature:bronach",
+            "nodes_nature:claystone_block",
+            "nodes_nature:conglomerate_block",
+            "nodes_nature:damo",
+            "nodes_nature:galanta",
+            "nodes_nature:gitiri",
+            "nodes_nature:gneiss_boulder",
+            "nodes_nature:granite_boulder",
+            "nodes_nature:hakimi",
+            "nodes_nature:ironstone_boulder",
+            "nodes_nature:jade_boulder",
+            "nodes_nature:lambakap",
+            "nodes_nature:limestone_boulder",
+            "nodes_nature:mahal",
+            "nodes_nature:marbhan",
+            "nodes_nature:merki",
+            "nodes_nature:momo",
+            "nodes_nature:moss",
+            "nodes_nature:nebiyi",
+            "nodes_nature:reshedaar",
+            "nodes_nature:sand_wet",
+            "nodes_nature:sandstone_block",
+            "nodes_nature:sari",
+            "nodes_nature:siltstone_block",
+            "nodes_nature:tanai",
+            "nodes_nature:tashvish",
+            "nodes_nature:thoka",
+            "nodes_nature:tikusati",
+            "nodes_nature:vansano",
+            "nodes_nature:wiha",
+            "nodes_nature:zufani",
+            "nodes_nature:silt_wet",
+            "nodes_nature:gravel",
+            "nodes_nature:volcanic_ash",
+            "nodes_nature:sand",
+            "nodes_nature:silt",
+            "nodes_nature:loam",
+            "nodes_nature:basalt_cobble",
+            "nodes_nature:gneiss_cobble",
+            "nodes_nature:jade_cobble",
+            "nodes_nature:cana",
+            "nodes_nature:chalin",
+            "nodes_nature:gravel_wet",
+            "nodes_nature:loam_wet",
+            "nodes_nature:loam_wet_salty",
+            "nodes_nature:volcanic_ash_wet",
+            "nodes_nature:volcanic_ash_wet_salty",
+            "nodes_nature:gravel_wet_salty",
+            "nodes_nature:sand_wet_salty",
+            "nodes_nature:silt_wet_salty",
+            "nodes_nature:limestone_cobble",
+            "nodes_nature:ironstone_cobble",
+            "nodes_nature:granite_cobble",
+            "nodes_nature:gemedi",
+            "nodes_nature:tiken",
+            "nodes_nature:kelp",
+            "nodes_nature:clay",
+            -- stairs
+            "stairs:stair_clay",
+            "stairs:stair_inner_clay",
+            "stairs:stair_outer_clay",
+            "stairs:slab_clay",
+            -- tech
+            "tech:clear_glass_ingot",
+            "tech:green_glass_ingot",
+            "tech:maraka_flour",
+            "tech:potash",
+            "tech:quicklime",
+            "tech:retted_cana_bundle",
+            "tech:roasted_iron_ore",
+            "tech:roof_tile_loose",
+            "tech:slaked_lime",
+        },
     }
-
-    for craftingType, craftingRecipes in pairs(craftingData) do
-        for _, recipe in ipairs(craftingRecipes) do
-            for _, item in ipairs(recipe.items) do
-                -- Check if item is not the output of any recipe (tier 0)
-                if not isOutputNode(item, craftingData) then
-                    -- only add nodes breakable by hand
-                    local tool = "player_api:hand_pale"
-                    processTier0Item(tool, item, tieredTable, 0)
-                end
-            end
-        end
-    end
-
-    -- Build the hierarchical table starting from tier 0
-    tieredTable = buildTieredTable(tieredTable, craftingData, 1)
-
-    return tieredTable
+    --recursively add tiers
+    return buildTieredTable(tieredTable, craftingRecipes, 1)
 end
 
 ------------------------------------------------------------------------------------------------------
