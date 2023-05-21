@@ -1,3 +1,11 @@
+pot_nodebox = {
+	{ -0.25, 0.375, -0.25, 0.25, 0.5, 0.25 }, -- NodeBox1
+	{ -0.375, -0.25, -0.375, 0.375, 0.3125, 0.375 }, -- NodeBox2
+	{ -0.3125, -0.375, -0.3125, 0.3125, -0.25, 0.3125 }, -- NodeBox3
+	{ -0.25, -0.5, -0.25, 0.25, -0.375, 0.25 }, -- NodeBox4
+	{ -0.3125, 0.3125, -0.3125, 0.3125, 0.375, 0.3125 }, -- NodeBox5
+}
+
 --------------
 
 --crushed_iron_ore
@@ -293,4 +301,101 @@ minetest.register_node("tech:aluminium_ingot", {
 	paramtype2 = "facedir",
 	groups = { falling_node = 1, dig_immediate = 3, temp_pass = 1 },
 	sounds = nodes_nature.node_sound_stone_defaults(),
+})
+
+minetest.register_node("tech:aluminium_water_pot", {
+	description = S("Aluminium Water Pot"),
+	tiles = {
+		"tech_aluminium_pot_empty.png",
+		"tech_aluminium.png",
+		"tech_aluminium.png",
+		"tech_aluminium.png",
+		"tech_aluminium.png",
+		"tech_aluminium.png",
+	},
+	drawtype = "nodebox",
+	stack_max = minimal.stack_max_bulky,
+	paramtype = "light",
+	node_box = {
+		type = "fixed",
+		fixed = clay_pot_nodebox,
+	},
+	liquids_pointable = true,
+	on_use = function(itemstack, user, pointed_thing)
+		return liquid_store.on_use_empty_bucket(itemstack, user, pointed_thing)
+	end,
+	--collect rain water
+	on_construct = function(pos)
+		minetest.get_node_timer(pos):start(math.random(30, 60))
+	end,
+	on_timer = function(pos, elapsed)
+		return water_pot(pos, "tech:aluminium_water_pot", elapsed)
+	end,
+	groups = { dig_immediate = 3, pottery = 1, temp_pass = 1 },
+	sounds = nodes_nature.node_sound_stone_defaults(),
+})
+
+--clay pot with salt water
+liquid_store.register_stored_liquid(
+	"nodes_nature:salt_water_source",
+	"tech:aluminium_water_pot_salt_water",
+	"tech:aluminium_water_pot",
+	{
+		"tech_aluminium_pot_water.png",
+		"tech_aluminium.png",
+		"tech_aluminium.png",
+		"tech_aluminium.png",
+		"tech_aluminium.png",
+		"tech_aluminium.png",
+	},
+	{
+		type = "fixed",
+		fixed = clay_pot_nodebox,
+	},
+	S("Aluminium Pot with Salt Water"),
+	{ dig_immediate = 2 }
+)
+
+--clay pot with freshwater
+liquid_store.register_stored_liquid(
+	"nodes_nature:freshwater_source",
+	"tech:aluminium_water_pot_freshwater",
+	"tech:aluminium_water_pot",
+	{
+		"tech_aluminium_pot_water.png",
+		"tech_aluminium.png",
+		"tech_aluminium.png",
+		"tech_aluminium.png",
+		"tech_aluminium.png",
+		"tech_aluminium.png",
+	},
+	{
+		type = "fixed",
+		fixed = clay_pot_nodebox,
+	},
+	S("Aluminium Pot with Freshwater"),
+	{ dig_immediate = 2 }
+)
+
+--make freshwater Pot drinkable on click
+minetest.override_item("tech:aluminium_water_pot_freshwater", {
+	on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
+		local meta = clicker:get_meta()
+		local thirst = meta:get_int("thirst")
+		--only drink if thirsty
+		if thirst < 100 then
+			local water = 100 --you're skulling a whole bucket
+			thirst = thirst + water
+			if thirst > 100 then
+				thirst = 100
+			end
+
+			--could add disease risk, but different sources have different risks
+			--e.g. rain vs mud puddle
+
+			meta:set_int("thirst", thirst)
+			minimal.switch_node(pos, { name = "tech:aluminium_water_pot" })
+			minetest.sound_play("nodes_nature_slurp", { pos = pos, max_hear_distance = 3, gain = 0.25 })
+		end
+	end,
 })

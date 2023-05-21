@@ -43,6 +43,23 @@ crafting.register_recipe({
 	always_known = true,
 })
 
+-- Aluminium Windows
+
+crafting.register_recipe({
+	type = "anvil",
+	output = "tech:aluminium_window_green 4",
+	items = { "tech:aluminium_ingot", "tech:pane_green 4" },
+	level = 1,
+	always_known = true,
+})
+crafting.register_recipe({
+	type = "anvil",
+	output = "tech:aluminium_window_clear 4",
+	items = { "tech:aluminium_ingot", "tech:pane_clear 4" },
+	level = 1,
+	always_known = true,
+})
+
 -- Crafting
 -- Blown from glass
 -- For simplicity, crafts use charcoal as an ingredient, assuming its used for fuel somehow

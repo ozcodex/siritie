@@ -1,8 +1,6 @@
 ---------------- Upcomming --------------------
 
-- aluminium water containers
 - aluminium roof tiles
-- aluminium windows
 
 ----------------- New Ideas --------------------
 
@@ -66,6 +64,8 @@
 	- aurifex can be used for glazing pottery
 	- glazed pottery less probable to break
 	- add a mug and a jug to drink from (and not drink an entire pot)
+- aluminium roof tiles dismantling
+- completely rework the undoing recipes (reciclable materials and its categories, aluminium, clay, pottery, glass, bricks)
 - add a way to recicle broken pottery
 - new working station: animal cage for breeding, requires specific food
 - add a new item: the scythe, cuts the plant leaving a sprout to grow again
@@ -115,6 +115,8 @@
 - alchemical furnace (Athanor) to gold and fine metals work
 - make the current gold statues rarest or bronce, brass or azofar
 - add back broken pottery block
+- create an api for roasting (iron melting, glass, pottery, etc...)
+- add more sound effects and ambience sounds
 
 --------------- Already done -------------------
 
@@ -155,6 +157,8 @@
 - move clay oil lamp to the pottery wheel
 - remove large fire wood from crafting
 - make maximum fish trap the same limit as fish stack
+- aluminium water containers
+- aluminium windows
 
 ------------ Inhereit form Exile ----------------
 

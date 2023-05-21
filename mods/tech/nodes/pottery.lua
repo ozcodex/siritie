@@ -1,3 +1,57 @@
+-- nodeboxes
+clay_pot_nodebox = {
+	{ -0.25, 0.375, -0.25, 0.25, 0.5, 0.25 }, -- NodeBox1
+	{ -0.375, -0.25, -0.375, 0.375, 0.3125, 0.375 }, -- NodeBox2
+	{ -0.3125, -0.375, -0.3125, 0.3125, -0.25, 0.3125 }, -- NodeBox3
+	{ -0.25, -0.5, -0.25, 0.25, -0.375, 0.25 }, -- NodeBox4
+	{ -0.3125, 0.3125, -0.3125, 0.3125, 0.375, 0.3125 }, -- NodeBox5
+}
+
+clay_amphora_nodebox = {
+	{ -0.0625, 0.1875, -0.25, 0, 0.25, -0.0625 },
+	{ -0.0625, 0.125, -0.0625, 0.0625, 0.4375, 0.0625 },
+	{ -0.1875, 0.0625, -0.1875, 0.1875, 0.125, 0.1875 },
+	{ -0.25, 0, -0.25, 0.25, 0.0625, 0.25 },
+	{ -0.25, -0.3125, -0.25, 0.25, 0, 0.25 },
+	{ -0.1875, -0.375, -0.1875, 0.1875, -0.3125, 0.1875 },
+	{ -0.1875, -0.5, -0.1875, 0.1875, -0.4375, 0.1875 },
+	{ -0.125, -0.4375, -0.125, 0.125, -0.375, 0.125 },
+	{ -0.125, 0.125, -0.125, 0.125, 0.1875, 0.125 },
+	{ -0.125, 0.375, -0.125, 0.125, 0.4375, 0.125 },
+	{ -0.0625, -0.0625, -0.3125, 0, 0.25, -0.25 },
+	{ 0, -0.0625, 0.25, 0.0625, 0.25, 0.3125 },
+	{ 0, 0.1875, 0.0625, 0.0625, 0.25, 0.25 },
+}
+
+storage_pot_nodebox = {
+	{ -0.375, -0.5, -0.375, 0.375, -0.375, 0.375 },
+	{ -0.375, 0.375, -0.375, 0.375, 0.5, 0.375 },
+	{ -0.4375, -0.375, -0.4375, 0.4375, -0.25, 0.4375 },
+	{ -0.4375, 0.25, -0.4375, 0.4375, 0.375, 0.4375 },
+	{ -0.5, -0.25, -0.5, 0.5, 0.25, 0.5 },
+}
+
+clay_lamp_nodebox = {
+	{ -0.125, -0.5, -0.125, 0.125, -0.4375, 0.125 }, -- bottom
+	{ -0.0625, -0.4375, -0.0625, 0.0625, -0.3125, 0.0625 }, -- stand
+	{ -0.125, -0.3125, -0.125, 0.125, -0.125, 0.125 }, -- body
+	{ -0.0625, -0.25, 0.125, 0.0625, -0.125, 0.25 }, -- spout
+	{ -0.0625, -0.1875, -0.1875, 0.0625, -0.125, -0.125 }, -- handle
+	{ -0.0625, -0.3125, -0.1875, 0.0625, -0.25, -0.125 }, -- handle
+	{ -0.0625, -0.3125, -0.25, 0.0625, -0.125, -0.1875 }, -- handle
+}
+
+lit_clay_lamp_nodebox = {
+	{ -0.0625, -0.125, 0.25, 0.0625, 0.0625, 0.4375 }, -- flame
+	{ -0.125, -0.5, -0.125, 0.125, -0.4375, 0.125 }, -- bottom
+	{ -0.0625, -0.4375, -0.0625, 0.0625, -0.3125, 0.0625 }, -- stand
+	{ -0.125, -0.3125, -0.125, 0.125, -0.125, 0.125 }, -- body
+	{ -0.0625, -0.25, 0.125, 0.0625, -0.125, 0.25 }, -- spout
+	{ -0.0625, -0.1875, -0.1875, 0.0625, -0.125, -0.125 }, -- handle
+	{ -0.0625, -0.3125, -0.1875, 0.0625, -0.25, -0.125 }, -- handle
+	{ -0.0625, -0.3125, -0.25, 0.0625, -0.125, -0.1875 }, -- handle
+}
+
 ---
 --Broken Pottery
 --if you smash it up, or from failed firings
@@ -98,6 +152,95 @@ minetest.register_node("tech:clay_water_pot_unfired", {
 	end,
 })
 
+-----------------------------------------------
+--Register water stores
+--source, nodename, nodename_empty, tiles, node_box, desc, groups
+
+--clay pot with salt water
+liquid_store.register_stored_liquid(
+	"nodes_nature:salt_water_source",
+	"tech:clay_water_pot_salt_water",
+	"tech:clay_water_pot",
+	{
+		"tech_water_pot_water.png",
+		"tech_pottery.png",
+		"tech_pottery.png",
+		"tech_pottery.png",
+		"tech_pottery.png",
+		"tech_pottery.png",
+	},
+	{
+		type = "fixed",
+		fixed = clay_pot_nodebox,
+	},
+	S("Clay Water Pot with Salt Water"),
+	{ dig_immediate = 2 }
+)
+
+--clay pot with freshwater
+liquid_store.register_stored_liquid(
+	"nodes_nature:freshwater_source",
+	"tech:clay_water_pot_freshwater",
+	"tech:clay_water_pot",
+	{
+		"tech_water_pot_water.png",
+		"tech_pottery.png",
+		"tech_pottery.png",
+		"tech_pottery.png",
+		"tech_pottery.png",
+		"tech_pottery.png",
+	},
+	{
+		type = "fixed",
+		fixed = clay_pot_nodebox,
+	},
+	S("Clay Water Pot with Freshwater"),
+	{ dig_immediate = 2 }
+)
+
+--make freshwater Pot drinkable on click
+minetest.override_item("tech:clay_water_pot_freshwater", {
+	on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
+		local meta = clicker:get_meta()
+		local thirst = meta:get_int("thirst")
+		--only drink if thirsty
+		if thirst < 100 then
+			local water = 100 --you're skulling a whole bucket
+			thirst = thirst + water
+			if thirst > 100 then
+				thirst = 100
+			end
+
+			--could add disease risk, but different sources have different risks
+			--e.g. rain vs mud puddle
+
+			meta:set_int("thirst", thirst)
+			minimal.switch_node(pos, { name = "tech:clay_water_pot" })
+			minetest.sound_play("nodes_nature_slurp", { pos = pos, max_hear_distance = 3, gain = 0.25 })
+		end
+	end,
+})
+
+liquid_store.register_stored_liquid(
+	"nodes_nature:freshwater_source",
+	"tech:clay_amphora_freshwater",
+	"tech:clay_amphora",
+	{
+		"tech_amphora_water.png",
+		"tech_pottery.png",
+		"tech_pottery.png",
+		"tech_pottery.png",
+		"tech_pottery.png",
+		"tech_pottery.png",
+	},
+	{
+		type = "fixed",
+		fixed = clay_amphora_nodebox,
+	},
+	S("Clay Amphora with Freshwater"),
+	{ dig_immediate = 2 }
+)
+
 --------------------------------------
 --unfired storage pot (see storage for fired version)
 minetest.register_node("tech:clay_storage_pot_unfired", {
@@ -115,13 +258,7 @@ minetest.register_node("tech:clay_storage_pot_unfired", {
 	paramtype = "light",
 	node_box = {
 		type = "fixed",
-		fixed = {
-			{ -0.375, -0.5, -0.375, 0.375, -0.375, 0.375 },
-			{ -0.375, 0.375, -0.375, 0.375, 0.5, 0.375 },
-			{ -0.4375, -0.375, -0.4375, 0.4375, -0.25, 0.4375 },
-			{ -0.4375, 0.25, -0.4375, 0.4375, 0.375, 0.4375 },
-			{ -0.5, -0.25, -0.5, 0.5, 0.25, 0.5 },
-		},
+		fixed = storage_pot_nodebox,
 	},
 	groups = { dig_immediate = 3, temp_pass = 1, heatable = 20 },
 	sounds = nodes_nature.node_sound_stone_defaults(),
@@ -156,16 +293,7 @@ minetest.register_node("tech:clay_oil_lamp_unfired", {
 	use_texture_alpha = c_alpha.clip,
 	node_box = {
 		type = "fixed",
-		fixed = {
-			--{-0.0625, -0.125, 0.25, 0.0625, 0.0625, 0.4375}, -- flame
-			{ -0.125, -0.5, -0.125, 0.125, -0.4375, 0.125 }, -- bottom
-			{ -0.0625, -0.4375, -0.0625, 0.0625, -0.3125, 0.0625 }, -- stand
-			{ -0.125, -0.3125, -0.125, 0.125, -0.125, 0.125 }, -- body
-			{ -0.0625, -0.25, 0.125, 0.0625, -0.125, 0.25 }, -- spout
-			{ -0.0625, -0.1875, -0.1875, 0.0625, -0.125, -0.125 }, -- handle
-			{ -0.0625, -0.3125, -0.1875, 0.0625, -0.25, -0.125 }, -- handle
-			{ -0.0625, -0.3125, -0.25, 0.0625, -0.125, -0.1875 }, -- handle
-		},
+		fixed = clay_lamp_nodebox,
 	},
 	groups = { dig_immediate = 3, temp_pass = 1, falling_node = 1, heatable = 20 },
 	sounds = nodes_nature.node_sound_stone_defaults(),
@@ -197,16 +325,7 @@ minetest.register_node("tech:clay_oil_lamp_unlit", {
 	use_texture_alpha = c_alpha.clip,
 	node_box = {
 		type = "fixed",
-		fixed = {
-			--{-0.0625, -0.125, 0.25, 0.0625, 0.0625, 0.4375}, -- flame
-			{ -0.125, -0.5, -0.125, 0.125, -0.4375, 0.125 }, -- bottom
-			{ -0.0625, -0.4375, -0.0625, 0.0625, -0.3125, 0.0625 }, -- stand
-			{ -0.125, -0.3125, -0.125, 0.125, -0.125, 0.125 }, -- body
-			{ -0.0625, -0.25, 0.125, 0.0625, -0.125, 0.25 }, -- spout
-			{ -0.0625, -0.1875, -0.1875, 0.0625, -0.125, -0.125 }, -- handle
-			{ -0.0625, -0.3125, -0.1875, 0.0625, -0.25, -0.125 }, -- handle
-			{ -0.0625, -0.3125, -0.25, 0.0625, -0.125, -0.1875 }, -- handle
-		},
+		fixed = clay_lamp_nodebox,
 	},
 	groups = { dig_immediate = 3, pottery = 1, temp_pass = 1, falling_node = 1 },
 	sounds = nodes_nature.node_sound_stone_defaults(),
@@ -259,16 +378,7 @@ minetest.register_node("tech:clay_oil_lamp", {
 	paramtype2 = "facedir",
 	node_box = {
 		type = "fixed",
-		fixed = {
-			{ -0.0625, -0.125, 0.25, 0.0625, 0.0625, 0.4375 }, -- flame
-			{ -0.125, -0.5, -0.125, 0.125, -0.4375, 0.125 }, -- bottom
-			{ -0.0625, -0.4375, -0.0625, 0.0625, -0.3125, 0.0625 }, -- stand
-			{ -0.125, -0.3125, -0.125, 0.125, -0.125, 0.125 }, -- body
-			{ -0.0625, -0.25, 0.125, 0.0625, -0.125, 0.25 }, -- spout
-			{ -0.0625, -0.1875, -0.1875, 0.0625, -0.125, -0.125 }, -- handle
-			{ -0.0625, -0.3125, -0.1875, 0.0625, -0.25, -0.125 }, -- handle
-			{ -0.0625, -0.3125, -0.25, 0.0625, -0.125, -0.1875 }, -- handle
-		},
+		fixed = lit_clay_lamp_nodebox,
 	},
 	groups = { dig_immediate = 3, pottery = 1, temp_pass = 1, falling_node = 1, not_in_creative_inventory = 1 },
 	sounds = nodes_nature.node_sound_stone_defaults(),

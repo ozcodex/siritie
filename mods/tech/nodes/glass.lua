@@ -300,7 +300,7 @@ minetest.register_node("tech:pane_green", {
 	drawtype = "nodebox",
 	node_box = {
 		type = "fixed",
-		fixed = { { -1 / 2 + 1 / 10, -1 / 2, -1 / 32, 1 / 2 - 1 / 10, 1 / 2 - 2 / 10, 1 / 32 } }, -- Modified from xpanes
+		fixed = { -0.375000, -0.500000, -0.375000, 0.375000, -0.437500, 0.375000 },
 	},
 	stack_max = minimal.stack_max_medium * 2,
 	paramtype = "light",
@@ -319,7 +319,7 @@ minetest.register_node("tech:pane_clear", {
 	drawtype = "nodebox",
 	node_box = {
 		type = "fixed",
-		fixed = { { -1 / 2 + 1 / 10, -1 / 2, -1 / 32, 1 / 2 - 1 / 10, 1 / 2 - 2 / 10, 1 / 32 } }, -- Modified from xpanes
+		fixed = { -0.375000, -0.500000, -0.375000, 0.375000, -0.437500, 0.375000 },
 	},
 	stack_max = minimal.stack_max_medium * 2,
 	paramtype = "light",
@@ -370,6 +370,58 @@ minetest.register_node("tech:window_clear", {
 		"tech_clear_glass_window.png",
 	},
 	inventory_image = "tech_clear_glass_window.png^[noalpha",
+	drawtype = "nodebox",
+	node_box = {
+		type = "fixed",
+		fixed = { { -1 / 2, -1 / 2, -1 / 32, 1 / 2, 1 / 2, 1 / 32 } }, -- From xpanes
+	},
+	stack_max = minimal.stack_max_medium * 2,
+	paramtype = "light",
+	paramtype2 = "facedir",
+	groups = { cracky = 3, oddly_breakable_by_hand = 3 },
+	use_texture_alpha = c_alpha.blend,
+	sunlight_propagates = true,
+	sounds = nodes_nature.node_sound_glass_defaults(),
+	after_place_node = minimal.protection_after_place_node,
+})
+
+minetest.register_node("tech:aluminium_window_green", {
+	description = S("Green Glass Window"),
+	tiles = {
+		"tech_aluminium.png",
+		"tech_aluminium.png",
+		"tech_aluminium.png",
+		"tech_aluminium.png",
+		"tech_aluminium_green_glass_window.png",
+		"tech_aluminium_green_glass_window.png",
+	},
+	inventory_image = "tech_aluminium_green_glass_window.png^[noalpha",
+	drawtype = "nodebox",
+	node_box = {
+		type = "fixed",
+		fixed = { { -1 / 2, -1 / 2, -1 / 32, 1 / 2, 1 / 2, 1 / 32 } }, -- From xpanes
+	},
+	stack_max = minimal.stack_max_medium * 2,
+	paramtype = "light",
+	paramtype2 = "facedir",
+	groups = { cracky = 3, oddly_breakable_by_hand = 3 },
+	use_texture_alpha = c_alpha.blend,
+	sunlight_propagates = true,
+	sounds = nodes_nature.node_sound_glass_defaults(),
+	after_place_node = minimal.protection_after_place_node,
+})
+
+minetest.register_node("tech:aluminium_window_clear", {
+	description = S("Clear Glass Window"),
+	tiles = {
+		"tech_aluminium.png",
+		"tech_aluminium.png",
+		"tech_aluminium.png",
+		"tech_aluminium.png",
+		"tech_aluminium_clear_glass_window.png",
+		"tech_aluminium_clear_glass_window.png",
+	},
+	inventory_image = "tech_aluminium_clear_glass_window.png^[noalpha",
 	drawtype = "nodebox",
 	node_box = {
 		type = "fixed",

@@ -123,7 +123,7 @@ for i in ipairs(list) do
       type = "fixed",
       fixed = box,
     },
-    stack_max = stack / 2,
+    stack_max = stack,
     groups = { snappy = 3, dig_immediate = 3, falling_node = 1, temp_pass = 1, heatable = heat, compostable = 5 },
     sounds = nodes_nature.node_sound_defaults(),
   })
