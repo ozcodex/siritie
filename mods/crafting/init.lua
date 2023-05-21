@@ -24,28 +24,28 @@ dofile(minetest.get_modpath("crafting") .. "/async_craft.lua")
 dofile(minetest.get_modpath("crafting") .. "/gui.lua")
 dofile(minetest.get_modpath("crafting") .. "/stations.lua")
 
-crafting.register_type("mixing_spot")
-crafting.register_type("mixing_bucket")
-crafting.register_type("mortar_bucket")
-crafting.register_type("threshing_spot")
-crafting.register_type("hammering_block")
-crafting.register_type("chopping_block")
-crafting.register_type("masonry_bench")
-crafting.register_type("crafting_spot")
-crafting.register_type("clay_shaping_spot")
-crafting.register_type("weaving_frame")
-crafting.register_type("grinding_stone")
-crafting.register_type("mortar_and_pestle")
-crafting.register_type("anvil")
-crafting.register_type("carpentry_bench")
-crafting.register_type("brick_makers_bench")
-crafting.register_type("spinning_wheel")
-crafting.register_type("loom")
-crafting.register_type("glass_furnace")
-crafting.register_type("wattle_workstation")
-crafting.register_type("clay_mixing")
-crafting.register_type("pottery_wheel")
-crafting.register_type("alchemy_bench")
+crafting.register_type("alchemy_bench") -- alchemy_bench
+crafting.register_type("anvil") -- anvil
+crafting.register_type("brick_makers_bench") -- brick_makers_bench
+crafting.register_type("carpentry_bench") -- carpentry_bench
+crafting.register_type("chopping_block") -- chopping_block
+crafting.register_type("clay_mixing") -- clay_mixing_bucket
+crafting.register_type("clay_shaping_spot") -- clay_shaping_spot
+crafting.register_type("crafting_spot") -- crafting_spot
+crafting.register_type("glass_furnace") -- glass_furnace
+crafting.register_type("grinding_stone") -- grinding_stone_limestone
+crafting.register_type("hammering_block") -- hammering_block_basalt
+crafting.register_type("loom") -- loom
+crafting.register_type("masonry_bench") -- masonry_bench
+crafting.register_type("mixing_bucket") -- mixing_bucket
+crafting.register_type("mixing_spot") -- mixing_spot
+crafting.register_type("mortar_and_pestle") -- mortar_pestle_limestone
+crafting.register_type("mortar_bucket") -- lime_mortar_bucket
+crafting.register_type("pottery_wheel") -- pottery_wheel
+crafting.register_type("spinning_wheel") -- spinning_wheel
+crafting.register_type("threshing_spot") -- threshing_spot
+crafting.register_type("wattle_workstation") -- wattle_workstation
+crafting.register_type("weaving_frame") -- weaving_frame
 
 if minetest.global_exists("awards") then
 	awards.register_on_unlock(function(name, award)

@@ -1,156 +1,607 @@
-================== TIER 0 ===================
-can be recolected by hand:
+-----------------------------------------
 
-fibrous plants
-woody plants
-mushrooms
-tree leaves
-snow
-cobbles
-sand
-gravel
-animal eggs
-boulder
+Tier 0:
 
-inv:
-crafting spot
-sleeping spot
-threshing spot
-clay shaping spot
+player_api:hand_pale
+nodes_nature:alaf
+nodes_nature:anperla
+nodes_nature:basalt_boulder
+nodes_nature:bronach
+nodes_nature:claystone_block
+nodes_nature:conglomerate_block
+nodes_nature:damo
+nodes_nature:galanta
+nodes_nature:gitiri
+nodes_nature:gneiss_boulder
+nodes_nature:granite_boulder
+nodes_nature:hakimi
+nodes_nature:ironstone_boulder
+nodes_nature:jade_boulder
+nodes_nature:lambakap
+nodes_nature:limestone_boulder
+nodes_nature:mahal
+nodes_nature:marbhan
+nodes_nature:merki
+nodes_nature:momo
+nodes_nature:moss
+nodes_nature:nebiyi
+nodes_nature:reshedaar
+nodes_nature:sand_wet
+nodes_nature:sandstone_block
+nodes_nature:sari
+nodes_nature:siltstone_block
+nodes_nature:tanai
+nodes_nature:tashvish
+nodes_nature:thoka
+nodes_nature:tikusati
+nodes_nature:vansano
+nodes_nature:wiha
+nodes_nature:zufani
+nodes_nature:silt_wet
+nodes_nature:gravel
+nodes_nature:volcanic_ash
+nodes_nature:sand
+nodes_nature:silt
+nodes_nature:loam
+nodes_nature:basalt_cobble
+nodes_nature:gneiss_cobble
+nodes_nature:jade_cobble
+nodes_nature:cana
+nodes_nature:chalin
+nodes_nature:gravel_wet
+nodes_nature:loam_wet
+nodes_nature:loam_wet_salty
+nodes_nature:volcanic_ash_wet
+nodes_nature:volcanic_ash_wet_salty
+nodes_nature:gravel_wet_salty
+nodes_nature:sand_wet_salty
+nodes_nature:silt_wet_salty
+nodes_nature:limestone_cobble
+nodes_nature:ironstone_cobble
+nodes_nature:granite_cobble
+nodes_nature:gemedi
+nodes_nature:tiken
+nodes_nature:kelp
+nodes_nature:clay
+stairs:stair_clay
+stairs:stair_inner_clay
+stairs:stair_outer_clay
+stairs:slab_clay
+tech:clear_glass_ingot
+tech:green_glass_ingot
+tech:maraka_flour
+tech:potash
+tech:quicklime
+tech:retted_cana_bundle
+tech:roasted_iron_ore
+tech:roof_tile_loose
+tech:slaked_lime
+tech:charcoal
+tech:sleeping_spot
+tech:crafting_spot
+tech:threshing_spot
+tech:clay_shaping_spot
+-----------------------------------------
 
-================== TIER 1 ==================
+Tier 1:
 
-crafting spot:
-sticks
-stone knife
-limestone grinding stone
+nodes_nature:kagum_leaves
+wielded_light:chalin_1
+nodes_nature:maraka_leaves
+wielded_light:tiken_1
+nodes_nature:sasaran_leaves
+nodes_nature:tangkal_leaves
+tech:stick
+wielded_light:gemedi_1
+wielded_light:cana_1
+tech:stone_chopper
+tech:grinding_stone_limestone
+nodes_nature:moss_seed
+nodes_nature:gitiri_seed
+nodes_nature:sari_seed
+nodes_nature:tanai_seed
+nodes_nature:bronach_seed
+nodes_nature:thoka_seed
+nodes_nature:alaf_seed
+nodes_nature:damo_seed
+nodes_nature:vansano_seed
+nodes_nature:anperla_seed
+nodes_nature:tashvish_seed
+nodes_nature:reshedaar_seed
+nodes_nature:mahal_seed
+nodes_nature:tikusati_seed
+nodes_nature:nebiyi_seed
+nodes_nature:marbhan_seed
+nodes_nature:hakimi_seed
+nodes_nature:merki_seed
+nodes_nature:wiha_seed
+nodes_nature:zufani_seed
+nodes_nature:galanta_seed
+nodes_nature:momo_seed
+nodes_nature:lambakap_seed
+-----------------------------------------
 
-Threshing spot:
-anperla tuber
-plant seeds
-mushroom spores
+Tier 2:
 
-clay shaping spot:
-clay sundial
-clay smoker
-clay clay water pot
-clay storage pot
+tech:lever
+tech:peeled_anperla
+tech:torch
+tech:digging_stick
+tech:efigy
+tech:small_wood_fire_unlit
+spears:spear_stone
+inferno:fire_sticks
+tech:adze_granite
+tech:adze_jade
+tech:adze_basalt
+tech:stone_club
+tech:mortar_pestle_basalt
+tech:mortar_pestle_granite
+tech:mortar_pestle_limestone
+tech:grinding_stone_granite
+tech:roasted_iron_ore_powder
+tech:lime_mortar
+-----------------------------------------
 
-================== TIER 2 ==================
+Tier 3:
 
-Crafting spot:
-mixing bucket
-lever
-peeled anperla tuber
-torch
-digging stick
-effigy
-wood fire
-masonry toolset
-brickworks bench
-weaving frame
-wattle workstation
-dyers table
-stone spear
-firesticks
+nodes_nature:clay_wet
+nodes_nature:tangkal_log
+nodes_nature:sasaran_log
+nodes_nature:kagum_log
+tech:herbal_medicine
+tech:mashed_anperla
+tech:maraka_bread
+nodes_nature:glow_worm
+-----------------------------------------
 
-grinding stone:
-bonemeal
-adze
-stone club
-mortar and pestle
-granite grinding stone
+Tier 4:
 
-================== TIER 2 ==================
+tech:sundial_unfired
+tech:smoker_unfired
+tech:clay_water_pot_unfired
+tech:clay_storage_pot_unfired
+tech:chopping_block
+-----------------------------------------
 
-adze:
-tangkal
-sasaran
-kagum
+Tier 5:
 
-firing:
-clay sundial
-clay smoker
-clay clay water pot
-clay storage pot
-charcoal block
-cooked anperla tuber
+stairs:stair_tangkal_log
+stairs:stair_inner_tangkal_log
+stairs:stair_outer_tangkal_log
+stairs:slab_tangkal_log
+stairs:stair_sasaran_log
+stairs:stair_inner_sasaran_log
+stairs:stair_outer_sasaran_log
+stairs:slab_sasaran_log
+stairs:stair_kagum_log
+stairs:stair_inner_kagum_log
+stairs:stair_outer_kagum_log
+stairs:slab_kagum_log
+tech:primitive_wooden_chest
+tech:wooden_water_pot
+tech:stick 2
+tech:large_wood_fire_unlit
+tech:hammering_block_granite
+tech:hammering_block_basalt
+-----------------------------------------
 
-chiling:
-wood ash
+Tier 6:
 
-mixing bucket:
-loam
-agricultural soil
-snow block
-clay mixing bucket
+tech:composter_bin
+tech:stick 1
+tech:mixing_bucket
+tech:mixing_spot
+tech:brick_makers_bench
+nodes_nature:limestone_block
+nodes_nature:limestone_cobble2
+nodes_nature:ironstone_block
+nodes_nature:ironstone_cobble2
+nodes_nature:granite_block
+nodes_nature:granite_cobble2
+nodes_nature:basalt_block
+nodes_nature:basalt_cobble2
+nodes_nature:gneiss_block
+nodes_nature:gneiss_cobble2
+nodes_nature:jade_block
+nodes_nature:jade_cobble2
+tech:clear_glass_mix
+tech:crushed_basalt
+tech:crushed_gneiss
+tech:crushed_granite
+tech:crushed_iron_ore
+tech:iron_bloom
+tech:crushed_lime
+-----------------------------------------
 
-digging stick:
-clay
-siltstone
-claystone
-ice
-paths
+Tier 7:
 
-brickworks bench
-mudbrick
-drystack
-rammed earth
-loose bricks
-loose roof tiles
+tech:weaving_frame
+tech:wattle_workstation
+ncrafting:dye_table
+tech:iron_ingot
+tech:potash_block
+nodes_nature:silt_agricultural_soil
+nodes_nature:silt_agricultural_soil_wet
+nodes_nature:clay_agricultural_soil
+nodes_nature:clay_agricultural_soil_wet
+nodes_nature:volcanic_ash_agricultural_soil
+nodes_nature:volcanic_ash_agricultural_soil_wet
+nodes_nature:gravel_agricultural_soil
+nodes_nature:gravel_agricultural_soil_wet
+nodes_nature:loam_agricultural_soil
+nodes_nature:loam_agricultural_soil_wet
+nodes_nature:sand_agricultural_soil
+nodes_nature:sand_agricultural_soil_wet
+tech:lime_mortar_bucket
+tech:clay_mixing_bucket
+stairs:stair_silt
+stairs:stair_inner_silt
+stairs:stair_outer_silt
+stairs:slab_silt
+stairs:stair_volcanic_ash
+stairs:stair_inner_volcanic_ash
+stairs:stair_outer_volcanic_ash
+stairs:slab_volcanic_ash
+stairs:stair_gravel
+stairs:stair_inner_gravel
+stairs:stair_outer_gravel
+stairs:slab_gravel
+stairs:stair_loam
+stairs:stair_inner_loam
+stairs:stair_outer_loam
+stairs:slab_loam
+stairs:stair_sand
+stairs:stair_inner_sand
+stairs:stair_outer_sand
+stairs:slab_sand
+tech:charcoal_block
+tech:quartz_powder
+tech:drystack
+tech:mudbrick
+tech:rammed_earth
+tech:loose_brick_unfired
+tech:roof_tile_loose_unfired
+tech:roof_tile
+-----------------------------------------
 
-weaving frame:
-thatch
-woven storage basket
-woven clothing
-woven blanket
-woven bag
-rope ladder
+Tier 8:
 
-wattle workstation:
-primitive fishtrap
-wattle
-loose wattle
-wicker storage basket
-wicker bag
+tech:anvil
+tech:iron_smelting_mix
+tech:loose_brick
+tech:claystone_block_mortar
+tech:siltstone_block_mortar
+tech:sandstone_block_mortar
+tech:conglomerate_block_mortar
+tech:limestone_block_mortar
+tech:ironstone_block_mortar
+tech:granite_block_mortar
+tech:basalt_block_mortar
+tech:gneiss_block_mortar
+tech:jade_block_mortar
+stairs:stair_drystack
+stairs:stair_inner_drystack
+stairs:stair_outer_drystack
+stairs:slab_drystack
+tech:wattle
+tech:wattle_loose
+tech:wattle_door_frame
+tech:thatch
+tech:woven_storage_basket
+tech:woven_hat
+tech:woven_cape
+tech:woven_poncho
+tech:woven_leggings
+tech:woven_blanket
+backpacks:backpack_woven_bag
+ropes:ropeladder_top
+tech:crushed_charcoal_block
+stairs:stair_mudbrick
+stairs:stair_inner_mudbrick
+stairs:stair_outer_mudbrick
+stairs:slab_mudbrick
+stairs:stair_rammed_earth
+stairs:stair_inner_rammed_earth
+stairs:stair_outer_rammed_earth
+stairs:slab_rammed_earth
+tech:roof_tile_ic
+tech:roof_tile_oc
+tech:roof_ridge_tile
+-----------------------------------------
 
-dyers table:
-bundle of plants, untreaten
+Tier 9:
 
-================== TIER 3 ==================
+tech:glass_furnace
+doors:door_wattle
+tech:trapdoor_wattle
+stairs:slab_thatch
+tech:sleeping_mat
+tech:pane_tray
+tech:lantern_case
+tech:axe_iron
+tech:shovel_iron
+tech:mace_iron
+tech:pickaxe_iron
+tech:iron_fittings
+tech:nails
+spears:spear_steel
+-----------------------------------------
 
+Tier 10:
 
+nodes_nature:maraka_log
+tech:glass_bottle_green
+tech:glass_bottle_clear
+doors:door_iron
+tech:trapdoor_iron
+-----------------------------------------
 
+Tier 11:
 
+tech:carpentry_bench
+tech:broken_pottery
+-----------------------------------------
 
+Tier 12:
 
+stairs:stair_maraka_log
+stairs:stair_inner_maraka_log
+stairs:stair_outer_maraka_log
+stairs:slab_maraka_log
+canoe:canoe
+tech:pane_green
+tech:pane_clear
+tech:wooden_ladder
+tech:pottery_wheel
+tech:masonry_bench
+tech:spinning_wheel
+-----------------------------------------
 
+Tier 13:
 
+nodes_nature:sandstone_brick
+nodes_nature:siltstone_brick
+nodes_nature:claystone_brick
+nodes_nature:conglomerate_brick
+nodes_nature:limestone_brick
+stairs:stair_limestone_block
+stairs:stair_inner_limestone_block
+stairs:stair_outer_limestone_block
+stairs:slab_limestone_block
+nodes_nature:ironstone_brick
+stairs:stair_ironstone_block
+stairs:stair_inner_ironstone_block
+stairs:stair_outer_ironstone_block
+stairs:slab_ironstone_block
+nodes_nature:granite_brick
+stairs:stair_granite_block
+stairs:stair_inner_granite_block
+stairs:stair_outer_granite_block
+stairs:slab_granite_block
+nodes_nature:basalt_brick
+stairs:stair_basalt_block
+stairs:stair_inner_basalt_block
+stairs:stair_outer_basalt_block
+stairs:slab_basalt_block
+nodes_nature:gneiss_brick
+stairs:stair_gneiss_block
+stairs:stair_inner_gneiss_block
+stairs:stair_outer_gneiss_block
+stairs:slab_gneiss_block
+nodes_nature:jade_brick
+stairs:stair_jade_block
+stairs:stair_inner_jade_block
+stairs:stair_outer_jade_block
+stairs:slab_jade_block
+stairs:stair_limestone_block_mortar
+stairs:stair_inner_limestone_block_mortar
+stairs:stair_outer_limestone_block_mortar
+stairs:slab_limestone_block_mortar
+stairs:stair_ironstone_block_mortar
+stairs:stair_inner_ironstone_block_mortar
+stairs:stair_outer_ironstone_block_mortar
+stairs:slab_ironstone_block_mortar
+stairs:stair_granite_block_mortar
+stairs:stair_inner_granite_block_mortar
+stairs:stair_outer_granite_block_mortar
+stairs:slab_granite_block_mortar
+stairs:stair_basalt_block_mortar
+stairs:stair_inner_basalt_block_mortar
+stairs:stair_outer_basalt_block_mortar
+stairs:slab_basalt_block_mortar
+stairs:stair_gneiss_block_mortar
+stairs:stair_inner_gneiss_block_mortar
+stairs:stair_outer_gneiss_block_mortar
+stairs:slab_gneiss_block_mortar
+stairs:stair_jade_block_mortar
+stairs:stair_inner_jade_block_mortar
+stairs:stair_outer_jade_block_mortar
+stairs:slab_jade_block_mortar
+tech:clay_watering_can_unfired
+tech:alembic_unfired
+tech:clay_amphora_unfired
+tech:clay_crucible_unfired
+tech:clay_mortar_unfired
+tech:clay_oil_lamp_unfired
+tech:cooking_pot_unfired
+tech:seismoscope_unfired
+tech:coarse_fibre 1
+tech:fine_fibre
+-----------------------------------------
 
+Tier 14:
 
+tech:loom
+stairs:stair_sandstone_brick
+stairs:stair_inner_sandstone_brick
+stairs:stair_outer_sandstone_brick
+stairs:slab_sandstone_brick
+stairs:stair_siltstone_brick
+stairs:stair_inner_siltstone_brick
+stairs:stair_outer_siltstone_brick
+stairs:slab_siltstone_brick
+stairs:stair_claystone_brick
+stairs:stair_inner_claystone_brick
+stairs:stair_outer_claystone_brick
+stairs:slab_claystone_brick
+stairs:stair_conglomerate_brick
+stairs:stair_inner_conglomerate_brick
+stairs:stair_outer_conglomerate_brick
+stairs:slab_conglomerate_brick
+stairs:stair_limestone_brick
+stairs:stair_inner_limestone_brick
+stairs:stair_outer_limestone_brick
+stairs:slab_limestone_brick
+stairs:stair_ironstone_brick
+stairs:stair_inner_ironstone_brick
+stairs:stair_outer_ironstone_brick
+stairs:slab_ironstone_brick
+stairs:stair_granite_brick
+stairs:stair_inner_granite_brick
+stairs:stair_outer_granite_brick
+stairs:slab_granite_brick
+stairs:stair_basalt_brick
+stairs:stair_inner_basalt_brick
+stairs:stair_outer_basalt_brick
+stairs:slab_basalt_brick
+stairs:stair_gneiss_brick
+stairs:stair_inner_gneiss_brick
+stairs:stair_outer_gneiss_brick
+stairs:slab_gneiss_brick
+stairs:stair_jade_brick
+stairs:stair_inner_jade_brick
+stairs:stair_outer_jade_brick
+stairs:slab_jade_brick
+tech:claystone_brick_mortar
+tech:siltstone_brick_mortar
+tech:sandstone_brick_mortar
+tech:conglomerate_brick_mortar
+tech:limestone_brick_mortar
+tech:ironstone_brick_mortar
+tech:granite_brick_mortar
+tech:basalt_brick_mortar
+tech:gneiss_brick_mortar
+tech:jade_brick_mortar
+-----------------------------------------
 
+Tier 15:
 
+tech:fine_fabric
+stairs:stair_claystone_brick_mortar
+stairs:stair_inner_claystone_brick_mortar
+stairs:stair_outer_claystone_brick_mortar
+stairs:slab_claystone_brick_mortar
+stairs:stair_siltstone_brick_mortar
+stairs:stair_inner_siltstone_brick_mortar
+stairs:stair_outer_siltstone_brick_mortar
+stairs:slab_siltstone_brick_mortar
+stairs:stair_sandstone_brick_mortar
+stairs:stair_inner_sandstone_brick_mortar
+stairs:stair_outer_sandstone_brick_mortar
+stairs:slab_sandstone_brick_mortar
+stairs:stair_conglomerate_brick_mortar
+stairs:stair_inner_conglomerate_brick_mortar
+stairs:stair_outer_conglomerate_brick_mortar
+stairs:slab_conglomerate_brick_mortar
+stairs:stair_limestone_brick_mortar
+stairs:stair_inner_limestone_brick_mortar
+stairs:stair_outer_limestone_brick_mortar
+stairs:slab_limestone_brick_mortar
+stairs:stair_ironstone_brick_mortar
+stairs:stair_inner_ironstone_brick_mortar
+stairs:stair_outer_ironstone_brick_mortar
+stairs:slab_ironstone_brick_mortar
+stairs:stair_granite_brick_mortar
+stairs:stair_inner_granite_brick_mortar
+stairs:stair_outer_granite_brick_mortar
+stairs:slab_granite_brick_mortar
+stairs:stair_basalt_brick_mortar
+stairs:stair_inner_basalt_brick_mortar
+stairs:stair_outer_basalt_brick_mortar
+stairs:slab_basalt_brick_mortar
+stairs:stair_gneiss_brick_mortar
+stairs:stair_inner_gneiss_brick_mortar
+stairs:stair_outer_gneiss_brick_mortar
+stairs:slab_gneiss_brick_mortar
+stairs:stair_jade_brick_mortar
+stairs:stair_inner_jade_brick_mortar
+stairs:stair_outer_jade_brick_mortar
+stairs:slab_jade_brick_mortar
+-----------------------------------------
 
+Tier 16:
 
+tech:light_fabric_hat
+tech:thick_fabric_hat
+tech:light_fabric_cape
+tech:thick_fabric_cape
+tech:light_fabric_trousers
+tech:thick_fabric_trousers
+tech:light_fabric_tunic
+tech:thick_fabric_tunic
+-----------------------------------------
 
+Tier 17:
 
-
-
-wattle workstation:
-wattle door
-wattle door frame
-wattle trapdoor
-
-weaving frame:
-thatch slab
-sleeping mat
-
-
-pickaxe:
-granite block
-
-
-
-
-
-
+tech:window_green
+tech:window_clear
+tech:wooden_chest
+tech:wooden_floor_boards
+tech:wooden_stairs
+tech:bed
+tech:alchemy_bench
+doors:door_wooden
+tech:trapdoor_wooden
+ropes:wood1rope_block
+ncrafting:dye_pot
+tech:glass_retort
+tech:glass_vessel
+tech:green_glass_mix
+tech:mattress
+tech:coarse_fabric
+backpacks:backpack_fabric_bag
+nodes_nature:snow_block
+nodes_nature:snow
+nodes_nature:ice
+tech:wood_ash
+tech:wood_ash_block
+tech:tiku
+tech:tang_unfermented
+tech:mashed_wiha
+tech:wiha_must_pot
+tech:maraka_flour_bitter
+tech:vegetable_oil
+tech:paint_lime_white
+tech:paint_glow_paint
+tech:paint_carbon_black_paint
+tech:paint_red_ochre_paint
+stairs:stair_bricks_and_mortar
+stairs:stair_inner_bricks_and_mortar
+stairs:stair_outer_bricks_and_mortar
+stairs:slab_bricks_and_mortar
+tech:bricks_and_mortar 1
+tech:unretted_cana_bundle
+tech:bricks_and_mortar
+tech:fishtrap
+tech:wicker_storage_basket
+backpacks:backpack_wicker_bag
+tech:primitive_bed
+tech:bonemeal
+tech:nightstone
+tech:nephritic_stone
+tech:activated_carbon
+tech:brimstone
+tech:star_dust
+tech:saltpeter
+tech:serpentine
+tech:soap_uncured
+tech:tartar_salt
+tech:aluminium_mix
+tech:acrimoniac_amphora
+tech:vitriol_vessel
+tech:aurifex
+tech:elixir_vitae
+tech:peridot
+tech:fermented_tartaris_syrup_amphora
+tech:iron_chest

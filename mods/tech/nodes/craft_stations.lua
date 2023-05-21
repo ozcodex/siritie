@@ -27,65 +27,7 @@ minetest.register_node("tech:crafting_spot", {
     minetest.remove_node(pos)
   end,
 })
---Mixing spot
---rearranging previously existing stuff (e.g. stairs, slabs)
--- New one is Masonry Toolset
-minetest.register_node("tech:mixing_spot", {
-  description = S("Masonry Toolset"),
-  tiles = { "tech_stick.png" },
-  drawtype = "nodebox",
-  inventory_image = "tech_mixing_spot_inv.png",
-  node_box = {
-    type = "fixed",
-    fixed = {
-      -- side 1
-      { -0.3750, -0.5000, -0.3125, -0.3125, -0.3750, -0.2500 },
-      { -0.3125, -0.3750, -0.3125, -0.2500, -0.2500, -0.2500 },
-      { -0.2500, -0.2500, -0.3125, -0.1875, -0.1250, -0.2500 },
-      { -0.1875, -0.1250, -0.3125, -0.1250, 0.0000, -0.2500 },
-      { -0.1250, 0.0000, -0.3125, -0.0625, 0.1250, -0.2500 },
 
-      -- tip
-      { -0.0625, 0.1250, -0.3125, 0.0000, 0.1875, -0.2500 },
-      -- plummet
-      { -0.0625, -0.3750, -0.3125, 0.0000, -0.2500, -0.2500 },
-
-      -- side 2
-      { 0.3125, -0.5000, -0.3125, 0.2500, -0.3750, -0.2500 },
-      { 0.2500, -0.3750, -0.3125, 0.1875, -0.2500, -0.2500 },
-      { 0.1875, -0.2500, -0.3125, 0.1250, -0.1250, -0.2500 },
-      { 0.1250, -0.1250, -0.3125, 0.0625, 0.0000, -0.2500 },
-      { 0.0625, 0.0000, -0.3125, 0.0000, 0.1250, -0.2500 },
-
-      -- crossbar
-      { -0.2500, -0.1875, -0.2500, 0.1875, -0.1250, -0.1875 },
-      -- string
-      { -0.04125, -0.2500, -0.29125, -0.02125, 0.1250, -0.27125 },
-
-      --Mullet
-      { -0.3125, -0.5000, -0.1250, -0.1250, -0.3125, 0.1250 },
-      { -0.2500, -0.4375, 0.1250, -0.1875, -0.3750, 0.2500 },
-
-      -- Square
-      { 0.0000, -0.5000, -0.1250, 0.2500, -0.46875, -0.0625 },
-      { 0.1875, -0.5000, -0.0625, 0.2500, -0.46875, 0.1250 },
-
-      --chisel
-      { -0.1250, -0.5000, 0.1875, 0.1250, -0.4375, 0.2500 },
-      { 0.1250, -0.47875, 0.1875, 0.1875, -0.45875, 0.2500 },
-    },
-  },
-  stack_max = 1,
-  paramtype = "light",
-  use_texture_alpha = c_alpha.clip,
-  walkable = false,
-  buildable_to = true,
-  floodable = true,
-  groups = { dig_immediate = 3, falling_node = 1, temp_pass = 1, nobones = 1 },
-  sounds = nodes_nature.node_sound_wood_defaults(),
-  sunlight_propagates = true,
-  on_rightclick = crafting.make_on_rightclick("mixing_spot", 2, { x = 8, y = 3 }),
-})
 --Threshing spot
 --extracting seeds from plants
 minetest.register_node("tech:threshing_spot", {
@@ -120,85 +62,6 @@ minetest.register_node("tech:threshing_spot", {
       "dry ground",
       { { "puts_out_fire", 1 } },
       {}
-    )
-  end,
-  on_punch = function(pos, node, player)
-    minetest.remove_node(pos)
-  end,
-})
--------------------
---Location limited
---weaving spot
-minetest.register_node("tech:weaving_spot", {
-  description = S("Weaving Spot"),
-  tiles = { "tech_station_weaving_spot.png" },
-  drawtype = "nodebox",
-  node_box = {
-    type = "fixed",
-    fixed = { -0.5, -0.5, -0.5, 0.5, -0.45, 0.5 },
-  },
-  selection_box = {
-    type = "fixed",
-    fixed = { -0.5, -0.5, -0.5, 0.5, -0.25, 0.5 },
-  },
-  stack_max = 1,
-  paramtype = "light",
-  use_texture_alpha = c_alpha.clip,
-  walkable = false,
-  buildable_to = true,
-  floodable = true,
-  groups = { dig_immediate = 3, attached_node = 1, temp_pass = 1, nobones = 1 },
-  sounds = nodes_nature.node_sound_stone_defaults(),
-  sunlight_propagates = true,
-  on_rightclick = crafting.make_on_rightclick("weaving_frame", 2, { x = 8, y = 3 }),
-  on_place = function(itemstack, placer, pointed_thing)
-    return on_place_loclim_spot(
-      itemstack,
-      placer,
-      pointed_thing,
-      {},
-      {},
-      "dry ground",
-      { { "puts_out_fire", 1 } },
-      {}
-    )
-  end,
-  on_punch = function(pos, node, player)
-    minetest.remove_node(pos)
-  end,
-})
---grinding spot
---for grinding stone tools
-minetest.register_node("tech:grinding_spot", {
-  description = S("Grinding Spot"),
-  tiles = { "tech_station_grinding_spot.png" },
-  drawtype = "nodebox",
-  node_box = {
-    type = "fixed",
-    fixed = { -0.5, -0.5, -0.5, 0.5, -0.45, 0.5 },
-  },
-  selection_box = {
-    type = "fixed",
-    fixed = { -0.5, -0.5, -0.5, 0.5, -0.25, 0.5 },
-  },
-  stack_max = 1,
-  paramtype = "light",
-  use_texture_alpha = c_alpha.clip,
-  walkable = false,
-  buildable_to = true,
-  floodable = true,
-  groups = { dig_immediate = 3, attached_node = 1, temp_pass = 1, nobones = 1 },
-  sounds = nodes_nature.node_sound_stone_defaults(),
-  sunlight_propagates = true,
-  on_rightclick = crafting.make_on_rightclick("grinding_stone", 2, { x = 8, y = 3 }),
-  on_place = function(itemstack, placer, pointed_thing)
-    return on_place_loclim_spot(
-      itemstack,
-      placer,
-      pointed_thing,
-      { { "stone", 1 }, { "masonry", 1 }, { "boulder", 1 } },
-      { "nodes_nature:sandstone" },
-      "hard stone, masonry, or sandstone"
     )
   end,
   on_punch = function(pos, node, player)
@@ -271,29 +134,65 @@ minetest.register_node("tech:clay_shaping_spot", {
     minetest.remove_node(pos)
   end,
 })
-------------------------------
---Tool based
---chopping_block --crude wood crafts,
-minetest.register_node("tech:chopping_block", {
-  description = S("Chopping Block"),
-  tiles = {
-    "tech_chopping_block_top.png",
-    "tech_chopping_block_top.png",
-    "tech_chopping_block.png",
-    "tech_chopping_block.png",
-    "tech_chopping_block.png",
-    "tech_chopping_block.png",
-  },
+
+-- mixing
+
+--- New one is Masonry Toolset
+minetest.register_node("tech:mixing_spot", {
+  description = S("Masonry Toolset"),
+  tiles = { "tech_stick.png" },
   drawtype = "nodebox",
+  inventory_image = "tech_mixing_spot_inv.png",
   node_box = {
     type = "fixed",
-    fixed = { -0.43, -0.5, -0.43, 0.43, 0.38, 0.43 },
+    fixed = {
+      -- side 1
+      { -0.3750, -0.5000, -0.3125, -0.3125, -0.3750, -0.2500 },
+      { -0.3125, -0.3750, -0.3125, -0.2500, -0.2500, -0.2500 },
+      { -0.2500, -0.2500, -0.3125, -0.1875, -0.1250, -0.2500 },
+      { -0.1875, -0.1250, -0.3125, -0.1250, 0.0000, -0.2500 },
+      { -0.1250, 0.0000, -0.3125, -0.0625, 0.1250, -0.2500 },
+
+      -- tip
+      { -0.0625, 0.1250, -0.3125, 0.0000, 0.1875, -0.2500 },
+      -- plummet
+      { -0.0625, -0.3750, -0.3125, 0.0000, -0.2500, -0.2500 },
+
+      -- side 2
+      { 0.3125, -0.5000, -0.3125, 0.2500, -0.3750, -0.2500 },
+      { 0.2500, -0.3750, -0.3125, 0.1875, -0.2500, -0.2500 },
+      { 0.1875, -0.2500, -0.3125, 0.1250, -0.1250, -0.2500 },
+      { 0.1250, -0.1250, -0.3125, 0.0625, 0.0000, -0.2500 },
+      { 0.0625, 0.0000, -0.3125, 0.0000, 0.1250, -0.2500 },
+
+      -- crossbar
+      { -0.2500, -0.1875, -0.2500, 0.1875, -0.1250, -0.1875 },
+      -- string
+      { -0.04125, -0.2500, -0.29125, -0.02125, 0.1250, -0.27125 },
+
+      --Mullet
+      { -0.3125, -0.5000, -0.1250, -0.1250, -0.3125, 0.1250 },
+      { -0.2500, -0.4375, 0.1250, -0.1875, -0.3750, 0.2500 },
+
+      -- Square
+      { 0.0000, -0.5000, -0.1250, 0.2500, -0.46875, -0.0625 },
+      { 0.1875, -0.5000, -0.0625, 0.2500, -0.46875, 0.1250 },
+
+      --chisel
+      { -0.1250, -0.5000, 0.1875, 0.1250, -0.4375, 0.2500 },
+      { 0.1250, -0.47875, 0.1875, 0.1875, -0.45875, 0.2500 },
+    },
   },
-  stack_max = minimal.stack_max_bulky,
+  stack_max = 1,
   paramtype = "light",
-  groups = { dig_immediate = 3, falling_node = 1, temp_pass = 1, craftedby = 1 },
+  use_texture_alpha = c_alpha.clip,
+  walkable = false,
+  buildable_to = true,
+  floodable = true,
+  groups = { dig_immediate = 3, falling_node = 1, temp_pass = 1, nobones = 1 },
   sounds = nodes_nature.node_sound_wood_defaults(),
-  on_rightclick = crafting.make_on_rightclick("chopping_block", 2, { x = 8, y = 3 }),
+  sunlight_propagates = true,
+  on_rightclick = crafting.make_on_rightclick("mixing_spot", 2, { x = 8, y = 3 }),
 })
 
 ------------------------------

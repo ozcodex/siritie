@@ -33,7 +33,7 @@ dofile(modpath .. "/protection.lua")
 dofile(modpath .. "/utility.lua")
 dofile(modpath .. "/infotext.lua")
 dofile(modpath .. "/metadata.lua")
-dofile(modpath .. "/debug.lua")
+-- dofile(modpath .. "/debug.lua")
 
 -- GUI related stuff
 

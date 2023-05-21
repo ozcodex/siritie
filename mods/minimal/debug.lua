@@ -192,6 +192,35 @@ local function getGroupedNodes(group)
 end
 --------------------------------------------------------------------------------
 
+-- craft station item
+local function getCraftStation(craftingType)
+    local preferred_stations = {
+        alchemy_bench = "tech:alchemy_bench",
+        anvil = "tech:anvil",
+        brick_makers_bench = "tech:brick_makers_bench",
+        carpentry_bench = "tech:carpentry_bench",
+        chopping_block = "tech:chopping_block",
+        clay_mixing = "tech:clay_mixing_bucket",
+        clay_shaping_spot = "tech:clay_shaping_spot",
+        crafting_spot = "tech:crafting_spot",
+        glass_furnace = "tech:glass_furnace",
+        grinding_stone = "tech:grinding_stone_limestone",
+        hammering_block = "tech:hammering_block_basalt",
+        loom = "tech:loom",
+        masonry_bench = "tech:masonry_bench",
+        mixing_bucket = "tech:mixing_bucket",
+        mixing_spot = "tech:mixing_spot",
+        mortar_and_pestle = "tech:mortar_pestle_limestone",
+        mortar_bucket = "tech:lime_mortar_bucket",
+        pottery_wheel = "tech:pottery_wheel",
+        spinning_wheel = "tech:spinning_wheel",
+        threshing_spot = "tech:threshing_spot",
+        wattle_workstation = "tech:wattle_workstation",
+        weaving_frame = "tech:weaving_frame",
+    }
+    return preferred_stations[craftingType]
+end
+
 -- checks if item is in at least one of the previous tiers
 local function isInPreviousTiers(tieredTable, item, tier)
     for i = 0, tier - 1 do
@@ -222,67 +251,70 @@ local function buildTieredTable(tieredTable, craftingRecipes, tier)
         -- Initialize the table for the current tier
         tieredTable[tier] = {}
     end
-    for _, craftingType in pairs(craftingRecipes) do
-        -- loop through all recipes
-        for _, recipe in ipairs(craftingType) do
-            -- assume recipe is crafteable
-            local isRecipeCrafteable = true
-            -- loop over the items
-            for _, item in ipairs(recipe.items) do
-                local item = sanitizeItem(item)
-                -- assume item is crafteable
-                local isItemCrafteable = true
-                -- check if item is group
-                if isGroup(item) then
-                    local group = sanitizeGroup(item)
-                    local isGroupCrafteable = false
-                    for _, node in ipairs(getGroupedNodes(group)) do
-                        local node = sanitizeItem(node)
-                        -- if at least one node is crafteable then the group is crafteable
-                        if isInPreviousTiers(tieredTable, node, tier) then
-                            isGroupCrafteable = true
+    for craftingTypeName, craftingType in pairs(craftingRecipes) do
+        -- check if this crafting Type is unlocked
+        local station = getCraftStation(craftingTypeName)
+        if station and isInPreviousTiers(tieredTable, station, tier) then
+            -- loop through all recipes
+            for _, recipe in ipairs(craftingType) do
+                -- assume recipe is crafteable
+                local isRecipeCrafteable = true
+                -- loop over the items
+                for _, item in ipairs(recipe.items) do
+                    local item = sanitizeItem(item)
+                    -- assume item is crafteable
+                    local isItemCrafteable = true
+                    -- check if item is group
+                    if isGroup(item) then
+                        local group = sanitizeGroup(item)
+                        local isGroupCrafteable = false
+                        for _, node in ipairs(getGroupedNodes(group)) do
+                            local node = sanitizeItem(node)
+                            -- if at least one node is crafteable then the group is crafteable
+                            if isInPreviousTiers(tieredTable, node, tier) then
+                                isGroupCrafteable = true
+                            end
+                            -- check if item is minable with tools in previous tiers
+                            if
+                                isMinableWithPreviousTiers(tieredTable, node, tier)
+                                and not isOutputNode(node, craftingRecipes)
+                                and not isInPreviousTiers(tieredTable, node, tier)
+                            then
+                                -- add it to current tier
+                                insertInto(tieredTable[tier], node)
+                            end
                         end
-                        -- check if item is minable with tools in previous tiers
+                        -- if group is not crafteable then recipe is not crafteable
+                        if not isGroupCrafteable then
+                            isItemCrafteable = false
+                        end
+                    else
+                        -- is a normal item, check for they in previous tiers
+                        if not isInPreviousTiers(tieredTable, item, tier) then
+                            isItemCrafteable = false
+                        end
+                        -- check if item is minable, so it can be added to current tier
                         if
-                            isMinableWithPreviousTiers(tieredTable, node, tier)
-                            and not isOutputNode(node, craftingRecipes)
-                            and not isInPreviousTiers(tieredTable, node, tier)
+                            isMinableWithPreviousTiers(tieredTable, item, tier)
+                            and not isOutputNode(item, craftingRecipes)
+                            and not isInPreviousTiers(tieredTable, item, tier)
                         then
                             -- add it to current tier
-                            insertInto(tieredTable[tier], node)
+                            insertInto(tieredTable[tier], item)
                         end
                     end
-                    -- if group is not crafteable then recipe is not crafteable
-                    if not isGroupCrafteable then
-                        print("no " .. group .. " nodes available")
-                        isItemCrafteable = false
+                    if not isItemCrafteable then
+                        -- with at least one item in the recipe that is not obteinable
+                        isRecipeCrafteable = false
                     end
-                else
-                    -- is a normal item, check for they in previous tiers
+                end
+                if isRecipeCrafteable then
+                    local item = sanitizeItem(recipe.output)
+                    -- if the recipe can be completed, add the output item to tier
+                    -- only add it if it doesn't exist in previous tiers
                     if not isInPreviousTiers(tieredTable, item, tier) then
-                        isItemCrafteable = false
-                    end
-                    -- check if item is minable, so it can be added to current tier
-                    if
-                        isMinableWithPreviousTiers(tieredTable, item, tier)
-                        and not isOutputNode(item, craftingRecipes)
-                        and not isInPreviousTiers(tieredTable, item, tier)
-                    then
-                        -- add it to current tier
                         insertInto(tieredTable[tier], item)
                     end
-                end
-                if not isItemCrafteable then
-                    -- with at least one item in the recipe that is not obteinable
-                    isRecipeCrafteable = false
-                end
-            end
-            if isRecipeCrafteable then
-                local item = sanitizeItem(recipe.output)
-                -- if the recipe can be completed, add the output item to tier
-                -- only add it if it doesn't exist in previous tiers
-                if not isInPreviousTiers(tieredTable, item, tier) then
-                    insertInto(tieredTable[tier], item)
                 end
             end
         end
@@ -290,7 +322,17 @@ local function buildTieredTable(tieredTable, craftingRecipes, tier)
 
     print("tier_" .. tier .. ":" .. #tieredTable[tier] .. " items")
     -- if tier is empty finish the recursion
-    if #tieredTable[tier] == 0 or tier > 20 then
+    if #tieredTable[tier] == 0 then
+        -- add as last tier the incrafteables
+        for craftingTypeName, craftingType in pairs(craftingRecipes) do
+            for _, recipe in ipairs(craftingType) do
+                local item = sanitizeItem(recipe.output)
+                if not isInPreviousTiers(tieredTable, item, tier) then
+                    insertInto(tieredTable[tier], item)
+                end
+            end
+        end
+
         return tieredTable
     else
         return buildTieredTable(tieredTable, craftingRecipes, tier + 1)
@@ -379,6 +421,7 @@ local function createTieredTable(craftingRecipes)
             "tech:roasted_iron_ore",
             "tech:roof_tile_loose",
             "tech:slaked_lime",
+            "tech:charcoal",
             -- free starting recipes
             "tech:sleeping_spot",
             "tech:crafting_spot",
