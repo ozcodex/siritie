@@ -117,6 +117,17 @@
 - add back broken pottery block
 - create an api for roasting (iron melting, glass, pottery, etc...)
 - add more sound effects and ambience sounds
+- make clothing cheaper
+- return effigy when destroyed
+- add Sari flour from seeds, use it to make bread
+- add to spear, if pointing thing has on right click dont throw
+- shift + ckick disables the slab merging
+- basalt and granite hammering blocks are swapped
+- fix enter on container crashing the game
+- make paths turn into soil if the node on top is not air
+- on sleep thrist and hunger decreases faster, energy increases faster
+- increase food values
+- add random drops to certain nature blocks
 
 --------------- Already done -------------------
 

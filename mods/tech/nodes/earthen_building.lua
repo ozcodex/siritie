@@ -31,7 +31,6 @@ stairs.register_stair_and_slab(
 minetest.register_node("tech:mudbrick", {
 	description = S("Mudbrick"),
 	tiles = { "tech_mudbrick.png" },
-	drop = "nodes_nature:clay",
 	stack_max = minimal.stack_max_heavy,
 	groups = { crumbly = 2, cracky = 3, oddly_breakable_by_hand = 1 },
 	sounds = nodes_nature.node_sound_dirt_defaults(),
@@ -49,7 +48,7 @@ stairs.register_stair_and_slab(
 	minimal.stack_max_large,
 	nodes_nature.node_sound_dirt_defaults(),
 	nil,
-	"nodes_nature:clay"
+	"tech:mudbrick"
 )
 
 ------------------------------------------
