@@ -60,6 +60,7 @@
 	- remove transporters and reviwe artifacts
 	- leather works
 	- bones can be found all arround the place
+	- gems that only can be found in chests: Diamonds, Sapphires, Emeralds, Ruby, Aquamarine
 - Masonry toolset rework:
 	-remove all the sairs and slabs recipes
 	- make the toolset able to make all the stairs and slabs
@@ -140,18 +141,19 @@
 - redesign the alembic and make it work only with the amphora
 - add random drops to certain nature blocks:
 	- bauxita from claystone
-	- pyrite from ironstone
+	- Pyrite from ironstone
 	- flint from gravel
 	- enigmatic sand clump from sand
 	- glass pieces, sea shells, ancient machine components, ancient key from enigmatic sand clump
 	- fossiliferous rock from limestone and claystone
-	- magnetite or iron nugget form ironstone
-	- Quartz, Amethyst, Jasper, Garnet form granite
+	- magnetite, iron nugget, Malachite form ironstone
+	- Quartz, Amethyst, Jasper, Garnet, Aquamarine form granite
 	- Quartz, Labradorite from gneiss
 	- Citrine, Agate from sandstone
-	- Calcite, Fluorite,Onyx from limestone
+	- calcite, Fluorite, Onyx from limestone
 	- Obsidian, Labradorite, Amethyst, Garnet from basalt
 	- Opal, Agate, Jasper from claystone
+	- Amber, Opal from siltstone
 	- Obsidian, Peridot from volcanic ash
 	- invertebrate carcass from loam and silt
 	- ancient machine components, ancient key from clay

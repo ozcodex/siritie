@@ -87,3 +87,9 @@ Materiales que quizas necesite añadir:
 
     • Pirita para extraer azufre
     • Bauxita para extraer aluminio
+    • Traces of copper from sandstone
+    • Traces of silver from siltstone
+    • Traces of Nickel from ironstone
+    • Traces of Tin from granite
+    • Traces of Gold from feldespat
+    • Traces of Gold from feldespat
