@@ -50,7 +50,7 @@ To sustain yourself, you can catch animals with clubs and explore farming for a 
 
 Fibrous plants, sticks and stones are fine as initial tools, but woodcutting requires better tools for harder woods. Build stairs and shelters around your base to save energy and protect you from extremes. Use sticks to build a ladder or pole to shimmy up, to get to high places or descend carefully.
 
-Not every step in crafting can be done at a work station, so consider the environment and industry you need to create to advance. Build ovens, kilns, and furnaces just as you would in real life, and start a fire with access to air and a sealed chamber that gets heated up. Blocks are hotter than slabs, and charcoal is hotter than wood. Fires can be temporarily extinguished by punching while holding sediment, and charcoal can be made by creating a wood fire sealed up to limit airflow.
+Not every step in crafting can be done at a work station, so consider the environment and industry you need to create to advance. Build ovens, kilns, and furnaces just as you would in real life, and start a fire with access to air and a sealed chamber that gets heated up. Blocks are hotter than slabs, and charcoal is hotter than wood. Two slabs, one on top of another chreates a whole block. Fires can be temporarily extinguished by punching while holding sediment, and charcoal can be made by creating a wood fire sealed up to limit airflow.
 
 If you're looking to make green or clear glass, sand and wood-ash can be made into green glass, but clear glass requires the ash to be soaked, dried, and roasted. Glass can be melted onto iron trays to make panes for real windows! Iron smelting is hard and requires plenty of charcoal and a space below the iron mixture for slag to drain out.
 

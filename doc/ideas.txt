@@ -40,11 +40,26 @@
 	- extact condiments from plants.
 - underground improvement
 	- add more randomness, probabilities
-	- add books or tablets on the under ground city with recipes for alchemy
+	- add books, scrolls or tablets on the under ground city with recipes for alchemyand lore
 	- add alchemy materials to the underground city, specially volcanic ash
 	- add a arcana container that has to be broken to be opened with common lot on the underground
 	- acrana container can be a sealed ceramic urn
 	- add boooks or pages with lore, that are collectible
+	- improve the Enigmatic Artifacts to make them sound more enigmatics
+	- Forgotten Jewelry: ancient rings, amulets, or bracelets. 
+	- robots npcs, had to repair and fuel them
+	- antique machines in the underground
+	- traps in the underground
+	- robots can give info, interact throug mesages, tell lore, or interchange items
+	- procedural generated stories
+	- minigames against the robots, different kind of robots
+	- gambling machines with coins, can be found it the sealed urns or crafted from gold
+	- chest that can be picked or unlocked with ancient keys
+	- brass, copper, and bronze are common in the underground
+	- antiquoorium metal working
+	- remove transporters and reviwe artifacts
+	- leather works
+	- bones can be found all arround the place
 - Masonry toolset rework:
 	-remove all the sairs and slabs recipes
 	- make the toolset able to make all the stairs and slabs
@@ -87,15 +102,8 @@
 - add bees and honey 
 - wood poles, like sticks, decorative, reach higher places
 - Clothing Accesories
-- robots npcs, had to repair and fuel them
-- antique machines in the underground
-- traps in the underground
-- robots can give info, interact throug mesages, tell lore, or interchange items
-- procedural generated stories
-- minigames against the robots, different kind of robots
 - unlockeable grafitti simbols
 - word search games (decyphering a password)
-- picklocking chests 
 - clay tablets, a way to record information
 - electricity, but only from antique devices
 - unique materials that only can be got from locked chests or trading whit robots
@@ -127,49 +135,30 @@
 - make paths turn into soil if the node on top is not air
 - on sleep thrist and hunger decreases faster, energy increases faster
 - increase food values
-- add random drops to certain nature blocks
+- review falling nodes in tech, specially pottery
+- make fish trap probability increase in deeper waters
+- redesign the alembic and make it work only with the amphora
+- add random drops to certain nature blocks:
+	- bauxita from claystone
+	- pyrite from ironstone
+	- flint from gravel
+	- enigmatic sand clump from sand
+	- glass pieces, sea shells, ancient machine components, ancient key from enigmatic sand clump
+	- fossiliferous rock from limestone and claystone
+	- magnetite or iron nugget form ironstone
+	- Quartz, Amethyst, Jasper, Garnet form granite
+	- Quartz, Labradorite from gneiss
+	- Citrine, Agate from sandstone
+	- Calcite, Fluorite,Onyx from limestone
+	- Obsidian, Labradorite, Amethyst, Garnet from basalt
+	- Opal, Agate, Jasper from claystone
+	- Obsidian, Peridot from volcanic ash
+	- invertebrate carcass from loam and silt
+	- ancient machine components, ancient key from clay
 
 --------------- Already done -------------------
 
-- add more traits
-- roof ridge tiles for uneven roof shapes
-- make paths with the digging stick
-- add alcohol extraction to the alembic (from tang)
-- wiha fermentation process, sugar and vinegar
-- draw a whole tech map tree including future changes
-- remove slag stairs and slabs, why to build them if they are trash?
-- remove boulders from built blocks, some actions are irreversible
-- change the mixing spot to be a crafteable craftstation
-- great rework on the recipes of newly created masonry toolset craftstation
-- add a new craft station, the wattlework station
-- refactor the remaining files in tech folder
-- organize tech/textures folder followin the same naming convention
-- make meats and cooked food compostable
-- make the composter use groups for generated compost
-- make the composter produce silt instead of loam
-- clay mixing bucket to undo unfired pottery 
-- make able to eat mashed wiha
-- mashed wiha now turns into wiha dregs if left to the air
-- wiha dregs get burnt if left near to fire
-- make able to extract oil also from maraka nut
-- pottery wheel from Limestone boulder and sticks as improved version of the clay shaping spot
-- alternative hammering log with granite
-- make burnt wiha flammable
-- Add a new tool: the fishtrap
-- create a clay smoker for safe bulk cooking
-- add amphora for tang and wiha cider
-- ceramic pendulum seismograph (based on the Seismoscope by Zhang Heng)
-- add alcehmy ceramic equipment (Alchemy Mortarium, Elemental Crucible)
-- add Alchemy glass equipment (retort, vessel)
-- add Alchemy bench
-- add aluminium
-- add alchemy recipes to the bench
-- a easier way to get large amounts of alcohol, from sugar and Tartar Salt (Tartaris Syrup)
-- move clay oil lamp to the pottery wheel
-- remove large fire wood from crafting
-- make maximum fish trap the same limit as fish stack
-- aluminium water containers
-- aluminium windows
+- all changes from previous versions
 
 ------------ Inhereit form Exile ----------------
 
