@@ -16,6 +16,19 @@ minetest.register_craftitem("tech:sugar", {
 	stack_max = minimal.stack_max_medium,
 })
 
+minetest.register_craftitem("tech:sea_shells", {
+	description = S("Sea Shells"),
+	inventory_image = "tech_sea_shells.png",
+	stack_max = minimal.stack_max_medium,
+})
+minetest.register_craftitem("tech:bauxita", {
+	description = S("Bauxita"),
+	inventory_image = "tech_bauxita.png",
+	stack_max = minimal.stack_max_medium,
+})
+
+-- to rework:
+
 minetest.register_craftitem("tech:nightstone", {
 	description = S("Nightstone"),
 	inventory_image = "tech_nightstone.png",

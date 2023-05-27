@@ -33,10 +33,10 @@ Materiales Extraidos:
     • Termita de Oxido de Hierro anhidrico y Alumina
     • Sulfuro de Aluminio de mezclar Aluminio y Azufre a altas temperaturas
     • Polvora de la mezcla de Azufre, Nitrato de Potasio, Carbon y Azucar
+    • Carbonato de Calcio extraido de la calcinacion y triturado de coonchas de mar
 
 Procesos de Extraccion que necesitar revisarse:
 
-    • Carbonato de Calcio extraido del hidroxido de calcio mezclado con dioxido de carbono y precipitado.
     • Amoniaco de los Lixiviados de origen animal.
     • Azufre extraido de la Arena Volcanica
     • Alumina (Oxido de Aluminio) extraida del Feldespato
@@ -93,3 +93,4 @@ Materiales que quizas necesite añadir:
     • Traces of Tin from granite
     • Traces of Gold from feldespat
     • Traces of Gold from feldespat
+    • calcium Carbonate form sea shells

@@ -17,24 +17,25 @@ Scattered throughout the ruins, the protagonist finds remnants of the extinct so
 Deep within the labyrinthine underground complex, the protagonist's path intersects with prophecies and cryptic inscriptions, each detailing the cataclysms that befell the society. These ancient texts speak of a destined hero, a chosen one who possesses the power to restore harmony to the world. This fabled figure is said to wield the ability to revive forgotten technologies, unveil the enigmatic mysteries of the past, and breathe life back into the desolate realm.
 
 There are a storytelling for each of the gems found in the game:
-- Emerald is asociated to enchanted forests and sacred groves
-- Diamond with the stars and the misteries of the sky
-- Sapphire with the water that runs in the deepts of the world
-- Opal is the heart of earth, related with deep caves underground
-- Aquamarine is the soul of the sea
-- Ruby with the power of the volcanos
-- Obsidian with the darkness of the night
-- Pyrite the golden gem, relate to wealth and abundance
-- Quartz the gem of clarity, unveal hidden truths
-- Amethyst gem of spiritual awakening and enlightenment
-- Jasper symbolizes strength and grounding is the spirit of the mountains
-- Garnet represents vitality, contains the power of the fire and the flames.
-- Labradorite, is the stone of transformation, guide seekers through the veils of inner knowledge
-- Citrine radiates vibrant energy that brings joy and success.
-- Agate is the gem that embodies balance and harmony. restores equilibrium and inner peace.
-- Fluorite is the stone of intuition and protection, is a shield against negativity.
-- Onyx symbolizes resilience. It is associated with hidden chambers and acts as a protector of secrets
-- Peridot is the gem of nature, is the spirit of the trees
-- Amber is the essence of ancient life is tied to lost civilisations and encloses ancient wisdom within.
-- Malachiteis a gem of al the sacred things related with ancient sacred sites, encloses the misteries of the gods
+  - Emerald, the gem of enchanted forests and sacred groves, resonates with the vibrant energy of nature's guardians.
+  - Diamond, born from the mysteries of the night sky, holds the secrets of cosmic realms and celestial wonders.
+  - Sapphire, the gem of deep waters, carries the flow of hidden currents that bind the depths of the world.
+  - Opal, the heart of the earth, shimmers with ethereal light, illuminating the secrets concealed within deep underground caves.
+  - Aquamarine, the soul of the sea, captures the tranquil essence of oceanic realms and the serenity of vast horizons.
+  - Ruby, ablaze with the power of volcanos, embodies the fiery passion and raw energy of molten forces.
+  - Obsidian, forged in the darkness of the night, holds the ancient knowledge and shadows of forgotten realms.
+  - Pyrite, the golden gem, exudes an aura of opulence and abundance, whispering tales of prosperity and wealth.
+  - Quartz, the gem of clarity, unveils hidden truths, reflecting the world with pristine transparency.
+  - Amethyst, gem of spiritual awakening and enlightenment, guides seekers on a transcendent journey to higher realms.
+  - Jasper, a symbol of strength and grounding, channels the spirit of mighty mountains, grounding wanderers on their path.
+  - Garnet, pulsating with vitality, harnesses the blazing flames of passion and ignites the spark of life within.
+  - Labradorite, the stone of transformation, unveils the kaleidoscope of hidden knowledge, guiding seekers through the veils of enlightenment.
+  - Citrine, radiating vibrant energy, illuminates the path to joy, success, and the life's blessings.
+  - Agate, a gem embodying balance and harmony, restores equilibrium within the soul, bringing inner peace and serenity.
+  - Fluorite, the stone of intuition and protection, creates a shimmering shield against negativity, guiding souls towards clarity and insight.
+  - Onyx, a symbol of resilience, guards the secrets hidden within ancient chambers, protecting the mysteries of the ages.
+  - Peridot, the gem of nature's essence, dances with the spirit of trees, fostering growth, rejuvenation, and a connection to the natural world.
+  - Amber, encapsulating the essence of ancient life, holds the whispers of lost civilizations and preserves ancient wisdom for those who seek it.
+  - Malachite, a gem intertwined with the sacred, holds the mysteries of ancient sites, channeling the potent energies of the divine.
 
+The way to work with antiquorium get lost in time, there are only few things that can be used, it didnt melt is too strong and mysterious

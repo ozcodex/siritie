@@ -1,6 +1,42 @@
 ---------------- Upcomming --------------------
 
+- keep track of good blessings and bad blessings
 - aluminium roof tiles
+- add random drops to certain nature blocks:
+	- bauxita from claystone
+	- Pyrite from ironstone
+	- flint from gravel
+	- glass pieces, sea shells from sand
+	- magnetite, iron nugget, Malachite form ironstone
+	- Quartz, Amethyst, Jasper, Garnet, Aquamarine form granite
+	- Quartz, Labradorite from gneiss
+	- Citrine, Agate from sandstone
+	- calcite, Fluorite, Onyx from limestone
+	- Obsidian, Labradorite, Amethyst, Garnet from basalt
+	- Opal, Agate, Jasper from claystone
+	- Amber, Opal from siltstone
+	- Obsidian, Peridot from volcanic ash
+	- invertebrate carcass from loam and silt
+- redesign the alembic and make it work only with the amphora
+- improve metal working, add coopper, bronce and brass
+- underground improvement
+	- add more randomness, probabilities
+	- add alchemy materials to the underground city, specially volcanic ash
+	- add books, scrolls or tablets on the under ground city with recipes for alchemy and lore
+	- add a arcana container (sealed ceramic urn) that has to be broken to be opened with common lot on the underground
+	- add boooks or pages with lore, that are collectible
+	- remove transporters and review artifacts
+	- improve the Enigmatic Artifacts to make them sound more enigmatics
+	- brass, copper, and bronze are common in the underground
+	- leather works
+	- bones can be found all arround the place
+	- gems that only can be found in chests: Diamonds, Sapphires, Emeralds, Ruby, Aquamarine
+- Masonry toolset rework:
+	-remove all the sairs and slabs recipes
+	- make the toolset able to make all the stairs and slabs
+	- also make it able to undo stairs
+	- add the slab combining to all the slabs
+	- remove some recipes, there are blocks that cannot be made
 
 ----------------- New Ideas --------------------
 
@@ -38,14 +74,8 @@
 	- add sugar(energy booster) as cooking condiment
 	- add recipes
 	- extact condiments from plants.
+	- increase food values, food also gives energy
 - underground improvement
-	- add more randomness, probabilities
-	- add books, scrolls or tablets on the under ground city with recipes for alchemyand lore
-	- add alchemy materials to the underground city, specially volcanic ash
-	- add a arcana container that has to be broken to be opened with common lot on the underground
-	- acrana container can be a sealed ceramic urn
-	- add boooks or pages with lore, that are collectible
-	- improve the Enigmatic Artifacts to make them sound more enigmatics
 	- Forgotten Jewelry: ancient rings, amulets, or bracelets. 
 	- robots npcs, had to repair and fuel them
 	- antique machines in the underground
@@ -55,17 +85,7 @@
 	- minigames against the robots, different kind of robots
 	- gambling machines with coins, can be found it the sealed urns or crafted from gold
 	- chest that can be picked or unlocked with ancient keys
-	- brass, copper, and bronze are common in the underground
-	- antiquoorium metal working
-	- remove transporters and reviwe artifacts
-	- leather works
-	- bones can be found all arround the place
-	- gems that only can be found in chests: Diamonds, Sapphires, Emeralds, Ruby, Aquamarine
-- Masonry toolset rework:
-	-remove all the sairs and slabs recipes
-	- make the toolset able to make all the stairs and slabs
-	- also make it able to undo stairs
-	- add the slab combining to all the slabs
+	- antiquorium metal working?
 - GUI rework:
 	- remove the breaktaker
 	- remove the sound and effect on spawning
@@ -80,7 +100,13 @@
 	- aurifex can be used for glazing pottery
 	- glazed pottery less probable to break
 	- add a mug and a jug to drink from (and not drink an entire pot)
-- aluminium roof tiles dismantling
+- archeology
+	- enigmatic sand clump from sand
+	- ancient machine components, ancient key from enigmatic sand clump
+	- fossiliferous rock from limestone and claystone
+	- ancient machine components, ancient key from clay
+- rework dye creation, can be from minerals or plants, fixed recipes
+- aluminium roof tiles dismantling (scrap)
 - completely rework the undoing recipes (reciclable materials and its categories, aluminium, clay, pottery, glass, bricks)
 - add a way to recicle broken pottery
 - new working station: animal cage for breeding, requires specific food
@@ -135,32 +161,13 @@
 - fix enter on container crashing the game
 - make paths turn into soil if the node on top is not air
 - on sleep thrist and hunger decreases faster, energy increases faster
-- increase food values
 - review falling nodes in tech, specially pottery
 - make fish trap probability increase in deeper waters
-- redesign the alembic and make it work only with the amphora
-- add random drops to certain nature blocks:
-	- bauxita from claystone
-	- Pyrite from ironstone
-	- flint from gravel
-	- enigmatic sand clump from sand
-	- glass pieces, sea shells, ancient machine components, ancient key from enigmatic sand clump
-	- fossiliferous rock from limestone and claystone
-	- magnetite, iron nugget, Malachite form ironstone
-	- Quartz, Amethyst, Jasper, Garnet, Aquamarine form granite
-	- Quartz, Labradorite from gneiss
-	- Citrine, Agate from sandstone
-	- calcite, Fluorite, Onyx from limestone
-	- Obsidian, Labradorite, Amethyst, Garnet from basalt
-	- Opal, Agate, Jasper from claystone
-	- Amber, Opal from siltstone
-	- Obsidian, Peridot from volcanic ash
-	- invertebrate carcass from loam and silt
-	- ancient machine components, ancient key from clay
+
 
 --------------- Already done -------------------
 
-- all changes from previous versions
+- add gemstones
 
 ------------ Inhereit form Exile ----------------
 
